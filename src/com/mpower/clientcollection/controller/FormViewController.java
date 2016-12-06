@@ -26,6 +26,7 @@ import org.javarosa.form.api.FormEntryModel;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import javax.swing.*;
+import javax.swing.text.View;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 
@@ -91,7 +92,8 @@ public class FormViewController {
     //operation Variables
     public boolean INITIALIZED = false;
     //UI variables
-    private Button mSubmitButton = null,mNextButton=null;
+    private Button mSubmitButton = null;
+    public static Button mNextButton=null;
     private int mRowIdx = 0;
     private int mColIdx = 0;
 
@@ -103,6 +105,7 @@ public class FormViewController {
     private Label mFormTitle = null;
 
 
+    public FormIndex idx;
 
     public static final class FormsDirectory {
         FormsDirectory (){}
@@ -221,7 +224,7 @@ public class FormViewController {
         INITIALIZED = true;
         Set<String> loops = new HashSet<String>();
         // step through every value in the form
-        FormIndex idx = FormIndex.createBeginningOfFormIndex();
+         idx = FormIndex.createBeginningOfFormIndex();
         int event;
         createFormTitle(model.getFormTitle());
         for (;;) {
@@ -263,14 +266,21 @@ public class FormViewController {
         return INITIALIZED;
     }
 
-    private void createNextButton() {
+    public void createNextButton() {
+
         mNextButton=new Button("Next");
         mNextButton.setOnAction(event -> {
+            FxViewController.getInstance().setCurrentView("Form", AppConfiguration.VIEW_TYPE.FORM_VIEW);
             System.out.println("Next BUtton CLicked");
-            createNextEvent();
+            //createNextEvent();
+            showNextView();
+            //createNextView();
+
+            /*FormController formController=FormViewController.getInstance().getFormController();
+            formController.stepToNextScreenEvent();*/
         });
 
-        FxViewController.getInstance().getCurrentLayout().add(mNextButton,getColIndex(),getRowIndex());
+       // FxViewController.getInstance().getCurrentLayout().add(mNextButton,getColIndex(),getRowIndex());
     }
 
     private void createNextEvent() {
@@ -452,5 +462,114 @@ public class FormViewController {
     }
     public int getColIndex(){
         return this.mColIdx;
+    }
+
+
+
+  //Sabbir
+    private void showNextView() {
+        //////////*******************////////////
+
+        System.out.println("I'm in view");
+        FormController formController = FormViewController.getInstance()
+                .getFormController();
+        boolean isHtmlQues = false;
+        if (formController.getEvent() != FormEntryController.EVENT_BEGINNING_OF_FORM) {
+            //int event_ = formController.stepToPreviousScreenEvent();
+            try {
+                int event_ = formController.getEvent();
+                String appearence = formController.getQuestionPrompt().getAppearanceHint();
+                if (event_ != FormEntryController.EVENT_BEGINNING_OF_FORM && appearence != null && appearence.equalsIgnoreCase("html")) {
+                    //TODO SNL mPower:
+                    if (formController.getQuestionPrompt().getAppearanceHint().equals("html")) {
+                        isHtmlQues = true;
+                        //((FxViewController)clearAnswer();
+                        //test=false;
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            formController.stepToNextScreenEvent();
+        }
+        //////***********************////////
+
+
+        if (formController.getEvent() != FormEntryController.EVENT_END_OF_FORM) {
+            // get constraint behavior preference value with appropriate default
+           /* String constraint_behavior = PreferenceManager.getDefaultSharedPreferences(this)
+                    .getString(PreferencesActivity.KEY_CONSTRAINT_BEHAVIOR,
+                            PreferencesActivity.CONSTRAINT_BEHAVIOR_DEFAULT);*/
+            //test=false;
+            if (formController.currentPromptIsQuestion()) {
+
+                // if constraint behavior says we should validate on swipe, do so
+                /*if (constraint_behavior.equals(PreferencesActivity.CONSTRAINT_BEHAVIOR_ON_SWIPE) && !isHtmlQues) {
+                    if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
+                        // A constraint was violated so a dialog should be showing.
+                        mBeenSwiped = false;
+                        return;
+                    }
+
+                    // otherwise, just save without validating (constraints will be validated on finalize)
+                } else
+
+                    saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
+            }
+*/
+                createNextButton();
+                if (formController.getEvent() == FormEntryController.EVENT_BEGINNING_OF_FORM) {
+
+                    createNextView();
+                }
+
+            } else {
+              //  mBeenSwiped = false;
+            }
+        }
+    }
+
+    /*
+    * This method has to create as per snl requirements. Like: next view would be viewed after
+    * getting confirmation through dialog.
+    * */
+    private void createNextView(){
+        System.out.println("I'm in 2nd view");
+        FormController formController = FormViewController.getInstance()
+                .getFormController();
+        View next;
+      //  FormIndex idx=FormIndex.createBeginningOfFormIndex();
+
+
+        int event = formController.stepToNextScreenEvent();
+        FormEntryModel model=mCurrentModel;
+        idx=model.incrementIndex(idx);
+       // FormIndex id=idx.getNextLevel();
+        FormEntryPrompt prompt = model.getQuestionPrompt(idx);
+        switch (event) {
+            case FormEntryController.EVENT_QUESTION:
+
+
+            case FormEntryController.EVENT_GROUP:
+                // create a savepoint
+               // FormEntryPrompt prompt = model.getQuestionPrompt(idx);
+
+                break;
+            case FormEntryController.EVENT_END_OF_FORM:
+
+                break;
+            case FormEntryController.EVENT_REPEAT:
+
+                break;
+            case FormEntryController.EVENT_PROMPT_NEW_REPEAT:
+
+                break;
+            case FormEntryController.EVENT_REPEAT_JUNCTURE:
+
+                // skip repeat junctures until we implement them
+                break;
+            default:
+                break;
+        }
     }
 }

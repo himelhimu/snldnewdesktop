@@ -64,7 +64,7 @@ public class Constants {
     public static final String FIRST_SESSION_FIRST_CHAPTER_EN = "1 1 Preparation for birth.xml";
     //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
     public static final String SECOND_SESSION_FIRST_CHAPTER_EN = "second_session_first_chapter_en.xml";
-    public static final String THIRD_SESSION_FIRST_CHAPTER_EN= "third_session_first_chapter_en.xml";
+    public static final String THIRD_SESSION_FIRST_CHAPTER_EN= "1 3 Evaluation after drying Is the baby crying.xml";
     public static final String FORTH_SESSION_FIRST_CHAPTER_EN = "four_session_first_chapter_en";
     public static final String FIFTH_SESSION_FIRST_CHAPTER_EN = "five_session_first_chapter_en";
     public static final String SIXTH_SESSION_FIRST_CHAPTER_EN = "six_session_first_chapter_en";

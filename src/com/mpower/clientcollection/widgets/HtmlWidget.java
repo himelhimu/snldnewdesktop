@@ -4,7 +4,10 @@ import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 
 import com.sun.jndi.toolkit.url.Uri;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -15,12 +18,16 @@ import org.javarosa.core.reference.ReferenceManager;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.Vector;
 
 /**
  * Created by hemel on 4/18/16.
  */
-public class HtmlWidget extends QuestionWidget{
+public class HtmlWidget extends QuestionWidget implements Initializable{
+    @FXML
+    private GridPane webGridPane;
     public String url;
     Vector<SelectChoice> mItems;
 
@@ -66,10 +73,12 @@ public class HtmlWidget extends QuestionWidget{
         scrollPane.setPrefWidth(300);
         FormViewController fvc = FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(scrollPane,fvc.getColIndex(),fvc.getRowIndex());
-        //FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
+       // FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
         fvc.incRowIndex();
-        fvc.decColIndex();
-
+        //fvc.decColIndex();
+        FormViewController formViewController=FormViewController.getInstance();
+        formViewController.createNextButton();
+       FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
 
     }
@@ -91,6 +100,11 @@ public class HtmlWidget extends QuestionWidget{
 
     @Override
     public void setOnLongClickListener() {
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 }

@@ -27,6 +27,7 @@ import java.sql.SQLException;
  */
 public class RegistrationController {
     private Stage regStage;
+    private Stage logInStage;
     private Parent root = null;
 
     @FXML
@@ -175,7 +176,7 @@ public class RegistrationController {
             e.printStackTrace();
         }
         Scene logInScene=new Scene(root);
-        regStage.setScene(logInScene);
-        regStage.show();
+        logInStage.setScene(logInScene);
+        logInStage.show();
     }
 }
