@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>TestHtmlwithQues</h:title>
+    <model>
+      <instance>
+        <test_html_with_ques id="test_html_with_ques">
+          <chapter1_html>chapter1.html</chapter1_html>
+          <Select_Correct_Answer/>
+          <start/>
+          <end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </test_html_with_ques>
+      </instance>
+      <bind nodeset="/test_html_with_ques/chapter1_html" required="false()" type="string"/>
+      <bind nodeset="/test_html_with_ques/Select_Correct_Answer" required="true()" type="select1"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/test_html_with_ques/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/test_html_with_ques/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/test_html_with_ques/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/test_html_with_ques/chapter1_html">
+      <label>chapter1.html</label>
+    </input>
+    <select1 ref="/test_html_with_ques/Select_Correct_Answer">
+      <label>Select Correct Answer</label>
+      <item>
+        <label>question1</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>question2</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>question3</label>
+        <value>3</value>
+      </item>
+    </select1>
+  </h:body>
+</h:html>

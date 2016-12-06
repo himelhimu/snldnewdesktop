@@ -1,0 +1,131 @@
+
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/ICT for Dalit Right.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/ICT for Dalit Right.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/ICT for Dalit Right.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/test_html_with_ques.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/testing_desktop_2.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/question_wth_calculation.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
