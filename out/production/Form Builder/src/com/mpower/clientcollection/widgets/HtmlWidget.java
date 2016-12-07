@@ -24,6 +24,7 @@ import java.util.Vector;
 
 /**
  * Created by hemel on 4/18/16.
+ * @author Sabbir
  */
 public class HtmlWidget extends QuestionWidget{
     @FXML
@@ -81,9 +82,9 @@ public class HtmlWidget extends QuestionWidget{
        // FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
         fvc.incRowIndex();
         //fvc.decColIndex();
-        //FormViewController formViewController=FormViewController.getInstance();
-       // formViewController.createNextButton();
-       // FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
+        FormViewController formViewController=FormViewController.getInstance();
+       formViewController.createNextButton();
+       FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
 
     }

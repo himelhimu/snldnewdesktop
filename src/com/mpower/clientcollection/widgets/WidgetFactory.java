@@ -181,8 +181,8 @@ public class WidgetFactory {
                     //questionWidget = new ListWidget(context, fep, true);
                 } else if (appearance.equals("label")) {
                     //questionWidget = new LabelWidget(context, fep);
-                } /*else if (appearance.equals("button")) {
-            //questionWidget = new SelectOneButtonWidget(context, fep);
+                }/* else if (appearance.equals("button")) {
+            questionWidget = new SelectOneButtonWidget(fep);
         }*/else if (appearance.equals("picture_selection")) {
           //  questionWidget = new PictureSelectionWidget(context, fep);
         }else if(appearance.equals("html")){

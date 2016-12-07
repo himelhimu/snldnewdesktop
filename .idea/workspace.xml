@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FormViewController$FormsDirectory.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FormViewController$FormsDirectory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FormViewController.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FormViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FxViewController.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/controller/FxViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/HtmlWidget.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/HtmlWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/WidgetFactory.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/WidgetFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/desktop/constants/Constants.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/desktop/constants/Constants.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneButtonWidget.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/test_snl_db.db" afterPath="$PROJECT_DIR$/out/production/Form Builder/test_snl_db.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_snl_db.db" afterPath="$PROJECT_DIR$/test_snl_db.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -20,16 +15,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Form Builder/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/appLog.txt" afterPath="$PROJECT_DIR$/out/production/Form Builder/appLog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/controller/FormViewController.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/controller/FormViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/controller/FxViewController.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/controller/FxViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/HtmlWidget.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/HtmlWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/WidgetFactory.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/desktop/constants/Constants.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/desktop/constants/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/desktop/constants/Constants.java" afterPath="$PROJECT_DIR$/src/com/mpower/desktop/constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java" afterPath="$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,34 +76,47 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FxViewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java">
+    <leaf>
+      <file leaf-file-name="FormViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="154" column="30" lean-forward="false" selection-start-line="154" selection-start-column="30" selection-end-line="154" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="246" column="50" lean-forward="false" selection-start-line="246" selection-start-column="50" selection-end-line="246" selection-end-column="50" />
               <folding>
-                <element signature="method#getInstance#0;class#FxViewController#0" expanded="false" />
+                <element signature="docComment;field#SERIALIABLE_CLASSES#0;class#FormViewController#0" expanded="false" />
+                <element signature="e#9691#9699#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/constants/Constants.java">
+      <file leaf-file-name="SelectOneButtonWidget.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneButtonWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="80" column="79" lean-forward="false" selection-start-line="80" selection-start-column="79" selection-end-line="80" selection-end-column="79" />
+            <state relative-caret-position="18">
+              <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectOneWidget.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="58" column="66" lean-forward="false" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java">
+      <file leaf-file-name="HtmlWidget.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="67" column="112" lean-forward="false" selection-start-line="67" selection-start-column="112" selection-end-line="67" selection-end-column="112" />
+            <state relative-caret-position="108">
+              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -188,18 +190,20 @@
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/StringWidget.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/config/AppConfiguration.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/QuestionWidget.java" />
-        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java" />
         <option value="$PROJECT_DIR$/App_configuration.xml" />
         <option value="$PROJECT_DIR$/src/resources/css/registration.css" />
         <option value="$PROJECT_DIR$/src/resources/fxml/registration.fxml" />
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/resources/fxml/htmlview.fxml" />
-        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java" />
-        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneButtonWidget.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java" />
       </list>
     </option>
   </component>
@@ -516,8 +520,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -535,15 +539,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets" />
+      <recent name="$PROJECT_DIR$/src/resources/img" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.mpower.clientcollection.widgets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources/img" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -747,6 +751,15 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="49" y="24" width="1317" height="744" extended-state="6" />
     <editor active="true" />
@@ -845,16 +858,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_71/javafx-src.zip!/javafx/scene/Scene.java" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_71/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_71/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_71/javafx-src.zip!/javafx/event/EventHandler.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_71/src.zip!/java/sql/ResultSet.java" />
     <entry file="jar://$PROJECT_DIR$/lib/javarosa-libraries-2015-08-05.jar!/org/javarosa/form/api/FormEntryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,58 +886,58 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/introductory_video.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="19" column="103" lean-forward="false" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/Login.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/Login.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/login.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/login.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration_profession.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration_new.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration_new.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/config/AppLogger.java">
@@ -943,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1452">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,10 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="63" column="11" lean-forward="false" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
-          <folding>
-            <element signature="e#2117#2118#0" expanded="false" />
-            <element signature="e#2165#2166#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,10 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="91" column="40" lean-forward="false" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-          <folding>
-            <element signature="e#5993#5994#0" expanded="false" />
-            <element signature="e#6025#6026#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,25 +1075,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/splash_screen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/LoginController.java">
@@ -1128,20 +1117,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/htmlview.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="135">
+          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -1154,46 +1135,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="190" column="57" lean-forward="false" selection-start-line="190" selection-start-column="57" selection-end-line="190" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#SERIALIABLE_CLASSES#0;class#FormViewController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/chapter_content.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="124" column="36" lean-forward="false" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="50" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
+        <state relative-caret-position="945">
           <caret line="67" column="112" lean-forward="false" selection-start-line="67" selection-start-column="112" selection-end-line="67" selection-end-column="112" />
           <folding />
         </state>
@@ -1214,6 +1169,78 @@
           <folding>
             <element signature="method#getInstance#0;class#FxViewController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FormViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="246" column="50" lean-forward="false" selection-start-line="246" selection-start-column="50" selection-end-line="246" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;field#SERIALIABLE_CLASSES#0;class#FormViewController#0" expanded="false" />
+            <element signature="e#9691#9699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidgetOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/splash_screen.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="186" column="72" lean-forward="false" selection-start-line="186" selection-start-column="72" selection-end-line="186" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneButtonWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/HtmlWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="58" column="66" lean-forward="false" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

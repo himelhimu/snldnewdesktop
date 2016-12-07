@@ -258,7 +258,7 @@ public class FormViewController {
                 break;
             }
             if ( event == FormEntryController.EVENT_END_OF_FORM ) {
-              createSubmitButton();
+                createSubmitButton();
                 break;
             }
 
