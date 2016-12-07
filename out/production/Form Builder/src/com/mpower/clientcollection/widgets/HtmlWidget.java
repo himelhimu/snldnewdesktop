@@ -25,7 +25,7 @@ import java.util.Vector;
 /**
  * Created by hemel on 4/18/16.
  */
-public class HtmlWidget extends QuestionWidget implements Initializable{
+public class HtmlWidget extends QuestionWidget{
     @FXML
     private GridPane webGridPane;
     public String url;
@@ -40,6 +40,8 @@ public class HtmlWidget extends QuestionWidget implements Initializable{
         super(prompt);
         final WebView browser = new WebView();
         final WebEngine webEngine = browser.getEngine();
+
+        System.out.println("******Showing html view**********");
 
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(browser);
@@ -66,9 +68,12 @@ public class HtmlWidget extends QuestionWidget implements Initializable{
         } catch (InvalidReferenceException e) {
             e.printStackTrace();
         }*/
-        String htmlPath="file:"+"/home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth-media/session_one.html";
+
+     String htmlPath="file:"+"/home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth-media/session_one.html";
         System.out.println("htmlPath"+htmlPath);
         webEngine.load(htmlPath);
+
+        ////////
         scrollPane.setPrefHeight(300);
         scrollPane.setPrefWidth(300);
         FormViewController fvc = FormViewController.getInstance();
@@ -76,9 +81,9 @@ public class HtmlWidget extends QuestionWidget implements Initializable{
        // FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
         fvc.incRowIndex();
         //fvc.decColIndex();
-        FormViewController formViewController=FormViewController.getInstance();
-        formViewController.createNextButton();
-       FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
+        //FormViewController formViewController=FormViewController.getInstance();
+       // formViewController.createNextButton();
+       // FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
 
     }
@@ -103,8 +108,4 @@ public class HtmlWidget extends QuestionWidget implements Initializable{
 
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
 }

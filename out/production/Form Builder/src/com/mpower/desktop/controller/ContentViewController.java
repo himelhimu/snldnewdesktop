@@ -62,7 +62,12 @@ public class ContentViewController {
                 current_session = "1_7";
                 FxViewController.getInstance().setCurrentView("1_7", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                 //System.out.print("Seventh Image clicked." + current_user);
+            }else if (imageViewID.equals("session_1_quiz"))
+            {
+                current_session="quiz_1_1";
+                FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
             }
+
 
         }else{
             clearTmpData();

@@ -96,7 +96,7 @@ public class WidgetFactory {
                             questionWidget=new HtmlWidget(fep);
                         }else if(appearance.equals("html")){
                             System.out.println("I'm hwere in html");
-                        	//questionWidget = new WebWidget(context, fep);
+                        	questionWidget = new HtmlWidget(fep);
                         }else {
                             String text = fep.getLongText();
                             if(fep.getLongText().endsWith(".html"))
@@ -181,16 +181,15 @@ public class WidgetFactory {
                     //questionWidget = new ListWidget(context, fep, true);
                 } else if (appearance.equals("label")) {
                     //questionWidget = new LabelWidget(context, fep);
-                } else if (appearance.equals("button")) {
+                } /*else if (appearance.equals("button")) {
             //questionWidget = new SelectOneButtonWidget(context, fep);
-        }else if (appearance.equals("picture_selection")) {
+        }*/else if (appearance.equals("picture_selection")) {
           //  questionWidget = new PictureSelectionWidget(context, fep);
         }else if(appearance.equals("html")){
             //Log.d("LOG",fep.toString());
             questionWidget = new HtmlWidget(fep);
-            System.out.println("hello from the darkside"+fep.toString());
-        }
-                else {
+            System.out.println("WidgetFactory html Call  "+fep.toString());
+        } else {
                     questionWidget = new SelectOneWidget(fep);
                 }
 
@@ -226,7 +225,7 @@ public class WidgetFactory {
                 //questionWidget = new TriggerWidget(context, fep);
                 break;
             default:
-                //questionWidget = new StringWidget(context, fep);
+                questionWidget = new StringWidget(fep);
                 break;
         }
         if(questionWidget != null)

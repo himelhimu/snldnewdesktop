@@ -63,7 +63,7 @@ public class Constants {
 
     public static final String FIRST_SESSION_FIRST_CHAPTER_EN = "1 1 Preparation for birth.xml";
     //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
-    public static final String SECOND_SESSION_FIRST_CHAPTER_EN = "second_session_first_chapter_en.xml";
+    public static final String SECOND_SESSION_FIRST_CHAPTER_EN = "1 2 At birth Dry thoroughly.xml";
     public static final String THIRD_SESSION_FIRST_CHAPTER_EN= "1 3 Evaluation after drying Is the baby crying.xml";
     public static final String FORTH_SESSION_FIRST_CHAPTER_EN = "four_session_first_chapter_en";
     public static final String FIFTH_SESSION_FIRST_CHAPTER_EN = "five_session_first_chapter_en";
@@ -77,6 +77,8 @@ public class Constants {
     public static final String TWELVTH_SESSION_FIRST_CHAPTER_EN = "twelve_session_first_chapter_en";
     public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "chapter_1_exam_en";
 
+    //Test for Exam
+    public static final String EXAM_1ST="Chapter 1 Helping Babies Breathe.xml";
     //Second Chapter English
 
     public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "first_session_second_chapter_en";

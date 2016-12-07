@@ -124,7 +124,7 @@ public class FxViewController {
         }else if(title.equals("1_2")) {
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
         }else{
-            xml_path = AppConfiguration.FORM_XML_PATH+Constants.THIRD_SESSION_FIRST_CHAPTER_EN;
+            xml_path = AppConfiguration.FORM_XML_PATH+Constants.EXAM_1ST;
         }
 
         isLoaded = fvc.loadformFromXML(xml_path);
