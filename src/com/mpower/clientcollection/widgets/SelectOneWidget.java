@@ -26,13 +26,13 @@ import java.util.Vector;
  */
 public class SelectOneWidget extends QuestionWidget {
     List<SelectChoice> mItems; // may take a while to compute
-    ArrayList<Button> buttons;
+    ArrayList<RadioButton> buttons;
 
     public SelectOneWidget(FormEntryPrompt prompt) {
         super(prompt);
 
         mItems = prompt.getSelectChoices();
-        buttons = new ArrayList<Button>();
+        buttons = new ArrayList<RadioButton>();
 
         final ToggleGroup rb_group = new ToggleGroup();
 
@@ -45,8 +45,8 @@ public class SelectOneWidget extends QuestionWidget {
         if (mItems != null) {
             VBox rbContainer = new VBox();
             for (int i = 0; i < mItems.size(); i++) {
-                Button r = new Button();
-                //r.setToggleGroup(rb_group);
+                RadioButton r = new RadioButton();
+                r.setToggleGroup(rb_group);
                 r.setText(prompt.getSelectChoiceText(mItems.get(i)));
                 //r.setTextSize(TypedValue.COMPLEX_UNIT_DIP, mAnswerFontsize);
                 r.setId(String.valueOf(i));
@@ -54,9 +54,10 @@ public class SelectOneWidget extends QuestionWidget {
                 buttons.add(r);
 
                 if (mItems.get(i).getValue().equals(s)) {
-                    r.setFocusTraversable(true);
+                   // r.setFocusTraversable(true);
+                    r.setSelected(true);
 
-                    r.setStyle("-fx-background-color: #ff0000; ");
+                   // r.setStyle("-fx-background-color: #ff0000; ");
                 }
 
                 rbContainer.getChildren().add(r);
@@ -74,9 +75,10 @@ public class SelectOneWidget extends QuestionWidget {
 
     @Override
     public void clearAnswer() {
-        for (Button button : this.buttons) {
-            if (!button.isDisabled()) {
-                button.setFocusTraversable(true);
+        for (RadioButton button : this.buttons) {
+            if (!button.isSelected()) {
+              //  button.setFocusTraversable(false);
+                button.setSelected(false);
 
                 button.setStyle("-fx-background-color: #ff0000; ");
                 return;
@@ -109,10 +111,10 @@ public class SelectOneWidget extends QuestionWidget {
 
     public int getCheckedId() {
         for (int i = 0; i < buttons.size(); ++i) {
-            Button button = buttons.get(i);
-            if (button.isDisabled()) {
+            RadioButton button = buttons.get(i);
+            if (button.isSelected()) {
 
-                button.setStyle("-fx-background-color: #ff0000; ");
+                //button.setStyle("-fx-background-color: #ff0000; ");
                 return i;
             }
         }

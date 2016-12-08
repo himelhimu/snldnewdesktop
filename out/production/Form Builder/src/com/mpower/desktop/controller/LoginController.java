@@ -30,6 +30,8 @@ public class LoginController extends AnchorPane {
 
     public void processLogin(ActionEvent event) {
         String username = userId.getText();
+        String passWord=password.getText();
+        //if (username.equals("") || passWord.equals("")) {}
         boolean isvalid = isUserValid(userId.getText(),password.getText());
         if(isvalid){
             isNewUser = isUserNew(username);
@@ -82,6 +84,8 @@ public class LoginController extends AnchorPane {
     }
 
     private boolean isUserValid(String username, String password) {
+        if (username.isEmpty() || password.isEmpty()) {createErrorDIalog("Please provide credentials"); return false;}
+        else
         try {
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement st = id.getConnection().createStatement();
@@ -116,6 +120,14 @@ public class LoginController extends AnchorPane {
         }
 
         return false;
+    }
+
+    private void createErrorDIalog(String s) {
+        Alert alert=new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(s);
+        alert.setContentText("You didn't enter anything...");
+        alert.showAndWait();
     }
 
 

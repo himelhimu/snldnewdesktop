@@ -373,6 +373,7 @@ public class FormViewController {
     }
 
     public void createSubmitButton(){
+         HashMap ansMap=new HashMap();
         mSubmitButton = new Button("Submit");
         mSubmitButton.setOnAction(e -> {
             System.out.print("submitt button clicked\n");
@@ -384,8 +385,12 @@ public class FormViewController {
             while (it.hasNext()) {
                 FormIndex index = it.next();
                 IAnswerData answer = FormViewController.getInstance().getAnswers().get(index);
+               // ansMap.put(index,answer);
+
+
 //                System.out.print(answer.getValue().toString());
             }
+           // createResultDIalog();
             try {
                 InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);
             } catch (SQLException e1) {
@@ -394,12 +399,24 @@ public class FormViewController {
             FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
 
         });
+
         FxViewController.getInstance().getCurrentLayout().add(mSubmitButton,getColIndex(),getRowIndex());
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mSubmitButton);
 
 
     }
 
+    private void createResultDIalog() {
+        Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
+        resultAlert.setHeaderText("Your answerwes");
+        FormController formController=FormViewController.getInstance().getFormController();
+
+        //WidgetFactory.createWidgetFromPrompt(prompt);
+        //resultAlert.setContentText(getAnswers().toString());
+       // resultAlert.setContentText(formController.getQuestionPrompt(formController.getFormIndex().getTerminal().toString()));
+        resultAlert.showAndWait();
+
+    }
 
 
     public  ArrayList getWidget(){
