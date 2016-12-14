@@ -6,7 +6,7 @@ import java.util.Properties;
  * Created by hemel on 4/13/16.
  */
 public class AppConfiguration {
-    public enum VIEW_TYPE  {FORM_VIEW,TUT_VIEW,REG_VIEW,LOGIN_VIEW,INTRO_VIEW,COURSE_OVERVIEW}
+    public enum VIEW_TYPE  {FORM_VIEW,TUT_VIEW,REG_VIEW,LOGIN_VIEW,INTRO_VIEW,COURSE_OVERVIEW,TEST}
 
     public static boolean APPLICATION_DEBUG = false;
 
@@ -39,6 +39,8 @@ public class AppConfiguration {
     //Sabbir
     //Chapter 1 english
     public static String CHAPTER_1_1="";
+    //Path for Images in DragDrop
+    public static String IMAGE_DRAG_DROP_PATH="";
 
 
 
@@ -76,6 +78,7 @@ public class AppConfiguration {
         //Sabbir
         CHAPTER_1_1=prop.getProperty("CHAPTER_1_1","question_wth_calculation.xml");
 
+        IMAGE_DRAG_DROP_PATH="file:///home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe-media/";
 
 
 

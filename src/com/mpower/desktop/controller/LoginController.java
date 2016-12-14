@@ -84,8 +84,8 @@ public class LoginController extends AnchorPane {
     }
 
     private boolean isUserValid(String username, String password) {
-        if (username.isEmpty() || password.isEmpty()) {createErrorDIalog("Please provide credentials"); return false;}
-        else
+        /*if (username.isEmpty() || password.isEmpty()) {createErrorDIalog("Please provide credentials"); return false;}
+        else*/
         try {
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement st = id.getConnection().createStatement();
@@ -133,6 +133,10 @@ public class LoginController extends AnchorPane {
 
     public void processRegister(ActionEvent actionEvent) {
         FxViewController.getInstance().setCurrentView("register", AppConfiguration.VIEW_TYPE.REG_VIEW);
+    }
+
+    public void processTest(ActionEvent event) {
+        FxViewController.getInstance().setCurrentView("Test",AppConfiguration.VIEW_TYPE.TEST);
     }
 }
 

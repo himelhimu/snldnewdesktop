@@ -5,7 +5,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="splashPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="530.0" style="-fx-background-color: #df94e8;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.Pane?>
+<Pane fx:id="splashlayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="530.0" style="-fx-background-color: #df94e8;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.clientcollection.controller.FxViewController">
    <children>
       <ImageView fitHeight="393.0" fitWidth="229.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -13,4 +14,4 @@
          </image>
       </ImageView>
    </children>
-</AnchorPane>
+</Pane>

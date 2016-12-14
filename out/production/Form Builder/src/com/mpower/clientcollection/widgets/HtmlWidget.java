@@ -75,15 +75,17 @@ public class HtmlWidget extends QuestionWidget{
         webEngine.load(htmlPath);
 
         ////////
-        /*scrollPane.setPrefHeight(300);
-        scrollPane.setPrefWidth(300);*/
+        /*scrollPane.setPrefHeight(600);
+        scrollPane.setPrefWidth(400);*/
         FormViewController fvc = FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(scrollPane,fvc.getColIndex(),fvc.getRowIndex());
+       // FxViewController.getInstance().getCurrentLayout().setContent(scrollPane);
        // FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
-        fvc.incRowIndex();
+        //fvc.incRowIndex();
+        fvc.incColIndex();
         //fvc.decColIndex();
-        FormViewController formViewController=FormViewController.getInstance();
-        formViewController.createNextButton();
+        /*FormViewController formViewController=FormViewController.getInstance();
+        formViewController.createNextButton();*/
        //FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
 

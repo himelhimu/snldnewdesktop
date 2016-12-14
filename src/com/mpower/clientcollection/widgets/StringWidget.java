@@ -55,9 +55,10 @@ public class StringWidget extends QuestionWidget {
         String s = prompt.getAnswerText();
         if (s != null) mAnswer.setText(s);
         FormViewController fvc = FormViewController.getInstance();
+        //FxViewController.getInstance().getCurrentLayout().setContent(mAnswer);
         FxViewController.getInstance().getCurrentLayout().add(mAnswer,fvc.getColIndex(),fvc.getRowIndex());
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mAnswer);
-        //fvc.incRowIndex();
+        fvc.incRowIndex();
         //fvc.decColIndex();
 
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);

@@ -18,9 +18,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
@@ -39,13 +41,15 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Main extends Application {
-    private static Pane splashLayout;
+    public static Pane splashLayout;
     private ProgressBar loadProgress;
     private Label progressText;
     private WebView webView;
     private static Stage mainStage;
     private final static String APP_CONFIGURATION_FILE =  "App_configuration.xml";
-    public static boolean isSpalshLoaded=false;
+
+    //Sabbir
+    public static boolean isSplashLoaded=false;
 
 
 
@@ -74,20 +78,26 @@ public class Main extends Application {
     }
 
     private void initSplashScreen() {
-        ImageView splash = new ImageView(new Image("http://fxexperience.com/wp-content/uploads/2010/06/logo.png"));
+        /*ImageView splash = new ImageView(new Image("http://fxexperience.com/wp-content/uploads/2010/06/logo.png"));
         loadProgress = new ProgressBar();
         loadProgress.setPrefWidth(AppConfiguration.SPLASH_WIDTH - 20);
-        progressText = new Label("Loading hobbits with pie . . .");
-        splashLayout = new VBox();
-        splashLayout.getChildren().addAll(splash, loadProgress, progressText);
-        progressText.setAlignment(Pos.CENTER);
-        splashLayout.setStyle("-fx-padding: 5; -fx-background-color: cornsilk; -fx-border-width:5; -fx-border-color: linear-gradient(to bottom, chocolate, derive(chocolate, 50%));");
-        splashLayout.setEffect(new DropShadow());
+        progressText = new Label("Loading hobbits with pie . . .");*/
+        try {
+            AnchorPane anchorPane=FXMLLoader.load(getClass().getResource("/resources/fxml/splash_screen.fxml"));
+            splashLayout = new VBox();
+            splashLayout.getChildren().addAll(anchorPane, loadProgress, progressText);
+            progressText.setAlignment(Pos.CENTER);
+            splashLayout.setStyle("-fx-padding: 5; -fx-background-color: cornsilk; -fx-border-width:5; -fx-border-color: linear-gradient(to bottom, chocolate, derive(chocolate, 50%));");
+            splashLayout.setEffect(new DropShadow());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-       // showSplash(primaryStage);
+        //showSplash(primaryStage);
         mainStage = primaryStage;
         mainStage.setAlwaysOnTop(false);
         mainStage.initStyle(StageStyle.DECORATED);

@@ -11,7 +11,9 @@ import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import org.javarosa.core.model.FormDef;
 import org.javarosa.core.model.FormIndex;
 import org.javarosa.core.model.GroupDef;
@@ -390,7 +392,7 @@ public class FormViewController {
 
 //                System.out.print(answer.getValue().toString());
             }
-           // createResultDIalog();
+          //  createResultDIalog();
             try {
                 InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);
             } catch (SQLException e1) {
@@ -401,6 +403,7 @@ public class FormViewController {
         });
 
         FxViewController.getInstance().getCurrentLayout().add(mSubmitButton,getColIndex(),getRowIndex());
+        //FxViewController.getInstance().getCurrentLayout().setContent(mSubmitButton);
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mSubmitButton);
 
 
@@ -409,8 +412,15 @@ public class FormViewController {
     private void createResultDIalog() {
         Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
         resultAlert.setHeaderText("Your answerwes");
-        FormController formController=FormViewController.getInstance().getFormController();
-
+        resultAlert.setContentText(getAnswers().toString());
+        widgets.clear();
+        FormController formViewController=FormViewController.getInstance().getFormController();
+        FormEntryPrompt formEntryPrompt=formViewController.getQuestionPrompt(formViewController.getFormIndex().getTerminal());
+        WidgetFactory.createWidgetFromPrompt(formEntryPrompt);
+        widgets.add(WidgetFactory.createWidgetFromPrompt(formEntryPrompt));
+        AnchorPane anchorPane=new AnchorPane();
+        anchorPane.getChildren().add((Node) getWidget().get(1));
+       // FxViewController.getInstance().getCurrentLayout().add(anchorPane,getColIndex(),getRowIndex());
         //WidgetFactory.createWidgetFromPrompt(prompt);
         //resultAlert.setContentText(getAnswers().toString());
        // resultAlert.setContentText(formController.getQuestionPrompt(formController.getFormIndex().getTerminal().toString()));
@@ -541,7 +551,7 @@ public class FormViewController {
 
     private void createFormTitle(String formTitle) {
         mFormTitle = new Label(formTitle);
-        FxViewController.getInstance().getCurrentLayout().add(mFormTitle,this.getColIndex(),this.getRowIndex());
+       FxViewController.getInstance().getCurrentLayout().add(mFormTitle,this.getColIndex(),this.getRowIndex());
       //  FxViewController.getInstance().getCurrentLayout().getChildren().add(mFormTitle);
         this.incRowIndex();
 

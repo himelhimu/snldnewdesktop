@@ -24,5 +24,6 @@
       <PasswordField fx:id="password" layoutX="176.0" layoutY="167.0" prefHeight="26.0" prefWidth="324.0" />
       <Button layoutX="202.0" layoutY="246.0" mnemonicParsing="false" onAction="#processLogin" prefHeight="26.0" prefWidth="197.0" text="Log In" />
       <Button layoutX="202.0" layoutY="300.0" mnemonicParsing="false" onAction="#processRegister" prefHeight="26.0" prefWidth="197.0" text="Register" />
+      <Button layoutX="202.0" layoutY="348.0" mnemonicParsing="false" onAction="#processTest" prefHeight="26.0" prefWidth="197.0" text="Test" />
    </children>
 </AnchorPane>

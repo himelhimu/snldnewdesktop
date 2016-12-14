@@ -4,24 +4,30 @@ package com.mpower.clientcollection.controller;
  * Created by hemel on 4/11/16.
  */
 
+import com.mpower.clientcollection.widgets.DragDropWidget;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.database.InitializeDatabase;
 
+import javafx.animation.FadeTransition;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -29,31 +35,43 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 import org.javarosa.form.api.FormEntryModel;
 import sample.Main;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static sample.Main.showSplash;
+import static sample.Main.splashLayout;
 
 
-
-public class FxViewController {
+public class FxViewController implements Initializable {
 
     private static FxViewController _VCInstance = null;
 
+    public static boolean isExam=false;
 
+/////TODO add the GridPane into a ScrollPane////////////////////
     //UI related variables
     private Stage curStage;
     Parent root = null;
 
-    private GridPane mGridMainLayout;
     private ScrollPane scrollPane;
-    private AnchorPane anchorPane;
+    private GridPane mGridMainLayout;
+@FXML
+private Pane splashlayout;
+    private Pane splashPane;
     //operation Variables
     //public boolean INITIALIZED = false;
 
     private FxViewController(){
         this.curStage =  Main.getMainStage();
+        //if (!isExam)
         setCurrentLayout();
+        //else
+        //setCurrentLayoutExam();
         AppLogger.getLoggerInstance().writeLog("\n"+getClass().getName()+": Initialized",AppConfiguration.APPLICATION_DEBUG);
     }
     public void showCurStage(){
@@ -63,11 +81,29 @@ public class FxViewController {
     public Stage getCurStage(){return this.curStage;}
 
     private void setCurrentLayout() {
+
         mGridMainLayout = new GridPane();
-        mGridMainLayout.setAlignment(Pos.CENTER);
+        //mGridMainLayout.setAlignment(Pos.CENTER);
         mGridMainLayout.setHgap(5);
         mGridMainLayout.setVgap(5);
         mGridMainLayout.setPadding(new Insets(5));
+        mGridMainLayout.setScaleShape(true);
+
+        /*ScrollBar scrollBar=new ScrollBar();
+        mGridMainLayout.getChildren().addAll(scrollBar);
+        scrollPane=new ScrollPane();
+       scrollPane.setVmax(500);
+        scrollPane.setFitToWidth(true);
+        //scrollPane.setContent(scrollBar);
+        scrollPane.setScaleShape(true);
+        scrollPane.setContent(mGridMainLayout);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+       // addToMainLayout();*/
+
+        scrollPane=new ScrollPane();
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
 
         /*anchorPane = new AnchorPane();*//*
         scrollPane.setAlignment(Pos.CENTER);
@@ -78,6 +114,18 @@ public class FxViewController {
         ColumnConstraints column2 = new ColumnConstraints(50, 150, 300);
         column2.setHgrow(Priority.ALWAYS);
         mGridMainLayout.getColumnConstraints().addAll(column1, column2);*/
+    }
+
+    private void addToMainLayout() {
+        scrollPane=new ScrollPane();
+        scrollPane.setPrefSize(600,600);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setContent(mGridMainLayout);
+        //scrollPane.setFitToWidth(true);
+        //scrollPane.setFitToHeight(true);
+        //scrollPane.setPannable(true);
+        //scrollPane.getChildrenUnmodifiable().setAll(mGridMainLayout);
     }
     /*public GridPane getCurrentLayout(){
         return mGridMainLayout;
@@ -105,14 +153,37 @@ public class FxViewController {
         }
         else if ( view_type == AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW ){
             showCourseOverviewStage();
+        }else if (view_type==AppConfiguration.VIEW_TYPE.TEST){
+            showTestStage();
         }
     }
 
+    private void showTestStage() {
+        Parent tempRoot=null;
+        try {
+            tempRoot=FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"test.fxml"));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (tempRoot!=null) {
+            //DragDropWidget dragDropWidgetNew=new DragDropWidget();
+            Scene scene=new Scene(tempRoot,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
+            this.curStage.setScene(scene);
+            showCurStage();
+        }else {
+            //TODO
+        }
+
+    }
+
     private void showFormViewStage(String title) {
-        mGridMainLayout = null;
+      //  mGridMainLayout = null;
         setCurrentLayout();
         Scene scene = new Scene(mGridMainLayout, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT);
         curStage.setScene(scene);
+
 
         FormViewController fvc = FormViewController.getInstance();
         fvc.clearInstance();
@@ -124,6 +195,10 @@ public class FxViewController {
         }else if(title.equals("1_2")) {
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
         }else{
+            isExam=true;
+            //destroyInstance();
+            //clearCurrentLayout();
+            //setCurrentLayoutExam();
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.EXAM_1ST;
         }
 
@@ -136,6 +211,17 @@ public class FxViewController {
                 AppLogger.getLoggerInstance().writeLog("\n"+this.getClass().getName()+": Successfully load: "+ xml_path,AppConfiguration.APPLICATION_DEBUG);
             }
         }
+    }
+
+  /*  private void clearCurrentLayout() {
+       FxViewController.getInstance().getCurrentLayout().clearConstraints(getCurrentLayout());
+    }*/
+
+    private void setCurrentLayoutExam() {
+        scrollPane=new ScrollPane();
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
+
     }
 
     private void showCourseOverviewStage() {
@@ -163,6 +249,7 @@ public class FxViewController {
             e.printStackTrace();
         }
         this.curStage.setScene(new Scene(tmpRoot, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT));
+
         showCurStage();
     }
 
@@ -197,9 +284,11 @@ public class FxViewController {
     }
 
     public void showMainStage(){
-        if (!Main.isSpalshLoaded) {
-            loadSplashScreen();
-            Main.isSpalshLoaded=true;
+        if (!Main.isSplashLoaded) {
+            //loadSplashScreen();
+            /*Stage splashStage=new Stage();
+            showSplash(splashStage);
+            Main.isSplashLoaded=true;*/
         }else
         curStage.setTitle(AppConfiguration.APPLICATION_NAME);
         //curStage.setIconified(true);
@@ -220,13 +309,43 @@ public class FxViewController {
     //Sabbir
     private void loadSplashScreen() {
         try {
-            root=FXMLLoader.load(getClass().getResource("/resources/fxml/splash_screen.fxml"));
+            splashPane= FXMLLoader.load(getClass().getResource("/resources/fxml/splash_screen.fxml"));
+            //root.getChildrenUnmodifiable().setAll(splashLayout);
+            mGridMainLayout.getChildren().addAll(splashPane);
+
+
+            FadeTransition fadeIn=new FadeTransition(Duration.seconds(10),splashPane);
+            fadeIn.setFromValue(0);
+            fadeIn.setToValue(1);
+            fadeIn.setCycleCount(1);
+
+            FadeTransition fadeOut=new FadeTransition(Duration.seconds(10),splashPane);
+            fadeOut.setFromValue(1);
+            fadeOut.setToValue(0);
+            fadeOut.setCycleCount(1);
+
+            fadeIn.play();
+
+            fadeIn.setOnFinished(event -> {
+                System.out.println("Inside fade in");
+                fadeOut.play();
+                //FxViewController.getInstance().showMainStage();
+
+            });
+
+            fadeOut.setOnFinished(event -> {
+                System.out.println("inside fadeout######");
+                FxViewController.getInstance().showMainStage();
+            });
+
+            /*Scene splashScene=new Scene(mGridMainLayout,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
+            this.curStage.setScene(splashScene);
+            curStage.show();*/
+            Main.isSplashLoaded=true;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Scene splashScene=new Scene(root,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
-        curStage.setScene(splashScene);
-        curStage.show();
+
     }
 
     //Sabbir
@@ -250,5 +369,11 @@ public class FxViewController {
     public static void destroyInstance(){
         if(_VCInstance != null)
             _VCInstance = null;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        AnchorPane anchorPane=new AnchorPane(splashPane);
+        //loadSplashScreen(splashPane,curStage);
     }
 }

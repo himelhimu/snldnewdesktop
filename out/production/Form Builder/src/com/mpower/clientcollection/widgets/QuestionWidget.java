@@ -69,7 +69,7 @@ public abstract class QuestionWidget {
         mPrompt = p;
 
         addQuestionText(p);
-        addHelpText(p);
+        //addHelpText(p);
     }
     public FormEntryPrompt getPrompt() {
         return mPrompt;
@@ -118,6 +118,7 @@ public abstract class QuestionWidget {
         System.out.print("constraint-------------------"+p.getIndex());
         FormViewController fvc = FormViewController.getInstance();
 
+        //FxViewController.getInstance().getCurrentLayout().setContent(mQuestionText);
         FxViewController.getInstance().getCurrentLayout().add(mQuestionText,fvc.getColIndex(),fvc.getRowIndex());
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mQuestionText);
         //fvc.incColIndex();

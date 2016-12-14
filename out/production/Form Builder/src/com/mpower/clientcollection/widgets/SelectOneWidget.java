@@ -3,13 +3,8 @@ package com.mpower.clientcollection.widgets;
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.sun.prism.paint.Color;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
 import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.core.model.data.SelectOneData;
@@ -27,13 +22,15 @@ import java.util.Vector;
 public class SelectOneWidget extends QuestionWidget {
     List<SelectChoice> mItems; // may take a while to compute
     ArrayList<RadioButton> buttons;
+    private ScrollPane scrollPane;
+    AnchorPane anchorPane;
 
     public SelectOneWidget(FormEntryPrompt prompt) {
         super(prompt);
-
+        scrollPane=new ScrollPane();
         mItems = prompt.getSelectChoices();
         buttons = new ArrayList<RadioButton>();
-
+        /*anchorPane=new AnchorPane();*/
         final ToggleGroup rb_group = new ToggleGroup();
 
 
@@ -60,12 +57,20 @@ public class SelectOneWidget extends QuestionWidget {
                    // r.setStyle("-fx-background-color: #ff0000; ");
                 }
 
+
                 rbContainer.getChildren().add(r);
-                rbContainer.setVgrow(r, Priority.ALWAYS);
+               // rbContainer.setVgrow(r, Priority.ALWAYS);
+
+
 
                // r.setOnCheckedChangeListener(this);
             }
+
+            /*anchorPane.getChildren().add(rbContainer);
+            scrollPane.setContent(rbContainer);*/
+            scrollPane.setContent(rbContainer);
             FormViewController fvc = FormViewController.getInstance();
+            ///FxViewController.getInstance().getCurrentLayout().setContent(rbContainer);
            FxViewController.getInstance().getCurrentLayout().add(rbContainer,fvc.getColIndex(),fvc.getRowIndex());
             //FxViewController.getInstance().getCurrentLayout().getChildren().add(rbContainer);
            // fvc.incRowIndex();

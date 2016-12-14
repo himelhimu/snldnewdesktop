@@ -78,7 +78,7 @@ public class Constants {
     public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "chapter_1_exam_en";
 
     //Test for Exam
-    public static final String EXAM_1ST="Chapter 1 Helping Babies Breathe.xml";
+    public static final String EXAM_1ST="Chapter 2 Healthy and Sick Newborn Care First Exam.xml";
     //Second Chapter English
 
     public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "first_session_second_chapter_en";

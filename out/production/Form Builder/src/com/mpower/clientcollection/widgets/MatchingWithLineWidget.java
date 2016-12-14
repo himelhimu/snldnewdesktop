@@ -20,9 +20,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.StrokeLineCap;
 import javafx.stage.Stage;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryPrompt;
 import sample.Main;
 
-public class MatchingWithLineWidget {
+public class MatchingWithLineWidget extends QuestionWidget {
 
     private Line mFirstLine = null;
     private Line mSecLine = null;
@@ -38,7 +40,8 @@ public class MatchingWithLineWidget {
     private Pane mDrawPane = null;
     private int mLineCount = 1;
 
-    public MatchingWithLineWidget() {
+    public MatchingWithLineWidget(FormEntryPrompt fep) {
+        super(fep);
         mDrawPane = new Pane();
         mDrawPane.setStyle("-fx-border-color: blue;");
         mDrawPane.setPrefWidth(400);
@@ -126,8 +129,28 @@ public class MatchingWithLineWidget {
 
         FormViewController fvc = FormViewController.getInstance();
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mDrawPane);
-        FxViewController.getInstance().getCurrentLayout().add(mDrawPane, fvc.getColIndex(), fvc.getRowIndex());
+       // FxViewController.getInstance().getCurrentLayout().add(mDrawPane, fvc.getColIndex(), fvc.getRowIndex());
         fvc.incRowIndex();
+
+    }
+
+    @Override
+    public IAnswerData getAnswer() {
+        return null;
+    }
+
+    @Override
+    public void clearAnswer() {
+
+    }
+
+    @Override
+    public void setFocus() {
+
+    }
+
+    @Override
+    public void setOnLongClickListener() {
 
     }
 

@@ -52,7 +52,7 @@ public class SelectOneButtonWidget extends QuestionWidget {
         System.out.println("In the SelectOneButton####");
        // mItems = prompt.getSelectChoices();
         mItems=prompt.getSelectChoices();
-        buttons = new ArrayList<Button>();
+        buttons = new ArrayList<>();
 
 
         // Layout holds the vertical list of buttons
@@ -82,7 +82,7 @@ public class SelectOneButtonWidget extends QuestionWidget {
                    onButtonClicked();
                });
 
-
+                buttons.add(newButton);
 
                /* buttons.add(newButton);*/
 
@@ -144,10 +144,17 @@ public class SelectOneButtonWidget extends QuestionWidget {
         buttonParams.setMargins(40, 50, 40, 0);
         addView(buttonLayout, buttonParams);*/
         FormViewController formViewController=FormViewController.getInstance();
+       /// FxViewController.getInstance().getCurrentLayout().setContent(newButton);
         FxViewController.getInstance().getCurrentLayout().add(newButton,formViewController.getColIndex(), formViewController.getRowIndex());
+        formViewController.incColIndex();
     }
 
     private void onButtonClicked() {
+        for(Button button:this.buttons){
+            if (button.isArmed()){
+                button.setStyle("-fx-base: #b6e7c9");
+            }
+        }
     }
 
     @Override
@@ -162,6 +169,11 @@ public class SelectOneButtonWidget extends QuestionWidget {
 
     @Override
     public void setFocus() {
+       for(Button button:this.buttons){
+           if (button.isFocused()){
+               button.setStyle("-fx-font: 22 arial; -fx-base: #b6e7c9;");
+           }
+       }
 
     }
 
@@ -186,7 +198,7 @@ public class SelectOneButtonWidget extends QuestionWidget {
     public int getCheckedId() {
         for (int i = 0; i < buttons.size(); ++i) {
             Button button = buttons.get(i);
-            if (button.getText().toString().equalsIgnoreCase(clickedButtonText)) {
+            if (button.getText().equalsIgnoreCase(clickedButtonText)) {
                 return i;
             }
         }
