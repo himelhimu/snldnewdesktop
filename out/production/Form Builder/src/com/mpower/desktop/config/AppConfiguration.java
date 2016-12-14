@@ -49,8 +49,8 @@ public class AppConfiguration {
         APPLICATION_NAME        = prop.getProperty("APPLICATION_NAME","SNL");
         APPLICATION_DEBUG       = Boolean.valueOf(prop.getProperty("APPLICATION_DEBUG","TRUE"));
 
-        SCREEN_WIDTH            = Integer.parseInt(prop.getProperty("SCREEN_WIDTH","400"));
-        SCREEN_HEIGHT           = Integer.parseInt(prop.getProperty("SCREEN_HEIGHT","450"));
+        SCREEN_WIDTH            = Integer.parseInt(prop.getProperty("SCREEN_WIDTH","1200"));
+        SCREEN_HEIGHT           = Integer.parseInt(prop.getProperty("SCREEN_HEIGHT","720"));
         SPLASH_WIDTH            = Integer.parseInt(prop.getProperty("SPLASH_WIDTH","676"));
         SPLASH_HEIGHT           = Integer.parseInt(prop.getProperty("SPLASH_HEIGHT","227"));
 

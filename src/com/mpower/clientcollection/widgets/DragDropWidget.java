@@ -14,6 +14,7 @@ import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.net.URL;
@@ -23,7 +24,7 @@ import java.util.ResourceBundle;
 /**
  * Created by sabbir on 12/12/16.
  */
-public class DragDropWidget implements Initializable {
+public class DragDropWidget extends QuestionWidget implements Initializable  {
     @FXML
     public Pane mAnchorPane;
     private FormEntryPrompt mPrompt;
@@ -36,8 +37,16 @@ public class DragDropWidget implements Initializable {
     private double startX,startY;
     private double distX,distY;
 
+    private ArrayList<ImageView> formImagesList;
+
     //ImageViews for holding images
     private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4;
+
+    public DragDropWidget(FormEntryPrompt prompt)
+    {
+        super(prompt);
+        mPrompt=prompt;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -143,6 +152,26 @@ public class DragDropWidget implements Initializable {
         imageView4.setOnMouseDragged(this::imageDropprd);
 
 
+
+    }
+
+    @Override
+    public IAnswerData getAnswer() {
+        return null;
+    }
+
+    @Override
+    public void clearAnswer() {
+
+    }
+
+    @Override
+    public void setFocus() {
+
+    }
+
+    @Override
+    public void setOnLongClickListener() {
 
     }
 }

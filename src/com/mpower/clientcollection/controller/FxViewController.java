@@ -28,6 +28,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -84,10 +85,10 @@ private Pane splashlayout;
 
         mGridMainLayout = new GridPane();
         //mGridMainLayout.setAlignment(Pos.CENTER);
-        mGridMainLayout.setHgap(5);
-        mGridMainLayout.setVgap(5);
+      /*  mGridMainLayout.setHgap(5);
+        mGridMainLayout.setVgap(5);*/
         mGridMainLayout.setPadding(new Insets(5));
-        mGridMainLayout.setScaleShape(true);
+       // mGridMainLayout.setScaleShape(true);
 
         /*ScrollBar scrollBar=new ScrollBar();
         mGridMainLayout.getChildren().addAll(scrollBar);
@@ -101,9 +102,12 @@ private Pane splashlayout;
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
        // addToMainLayout();*/
 
+
+
         scrollPane=new ScrollPane();
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        scrollPane.setContent(mGridMainLayout);
 
         /*anchorPane = new AnchorPane();*//*
         scrollPane.setAlignment(Pos.CENTER);
@@ -181,7 +185,7 @@ private Pane splashlayout;
     private void showFormViewStage(String title) {
       //  mGridMainLayout = null;
         setCurrentLayout();
-        Scene scene = new Scene(mGridMainLayout, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT);
+        Scene scene = new Scene(scrollPane, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT);
         curStage.setScene(scene);
 
 

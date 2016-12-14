@@ -225,7 +225,7 @@ public class WidgetFactory {
                 }else if (appearance.equals("drag-drop")) {
                    // questionWidget=new DragDropWidgetNew(fep);
                     //LogUtils.informationLog(new WidgetFactory(), " Found Drag-dropWidget");
-                    //questionWidget = new DragDropWidget(fep);
+                    questionWidget = new DragDropWidget(fep);
                 }else if(appearance.equals("line_draw")){
                     //LogUtils.informationLog(new WidgetFactory(), " Found LineDrawWidget");
                     questionWidget = new MatchingWithLineWidget(fep);
