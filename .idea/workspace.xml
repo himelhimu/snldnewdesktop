@@ -2,14 +2,360 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="JavaFXApp" />
+      <artifact name="Form Builder:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/PictureSelectWidget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/ReArrangeWidget.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-06_17-23-19/1 1 Preparation for birth_2016-12-06_17-23-19.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-06_17-24-51/1 1 Preparation for birth_2016-12-06_17-24-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-06_17-31-04/1 1 Preparation for birth_2016-12-06_17-31-04.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-06_17-53-24/1 1 Preparation for birth_2016-12-06_17-53-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_11-22-52/1 1 Preparation for birth_2016-12-07_11-22-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_11-23-55/1 1 Preparation for birth_2016-12-07_11-23-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_11-29-51/1 1 Preparation for birth_2016-12-07_11-29-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-44-42/1 1 Preparation for birth_2016-12-07_12-44-42.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-45-34/1 1 Preparation for birth_2016-12-07_12-45-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-50-34/1 1 Preparation for birth_2016-12-07_12-50-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-56-23/1 1 Preparation for birth_2016-12-07_12-56-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-57-43/1 1 Preparation for birth_2016-12-07_12-57-43.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_12-58-14/1 1 Preparation for birth_2016-12-07_12-58-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-02-13/1 1 Preparation for birth_2016-12-07_13-02-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-11-29/1 1 Preparation for birth_2016-12-07_13-11-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-12-21/1 1 Preparation for birth_2016-12-07_13-12-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-13-03/1 1 Preparation for birth_2016-12-07_13-13-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-13-48/1 1 Preparation for birth_2016-12-07_13-13-48.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-20-57/1 1 Preparation for birth_2016-12-07_14-20-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-21-38/1 1 Preparation for birth_2016-12-07_14-21-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-42-16/1 1 Preparation for birth_2016-12-07_14-42-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-44-14/1 1 Preparation for birth_2016-12-07_14-44-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-46-11/1 1 Preparation for birth_2016-12-07_14-46-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-46-48/1 1 Preparation for birth_2016-12-07_14-46-48.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-53-27/1 1 Preparation for birth_2016-12-07_14-53-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-55-06/1 1 Preparation for birth_2016-12-07_14-55-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-06-25/1 1 Preparation for birth_2016-12-07_15-06-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-12-57/1 1 Preparation for birth_2016-12-07_15-12-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-15-14/1 1 Preparation for birth_2016-12-07_15-15-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-16-34/1 1 Preparation for birth_2016-12-07_15-16-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-28-23/1 1 Preparation for birth_2016-12-07_15-28-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-28-59/1 1 Preparation for birth_2016-12-07_15-28-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-29-59/1 1 Preparation for birth_2016-12-07_15-29-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-31-13/1 1 Preparation for birth_2016-12-07_15-31-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_15-44-25/1 1 Preparation for birth_2016-12-07_15-44-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_16-29-29/1 1 Preparation for birth_2016-12-07_16-29-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_16-42-27/1 1 Preparation for birth_2016-12-07_16-42-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_16-58-18/1 1 Preparation for birth_2016-12-07_16-58-18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_17-03-58/1 1 Preparation for birth_2016-12-07_17-03-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_17-08-11/1 1 Preparation for birth_2016-12-07_17-08-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_17-18-36/1 1 Preparation for birth_2016-12-07_17-18-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_17-21-40/1 1 Preparation for birth_2016-12-07_17-21-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_17-25-16/1 1 Preparation for birth_2016-12-07_17-25-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-08-37/1 1 Preparation for birth_2016-12-08_11-08-37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-26-05/1 1 Preparation for birth_2016-12-08_11-26-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-26-55/1 1 Preparation for birth_2016-12-08_11-26-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-27-38/1 1 Preparation for birth_2016-12-08_11-27-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-31-08/1 1 Preparation for birth_2016-12-08_11-31-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-31-17/1 1 Preparation for birth_2016-12-08_11-31-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-36-40/1 1 Preparation for birth_2016-12-08_11-36-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-39-22/1 1 Preparation for birth_2016-12-08_11-39-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-43-31/1 1 Preparation for birth_2016-12-08_11-43-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-08_11-44-07/1 1 Preparation for birth_2016-12-08_11-44-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-12_16-37-15/1 1 Preparation for birth_2016-12-12_16-37-15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-12_17-13-07/1 1 Preparation for birth_2016-12-12_17-13-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-12_17-16-24/1 1 Preparation for birth_2016-12-12_17-16-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-12_17-25-26/1 1 Preparation for birth_2016-12-12_17-25-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-14_11-14-34/1 1 Preparation for birth_2016-12-14_11-14-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-14_17-55-29/1 1 Preparation for birth_2016-12-14_17-55-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-14_18-07-21/1 1 Preparation for birth_2016-12-14_18-07-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_11-22-56/1 2 At birth Dry thoroughly_2016-12-07_11-22-56.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_11-24-04/1 2 At birth Dry thoroughly_2016-12-07_11-24-04.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_12-50-38/1 2 At birth Dry thoroughly_2016-12-07_12-50-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_14-46-16/1 2 At birth Dry thoroughly_2016-12-07_14-46-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_14-53-31/1 2 At birth Dry thoroughly_2016-12-07_14-53-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_15-07-17/1 2 At birth Dry thoroughly_2016-12-07_15-07-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_15-13-17/1 2 At birth Dry thoroughly_2016-12-07_15-13-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_15-17-29/1 2 At birth Dry thoroughly_2016-12-07_15-17-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_15-31-18/1 2 At birth Dry thoroughly_2016-12-07_15-31-18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_15-44-30/1 2 At birth Dry thoroughly_2016-12-07_15-44-30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_16-29-42/1 2 At birth Dry thoroughly_2016-12-07_16-29-42.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_17-08-25/1 2 At birth Dry thoroughly_2016-12-07_17-08-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-07_17-21-46/1 2 At birth Dry thoroughly_2016-12-07_17-21-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-12_16-37-31/1 2 At birth Dry thoroughly_2016-12-12_16-37-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-12_17-13-24/1 2 At birth Dry thoroughly_2016-12-12_17-13-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-12_17-25-45/1 2 At birth Dry thoroughly_2016-12-12_17-25-45.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-12_18-16-44/1 2 At birth Dry thoroughly_2016-12-12_18-16-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-14_11-15-07/1 2 At birth Dry thoroughly_2016-12-14_11-15-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-14_17-55-36/1 2 At birth Dry thoroughly_2016-12-14_17-55-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-14_18-07-27/1 2 At birth Dry thoroughly_2016-12-14_18-07-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-14_18-13-54/1 2 At birth Dry thoroughly_2016-12-14_18-13-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 2 At birth Dry thoroughly_2016-12-14_18-14-02/1 2 At birth Dry thoroughly_2016-12-14_18-14-02.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-16-15/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-16-15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_10-29-54/1 3 Evaluation after drying Is the baby crying_2016-12-07_10-29-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-22-58/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-22-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-13/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-26/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-34/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_12-50-40/1 3 Evaluation after drying Is the baby crying_2016-12-07_12-50-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-07-56/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-07-56.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-08-12/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-08-12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-22/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-26/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-31/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-35/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-35.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-22/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-43/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-43.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-50/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-50.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-52/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-55/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-57/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-59/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-44-33/Chapter 1 Helping Babies Breathe_2016-12-07_15-44-33.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 1 Helping Babies Breathe_2016-12-07_17-08-29/Chapter 1 Helping Babies Breathe_2016-12-07_17-08-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-25-47/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-25-47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-50-37/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-50-37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-14_18-14-06/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-14_18-14-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-06_11-18-21/1 1 Preparation for birth_2016-12-06_11-18-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-06_11-21-13/1 1 Preparation for birth_2016-12-06_11-21-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-08_12-59-40/1 1 Preparation for birth_2016-12-08_12-59-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-08_13-27-27/1 1 Preparation for birth_2016-12-08_13-27-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-08_15-06-47/1 1 Preparation for birth_2016-12-08_15-06-47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_10-19-50/1 1 Preparation for birth_2016-12-12_10-19-50.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_10-21-21/1 1 Preparation for birth_2016-12-12_10-21-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_10-42-11/1 1 Preparation for birth_2016-12-12_10-42-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_10-43-08/1 1 Preparation for birth_2016-12-12_10-43-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_12-59-26/1 1 Preparation for birth_2016-12-12_12-59-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_13-13-22/1 1 Preparation for birth_2016-12-12_13-13-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_13-25-58/1 1 Preparation for birth_2016-12-12_13-25-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_13-31-36/1 1 Preparation for birth_2016-12-12_13-31-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_14-41-08/1 1 Preparation for birth_2016-12-12_14-41-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_14-48-09/1 1 Preparation for birth_2016-12-12_14-48-09.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_16-23-23/1 1 Preparation for birth_2016-12-12_16-23-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 1 Preparation for birth_2016-12-12_16-31-46/1 1 Preparation for birth_2016-12-12_16-31-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-08_13-02-23/1 2 At birth Dry thoroughly_2016-12-08_13-02-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_10-21-26/1 2 At birth Dry thoroughly_2016-12-12_10-21-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_10-43-14/1 2 At birth Dry thoroughly_2016-12-12_10-43-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_13-26-07/1 2 At birth Dry thoroughly_2016-12-12_13-26-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_13-31-51/1 2 At birth Dry thoroughly_2016-12-12_13-31-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_14-41-28/1 2 At birth Dry thoroughly_2016-12-12_14-41-28.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_14-48-24/1 2 At birth Dry thoroughly_2016-12-12_14-48-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_16-23-34/1 2 At birth Dry thoroughly_2016-12-12_16-23-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/1 2 At birth Dry thoroughly_2016-12-12_16-31-52/1 2 At birth Dry thoroughly_2016-12-12_16-31-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_10-21-30/Chapter 1 Helping Babies Breathe_2016-12-12_10-21-30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_13-31-59/Chapter 1 Helping Babies Breathe_2016-12-12_13-31-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_13-35-13/Chapter 1 Helping Babies Breathe_2016-12-12_13-35-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/ICT for Dalit Right_2016-12-05_17-36-01/ICT for Dalit Right_2016-12-05_17-36-01.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-17-55/question_wth_calculation_2016-12-05_12-17-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-18-14/question_wth_calculation_2016-12-05_12-18-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-18-23/question_wth_calculation_2016-12-05_12-18-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-26-53/question_wth_calculation_2016-12-05_12-26-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-26-59/question_wth_calculation_2016-12-05_12-26-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_12-27-12/question_wth_calculation_2016-12-05_12-27-12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_14-04-06/question_wth_calculation_2016-12-05_14-04-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_14-58-03/question_wth_calculation_2016-12-05_14-58-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-45-53/question_wth_calculation_2016-12-05_15-45-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-50-32/question_wth_calculation_2016-12-05_15-50-32.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-50-45/question_wth_calculation_2016-12-05_15-50-45.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-51-59/question_wth_calculation_2016-12-05_15-51-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-52-03/question_wth_calculation_2016-12-05_15-52-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-52-08/question_wth_calculation_2016-12-05_15-52-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-52-13/question_wth_calculation_2016-12-05_15-52-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-05_15-59-05/question_wth_calculation_2016-12-05_15-59-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-06_10-54-33/question_wth_calculation_2016-12-06_10-54-33.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-06_10-56-57/question_wth_calculation_2016-12-06_10-56-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-06_11-00-54/question_wth_calculation_2016-12-06_11-00-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/question_wth_calculation_2016-12-06_11-01-13/question_wth_calculation_2016-12-06_11-01-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_12-17-05/test_html_with_ques_2016-12-05_12-17-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_14-04-31/test_html_with_ques_2016-12-05_14-04-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_14-04-46/test_html_with_ques_2016-12-05_14-04-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_14-05-02/test_html_with_ques_2016-12-05_14-05-02.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_14-57-54/test_html_with_ques_2016-12-05_14-57-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_15-04-54/test_html_with_ques_2016-12-05_15-04-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-05_15-44-32/test_html_with_ques_2016-12-05_15-44-32.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/test_html_with_ques_2016-12-06_10-51-53/test_html_with_ques_2016-12-06_10-51-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-05_12-17-44/testing_desktop_2_2016-12-05_12-17-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-05_14-05-06/testing_desktop_2_2016-12-05_14-05-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-05_14-57-57/testing_desktop_2_2016-12-05_14-57-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-05_15-45-40/testing_desktop_2_2016-12-05_15-45-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-06_10-52-07/testing_desktop_2_2016-12-06_10-52-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-06_10-57-57/testing_desktop_2_2016-12-06_10-57-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/h/testing_desktop_2_2016-12-06_11-01-03/testing_desktop_2_2016-12-06_11-01-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instances/question_wth_calculation_2016-12-12_18-10-35/question_wth_calculation_2016-12-12_18-10-35.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-06_17-23-19/1 1 Preparation for birth_2016-12-06_17-23-19.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-06_17-24-51/1 1 Preparation for birth_2016-12-06_17-24-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-06_17-31-04/1 1 Preparation for birth_2016-12-06_17-31-04.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-06_17-53-24/1 1 Preparation for birth_2016-12-06_17-53-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_11-22-52/1 1 Preparation for birth_2016-12-07_11-22-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_11-23-55/1 1 Preparation for birth_2016-12-07_11-23-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_11-29-51/1 1 Preparation for birth_2016-12-07_11-29-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-44-42/1 1 Preparation for birth_2016-12-07_12-44-42.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-45-34/1 1 Preparation for birth_2016-12-07_12-45-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-50-34/1 1 Preparation for birth_2016-12-07_12-50-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-56-23/1 1 Preparation for birth_2016-12-07_12-56-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-57-43/1 1 Preparation for birth_2016-12-07_12-57-43.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_12-58-14/1 1 Preparation for birth_2016-12-07_12-58-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_13-02-13/1 1 Preparation for birth_2016-12-07_13-02-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_13-11-29/1 1 Preparation for birth_2016-12-07_13-11-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_13-12-21/1 1 Preparation for birth_2016-12-07_13-12-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_13-13-03/1 1 Preparation for birth_2016-12-07_13-13-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_13-13-48/1 1 Preparation for birth_2016-12-07_13-13-48.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-20-57/1 1 Preparation for birth_2016-12-07_14-20-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-21-38/1 1 Preparation for birth_2016-12-07_14-21-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-42-16/1 1 Preparation for birth_2016-12-07_14-42-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-44-14/1 1 Preparation for birth_2016-12-07_14-44-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-46-11/1 1 Preparation for birth_2016-12-07_14-46-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-46-48/1 1 Preparation for birth_2016-12-07_14-46-48.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-53-27/1 1 Preparation for birth_2016-12-07_14-53-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_14-55-06/1 1 Preparation for birth_2016-12-07_14-55-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-06-25/1 1 Preparation for birth_2016-12-07_15-06-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-12-57/1 1 Preparation for birth_2016-12-07_15-12-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-15-14/1 1 Preparation for birth_2016-12-07_15-15-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-16-34/1 1 Preparation for birth_2016-12-07_15-16-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-28-23/1 1 Preparation for birth_2016-12-07_15-28-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-28-59/1 1 Preparation for birth_2016-12-07_15-28-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-29-59/1 1 Preparation for birth_2016-12-07_15-29-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-31-13/1 1 Preparation for birth_2016-12-07_15-31-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_15-44-25/1 1 Preparation for birth_2016-12-07_15-44-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_16-29-29/1 1 Preparation for birth_2016-12-07_16-29-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_16-42-27/1 1 Preparation for birth_2016-12-07_16-42-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_16-58-18/1 1 Preparation for birth_2016-12-07_16-58-18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_17-03-58/1 1 Preparation for birth_2016-12-07_17-03-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_17-08-11/1 1 Preparation for birth_2016-12-07_17-08-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_17-18-36/1 1 Preparation for birth_2016-12-07_17-18-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_17-21-40/1 1 Preparation for birth_2016-12-07_17-21-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-07_17-25-16/1 1 Preparation for birth_2016-12-07_17-25-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-08-37/1 1 Preparation for birth_2016-12-08_11-08-37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-26-05/1 1 Preparation for birth_2016-12-08_11-26-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-26-55/1 1 Preparation for birth_2016-12-08_11-26-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-27-38/1 1 Preparation for birth_2016-12-08_11-27-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-31-08/1 1 Preparation for birth_2016-12-08_11-31-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-31-17/1 1 Preparation for birth_2016-12-08_11-31-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-36-40/1 1 Preparation for birth_2016-12-08_11-36-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-39-22/1 1 Preparation for birth_2016-12-08_11-39-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-43-31/1 1 Preparation for birth_2016-12-08_11-43-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-08_11-44-07/1 1 Preparation for birth_2016-12-08_11-44-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-12_16-37-15/1 1 Preparation for birth_2016-12-12_16-37-15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-12_17-13-07/1 1 Preparation for birth_2016-12-12_17-13-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-12_17-16-24/1 1 Preparation for birth_2016-12-12_17-16-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-12_17-25-26/1 1 Preparation for birth_2016-12-12_17-25-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-14_11-14-34/1 1 Preparation for birth_2016-12-14_11-14-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-14_17-55-29/1 1 Preparation for birth_2016-12-14_17-55-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 1 Preparation for birth_2016-12-14_18-07-21/1 1 Preparation for birth_2016-12-14_18-07-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_11-22-56/1 2 At birth Dry thoroughly_2016-12-07_11-22-56.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_11-24-04/1 2 At birth Dry thoroughly_2016-12-07_11-24-04.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_12-50-38/1 2 At birth Dry thoroughly_2016-12-07_12-50-38.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_14-46-16/1 2 At birth Dry thoroughly_2016-12-07_14-46-16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_14-53-31/1 2 At birth Dry thoroughly_2016-12-07_14-53-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_15-07-17/1 2 At birth Dry thoroughly_2016-12-07_15-07-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_15-13-17/1 2 At birth Dry thoroughly_2016-12-07_15-13-17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_15-17-29/1 2 At birth Dry thoroughly_2016-12-07_15-17-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_15-31-18/1 2 At birth Dry thoroughly_2016-12-07_15-31-18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_15-44-30/1 2 At birth Dry thoroughly_2016-12-07_15-44-30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_16-29-42/1 2 At birth Dry thoroughly_2016-12-07_16-29-42.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_17-08-25/1 2 At birth Dry thoroughly_2016-12-07_17-08-25.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-07_17-21-46/1 2 At birth Dry thoroughly_2016-12-07_17-21-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-12_16-37-31/1 2 At birth Dry thoroughly_2016-12-12_16-37-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-12_17-13-24/1 2 At birth Dry thoroughly_2016-12-12_17-13-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-12_17-25-45/1 2 At birth Dry thoroughly_2016-12-12_17-25-45.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-12_18-16-44/1 2 At birth Dry thoroughly_2016-12-12_18-16-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-14_11-15-07/1 2 At birth Dry thoroughly_2016-12-14_11-15-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-14_17-55-36/1 2 At birth Dry thoroughly_2016-12-14_17-55-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 2 At birth Dry thoroughly_2016-12-14_18-07-27/1 2 At birth Dry thoroughly_2016-12-14_18-07-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-16-15/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-16-15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_10-29-54/1 3 Evaluation after drying Is the baby crying_2016-12-07_10-29-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-22-58/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-22-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-13/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-26/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-34/1 3 Evaluation after drying Is the baby crying_2016-12-07_11-24-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_12-50-40/1 3 Evaluation after drying Is the baby crying_2016-12-07_12-50-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-07-56/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-07-56.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-08-12/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-08-12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-22/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-26/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-31/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-35/1 3 Evaluation after drying Is the baby crying_2016-12-07_15-13-35.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-22/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-43/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-43.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-50/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-50.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-52/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-55/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-57/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-59/Chapter 1 Helping Babies Breathe_2016-12-07_15-42-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_15-44-33/Chapter 1 Helping Babies Breathe_2016-12-07_15-44-33.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 1 Helping Babies Breathe_2016-12-07_17-08-29/Chapter 1 Helping Babies Breathe_2016-12-07_17-08-29.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-25-47/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-25-47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-50-37/Chapter 2 Healthy and Sick Newborn Care First Exam_2016-12-12_17-50-37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-06_11-18-21/1 1 Preparation for birth_2016-12-06_11-18-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-06_11-21-13/1 1 Preparation for birth_2016-12-06_11-21-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-08_12-59-40/1 1 Preparation for birth_2016-12-08_12-59-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-08_13-27-27/1 1 Preparation for birth_2016-12-08_13-27-27.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-08_15-06-47/1 1 Preparation for birth_2016-12-08_15-06-47.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_10-19-50/1 1 Preparation for birth_2016-12-12_10-19-50.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_10-21-21/1 1 Preparation for birth_2016-12-12_10-21-21.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_10-42-11/1 1 Preparation for birth_2016-12-12_10-42-11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_10-43-08/1 1 Preparation for birth_2016-12-12_10-43-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_12-59-26/1 1 Preparation for birth_2016-12-12_12-59-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_13-13-22/1 1 Preparation for birth_2016-12-12_13-13-22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_13-25-58/1 1 Preparation for birth_2016-12-12_13-25-58.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_13-31-36/1 1 Preparation for birth_2016-12-12_13-31-36.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_14-41-08/1 1 Preparation for birth_2016-12-12_14-41-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_14-48-09/1 1 Preparation for birth_2016-12-12_14-48-09.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_16-23-23/1 1 Preparation for birth_2016-12-12_16-23-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 1 Preparation for birth_2016-12-12_16-31-46/1 1 Preparation for birth_2016-12-12_16-31-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-08_13-02-23/1 2 At birth Dry thoroughly_2016-12-08_13-02-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_10-21-26/1 2 At birth Dry thoroughly_2016-12-12_10-21-26.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_10-43-14/1 2 At birth Dry thoroughly_2016-12-12_10-43-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_13-26-07/1 2 At birth Dry thoroughly_2016-12-12_13-26-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_13-31-51/1 2 At birth Dry thoroughly_2016-12-12_13-31-51.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_14-41-28/1 2 At birth Dry thoroughly_2016-12-12_14-41-28.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_14-48-24/1 2 At birth Dry thoroughly_2016-12-12_14-48-24.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_16-23-34/1 2 At birth Dry thoroughly_2016-12-12_16-23-34.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/1 2 At birth Dry thoroughly_2016-12-12_16-31-52/1 2 At birth Dry thoroughly_2016-12-12_16-31-52.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_10-21-30/Chapter 1 Helping Babies Breathe_2016-12-12_10-21-30.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_13-31-59/Chapter 1 Helping Babies Breathe_2016-12-12_13-31-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/Chapter 1 Helping Babies Breathe_2016-12-12_13-35-13/Chapter 1 Helping Babies Breathe_2016-12-12_13-35-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/ICT for Dalit Right_2016-12-05_17-36-01/ICT for Dalit Right_2016-12-05_17-36-01.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-17-55/question_wth_calculation_2016-12-05_12-17-55.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-18-14/question_wth_calculation_2016-12-05_12-18-14.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-18-23/question_wth_calculation_2016-12-05_12-18-23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-26-53/question_wth_calculation_2016-12-05_12-26-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-26-59/question_wth_calculation_2016-12-05_12-26-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_12-27-12/question_wth_calculation_2016-12-05_12-27-12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_14-04-06/question_wth_calculation_2016-12-05_14-04-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_14-58-03/question_wth_calculation_2016-12-05_14-58-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-45-53/question_wth_calculation_2016-12-05_15-45-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-50-32/question_wth_calculation_2016-12-05_15-50-32.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-50-45/question_wth_calculation_2016-12-05_15-50-45.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-51-59/question_wth_calculation_2016-12-05_15-51-59.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-52-03/question_wth_calculation_2016-12-05_15-52-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-52-08/question_wth_calculation_2016-12-05_15-52-08.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-52-13/question_wth_calculation_2016-12-05_15-52-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-05_15-59-05/question_wth_calculation_2016-12-05_15-59-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-06_10-54-33/question_wth_calculation_2016-12-06_10-54-33.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-06_10-56-57/question_wth_calculation_2016-12-06_10-56-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-06_11-00-54/question_wth_calculation_2016-12-06_11-00-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/question_wth_calculation_2016-12-06_11-01-13/question_wth_calculation_2016-12-06_11-01-13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_12-17-05/test_html_with_ques_2016-12-05_12-17-05.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_14-04-31/test_html_with_ques_2016-12-05_14-04-31.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_14-04-46/test_html_with_ques_2016-12-05_14-04-46.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_14-05-02/test_html_with_ques_2016-12-05_14-05-02.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_14-57-54/test_html_with_ques_2016-12-05_14-57-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_15-04-54/test_html_with_ques_2016-12-05_15-04-54.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-05_15-44-32/test_html_with_ques_2016-12-05_15-44-32.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/test_html_with_ques_2016-12-06_10-51-53/test_html_with_ques_2016-12-06_10-51-53.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-05_12-17-44/testing_desktop_2_2016-12-05_12-17-44.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-05_14-05-06/testing_desktop_2_2016-12-05_14-05-06.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-05_14-57-57/testing_desktop_2_2016-12-05_14-57-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-05_15-45-40/testing_desktop_2_2016-12-05_15-45-40.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-06_10-52-07/testing_desktop_2_2016-12-06_10-52-07.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-06_10-57-57/testing_desktop_2_2016-12-06_10-57-57.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/h/testing_desktop_2_2016-12-06_11-01-03/testing_desktop_2_2016-12-06_11-01-03.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Form Builder/instances/question_wth_calculation_2016-12-12_18-10-35/question_wth_calculation_2016-12-12_18-10-35.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/DragDropWidget.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/DragDropWidget.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/WidgetFactory.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/clientcollection/widgets/WidgetFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/desktop/config/AppConfiguration.class" afterPath="$PROJECT_DIR$/out/production/Form Builder/com/mpower/desktop/config/AppConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/test_snl_db.db" afterPath="$PROJECT_DIR$/out/production/Form Builder/test_snl_db.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_snl_db.db" afterPath="$PROJECT_DIR$/test_snl_db.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App_configuration.xml" afterPath="$PROJECT_DIR$/App_configuration.xml" />
@@ -18,12 +364,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/App_configuration.xml" afterPath="$PROJECT_DIR$/out/production/Form Builder/App_configuration.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/appLog.txt" afterPath="$PROJECT_DIR$/out/production/Form Builder/appLog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/DragDropWidget.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/DragDropWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/WidgetFactory.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/desktop/config/AppConfiguration.java" afterPath="$PROJECT_DIR$/out/production/Form Builder/src/com/mpower/desktop/config/AppConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" afterPath="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mpower/desktop/config/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/com/mpower/desktop/config/AppConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/fxml/test.fxml" afterPath="$PROJECT_DIR$/src/resources/fxml/test.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,21 +425,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WidgetFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java">
+      <file leaf-file-name="ReArrangeWidget.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/ReArrangeWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FxViewController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="187" column="42" lean-forward="false" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+            <state relative-caret-position="294">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,21 +437,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App_configuration.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App_configuration.xml">
+      <file leaf-file-name="PictureSelectWidget.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/PictureSelectWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContentViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -205,21 +528,22 @@
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/resources/fxml/Login.fxml" />
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidgetNew.java" />
-        <option value="$PROJECT_DIR$/src/resources/fxml/test.fxml" />
-        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java" />
         <option value="$PROJECT_DIR$/src/com/mpower/desktop/config/AppConfiguration.java" />
         <option value="$PROJECT_DIR$/App_configuration.xml" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java" />
+        <option value="$PROJECT_DIR$/src/resources/fxml/test.fxml" />
         <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/ReArrangeWidget.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="52" />
-    <option name="width" value="1305" />
-    <option name="height" value="685" />
+    <option name="x" value="49" />
+    <option name="y" value="24" />
+    <option name="width" value="1317" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -259,7 +583,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,6 +628,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rearrange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,8 +963,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instances" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instances" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1 1 Preparation for birth_2016-12-15_10-48-12" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -590,7 +1016,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -814,7 +1240,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="52" width="1305" height="685" extended-state="0" />
+    <frame x="49" y="24" width="1317" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -824,10 +1250,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46721312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4581498" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25440612" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19969627" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29446936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -846,7 +1273,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29446936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -871,74 +1297,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Form Builder.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/IntroViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/introductory_video.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="19" column="103" lean-forward="false" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/login.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration_profession.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration_new.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/config/AppLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AppPreloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appLog.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -996,13 +1354,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/registration.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/database/InitializeDatabase.java">
@@ -1013,13 +1371,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/htmlview.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidgetOld.java" />
@@ -1045,20 +1403,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/splash_screen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/SelectOneWidget.java">
@@ -1128,23 +1479,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/fxml/chapter_content.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="124" column="36" lean-forward="false" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="50" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/Login.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/Login.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/URL.java">
@@ -1161,14 +1512,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1208,16 +1551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#3153#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2404#2405#0" expanded="false" />
-            <element signature="e#2445#2446#0" expanded="false" />
-            <element signature="e#2583#2584#0" expanded="false" />
-            <element signature="e#2601#2602#0" expanded="false" />
-            <element signature="e#2650#2651#0" expanded="false" />
-            <element signature="e#2668#2669#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,37 +1558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="134" column="71" lean-forward="false" selection-start-line="134" selection-start-column="71" selection-end-line="134" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/PictureSelectionWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/fxml/test.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1267,37 +1569,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java">
+    <entry file="file://$PROJECT_DIR$/App_configuration.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/ContentViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
+        <state relative-caret-position="756">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App_configuration.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/WidgetFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        <state relative-caret-position="18">
+          <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AppPreloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_13-13-48/1 1 Preparation for birth_2016-12-07_13-13-48.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instances/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44/1 3 Evaluation after drying Is the baby crying_2016-12-06_18-00-44.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-07_14-20-57/1 1 Preparation for birth_2016-12-07_14-20-57.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instances/1 1 Preparation for birth_2016-12-15_10-48-12/1 1 Preparation for birth_2016-12-15_10-48-12.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/PictureSelectionWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/desktop/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2293">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/controller/FxViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="187" column="42" lean-forward="false" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+        <state relative-caret-position="252">
+          <caret line="177" column="42" lean-forward="true" selection-start-line="177" selection-start-column="42" selection-end-line="177" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/fxml/test.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/DragDropWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-574">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/ReArrangeWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mpower/clientcollection/widgets/PictureSelectWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,7 +1776,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

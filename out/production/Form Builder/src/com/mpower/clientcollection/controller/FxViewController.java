@@ -5,6 +5,7 @@ package com.mpower.clientcollection.controller;
  */
 
 import com.mpower.clientcollection.widgets.DragDropWidget;
+import com.mpower.clientcollection.widgets.ReArrangeWidget;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
@@ -173,12 +174,15 @@ private Pane splashlayout;
         }
         if (tempRoot!=null) {
             //DragDropWidget dragDropWidgetNew=new DragDropWidget();
+            /*ReArrangeWidget reArrangeWidget=new ReArrangeWidget();
+            reArrangeWidget.setImages();*/
             Scene scene=new Scene(tempRoot,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
             this.curStage.setScene(scene);
             showCurStage();
         }else {
             //TODO
         }
+
 
     }
 

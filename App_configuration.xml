@@ -4,8 +4,8 @@
 	<comment>Appconfiguration</comment>
     <entry key="APPLICATION_DEBUG">TRUE</entry>
     <entry key="APPLICATION_NAME">SNL Desktop Application</entry>
-	<entry key="SCREEN_WIDTH">1200</entry>
-    <entry key="SCREEN_HEIGHT">768</entry>
+	<entry key="SCREEN_WIDTH">700</entry>
+    <entry key="SCREEN_HEIGHT">500</entry>
     <entry key="SPLASH_WIDTH">676</entry>
     <entry key="SPLASH_HEIGHT">227</entry>
     <entry key="LOGIN_NAME">SNL LOGIN</entry>
