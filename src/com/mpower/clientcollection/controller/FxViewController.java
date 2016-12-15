@@ -5,6 +5,7 @@ package com.mpower.clientcollection.controller;
  */
 
 import com.mpower.clientcollection.widgets.DragDropWidget;
+import com.mpower.clientcollection.widgets.PictureSelectWidget;
 import com.mpower.clientcollection.widgets.ReArrangeWidget;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
@@ -53,17 +54,15 @@ public class FxViewController implements Initializable {
 
     private static FxViewController _VCInstance = null;
 
-    public static boolean isExam=false;
 
-/////TODO add the GridPane into a ScrollPane////////////////////
     //UI related variables
     private Stage curStage;
     Parent root = null;
 
     private ScrollPane scrollPane;
     private GridPane mGridMainLayout;
-@FXML
-private Pane splashlayout;
+    @FXML
+    private Pane splashlayout;
     private Pane splashPane;
     //operation Variables
     //public boolean INITIALIZED = false;
@@ -76,6 +75,7 @@ private Pane splashlayout;
         //setCurrentLayoutExam();
         AppLogger.getLoggerInstance().writeLog("\n"+getClass().getName()+": Initialized",AppConfiguration.APPLICATION_DEBUG);
     }
+
     public void showCurStage(){
         this.curStage.show();
     }
@@ -86,22 +86,10 @@ private Pane splashlayout;
 
         mGridMainLayout = new GridPane();
         //mGridMainLayout.setAlignment(Pos.CENTER);
-      /*  mGridMainLayout.setHgap(5);
-        mGridMainLayout.setVgap(5);*/
+        mGridMainLayout.setHgap(5);
+        mGridMainLayout.setVgap(5);
         mGridMainLayout.setPadding(new Insets(5));
        // mGridMainLayout.setScaleShape(true);
-
-        /*ScrollBar scrollBar=new ScrollBar();
-        mGridMainLayout.getChildren().addAll(scrollBar);
-        scrollPane=new ScrollPane();
-       scrollPane.setVmax(500);
-        scrollPane.setFitToWidth(true);
-        //scrollPane.setContent(scrollBar);
-        scrollPane.setScaleShape(true);
-        scrollPane.setContent(mGridMainLayout);
-        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
-        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
-       // addToMainLayout();*/
 
 
 
@@ -164,7 +152,7 @@ private Pane splashlayout;
     }
 
     private void showTestStage() {
-        Parent tempRoot=null;
+      /*  Parent tempRoot=null;
         try {
             tempRoot=FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"test.fxml"));
 
@@ -174,14 +162,26 @@ private Pane splashlayout;
         }
         if (tempRoot!=null) {
             //DragDropWidget dragDropWidgetNew=new DragDropWidget();
-            /*ReArrangeWidget reArrangeWidget=new ReArrangeWidget();
-            reArrangeWidget.setImages();*/
+            *//*ReArrangeWidget reArrangeWidget=new ReArrangeWidget();
+            reArrangeWidget.setImages();*//*
             Scene scene=new Scene(tempRoot,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
             this.curStage.setScene(scene);
             showCurStage();
         }else {
             //TODO
-        }
+        }*/
+        PictureSelectWidget pictureSelectWidget=new PictureSelectWidget();
+        FXMLLoader fxmlLoader=new FXMLLoader(PictureSelectWidget.class.getResource(AppConfiguration.FXML_PATH+"htmlview.fxml"));
+        fxmlLoader.setController(pictureSelectWidget);
+        /*try {
+            pictureSelectWidget.mGridPane=fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+        Scene scene=new Scene(pictureSelectWidget.mGridPane,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
+        this.curStage.setScene(scene);
+        showCurStage();
 
 
     }
@@ -203,10 +203,6 @@ private Pane splashlayout;
         }else if(title.equals("1_2")) {
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
         }else{
-            isExam=true;
-            //destroyInstance();
-            //clearCurrentLayout();
-            //setCurrentLayoutExam();
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.EXAM_1ST;
         }
 

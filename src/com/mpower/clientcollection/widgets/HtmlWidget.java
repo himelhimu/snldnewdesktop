@@ -19,6 +19,7 @@ import org.javarosa.form.api.FormEntryPrompt;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
@@ -30,7 +31,7 @@ public class HtmlWidget extends QuestionWidget{
     @FXML
     private GridPane webGridPane;
     public String url;
-    Vector<SelectChoice> mItems;
+    List<SelectChoice> mItems;
 
     public HtmlWidget( FormEntryPrompt prompt) {
         this(prompt, true);
@@ -39,6 +40,7 @@ public class HtmlWidget extends QuestionWidget{
 
     protected HtmlWidget(FormEntryPrompt prompt, boolean derived) {
         super(prompt);
+        mItems= mPrompt.getSelectChoices();
         final WebView browser = new WebView();
         final WebEngine webEngine = browser.getEngine();
 
@@ -69,25 +71,26 @@ public class HtmlWidget extends QuestionWidget{
         } catch (InvalidReferenceException e) {
             e.printStackTrace();
         }*/
+        String htmlUri="jr://images/"+mPrompt.getSelectChoiceText(mItems.get(0));
 
-     String htmlPath="file:"+"/home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth-media/session_one.html";
+        String htmlFileName="";
+
+        try {
+            htmlFileName+=ReferenceManager._().DeriveReference(htmlUri).getLocalURI();
+        } catch (InvalidReferenceException e) {
+            e.printStackTrace();
+        }
+        System.out.println(htmlFileName+"######");
+        String htmlPath="file:"+"/home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth-media/session_one.html";
         System.out.println("htmlPath"+htmlPath);
         webEngine.load(htmlPath);
 
-        ////////
-        /*scrollPane.setPrefHeight(600);
-        scrollPane.setPrefWidth(400);*/
+        //webEngine.load(htmlFileName);
+
+
         FormViewController fvc = FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(scrollPane,fvc.getColIndex(),fvc.getRowIndex());
-       // FxViewController.getInstance().getCurrentLayout().setContent(scrollPane);
-       // FxViewController.getInstance().getCurrentLayout().getChildren().add(scrollPane);
-        //fvc.incRowIndex();
-        fvc.incColIndex();
-        //fvc.decColIndex();
-        /*FormViewController formViewController=FormViewController.getInstance();
-        formViewController.createNextButton();*/
-       //FxViewController.getInstance().getCurrentLayout().add(FormViewController.mNextButton,fvc.getColIndex()+1,fvc.getRowIndex());
-        //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
+        fvc.incRowIndex();
 
     }
 

@@ -1126,3 +1126,51 @@ com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 2 At birth Dry thoroughly.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 2 At birth Dry thoroughly.xml
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
+com.mpower.clientcollection.controller.FxViewController: Initialized
