@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>৩.২ শিশুর সংক্রমণ সনাক্ত করে, দ্রুত চিকিৎসা ব্যবস্থা গ্রহণ করুন</h:title>
+    <model>
+      <instance>
+        <session_2_chap_3 id="second_session_third_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter3/>
+          <s2_q1/>
+          <cal1/>
+          <s2_q2/>
+          <cal2/>
+          <s2_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_2_chap_3>
+      </instance>
+      <bind nodeset="/session_2_chap_3/chapter3" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_3/s2_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_3/s2_q1  = 't',1,0)" nodeset="/session_2_chap_3/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_3/s2_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_3/s2_q2  = 't',1,0)" nodeset="/session_2_chap_3/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_3/s2_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_3/s2_q3  = 't',1,0)" nodeset="/session_2_chap_3/cal3" type="string"/>
+      <bind calculate=" /session_2_chap_3/cal1 + /session_2_chap_3/cal2 + /session_2_chap_3/cal3 " nodeset="/session_2_chap_3/correctAns" type="string"/>
+      <bind calculate="if( /session_2_chap_3/cal1 + /session_2_chap_3/cal2 + /session_2_chap_3/cal3 =1,'১',' ')" nodeset="/session_2_chap_3/trans" type="string"/>
+      <bind calculate="if( /session_2_chap_3/cal1 + /session_2_chap_3/cal2 + /session_2_chap_3/cal3 =2,'২',' ')" nodeset="/session_2_chap_3/transs" type="string"/>
+      <bind calculate="if( /session_2_chap_3/cal1 + /session_2_chap_3/cal2 + /session_2_chap_3/cal3 =3,'৩',' ')" nodeset="/session_2_chap_3/transss" type="string"/>
+      <bind calculate="if( /session_2_chap_3/cal1 + /session_2_chap_3/cal2 + /session_2_chap_3/cal3 =0,'০',' ')" nodeset="/session_2_chap_3/transsss" type="string"/>
+      <bind nodeset="/session_2_chap_3/corrAns1" readonly="true()" relevant=" /session_2_chap_3/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_2_chap_3/corrAns2" readonly="true()" relevant=" /session_2_chap_3/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_2_chap_3/corrAns3" readonly="true()" relevant=" /session_2_chap_3/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_2_chap_3/corrAns4" readonly="true()" relevant=" /session_2_chap_3/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_2_chap_3/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'e62bf8e7c05342639d969b6c20e128fb'" nodeset="/session_2_chap_3/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_2_chap_3/chapter3">
+      <label>Chapter 3</label>
+      <item>
+        <label>session_two.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_3/s2_q1">
+      <label>১. মারাত্মক সংক্রমণে কি ব্যবস্থাপনা দিতে হবে?</label>
+      <item>
+        <label>এ্যান্টিবায়োটিকের প্রথম ডোজ দিতে হবে। মাংশপেশীতে ইনজেকশন “জেন্টামাইসিন” ৫ হতে ৭.৫ মি.গ্রা/কেজি/দিন এবং i)
+ 
+এমোক্সিসিলিন
+ ড্রপ-৫০ মি.গ্রা/কেজি/দিন ও দ্রুত নিকটস্থ উপজেলা স্বাস্থ্যকেন্দ্রে রেফার করুন</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>শুধুমাত্র নিকটস্থ উপজেলা স্বাস্থ্যকেন্দ্রে রেফার করুন</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>কোন চিকিৎসার প্রয়োজন নাই</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_3/s2_q2">
+      <label>২.মা’কে নাভীর সংক্রমণের ক্ষেত্রে কি পরামর্শ দিতে হবে?</label>
+      <item>
+        <label>নাভী শুকনো রাখতে হবে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>যথাযথ অ্যান্টিবায়োটিক ৫ দিন চালিয়ে যেতে হবে</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>উপরের দু’টি</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_3/s2_q3">
+      <label>৩.রেফার করার ক্ষেত্রে কোনটি প্রযোজ্য?</label>
+      <item>
+        <label>রেফারেল স্লিপ প্রদান করতে হবে ও যাতায়াতের জন্য যানবাহনের ব্যবস্থা করতে হবে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>শিশুকে উষ্ণ রাখতে হবে</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>উপরের দু’টি</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_2_chap_3/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_3/trans "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_3/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_3/transs "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_3/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_3/transss "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_3/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_3/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>

@@ -2,6 +2,7 @@ package com.mpower.clientcollection.widgets;
 
 import com.mpower.clientcollection.controller.FormViewController;
 
+import com.mpower.clientcollection.controller.FxViewController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -21,9 +22,8 @@ import java.util.ResourceBundle;
 /**
  * Created by sabbir on 12/12/16.
  */
-public class DragDropWidget extends QuestionWidget implements Initializable  {
-    @FXML
-    public Pane mAnchorPane;
+public class DragDropWidget extends QuestionWidget{
+    public AnchorPane mAnchorPane;
     private FormEntryPrompt mPrompt;
     private int[] buttonValue;
     private Label mAnswerText;
@@ -42,11 +42,13 @@ public class DragDropWidget extends QuestionWidget implements Initializable  {
     public DragDropWidget(FormEntryPrompt prompt)
     {
         super(prompt);
+        mAnchorPane=new AnchorPane();
         mPrompt=prompt;
+        initialize();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize() {
        // mPane.autosize();
 
         setImages();
@@ -138,6 +140,9 @@ public class DragDropWidget extends QuestionWidget implements Initializable  {
 
         }
 
+        FormViewController fvc=FormViewController.getInstance();
+        FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getRowIndex(),fvc.getColIndex());
+        fvc.incRowIndex();
         imageView1.setOnMousePressed(this::imageDragged);
         imageView2.setOnMousePressed(this::imageDragged);
         imageView3.setOnMousePressed(this::imageDragged);

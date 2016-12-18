@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Chapter 2- Healthy and Sick Newborn Care (First Exam)</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/chapter2_1_exam_en/c2_1_q5/5:label">
+            <value form="image">jr://images/common.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q5/3:label">
+            <value form="image">jr://images/c2_1_q5_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q12:label">
+            <value form="image">jr://images/c2_1_q12.png</value>
+            <value>12. What kind of complications can be faced by mothers who are breast feeding?</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q7/1:label">
+            <value form="image">jr://images/c2_1_q7_1.png</value>
+            <value>1 minute</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q7:label">
+            <value form="image">jr://images/c2_1_q7.png</value>
+            <value>7. While taking temperature for how long should the thermometer be placed in the axilla?</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q5/1:label">
+            <value form="image">jr://images/c2_1_q5_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q7/2:label">
+            <value form="image">jr://images/c2_1_q7_2.png</value>
+            <value>2 minutes</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q5/2:label">
+            <value form="image">jr://images/c2_1_q5_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q7/3:label">
+            <value form="image">jr://images/c2_1_q7_3.png</value>
+            <value>3 minutes</value>
+          </text>
+          <text id="/chapter2_1_exam_en/c2_1_q5/4:label">
+            <value form="image">jr://images/c2_1_q5_4.png</value>
+            <value>Option4</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chapter2_1_exam_en id="chapter_2_1_exam_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <c2_1_q1/>
+          <c1/>
+          <c2_1_q2/>
+          <c2/>
+          <c2_1_q3/>
+          <c3/>
+          <c2_1_q4/>
+          <c4/>
+          <c2_1_q5/>
+          <c5/>
+          <c2_1_q6/>
+          <c6/>
+          <c2_1_q7/>
+          <c7/>
+          <c2_1_q8/>
+          <c8/>
+          <c2_1_q9/>
+          <c9/>
+          <c2_1_q10/>
+          <c10/>
+          <c2_1_q11/>
+          <c11/>
+          <c2_1_q12/>
+          <c12/>
+          <c2_1_q13/>
+          <c13/>
+          <c2_1_q14/>
+          <c14/>
+          <c2_1_q15/>
+          <c15/>
+          <c2_1_q16/>
+          <c16/>
+          <c2_1_q17/>
+          <c17/>
+          <c2_1_q18/>
+          <c18/>
+          <c2_1_q19/>
+          <c19/>
+          <c2_1_q20/>
+          <c20/>
+          <total/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </chapter2_1_exam_en>
+      </instance>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q1" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q1  = '3',1,0)" nodeset="/chapter2_1_exam_en/c1" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q2" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q2  = '3',1,0)" nodeset="/chapter2_1_exam_en/c2" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q3" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q3  = '1',1,0)" nodeset="/chapter2_1_exam_en/c3" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q4" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q4  = '1',1,0)" nodeset="/chapter2_1_exam_en/c4" readonly="true()" type="string"/>
+      <bind constraint=".='1 2 3 4'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q5" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q5  = '1 2 3 4',1,0)" nodeset="/chapter2_1_exam_en/c5" readonly="true()" type="string"/>
+      <bind constraint=".='2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q6" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q6  = '2',1,0)" nodeset="/chapter2_1_exam_en/c6" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q7" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q7  = '3',1,0)" nodeset="/chapter2_1_exam_en/c7" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q8" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q8  = '1',1,0)" nodeset="/chapter2_1_exam_en/c8" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q9" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q9  = '3',1,0)" nodeset="/chapter2_1_exam_en/c9" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q10" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q10  = '3',1,0)" nodeset="/chapter2_1_exam_en/c10" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q11" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q11  = '1',1,0)" nodeset="/chapter2_1_exam_en/c11" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q12" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q12  = '3',1,0)" nodeset="/chapter2_1_exam_en/c12" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q13" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q13  = '3',1,0)" nodeset="/chapter2_1_exam_en/c13" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q14" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q14  = '3',1,0)" nodeset="/chapter2_1_exam_en/c14" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q15" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q15  = '1',1,0)" nodeset="/chapter2_1_exam_en/c15" readonly="true()" type="string"/>
+      <bind constraint=".='3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q16" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q16  = '3',1,0)" nodeset="/chapter2_1_exam_en/c16" readonly="true()" type="string"/>
+      <bind constraint=".='2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q17" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q17  = '2',1,0)" nodeset="/chapter2_1_exam_en/c17" readonly="true()" type="string"/>
+      <bind constraint=".='1 2 3 4 5'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q18" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q18  = '1 2 3 4 5',1,0)" nodeset="/chapter2_1_exam_en/c18" readonly="true()" type="string"/>
+      <bind constraint=".='1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_1_exam_en/c2_1_q19" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q19  = '1',1,0)" nodeset="/chapter2_1_exam_en/c19" readonly="true()" type="string"/>
+      <bind nodeset="/chapter2_1_exam_en/c2_1_q20" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_1_exam_en/c2_1_q20  = '1 2 3 4 5 6 7 8 9',1,0)" nodeset="/chapter2_1_exam_en/c20" readonly="true()" type="string"/>
+      <bind calculate=" /chapter2_1_exam_en/c1  +  /chapter2_1_exam_en/c2  +  /chapter2_1_exam_en/c3  +  /chapter2_1_exam_en/c4  +  /chapter2_1_exam_en/c5  +  /chapter2_1_exam_en/c6  +  /chapter2_1_exam_en/c7  +  /chapter2_1_exam_en/c8  +  /chapter2_1_exam_en/c9  +  /chapter2_1_exam_en/c10  +  /chapter2_1_exam_en/c11  +  /chapter2_1_exam_en/c12  +  /chapter2_1_exam_en/c13  +  /chapter2_1_exam_en/c14  +  /chapter2_1_exam_en/c15  +  /chapter2_1_exam_en/c16  +  /chapter2_1_exam_en/c17  +  /chapter2_1_exam_en/c18  +  /chapter2_1_exam_en/c19  +  /chapter2_1_exam_en/c20 " nodeset="/chapter2_1_exam_en/total" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/chapter2_1_exam_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'13c727b8ef284f3fbc4a32d2a0e5431d'" nodeset="/chapter2_1_exam_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q1">
+      <label>1. What are the Essential Newborn Care services?</label>
+      <item>
+        <label>To dry the baby</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>To tie and cut the umbilical cord and use 7.1% Chlorhexidine on it</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Provide skin-to-skin care and keep the baby warm</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Start breast feeding within 1 hour of birth</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q2">
+      <label>2. How long should you provide skin-to-skin care to the baby?</label>
+      <item>
+        <label>Up to at least 4 hours after birth</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Up to at least 3 hours after birth</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Up to at least 2 hours after birth</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q3">
+      <label>3. How long after birth should the baby initiate breastfeeding?</label>
+      <item>
+        <label>Within 1 hour of birth</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Within 2 hours of birth</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Within 3 hours of birth</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q4">
+      <label>4. When should you use 7.1% Chlorhexidine?</label>
+      <item>
+        <label>Just after cutting the cord</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>72 hours after birth</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Never</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="rearrange_four" ref="/chapter2_1_exam_en/c2_1_q5">
+      <label>5. How will you apply 7.1% Chlorhexidine on the cut cord?</label>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q5/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q5/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q5/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q5/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q5/5:label')"/>
+        <value>5</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q6">
+      <label>6. What are the signs for a normal newborn baby?</label>
+      <item>
+        <label>Respiratory rate at 30-59/minute, Temperature at 38.5°C, Weight at 2500-4000g, Dry cord, Able to suck milk from the mother’s breast, Crying without any other symptoms, Can be easily woken up, Reduced movement, Temperature at 35.5°C – 37.5°C, Heart rate more than 160/minutes</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Weight at 2500-4000g, Dry cord, Able to suck milk from the mother’s breast, Crying without any other symptoms, Can be easily woken up, Reduced movement, Temperature at 35.5°C – 37.5°C, Heart rate more than 160/minutes</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>None of the above</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="compact" ref="/chapter2_1_exam_en/c2_1_q7">
+      <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q7:label')"/>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q7/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q7/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q7/3:label')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q8">
+      <label>8. Why is it important to take the baby’s weight soon after birth?</label>
+      <item>
+        <label>To detect the babies who need special care</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>To let the mother and family know the baby’s weight</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>To determine how long the baby should breastfeed each time</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q9">
+      <label>9. What is the correct position for breastfeeding?</label>
+      <item>
+        <label>The baby’s head and body will be in alignment</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>The baby’s nose will be positioned opposite the mother’s nipple</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>All of the above</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q10">
+      <label>10. What are the signs of good attachment?</label>
+      <item>
+        <label>Nipple and more areola is inside the baby’s mouth</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Biting on the nipple and sucking the nipple hard</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Open the mouth wide</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q11">
+      <label>11. Which of the following signs indicate that the baby is getting enough breast milk?</label>
+      <item>
+        <label>The baby will urinate 6-8 times a day and will sleep properly</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>The baby will keep crying continuously</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>The baby will be easily woken up from sleep</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q12">
+      <label ref="jr:itext('/chapter2_1_exam_en/c2_1_q12:label')"/>
+      <item>
+        <label>Engorged breast, mastitis, flat nipples</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Cracked nipples</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>All of the above</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q13">
+      <label>13. What are the causes of cracked nipple?</label>
+      <item>
+        <label>Having spicy food</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Wearing tight clothes</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Having poor attachment while breastfeeding</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q14">
+      <label>14. What are the ways to prevent heat loss of the baby?</label>
+      <item>
+        <label>Keep the baby in skin-to-skin care</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Control the air flow inside the room</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Ensure that the baby is not in contact with anything wet or cold</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Ensure that the baby is not bathed within 72 hours of birth</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>All of the above</label>
+        <value>5</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q15">
+      <label>15. What is the course of action to prevent the baby from having high temperature?</label>
+      <item>
+        <label>Ensure that the baby is not directly under the sun or near any other source of heat</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>If the baby is covered in excess clothing, take off the excess layers of clothing</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cover the baby with more layers of clothes</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q16">
+      <label>16. Within how many days after birth should all immunizations of the baby be completed?</label>
+      <item>
+        <label>10 months</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>12 months</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>15 months</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q17">
+      <label>17. Where should you discard the used syringe after vaccination?</label>
+      <item>
+        <label>In a waste paper basket</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>In a safety box (for sharp objects)</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>None of the above</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter2_1_exam_en/c2_1_q18">
+      <label>18. Arrange the steps of measuring a baby’s weight in the correct order.</label>
+      <item>
+        <label>Wipe the weighing scale with a liquid antiseptic</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Put a clean cloth on top of the weighing scale</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Bring the weighing scale to “0”</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Take the baby’s clothes off and weigh the baby</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Record the weight of the baby</label>
+        <value>5</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter2_1_exam_en/c2_1_q19">
+      <label>19. Which features would you use to classify the baby?</label>
+      <item>
+        <label>The baby’s weight, temperature and physical examination</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>The baby’s weight only</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>The baby’s temperature only</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter2_1_exam_en/c2_1_q20">
+      <label>20. What information should be given to the mother and the family during discharge from the healthcare facility?</label>
+      <item>
+        <label>The baby must be fed only breast milk up to at least 6 months of age</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>A normal temperature must be maintained for the baby</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Low Birth Weight and Preterm babies must continue to give KMC at home</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Cord care</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Danger Signs of the baby</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Problems with the mother’s breast</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Immunizations of the baby</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Maintenance of personal hygiene</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Provide the date and time for PNC visit</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>No counselling should be done</label>
+        <value>10</value>
+      </item>
+    </select>
+    <input ref="/chapter2_1_exam_en/total">
+      <label>Your Score</label>
+    </input>
+  </h:body>
+</h:html>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1.7 Vantilate with bag and mask-To Establish breathing</h:title>
+    <model>
+      <instance>
+        <session_7_chap_1_en id="seven_session_first_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s7_q1/>
+          <cal1/>
+          <s7_q2/>
+          <cal2/>
+          <s7_q3/>
+          <cal3/>
+          <correctAns/>
+          <sco1/>
+          <sco2/>
+          <sco3/>
+          <sco0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_7_chap_1_en>
+      </instance>
+      <bind nodeset="/session_7_chap_1_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_1_en/s7_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_1_en/s7_q1  = 't',1,0)" nodeset="/session_7_chap_1_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_1_en/s7_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_1_en/s7_q2  = 't',1,0)" nodeset="/session_7_chap_1_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_1_en/s7_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_1_en/s7_q3  = 't',1,0)" nodeset="/session_7_chap_1_en/cal3" type="string"/>
+      <bind calculate=" /session_7_chap_1_en/cal1 + /session_7_chap_1_en/cal2 + /session_7_chap_1_en/cal3 " nodeset="/session_7_chap_1_en/correctAns" type="string"/>
+      <bind nodeset="/session_7_chap_1_en/sco1" readonly="true()" relevant=" /session_7_chap_1_en/correctAns  = 1" type="int"/>
+      <bind nodeset="/session_7_chap_1_en/sco2" readonly="true()" relevant=" /session_7_chap_1_en/correctAns  = 2" type="int"/>
+      <bind nodeset="/session_7_chap_1_en/sco3" readonly="true()" relevant=" /session_7_chap_1_en/correctAns  = 3" type="int"/>
+      <bind nodeset="/session_7_chap_1_en/sco0" readonly="true()" relevant=" /session_7_chap_1_en/correctAns  = 0" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_7_chap_1_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'cc3824ea99844777afbd0be4d141e8cb'" nodeset="/session_7_chap_1_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_7_chap_1_en/chapter1">
+      <label>Chapter 1</label>
+      <item>
+        <label>session_seven.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_1_en/s7_q1">
+      <label>1. How do you select the correct mask?</label>
+      <item>
+        <label>Select a mask that covers the chin, mouth, and nose but not the eyes</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Select a mask that covers the chin, mouth, nose and the eyes</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Select a mask that covers the mouth, nose</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_1_en/s7_q2">
+      <label>2. Which of the following statement is correct during ventilation?</label>
+      <item>
+        <label>Provider should stand at the foot end</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Provider should stand at the baby’s head end</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Provider should stand close to the baby’s abdomen</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_1_en/s7_q3">
+      <label>3. What should you do before initiation of bag &amp; mask ventilation</label>
+      <item>
+        <label>Move the baby to the ventilation area, stand at baby’s head end, position the head slightly extended, select the correct mask, position the musk, ensure firm seal, start bag &amp; mask ventilation</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Move the baby to the ventilation area, stand at baby’s head end, position the head slightly extended, ensure firm seal, start bag &amp; mask ventilation</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Move the baby Position the head slightly extended, select the correct mask, position the musk, ensure firm seal, start bag &amp; mask ventilation</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_7_chap_1_en/sco1">
+      <label>Your Score 
+
+<output value=" /session_7_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_1_en/sco2">
+      <label>Your Score 
+
+<output value=" /session_7_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_1_en/sco3">
+      <label>Your Score 
+
+<output value=" /session_7_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_1_en/sco0">
+      <label>Your Score 
+
+<output value=" /session_7_chap_1_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

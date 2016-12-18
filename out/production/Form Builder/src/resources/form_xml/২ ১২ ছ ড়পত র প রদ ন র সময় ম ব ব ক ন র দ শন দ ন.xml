@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>২.১২ ছাড়পত্র প্রদানের সময় মা বাবাকে নির্দেশনা দিন</h:title>
+    <model>
+      <instance>
+        <session_12_chap_2 id="twelve_session_second_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter2/>
+          <s12_q1/>
+          <cal1/>
+          <s12_q2/>
+          <cal2/>
+          <s12_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_12_chap_2>
+      </instance>
+      <bind nodeset="/session_12_chap_2/chapter2" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_12_chap_2/s12_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_12_chap_2/s12_q1  = 't',1,0)" nodeset="/session_12_chap_2/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_12_chap_2/s12_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_12_chap_2/s12_q2  = 't',1,0)" nodeset="/session_12_chap_2/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_12_chap_2/s12_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_12_chap_2/s12_q3  = 't',1,0)" nodeset="/session_12_chap_2/cal3" type="string"/>
+      <bind calculate=" /session_12_chap_2/cal1 + /session_12_chap_2/cal2 + /session_12_chap_2/cal3 " nodeset="/session_12_chap_2/correctAns" type="string"/>
+      <bind calculate="if( /session_12_chap_2/cal1 + /session_12_chap_2/cal2 + /session_12_chap_2/cal3 =1,'১',' ')" nodeset="/session_12_chap_2/trans" type="string"/>
+      <bind calculate="if( /session_12_chap_2/cal1 + /session_12_chap_2/cal2 + /session_12_chap_2/cal3 =2,'২',' ')" nodeset="/session_12_chap_2/transs" type="string"/>
+      <bind calculate="if( /session_12_chap_2/cal1 + /session_12_chap_2/cal2 + /session_12_chap_2/cal3 =3,'৩',' ')" nodeset="/session_12_chap_2/transss" type="string"/>
+      <bind calculate="if( /session_12_chap_2/cal1 + /session_12_chap_2/cal2 + /session_12_chap_2/cal3 =0,'০',' ')" nodeset="/session_12_chap_2/transsss" type="string"/>
+      <bind nodeset="/session_12_chap_2/corrAns1" readonly="true()" relevant=" /session_12_chap_2/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_12_chap_2/corrAns2" readonly="true()" relevant=" /session_12_chap_2/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_12_chap_2/corrAns3" readonly="true()" relevant=" /session_12_chap_2/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_12_chap_2/corrAns4" readonly="true()" relevant=" /session_12_chap_2/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_12_chap_2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'3718259882994ba7bb737623b7d9e1ec'" nodeset="/session_12_chap_2/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_12_chap_2/chapter2">
+      <label>chapter 2</label>
+      <item>
+        <label>session_twelve.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_12_chap_2/s12_q1">
+      <label>১. প্রসব পরবর্তী প্রথম সাক্ষাৎ কতদিনের মধ্যে করতে হবে?</label>
+      <item>
+        <label>প্রসবের ২৪ ঘন্টার মধ্যে</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>প্রসবের ৪৮ ঘন্টার মধ্যে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>প্রসবের ৭২ ঘন্টার মধ্যে</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_12_chap_2/s12_q2">
+      <label>২. বিপদ চিহ্ন সম্পর্কে শিশুর মা বাবাকে কি তথ্য দিতে হবে?</label>
+      <item>
+        <label>জন্মের ১ম সপ্তাহে বিপদ চিহ্ন দেখা দেয় না</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>বিপদ চিহ্ন দেখা দিলে জরুরি ভিত্তিতে স্বাস্থ্যকেন্দ্রে যেতে হবে</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>বিপদ চিহ্ন সাধারণত জটিল কোন সমস্যা নয়, বাড়িতেই ব্যবস্থাপনা দেয়া সম্ভব</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_12_chap_2/s12_q3">
+      <label>৩. শিশুটি যে পর্যাপ্ত দুধ পাচ্ছে তা বুঝার লক্ষণ/চিহ্ন কি?</label>
+      <item>
+        <label>খাওয়ানোর এক ঘন্টা আগে কান্নাকাটি শুরু করা</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>জোরালোভাবে স্তনের বোঁটা চোষা</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>২৪ ঘন্টায় ৬-৮ বার প্রস্রাব করা</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_12_chap_2/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_12_chap_2/trans "/>/৩</label>
+    </input>
+    <input ref="/session_12_chap_2/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_12_chap_2/transs "/>/৩</label>
+    </input>
+    <input ref="/session_12_chap_2/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_12_chap_2/transss "/>/৩</label>
+    </input>
+    <input ref="/session_12_chap_2/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_12_chap_2/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>

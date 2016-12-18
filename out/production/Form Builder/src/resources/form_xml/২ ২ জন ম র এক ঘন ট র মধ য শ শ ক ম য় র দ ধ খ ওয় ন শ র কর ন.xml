@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>২.২ জন্মের এক ঘন্টার মধ্যে শিশুকে মায়ের দুধ খাওয়ানো শুরু করুন</h:title>
+    <model>
+      <instance>
+        <session_2_chap_2 id="second_session_second_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s2_q1/>
+          <cal1/>
+          <s2_q2/>
+          <cal2/>
+          <s2_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_2_chap_2>
+      </instance>
+      <bind nodeset="/session_2_chap_2/chapter1" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_2/s2_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_2/s2_q1  = 't',1,0)" nodeset="/session_2_chap_2/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_2/s2_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_2/s2_q2  = 't',1,0)" nodeset="/session_2_chap_2/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_2_chap_2/s2_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_2_chap_2/s2_q3  = 't',1,0)" nodeset="/session_2_chap_2/cal3" type="string"/>
+      <bind calculate=" /session_2_chap_2/cal1 + /session_2_chap_2/cal2 + /session_2_chap_2/cal3 " nodeset="/session_2_chap_2/correctAns" type="string"/>
+      <bind calculate="if( /session_2_chap_2/cal1 + /session_2_chap_2/cal2 + /session_2_chap_2/cal3 =1,'১',' ')" nodeset="/session_2_chap_2/trans" type="string"/>
+      <bind calculate="if( /session_2_chap_2/cal1 + /session_2_chap_2/cal2 + /session_2_chap_2/cal3 =2,'২',' ')" nodeset="/session_2_chap_2/transs" type="string"/>
+      <bind calculate="if( /session_2_chap_2/cal1 + /session_2_chap_2/cal2 + /session_2_chap_2/cal3 =3,'৩',' ')" nodeset="/session_2_chap_2/transss" type="string"/>
+      <bind calculate="if( /session_2_chap_2/cal1 + /session_2_chap_2/cal2 + /session_2_chap_2/cal3 =0,'০',' ')" nodeset="/session_2_chap_2/transsss" type="string"/>
+      <bind nodeset="/session_2_chap_2/corrAns1" readonly="true()" relevant=" /session_2_chap_2/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_2_chap_2/corrAns2" readonly="true()" relevant=" /session_2_chap_2/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_2_chap_2/corrAns3" readonly="true()" relevant=" /session_2_chap_2/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_2_chap_2/corrAns4" readonly="true()" relevant=" /session_2_chap_2/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_2_chap_2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'fa539cc08f984ad29b533f4d1caedb7c'" nodeset="/session_2_chap_2/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_2_chap_2/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_two.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_2/s2_q1">
+      <label>১. জন্মের কতক্ষণ পর হতে শিশুকে মায়ের বুকের দুধ খাওয়ানো শুরু করতে হবে?</label>
+      <item>
+        <label>জন্মের ১ ঘন্টার মধ্যেই</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>জন্মের ২ ঘন্টার মধ্যেই</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>জন্মের ৩ ঘন্টার মধ্যেই</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_2/s2_q2">
+      <label>২. জন্মের পর হতে কতদিন পর্যন্ত শিশুকে শুধুমাত্র মায়ের দুধ খাওয়াতে হবে?</label>
+      <item>
+        <label>প্রথম ৪ মাস</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>প্রথম ৫ মাস</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>প্রথম ৬ মাস</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_2_chap_2/s2_q3">
+      <label>৩. শিশুটি যে খাওয়ার জন্য প্রস্তুত তা কোন লক্ষণ থেকে বুঝা যায়?</label>
+      <item>
+        <label>শিশুটি স্তন খুঁজবে, জিহবা বের করবে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>হাতের আঙ্গুল চাটবে</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>উপরের সবক’টি</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_2_chap_2/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_2/trans "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_2/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_2/transs "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_2/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_2/transss "/>/৩</label>
+    </input>
+    <input ref="/session_2_chap_2/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_2_chap_2/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>

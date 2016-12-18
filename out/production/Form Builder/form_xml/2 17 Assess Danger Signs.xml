@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2.17 Assess Danger Signs</h:title>
+    <model>
+      <instance>
+        <session_17_chap_2_en id="seventeen_session_second_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s17_q1/>
+          <cal1/>
+          <s17_q2/>
+          <cal2/>
+          <s17_q3/>
+          <cal3/>
+          <correctAns/>
+          <cor1/>
+          <cor2/>
+          <cor3/>
+          <cor0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_17_chap_2_en>
+      </instance>
+      <bind nodeset="/session_17_chap_2_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_17_chap_2_en/s17_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_17_chap_2_en/s17_q1  = 't',1,0)" nodeset="/session_17_chap_2_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_17_chap_2_en/s17_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_17_chap_2_en/s17_q2  = 't',1,0)" nodeset="/session_17_chap_2_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_17_chap_2_en/s17_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_17_chap_2_en/s17_q3  = 't',1,0)" nodeset="/session_17_chap_2_en/cal3" type="string"/>
+      <bind calculate=" /session_17_chap_2_en/cal1 + /session_17_chap_2_en/cal2 + /session_17_chap_2_en/cal3 " nodeset="/session_17_chap_2_en/correctAns" type="string"/>
+      <bind nodeset="/session_17_chap_2_en/cor1" readonly="true()" relevant=" /session_17_chap_2_en/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_17_chap_2_en/cor2" readonly="true()" relevant=" /session_17_chap_2_en/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_17_chap_2_en/cor3" readonly="true()" relevant=" /session_17_chap_2_en/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_17_chap_2_en/cor0" readonly="true()" relevant=" /session_17_chap_2_en/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_17_chap_2_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'9121d47a36f549e384c0eb98b3675df8'" nodeset="/session_17_chap_2_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_17_chap_2_en/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_seventeen.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_17_chap_2_en/s17_q1">
+      <label>1. Which of the following are danger signs?</label>
+      <item>
+        <label>60 or more breaths per minute, tempereture under 30.50C, no movement, convelsions,</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>50 breaths per minute, tempereture under 30.50C, no movement, convelsions,</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>40 breaths per minute, tempereture under 30.50C, no movement, convelsions,</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_17_chap_2_en/s17_q2">
+      <label>2. What should you do if the bay become unconscious?</label>
+      <item>
+        <label>Check blood glucose, if less then 2.2 mlmol/l give 10% glucose at 2ml/kg IV</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Give bag &amp; mask ventilation first</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Both of above</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_17_chap_2_en/s17_q3">
+      <label>3 .What should you do if the baby is convulsing?</label>
+      <item>
+        <label>Give phenobarbital, watch for apnoea, Monitor feequantly</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Give phenobarbital, Monitor feequantly</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>No management required</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_17_chap_2_en/cor1">
+      <label>Your Score 
+<output value=" /session_17_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_17_chap_2_en/cor2">
+      <label>Your Score 
+<output value=" /session_17_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_17_chap_2_en/cor3">
+      <label>Your Score 
+<output value=" /session_17_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_17_chap_2_en/cor0">
+      <label>Your Score 
+<output value=" /session_17_chap_2_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

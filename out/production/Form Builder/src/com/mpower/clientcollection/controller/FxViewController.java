@@ -198,10 +198,10 @@ public class FxViewController implements Initializable {
         boolean isLoaded = false;
         String xml_path = "";
         if(title.equals("1_1")){
-            xml_path = AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+            xml_path = AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER;
             System.out.println("Form Path:"+xml_path);
         }else if(title.equals("1_2")) {
-            xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
+            xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER;
         }else{
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.EXAM_1ST;
         }

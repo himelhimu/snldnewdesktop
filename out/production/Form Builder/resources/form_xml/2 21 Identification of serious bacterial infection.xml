@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2.21 Identification of serious bacterial infection</h:title>
+    <model>
+      <instance>
+        <session_21_chap_2_en id="twentyone_session_second_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s21_q1/>
+          <cal1/>
+          <s21_q2/>
+          <cal2/>
+          <s21_q3/>
+          <cal3/>
+          <correctAns/>
+          <cor1/>
+          <cor2/>
+          <cor3/>
+          <cor0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_21_chap_2_en>
+      </instance>
+      <bind nodeset="/session_21_chap_2_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_21_chap_2_en/s21_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_21_chap_2_en/s21_q1  = 't',1,0)" nodeset="/session_21_chap_2_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_21_chap_2_en/s21_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_21_chap_2_en/s21_q2  = 't',1,0)" nodeset="/session_21_chap_2_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_21_chap_2_en/s21_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_21_chap_2_en/s21_q3  = 't',1,0)" nodeset="/session_21_chap_2_en/cal3" type="string"/>
+      <bind calculate=" /session_21_chap_2_en/cal1 + /session_21_chap_2_en/cal2 + /session_21_chap_2_en/cal3 " nodeset="/session_21_chap_2_en/correctAns" type="string"/>
+      <bind nodeset="/session_21_chap_2_en/cor1" readonly="true()" relevant=" /session_21_chap_2_en/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_21_chap_2_en/cor2" readonly="true()" relevant=" /session_21_chap_2_en/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_21_chap_2_en/cor3" readonly="true()" relevant=" /session_21_chap_2_en/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_21_chap_2_en/cor0" readonly="true()" relevant=" /session_21_chap_2_en/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_21_chap_2_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'9eb00e6d3d57424fb6e73815dab3f9e6'" nodeset="/session_21_chap_2_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_21_chap_2_en/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_twentyone.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_21_chap_2_en/s21_q1">
+      <label>1. Which of the following mothers’ risk factor may develop serious bacterial infection in newborn?</label>
+      <item>
+        <label>Membranes ruptured &gt;18 hours before delivery</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Mother had fever &gt;38°C before delivery or during labour</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Both of above</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_21_chap_2_en/s21_q2">
+      <label>2. Which are the following signs of serious bacterial infection?</label>
+      <item>
+        <label>Signs of pneumonia, severe skin pustules, umbilical pas, bulged fontanelle</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Signs of pneumonia, severe skin pustules</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Signs of pneumonia, umbilical pas, bulged fontanelle</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_21_chap_2_en/s21_q3">
+      <label>3. Which antibiotic are the drug of choice for management of serious bacterial infection?</label>
+      <item>
+        <label>Cefotaxime</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Cloxacillin, gentamicin</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Ampicillin, gentamicin</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_21_chap_2_en/cor1">
+      <label>Your Score 
+<output value=" /session_21_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_21_chap_2_en/cor2">
+      <label>Your Score 
+<output value=" /session_21_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_21_chap_2_en/cor3">
+      <label>Your Score 
+<output value=" /session_21_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_21_chap_2_en/cor0">
+      <label>Your Score 
+<output value=" /session_21_chap_2_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

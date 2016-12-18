@@ -1,5 +1,7 @@
 package com.mpower.clientcollection.widgets;
 
+import com.mpower.clientcollection.controller.FormViewController;
+import com.mpower.clientcollection.controller.FxViewController;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,8 +24,7 @@ import java.util.ResourceBundle;
 /**
  * Created by sabbir on 12/15/16.
  */
-public class ReArrangeWidget extends QuestionWidget implements Initializable {
-    @FXML
+public class ReArrangeWidget extends QuestionWidget{
     private AnchorPane mAnchorPane;
 
     private ArrayList<ImageView> imageViews;
@@ -31,6 +32,8 @@ public class ReArrangeWidget extends QuestionWidget implements Initializable {
 
     public ReArrangeWidget(FormEntryPrompt p) {
         super(p);
+        mAnchorPane=new AnchorPane();
+        initialize();
     }
 
     public void setImages()
@@ -86,6 +89,9 @@ public class ReArrangeWidget extends QuestionWidget implements Initializable {
             event.consume();
         };
 */
+        FormViewController formViewController=FormViewController.getInstance();
+        FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,formViewController.getColIndex(),formViewController.getRowIndex());
+        formViewController.incRowIndex();
     }
 
 
@@ -114,8 +120,8 @@ public class ReArrangeWidget extends QuestionWidget implements Initializable {
 
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize() {
         setImages();
     }
 

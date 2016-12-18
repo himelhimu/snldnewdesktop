@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2.6 Measure birth weight</h:title>
+    <model>
+      <instance>
+        <session_6_chap_2_en id="six_session_second_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s6_q1/>
+          <cal1/>
+          <s6_q2/>
+          <cal2/>
+          <s6_q3/>
+          <cal3/>
+          <correctAns/>
+          <cor1/>
+          <cor2/>
+          <cor3/>
+          <cor0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_6_chap_2_en>
+      </instance>
+      <bind nodeset="/session_6_chap_2_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_2_en/s6_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_2_en/s6_q1  = 't',1,0)" nodeset="/session_6_chap_2_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_2_en/s6_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_2_en/s6_q2  = 't',1,0)" nodeset="/session_6_chap_2_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_2_en/s6_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_2_en/s6_q3  = 't',1,0)" nodeset="/session_6_chap_2_en/cal3" type="string"/>
+      <bind calculate=" /session_6_chap_2_en/cal1 + /session_6_chap_2_en/cal2 + /session_6_chap_2_en/cal3 " nodeset="/session_6_chap_2_en/correctAns" type="string"/>
+      <bind nodeset="/session_6_chap_2_en/cor1" readonly="true()" relevant=" /session_6_chap_2_en/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_6_chap_2_en/cor2" readonly="true()" relevant=" /session_6_chap_2_en/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_6_chap_2_en/cor3" readonly="true()" relevant=" /session_6_chap_2_en/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_6_chap_2_en/cor0" readonly="true()" relevant=" /session_6_chap_2_en/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_6_chap_2_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'719f6629fc4440f1a039b5d85ddf6d40'" nodeset="/session_6_chap_2_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_6_chap_2_en/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_six.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_2_en/s6_q1">
+      <label>1. Which is the most important reason for weighing all babies soon after birth?</label>
+      <item>
+        <label>Birth weight may classify and identify babies who need special care</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Mother and family members often want to know the birth weight</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Birth weight will determine the duration of feeding</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_2_en/s6_q2">
+      <label>2. When should the baby’s weight be taken?</label>
+      <item>
+        <label>Sometime during the first day</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Before mother and baby leave the birth facility</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Within 90 minutes after birth</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_2_en/s6_q3">
+      <label>3. When should a scale be turned to zero?</label>
+      <item>
+        <label>Once per month</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>When it does not seem to be functioning properly</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Before each use</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_6_chap_2_en/cor1">
+      <label>Your Score 
+<output value=" /session_6_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_2_en/cor2">
+      <label>Your Score 
+<output value=" /session_6_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_2_en/cor3">
+      <label>Your Score 
+<output value=" /session_6_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_2_en/cor0">
+      <label>Your Score 
+<output value=" /session_6_chap_2_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

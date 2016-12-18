@@ -12,9 +12,9 @@ public class Constants {
 
     public static final String NONE = "none";
 
-    public static final String FIRST_SESSION_FIRST_CHAPTER = "first_session_first_chapter.xml";
+    public static final String FIRST_SESSION_FIRST_CHAPTER = "11.xml";
     //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
-    public static final String SECOND_SESSION_FIRST_CHAPTER = "second_session_first_chapter";
+    public static final String SECOND_SESSION_FIRST_CHAPTER = "2_exam.xml";
     public static final String THIRD_SESSION_FIRST_CHAPTER = "third_session_first_chapter";
     public static final String FORTH_SESSION_FIRST_CHAPTER = "four_session_first_chapter";
     public static final String FIFTH_SESSION_FIRST_CHAPTER = "five_session_first_chapter";

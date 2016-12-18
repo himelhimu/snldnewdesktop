@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>প্রথম অধ্যায় হেল্পিং বেবিজ ব্রিদ পরীক্ষা</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/chapter1_exam/c1_q20/2:label">
+            <value form="image">jr://images/c1q20_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/15:label">
+            <value form="image">jr://images/c1q20_15.png</value>
+            <value>Option15</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/16:label">
+            <value form="image">jr://images/c1q20_16.png</value>
+            <value>Option16</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/3:label">
+            <value form="image">jr://images/c1q20_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q5/2:label">
+            <value form="image">jr://images/c1q5_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/6:label">
+            <value form="image">jr://images/common.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/11:label">
+            <value form="image">jr://images/c1q20_11.png</value>
+            <value>Option11</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/3:label">
+            <value form="image">jr://images/c1q2_5.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q4/4:label">
+            <value form="image">jr://images/c1q4_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/8:label">
+            <value form="image">jr://images/c1q20_8.png</value>
+            <value>Option8</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/10:label">
+            <value form="image">jr://images/c1q20_10.png</value>
+            <value>Option10</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/5:label">
+            <value form="image">jr://images/c1q20_5.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/18:label">
+            <value form="image">jr://images/c1q20_18.png</value>
+            <value>Option18</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/8:label">
+            <value form="image">jr://images/c1q2_12.png</value>
+            <value>Option8</value>
+          </text>
+          <text id="/chapter1_exam/c1_q5/3:label">
+            <value form="image">jr://images/c1q5_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q12/1:label">
+            <value form="image">jr://images/c1q12_1.png</value>
+            <value>২ মিনিট বেশী।</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/14:label">
+            <value form="image">jr://images/c1q20_14.png</value>
+            <value>Option14</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/5:label">
+            <value form="image">jr://images/c1q20_5.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/3:label">
+            <value form="image">jr://images/c1q20_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q15/1:label">
+            <value form="image">jr://images/c1q15_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/9:label">
+            <value form="image">jr://images/c1q20_9.png</value>
+            <value>Option9</value>
+          </text>
+          <text id="/chapter1_exam/c1_q4/5:label">
+            <value form="image">jr://images/common.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/7:label">
+            <value form="image">jr://images/c1q20_7.png</value>
+            <value>Option7</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/17:label">
+            <value form="image">jr://images/c1q20_17.png</value>
+            <value>Option17</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/4:label">
+            <value form="image">jr://images/c1q20_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/13:label">
+            <value form="image">jr://images/c1q20_13.png</value>
+            <value>Option13</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/12:label">
+            <value form="image">jr://images/c1q2_1.png</value>
+            <value>Option12</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/13:label">
+            <value form="image">jr://images/common.png</value>
+            <value>Option13</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/12:label">
+            <value form="image">jr://images/c1q20_12.png</value>
+            <value>Option12</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/2:label">
+            <value form="image">jr://images/c1q20_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/17:label">
+            <value form="image">jr://images/c1q20_17.png</value>
+            <value>Option17</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/2:label">
+            <value form="image">jr://images/c1q2_9.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/9:label">
+            <value form="image">jr://images/c1q20_9.png</value>
+            <value>Option9</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/8:label">
+            <value form="image">jr://images/c1q20_8.png</value>
+            <value>Option8</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/10:label">
+            <value form="image">jr://images/c1q20_10.png</value>
+            <value>Option10</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/10:label">
+            <value form="image">jr://images/c1q20_10.png</value>
+            <value>Option10</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/4:label">
+            <value form="image">jr://images/c1q20_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q15/3:label">
+            <value form="image">jr://images/c1q15_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/12:label">
+            <value form="image">jr://images/c1q20_12.png</value>
+            <value>Option12</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/16:label">
+            <value form="image">jr://images/c1q20_16.png</value>
+            <value>Option16</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/14:label">
+            <value form="image">jr://images/c1q20_14.png</value>
+            <value>Option14</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/2:label">
+            <value form="image">jr://images/c1q20_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/17:label">
+            <value form="image">jr://images/c1q20_17.png</value>
+            <value>Option17</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/6:label">
+            <value form="image">jr://images/c1q2_10.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/8:label">
+            <value form="image">jr://images/c1q20_8.png</value>
+            <value>Option8</value>
+          </text>
+          <text id="/chapter1_exam/c1_q12:label">
+            <value form="image">jr://images/c1q7.png</value>
+            <value>১২। শিশুকে মুছে শুকনো করা, শ্বাসনালী পরিস্কার করা, উদ্দীপ্ত করা কতক্ষণ সময়ের মধ্যে শেষ করা উচিৎ।</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/2:label">
+            <value form="image">jr://images/c1q7_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/1:label">
+            <value form="image">jr://images/c1q2_2.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/5:label">
+            <value form="image">jr://images/c1q7_5.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/4:label">
+            <value form="image">jr://images/c1q20_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/7:label">
+            <value form="image">jr://images/c1q20_7.png</value>
+            <value>Option7</value>
+          </text>
+          <text id="/chapter1_exam/c1_q4/1:label">
+            <value form="image">jr://images/c1q4_3.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/9:label">
+            <value form="image">jr://images/c1q2_6.png</value>
+            <value>Option9</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7:label">
+            <value form="image">jr://images/c1q7.png</value>
+            <value>৭। জন্মের পরপর যে শিশুটি কাঁদছে তাকে কি কি পরিচর্যা প্রদান করা হয়?</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/7:label">
+            <value form="image">jr://images/c1q2_11.png</value>
+            <value>Option7</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/10:label">
+            <value form="image">jr://images/c1q2_8.png</value>
+            <value>Option10</value>
+          </text>
+          <text id="/chapter1_exam/c1_q4/2:label">
+            <value form="image">jr://images/c1q4_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q12/2:label">
+            <value form="image">jr://images/c1q12_2.png</value>
+            <value>২ মিনিটের মধ্যে।</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/6:label">
+            <value form="image">jr://images/c1q20_6.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/1:label">
+            <value form="image">jr://images/c1q20_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/12:label">
+            <value form="image">jr://images/c1q20_12.png</value>
+            <value>Option12</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/9:label">
+            <value form="image">jr://images/c1q20_9.png</value>
+            <value>Option9</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/14:label">
+            <value form="image">jr://images/c1q20_14.png</value>
+            <value>Option14</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/1:label">
+            <value form="image">jr://images/c1q7_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/5:label">
+            <value form="image">jr://images/c1q2_4.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/11:label">
+            <value form="image">jr://images/c1q20_11.png</value>
+            <value>Option11</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/11:label">
+            <value form="image">jr://images/c1q20_11.png</value>
+            <value>Option11</value>
+          </text>
+          <text id="/chapter1_exam/c1_q15/2:label">
+            <value form="image">jr://images/c1q15_2.png</value>
+            <value>Option2</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/1:label">
+            <value form="image">jr://images/c1q20_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q5/1:label">
+            <value form="image">jr://images/c1q5_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/18:label">
+            <value form="image">jr://images/c1q20_18.png</value>
+            <value>Option18</value>
+          </text>
+          <text id="/chapter1_exam/c1_q4/3:label">
+            <value form="image">jr://images/c1q4_1.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/6:label">
+            <value form="image">jr://images/c1q20_6.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/5:label">
+            <value form="image">jr://images/c1q20_5.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/13:label">
+            <value form="image">jr://images/c1q20_13.png</value>
+            <value>Option13</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/11:label">
+            <value form="image">jr://images/c1q2_7.png</value>
+            <value>Option11</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/4:label">
+            <value form="image">jr://images/c1q7_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q2/4:label">
+            <value form="image">jr://images/c1q2_3.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/16:label">
+            <value form="image">jr://images/c1q20_16.png</value>
+            <value>Option16</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/1:label">
+            <value form="image">jr://images/c1q20_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/15:label">
+            <value form="image">jr://images/c1q20_15.png</value>
+            <value>Option15</value>
+          </text>
+          <text id="/chapter1_exam/c1_q7/3:label">
+            <value form="image">jr://images/c1q7_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/18:label">
+            <value form="image">jr://images/c1q20_18.png</value>
+            <value>Option18</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/13:label">
+            <value form="image">jr://images/c1q20_13.png</value>
+            <value>Option13</value>
+          </text>
+          <text id="/chapter1_exam/c1_q9/6:label">
+            <value form="image">jr://images/c1q20_6.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter1_exam/c1_q12/3:label">
+            <value form="image">jr://images/c1q12_3.png</value>
+            <value>১ মিনিটের কম সময়।</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/15:label">
+            <value form="image">jr://images/c1q20_15.png</value>
+            <value>Option15</value>
+          </text>
+          <text id="/chapter1_exam/c1_q14/7:label">
+            <value form="image">jr://images/c1q20_7.png</value>
+            <value>Option7</value>
+          </text>
+          <text id="/chapter1_exam/c1_q20/3:label">
+            <value form="image">jr://images/c1q20_3.png</value>
+            <value>Option3</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chapter1_exam id="chapter_1_exam">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <c1_q1/>
+          <cal1/>
+          <c1_q2/>
+          <cal2/>
+          <c1_q3/>
+          <cal3/>
+          <c1_q4/>
+          <cal4/>
+          <c1_q5/>
+          <cal5/>
+          <c1_q6/>
+          <cal6/>
+          <c1_q7/>
+          <cal7/>
+          <c1_q8/>
+          <cal8/>
+          <c1_q9/>
+          <cal9/>
+          <c1_q10/>
+          <cal10/>
+          <c1_q11/>
+          <cal11/>
+          <c1_q12/>
+          <cal12/>
+          <c1_q13/>
+          <cal13/>
+          <c1_q14/>
+          <cal14/>
+          <c1_q15/>
+          <cal15/>
+          <c1_q16/>
+          <cal16/>
+          <c1_q17/>
+          <cal17/>
+          <c1_q18/>
+          <cal18/>
+          <c1_q19/>
+          <cal19/>
+          <c1_q20/>
+          <cal20/>
+          <res/>
+          <score/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </chapter1_exam>
+      </instance>
+      <bind constraint=".= '1 2 3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q1" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q1  = '1 2 3',1,0)" nodeset="/chapter1_exam/cal1" type="string"/>
+      <bind constraint="count-selected(.) =12 and .= '1 2 3 4 5 6 7 8 9 10 11 12'" jr:constraintMsg="উত্তর সম্পূর্ণ করুন" nodeset="/chapter1_exam/c1_q2" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q2  = '1 2 3 4 5 6 7 8 9 10 11 12',1,0)" nodeset="/chapter1_exam/cal2" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q3" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q3  = '1',1,0)" nodeset="/chapter1_exam/cal3" type="string"/>
+      <bind constraint="count-selected(.) =4 and .= '1 2 3 4'" jr:constraintMsg="উত্তর সম্পূর্ণ করুন" nodeset="/chapter1_exam/c1_q4" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q4  = '1 2 3 4',1,0)" nodeset="/chapter1_exam/cal4" type="string"/>
+      <bind constraint=".= '1 2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q5" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q5  = '1 2',1,0)" nodeset="/chapter1_exam/cal5" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q6" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q6  = '1',1,0)" nodeset="/chapter1_exam/cal6" type="string"/>
+      <bind constraint=".= '1 2 3 4'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q7" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q7  = '1 2 3 4',1,0)" nodeset="/chapter1_exam/cal7" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q8" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q8  = '1',1,0)" nodeset="/chapter1_exam/cal8" type="string"/>
+      <bind constraint=".= '2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q9" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q9  = '1,2,5,6,8,11',1,0)" nodeset="/chapter1_exam/cal9" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q10" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q10  = '1',1,0)" nodeset="/chapter1_exam/cal10" type="string"/>
+      <bind constraint=".= '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q11" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q11  = '3',1,0)" nodeset="/chapter1_exam/cal11" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q12" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q12  = '1',1,0)" nodeset="/chapter1_exam/cal12" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q13" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q13  = '1',1,0)" nodeset="/chapter1_exam/cal13" type="string"/>
+      <bind constraint=".= '2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q14" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q14  = '1,2,5,6,8,11',1,0)" nodeset="/chapter1_exam/cal14" type="string"/>
+      <bind constraint=".= '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q15" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q15  = '3',1,0)" nodeset="/chapter1_exam/cal15" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q16" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q16  = '1',1,0)" nodeset="/chapter1_exam/cal16" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q17" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q17  = '1',1,0)" nodeset="/chapter1_exam/cal17" type="string"/>
+      <bind constraint=".= '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q18" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q18  = '3',1,0)" nodeset="/chapter1_exam/cal18" type="string"/>
+      <bind constraint=".= '2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q19" required="true()" type="select1"/>
+      <bind calculate="if( /chapter1_exam/c1_q19  = '2',1,0)" nodeset="/chapter1_exam/cal19" type="string"/>
+      <bind constraint=".= '2'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter1_exam/c1_q20" required="true()" type="select"/>
+      <bind calculate="if( /chapter1_exam/c1_q20  = '1,2,5,6,8,11',1,0)" nodeset="/chapter1_exam/cal20" type="string"/>
+      <bind calculate=" /chapter1_exam/cal1  +  /chapter1_exam/cal2  +  /chapter1_exam/cal3  +  /chapter1_exam/cal4  +  /chapter1_exam/cal5  +  /chapter1_exam/cal6  +  /chapter1_exam/cal7  +  /chapter1_exam/cal8  +  /chapter1_exam/cal9  +  /chapter1_exam/cal10  +  /chapter1_exam/cal11  +  /chapter1_exam/cal12  +  /chapter1_exam/cal13  +  /chapter1_exam/cal14  +  /chapter1_exam/cal15  +  /chapter1_exam/cal16  +  /chapter1_exam/cal17  +  /chapter1_exam/cal18  +  /chapter1_exam/cal19  +  /chapter1_exam/cal20 " nodeset="/chapter1_exam/res" type="string"/>
+      <bind calculate="if( /chapter1_exam/res  = 0,'০', if( /chapter1_exam/res  = 1,'১', if( /chapter1_exam/res  = 2,'২', if( /chapter1_exam/res  = 3,'৩', if( /chapter1_exam/res  = 4,'৪', if( /chapter1_exam/res  = 5,'৫', if( /chapter1_exam/res  = 6,'৬', if( /chapter1_exam/res  = 7,'৭', if( /chapter1_exam/res  = 8,'৮', if( /chapter1_exam/res  = 9,'৯', if( /chapter1_exam/res  = 10,'১০', if( /chapter1_exam/res  = 11,'১১', if( /chapter1_exam/res  = 12,'১২', if( /chapter1_exam/res  = 13,'১৩', if( /chapter1_exam/res  = 14,'১৪', if( /chapter1_exam/res  = 15,'১৫', if( /chapter1_exam/res  = 16,'১৬', if( /chapter1_exam/res  = 17,'১৭', if( /chapter1_exam/res  = 18,'১৮', if( /chapter1_exam/res  = 19,'১৯', if( /chapter1_exam/res  = 20,'২০', ' ')))))))))))))))))))))" nodeset="/chapter1_exam/score" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/chapter1_exam/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'f50c9c3d02d9490b9be57baeec2a949f'" nodeset="/chapter1_exam/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select ref="/chapter1_exam/c1_q1">
+      <label>১। প্রসবের স্থানটি কেমন হওয়া জরুরী?</label>
+      <item>
+        <label>উষ্ণ, শুষ্ক, পরিস্কার, পর্যাপ্ত আলো সম্পন্ন।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ঘরের দরজা খোলা।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>খোলা বাতাস সম্পন্ন।</label>
+        <value>3</value>
+      </item>
+    </select>
+    <select appearance="rearrange" ref="/chapter1_exam/c1_q2">
+      <label>২। হাত ধোয়ার সঠিক ধাপ কোনটি?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q2/13:label')"/>
+        <value>13</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q3">
+      <label>৩।বিশোধন কেন করা হয়?</label>
+      <item>
+        <label>এইচ আই ভি ও হেপাটাইটিস সহ অন্যান্য জীবাণু ধ্বংস করা।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>সেবাদানকারীকে নিরাপদ রাখা।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>সেবা গ্রহনকারীকে অনিরাপদ করা।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="rearrange_four" ref="/chapter1_exam/c1_q4">
+      <label>৪। বিশোধনের ধাপ সমূহ কি কি?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q4/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q4/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q4/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q4/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q4/5:label')"/>
+        <value>5</value>
+      </item>
+    </select>
+    <select appearance="compact" ref="/chapter1_exam/c1_q5">
+      <label>৫। শিশুর জন্মের পর প্রথম করণীয় কি?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q5/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q5/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q5/3:label')"/>
+        <value>3</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q6">
+      <label>৬। কিভাবে শিশুকে ভালভাবে মুছে শুস্ক করতে হবে?</label>
+      <item>
+        <label>পরিস্কার শুকনো কাপড় দিয়ে মাথা, পিঠ, হাত, পা সহ সম্পূর্ন শরীর ভালভাবে মুছে শিশুকে শুস্ক করতে হবে। (সঠিক উত্তর)</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ভেজা কাপড় সরিয়ে আরেকটি শুকনো কাপড় দিয়ে মুছিয়ে দিতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শিশুর মাথায় কাপড়/টুপি দিতে হবে।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="drag-drop" ref="/chapter1_exam/c1_q7">
+      <label ref="jr:itext('/chapter1_exam/c1_q7:label')"/>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q7/6:label')"/>
+        <value>6</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q8">
+      <label>৮। জন্মের পরপর শিশুকে কিভাবে উষ্ণ রাখতে হবে।</label>
+      <item>
+        <label>শিশুকে মায়ের ত্বকের স্পর্শে ২ঘন্টা রাখতে হবে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শুকনো গরম কাপড় দিয়ে ঢেকে দিতে হবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>মাথায় কপড় বা টুপি দিতে হবে</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>ভেজা কাপড় সরিয়ে ফেলতে হবে</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <select appearance="line_draw" ref="/chapter1_exam/c1_q9">
+      <label>৯। শিশু জন্মের পর যদি না কাঁদে</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q9/18:label')"/>
+        <value>18</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q10">
+      <label>১০। শিশুর শ্বাসনালী পরিষ্কার করার ধাপসমূহ কি কি?</label>
+      <item>
+        <label>দুই আঙ্গুলের সাকারটি চেপে বাতাস বের করে যন্ত্রেও নলাকৃতি প্রান্ত প্রথমে শিশুর মুখে ( ৫ সেঃ মিঃ) প্রবেশ করাতে  হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>অতঃপর আঙ্গুলের ‘চাপ’ ছেড়ে দিয়ে নলাকৃতি প্রান্ত বের করে নিয়ে আসতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের কোনটি সঠিক নয়।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q11">
+      <label>১১। শ্বাসনালী পরিস্কার করার ক্ষেত্রে লক্ষণীয় কোনটি?</label>
+      <item>
+        <label>প্রথমে শিশুর মুখ ও পরে নাক পরিস্কার করতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>সাকার যন্ত্রেও নলাকৃতি প্রান্ত শিশুর ০৫ সেঃ মিঃ প্রবেশ করাতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের দুটিই সঠিক উত্তর।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="compact" ref="/chapter1_exam/c1_q12">
+      <label ref="jr:itext('/chapter1_exam/c1_q12:label')"/>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q12/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q12/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q12/3:label')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q13">
+      <label>১৩। শিশুকে উদ্দীপ্ত করার সঠিক পদ্ধতি কোনটি?</label>
+      <item>
+        <label>শিরদাড়া বরাবর ১-২ বার ঘষা দেয়া</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শিশুর শরীরে ঠান্ডা/গরম পানির ছিটা দেয়া</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>মাথা নিচের দিকে ঝুলিয়ে পিঠে হাল্কা চাপড় দেয়া</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="line_draw" ref="/chapter1_exam/c1_q14">
+      <label>১৪। শ্বাসনালী পরিস্কার করা ও উদ্দীপ্ত করার পর যদি শিশুটি কাঁদে না তবে তাকে কি ধরণের পরিচর্যা প্রদান করা হবে?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q14/18:label')"/>
+        <value>18</value>
+      </item>
+    </select>
+    <select1 appearance="compact" ref="/chapter1_exam/c1_q15">
+      <label>১৫। শিশুকে কৃত্রিম শ্বাস দেবার জন্য সঠিক সাইজের মাস্ক এর বৈশিষ্ট্য কি হওয়া উচিত?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q15/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q15/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q15/3:label')"/>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q16">
+      <label>১৬। শিশুকে কিভাবে কৃত্রিম শ্বাস দিবেন?</label>
+      <item>
+        <label>মাথার অবস্থান ঠিক করে মাস্ক ও মুখের আবৃত অংশের মধ্যে বায়ুনিরোধক অবস্থা বজায় রেখে মিনিটে ৪০ বার শ্বাস দিবেন</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>মিনিটে ৩০ বার শ্বাস দিবেন</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শিশুর মাথা সামনের দিকে ঘুরিয়ে ধরবেন</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q17">
+      <label>১৭। শিশুকে ১ মিনিট কৃত্রিম শ্বাস দেওয়ার পর ও যদি শিশুটি শ্বাস না নেয তবে প্রথমে কি করা উচিৎ?</label>
+      <item>
+        <label>সাহায্যের জন্য ডাকবেন ও ব্যাগটি জোরে চেপে বড় বড় শ্বাস দেওয়ার চেষ্টা করবেন</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শুধু সাহায্যের জন্য ডাকবেন</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শিশুর শ্বাসনালী পুনরায় পরিষ্কার করবেন</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q18">
+      <label>১৮। স্টেথোস্কোপ সাহায্যে কিভাবে শিশুর হৃদস্পন্দন নিরূপণ করবেন?</label>
+      <item>
+        <label>বুকের বামপাশে ৩ সেকেন্ড হৃদস্পন্দন গুনতে হবে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>বুকের বামপাশে ৪ সেকেন্ড হৃদস্পন্দন গুনতে হবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>বুকের বামপাশে ৬ সেকেন্ড হৃদস্পন্দন গুনতে হবে</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter1_exam/c1_q19">
+      <label>১৯। যে শিশুটি কৃত্রিম শ্বাস জোরদার করার পরও ভালভাবে শ্বাস নিচ্ছে না তার হৃদস্পন্দন কিভাবে নিরুপণ করবেন?</label>
+      <item>
+        <label>নাড়ীতে স্পন্দন অনুভব করে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শুধু মাত্র স্টেথোস্কোপের সাহায্যে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের কোনটিই নয়</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="line_draw" ref="/chapter1_exam/c1_q20">
+      <label>২০। কৃত্রিম শ্বাস জোড়দার করার পর ও যে শিশু শ্বাস নিচ্ছেনা তার হৃদস্পন্দন স্বাভাবিক হলে বা ধীর গতির হলে পর্যায় ক্রমে করণীয় কি?</label>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter1_exam/c1_q20/18:label')"/>
+        <value>18</value>
+      </item>
+    </select>
+    <input ref="/chapter1_exam/score">
+      <label>আপনার স্কোর</label>
+    </input>
+  </h:body>
+</h:html>

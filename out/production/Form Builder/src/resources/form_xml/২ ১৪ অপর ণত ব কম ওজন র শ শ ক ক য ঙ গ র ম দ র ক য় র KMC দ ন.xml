@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>২.১৪ অপরিণত বা কম ওজনের শিশুকে ক্যাঙ্গারু মাদার কেয়ার (KMC) দিন</h:title>
+    <model>
+      <instance>
+        <session_14_chap_2 id="fourteen_session_second_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter2/>
+          <s14_q1/>
+          <cal1/>
+          <s14_q2/>
+          <cal2/>
+          <s14_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_14_chap_2>
+      </instance>
+      <bind nodeset="/session_14_chap_2/chapter2" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_14_chap_2/s14_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_14_chap_2/s14_q1  = 't',1,0)" nodeset="/session_14_chap_2/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_14_chap_2/s14_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_14_chap_2/s14_q2  = 't',1,0)" nodeset="/session_14_chap_2/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_14_chap_2/s14_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_14_chap_2/s14_q3  = 't',1,0)" nodeset="/session_14_chap_2/cal3" type="string"/>
+      <bind calculate=" /session_14_chap_2/cal1 + /session_14_chap_2/cal2 + /session_14_chap_2/cal3 " nodeset="/session_14_chap_2/correctAns" type="string"/>
+      <bind calculate="if( /session_14_chap_2/cal1 + /session_14_chap_2/cal2 + /session_14_chap_2/cal3 =1,'১',' ')" nodeset="/session_14_chap_2/trans" type="string"/>
+      <bind calculate="if( /session_14_chap_2/cal1 + /session_14_chap_2/cal2 + /session_14_chap_2/cal3 =2,'২',' ')" nodeset="/session_14_chap_2/transs" type="string"/>
+      <bind calculate="if( /session_14_chap_2/cal1 + /session_14_chap_2/cal2 + /session_14_chap_2/cal3 =3,'৩',' ')" nodeset="/session_14_chap_2/transss" type="string"/>
+      <bind calculate="if( /session_14_chap_2/cal1 + /session_14_chap_2/cal2 + /session_14_chap_2/cal3 =0,'০',' ')" nodeset="/session_14_chap_2/transsss" type="string"/>
+      <bind nodeset="/session_14_chap_2/corrAns1" readonly="true()" relevant=" /session_14_chap_2/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_14_chap_2/corrAns2" readonly="true()" relevant=" /session_14_chap_2/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_14_chap_2/corrAns3" readonly="true()" relevant=" /session_14_chap_2/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_14_chap_2/corrAns4" readonly="true()" relevant=" /session_14_chap_2/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_14_chap_2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'4868403d56df439eaa98b0488cd67ebb'" nodeset="/session_14_chap_2/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_14_chap_2/chapter2">
+      <label>chapter 2</label>
+      <item>
+        <label>session_fourteen.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_14_chap_2/s14_q1">
+      <label>১. কোন শিশুদের KMC দেয়া হবে?</label>
+      <item>
+        <label>যে সকল শিশুর জন্ম ওজন ২০০০ গ্রামের নিচে ও অপরিণত</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>যে সকল শিশুর জন্ম ওজন ২৫০০ গ্রামের বেশি</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>উপরের কোনটিই নয়</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_14_chap_2/s14_q2">
+      <label>২.শিশুকে কে/কারা KMC দিবেন ?</label>
+      <item>
+        <label>শুধুমাত্র শিশুর মা</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>শিশুর মা বা পরিবারের অন্যান্য সদস্য</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>শুধুমাত্র শিশুর বাবা</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_14_chap_2/s14_q3">
+      <label>৩.কতদিন পর্যন্ত KMC চালিয়ে যেতে হবে?</label>
+      <item>
+        <label>যতদিন পর্যন্ত শিশুর ওজন ২৫০০ গ্রাম না হয়</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>মোট গর্ভকাল ৪০ সপ্তাহ পূর্ণ হয়</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>উপরের সবক’টি</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_14_chap_2/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_14_chap_2/trans "/>/৩</label>
+    </input>
+    <input ref="/session_14_chap_2/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_14_chap_2/transs "/>/৩</label>
+    </input>
+    <input ref="/session_14_chap_2/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_14_chap_2/transss "/>/৩</label>
+    </input>
+    <input ref="/session_14_chap_2/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_14_chap_2/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>

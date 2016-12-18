@@ -184,9 +184,9 @@ public class WidgetFactory {
                 }/*else if (appearance.equals("button")) {
             questionWidget = new SelectOneButtonWidget(fep);
         }*/else if (appearance.equals("picture_selection")) {
-           //questionWidget = new PictureSelectionWidget(fep);
-                    questionWidget=new ReArrangeWidget(fep);
-                    System.out.println("In widgetfactory re-arrange ####");
+           questionWidget = new PictureSelectionWidget(fep);
+                    //questionWidget=new ReArrangeWidget(fep);
+                    System.out.println("In widgetfactory PictureSeletion ####");
         }else if(appearance.equals("html")){
             //Log.d("LOG",fep.toString());
             questionWidget = new HtmlWidget(fep);
@@ -222,11 +222,14 @@ public class WidgetFactory {
                    // questionWidget = new LabelWidget(context, fep);
                 }else if (appearance.equals("rearrange")) {
                    // questionWidget = new ReArrangeWidget(context, fep);
+                    questionWidget=new ReArrangeWidget(fep);
+                    System.out.println("In widget factory *#*# Rearrange##");
                 }else if (appearance.equals("rearrange_four")) {
                     //questionWidget = new ReArrangeFourWidget(context, fep);
                 }else if (appearance.equals("drag-drop")) {
                    // questionWidget=new DragDropWidgetNew(fep);
                     //LogUtils.informationLog(new WidgetFactory(), " Found Drag-dropWidget");
+                    System.out.println("In dragDrop #####");
                     questionWidget = new DragDropWidget(fep);
                 }else if(appearance.equals("line_draw")){
                     //LogUtils.informationLog(new WidgetFactory(), " Found LineDrawWidget");

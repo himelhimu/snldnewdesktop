@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2.1 Continue skin-to-skin care and monitor breathing</h:title>
+    <model>
+      <instance>
+        <session_1_chap_2_en id="first_session_second_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s1_q1/>
+          <cal1/>
+          <s1_q2/>
+          <cal2/>
+          <s1_q3/>
+          <cal3/>
+          <correctAns/>
+          <cor1/>
+          <cor2/>
+          <cor3/>
+          <cor0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_1_chap_2_en>
+      </instance>
+      <bind nodeset="/session_1_chap_2_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_2_en/s1_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_2_en/s1_q1  = 't',1,0)" nodeset="/session_1_chap_2_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_2_en/s1_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_2_en/s1_q2  = 't',1,0)" nodeset="/session_1_chap_2_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_2_en/s1_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_2_en/s1_q3  = 't',1,0)" nodeset="/session_1_chap_2_en/cal3" type="string"/>
+      <bind calculate=" /session_1_chap_2_en/cal1 + /session_1_chap_2_en/cal2 + /session_1_chap_2_en/cal3 " nodeset="/session_1_chap_2_en/correctAns" type="string"/>
+      <bind nodeset="/session_1_chap_2_en/cor1" readonly="true()" relevant=" /session_1_chap_2_en/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_1_chap_2_en/cor2" readonly="true()" relevant=" /session_1_chap_2_en/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_1_chap_2_en/cor3" readonly="true()" relevant=" /session_1_chap_2_en/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_1_chap_2_en/cor0" readonly="true()" relevant=" /session_1_chap_2_en/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_1_chap_2_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'87b608fb8a414526a898696511e3d4a3'" nodeset="/session_1_chap_2_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_1_chap_2_en/chapter1">
+      <label>Chapter 1</label>
+      <item>
+        <label>session_one.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_2_en/s1_q1">
+      <label>1. When should skin-to-skin care begin?</label>
+      <item>
+        <label>After delivery of the placenta</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Immediately after drying the baby following birth</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>After being shown to the relatives</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_2_en/s1_q2">
+      <label>2. During the first hour after birth, how often should babies be observed for breathing problems?</label>
+      <item>
+        <label>Once during the hour</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Every 30 minutes</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Every 15 minutes</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_2_en/s1_q3">
+      <label>3. During the first two hours when should skin- to-skin care be interrupted?</label>
+      <item>
+        <label>Briefly for essential care and monitoring</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>When showing the baby to the relatives</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>To give the first bath</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_1_chap_2_en/cor1">
+      <label>Your Score 
+<output value=" /session_1_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_2_en/cor2">
+      <label>Your Score 
+<output value=" /session_1_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_2_en/cor3">
+      <label>Your Score 
+<output value=" /session_1_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_2_en/cor0">
+      <label>Your Score 
+<output value=" /session_1_chap_2_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

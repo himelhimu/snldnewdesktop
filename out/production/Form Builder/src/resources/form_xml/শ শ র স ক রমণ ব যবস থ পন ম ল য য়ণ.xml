@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>শিশুর সংক্রমণ ব্যবস্থাপনা মূল্যায়ণ</h:title>
+    <model>
+      <instance>
+        <chapter3_exam id="chapter_3_exam">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <c3_q1/>
+          <cal1/>
+          <c3_q2/>
+          <cal2/>
+          <c3_q3/>
+          <cal3/>
+          <c3_q4/>
+          <cal4/>
+          <c3_q5/>
+          <cal5/>
+          <c3_q6/>
+          <cal6/>
+          <c3_q7/>
+          <cal7/>
+          <c3_q8/>
+          <cal8/>
+          <c3_q9/>
+          <cal9/>
+          <c3_q10/>
+          <cal10/>
+          <c3_q11/>
+          <cal11/>
+          <c3_q12/>
+          <cal12/>
+          <c3_q13/>
+          <cal13/>
+          <c3_q14/>
+          <cal14/>
+          <c3_q15/>
+          <cal15/>
+          <c3_q16/>
+          <cal16/>
+          <c3_q17/>
+          <cal17/>
+          <c3_q18/>
+          <cal18/>
+          <c3_q19/>
+          <cal19/>
+          <c3_q20/>
+          <cal20/>
+          <res/>
+          <score/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </chapter3_exam>
+      </instance>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q1" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q1  = '3',1,0)" nodeset="/chapter3_exam/cal1" type="string"/>
+      <bind constraint=". = '1 2 3 4 5 6 7 8 9 10'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q2" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q2  = '1 2 3 4 5 6 7 8 9 10',1,0)" nodeset="/chapter3_exam/cal2" type="string"/>
+      <bind constraint=". = '1 2 3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q3" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q3  = '1 2 3',1,0)" nodeset="/chapter3_exam/cal3" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q4" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q4  = '1',1,0)" nodeset="/chapter3_exam/cal4" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q5" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q5  = '3',1,0)" nodeset="/chapter3_exam/cal5" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q6" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q6  = '1',1,0)" nodeset="/chapter3_exam/cal6" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q7" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q7  = '3',1,0)" nodeset="/chapter3_exam/cal7" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q8" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q8  = '3',1,0)" nodeset="/chapter3_exam/cal8" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q9" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q9  = '1',1,0)" nodeset="/chapter3_exam/cal9" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q10" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q10  = '1',1,0)" nodeset="/chapter3_exam/cal10" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q11" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q11  = '3',1,0)" nodeset="/chapter3_exam/cal11" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q12" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q12  = '1',1,0)" nodeset="/chapter3_exam/cal12" type="string"/>
+      <bind constraint=". = '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q13" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q13  = '1',1,0)" nodeset="/chapter3_exam/cal13" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q14" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q14  = '3',1,0)" nodeset="/chapter3_exam/cal14" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q15" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q15  = '3',1,0)" nodeset="/chapter3_exam/cal15" type="string"/>
+      <bind constraint=". = '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q16" required="true()" type="select1"/>
+      <bind calculate="if( /chapter3_exam/c3_q16  = '3',1,0)" nodeset="/chapter3_exam/cal16" type="string"/>
+      <bind constraint=". = '1 2 3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q17" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q17  = '1 2 3',1,0)" nodeset="/chapter3_exam/cal17" type="string"/>
+      <bind constraint=". = '1 2 3 4 5'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q18" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q18  = '1 2 3 4 5',1,0)" nodeset="/chapter3_exam/cal18" type="string"/>
+      <bind constraint=". = '1 2 3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q19" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q19  = '1 2 3',1,0)" nodeset="/chapter3_exam/cal19" type="string"/>
+      <bind constraint=". = '1 2 3 4'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter3_exam/c3_q20" required="true()" type="select"/>
+      <bind calculate="if( /chapter3_exam/c3_q20  = '1 2 3 4',1,0)" nodeset="/chapter3_exam/cal20" type="string"/>
+      <bind calculate=" /chapter3_exam/cal1  +  /chapter3_exam/cal2  +  /chapter3_exam/cal3  +  /chapter3_exam/cal4  +  /chapter3_exam/cal5  +  /chapter3_exam/cal6  +  /chapter3_exam/cal7  +  /chapter3_exam/cal8  +  /chapter3_exam/cal9  +  /chapter3_exam/cal10  +  /chapter3_exam/cal11  +  /chapter3_exam/cal12  +  /chapter3_exam/cal13  +  /chapter3_exam/cal14  +  /chapter3_exam/cal15  +  /chapter3_exam/cal16  +  /chapter3_exam/cal17  +  /chapter3_exam/cal18  +  /chapter3_exam/cal19  +  /chapter3_exam/cal20 " nodeset="/chapter3_exam/res" type="string"/>
+      <bind calculate="if( /chapter3_exam/res  = 0,'০', if( /chapter3_exam/res  = 1,'১', if( /chapter3_exam/res  = 2,'২', if( /chapter3_exam/res  = 3,'৩', if( /chapter3_exam/res  = 4,'৪', if( /chapter3_exam/res  = 5,'৫', if( /chapter3_exam/res  = 6,'৬', if( /chapter3_exam/res  = 7,'৭', if( /chapter3_exam/res  = 8,'৮', if( /chapter3_exam/res  = 9,'৯', if( /chapter3_exam/res  = 10,'১০', if( /chapter3_exam/res  = 11,'১১', if( /chapter3_exam/res  = 12,'১২', if( /chapter3_exam/res  = 13,'১৩', if( /chapter3_exam/res  = 14,'১৪', if( /chapter3_exam/res  = 15,'১৫', if( /chapter3_exam/res  = 16,'১৬', if( /chapter3_exam/res  = 17,'১৭', if( /chapter3_exam/res  = 18,'১৮', if( /chapter3_exam/res  = 19,'১৯', if( /chapter3_exam/res  = 20,'২০', ' ')))))))))))))))))))))" nodeset="/chapter3_exam/score" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/chapter3_exam/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'ae7cc735a7314fb3a8580c0afd28b1f7'" nodeset="/chapter3_exam/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q1">
+      <label>১. নিম্ন বর্ণিত শিশুর (০ - ৫৯ দিন) সংক্রমনের শ্রেণী বিভাগ কোনটি সঠিক?</label>
+      <item>
+        <label>সংকটাপন্ন অসুস্থতা, মারাত্মক সংক্রমন, শুধুমাত্র দ্রুত শ্বাস।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>সংকটাপন্ন অসুস্থতা, মারাত্মক সংক্রমন, শুধুমাত্র দ্রুত শ্বাস ও স্থানীয় সীমিত সংক্রমন।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>সংকটাপন্ন অসুস্থতা, শুধুমাত্র দ্রুত শ্বাস, স্থানীয় সীমিত সংক্রমন।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter3_exam/c3_q2">
+      <label>২. সংকটাপন্ন অসুস্থতার লক্ষণ গুলো কি কি?</label>
+      <item>
+        <label>অচেতন বা একদম নড়াচড়া না করা।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>খিঁচুনী বা খিঁচুনীর ইতিহাস আছে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>একদম খেতে না পারা।</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>অনবরত বমি।</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>মাথার তালু স্ফীত হওয়া।</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>শিশুর শরীরের বিশেষ নীল বর্ণ ধারণ করা।</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>ওজন ১৫০০ গ্রামের কম।</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>দ্রুত শ্বাস।</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>পুঁজ বটি</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>তাপমাত্রা ১০০.৪ ডিগ্রি সেঃ বেশী।</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>কোনোটি নয়</label>
+        <value>11</value>
+      </item>
+    </select>
+    <select appearance="button" ref="/chapter3_exam/c3_q3">
+      <label>৩. মারাত্মক সংক্রমনের লক্ষণ গুলো কি কি?</label>
+      <item>
+        <label>দ্রুত শ্বাস।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>বুকের নীচের অংশ মারাত্মক ভাবে দেবে যাওয়া।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>তাপমাত্রা ৯৫.৫ ডিগ্রি ফাঃ/ ৩৫.৫ ডিগ্রি সেঃ এর কম।</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>নাভী থেকে পুঁজ পড়া।</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>নেতিয়ে পড়া বা স্বাভাবিকের চেয়ে কম নড়াচড়া করা।</label>
+        <value>5</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q4">
+      <label>৪. দ্রুত শ্বাস এর লক্ষণ কোনটি?</label>
+      <item>
+        <label>শ্বাসের হার ৬০ বা তার বেশী।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শ্বাসের হার ৫৫ বা তার বেশী।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শ্বাসের হার ৫০ বা তার বেশী।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q5">
+      <label>৫. শিশুর নেতিয়ে পড়া বা স্বাভাবিকের চেয়ে কম নড়াচড়া করলে কিভাবে সনাক্ত করতে হবে?</label>
+      <item>
+        <label>জেগে থাকা অবস্থায় শিশুটি স্বাভাবিকের চেয়ে কম নড়াচড়া করলে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>যদি মায়ের কাছ থেকে নিয়ে ইতিহাস জানা যায় যে, শিশুটি একেবারেই নড়াচড়া করে না বা অচেতন থাকে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>যদি শিশু অস্বাভাবিক ঘুমে আচ্ছন্ন থাকে এবং উদ্দীপ্ত করা ব্যতিত না জাগে।</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>জাগ্রত অবস্থায় শিশুটির নড়াচড়া স্বাভাবিক।</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>শিশুটির স্বাভাবিক ভাবে ঘুমায় ও দুধ টেনে খেতে পারে।</label>
+        <value>5</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q6">
+      <label>৬. শিশুর খিঁচুনী থাকলে কিভাবে সনাক্ত করতে হবে?</label>
+      <item>
+        <label>যদি শিশুর শরীরের বিভিন্ন অঙ্গ প্রত্যঙ্গ বা পুরো শরীর বারবার ঝাঁকি দেয়, চোখ উল্টে যায়, মুখ থেকে ফেনা বের হয় এবং হাত-পা শক্ত হয়ে যায়।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>যদি শিশুর উচ্চ তাপমাত্রা, খিটখিটে মেজাজ ও দুধ খেতে না চায়।।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>যদি শিশুর মাংস পেশীর সংকোচন ঘটে।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q7">
+      <label>৭. শিশু খেতে না পারলে বা একদম না চুষলে কিভাবে সনাক্ত করতে হবে?</label>
+      <item>
+        <label>শিশুর মায়ের কাছ থেকে ইতিহাস নিয়ে নিশ্চিত হতে হবে যে, শিশু জন্মেও পর ঠিকমত খেতে কিন্তু বর্তমানে আগের মত খাচ্ছে না।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>পর্যবেক্ষণ করতে হবে শিশু ঠিকমত খাচ্ছে কি না।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের সব কটি।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q8">
+      <label>৮. শিশুর মাথার তালু স্ফীত হলে কিভাবে সনাক্ত করতে হবে?</label>
+      <item>
+        <label>শিশুর মাথায় কোন আঘাতের চিহ্ন আছে কি না লক্ষ্য করতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শিশুর মাথার তালু স্পর্শ করলে “স্পঞ্জ” এর মত নরম স্ফিত অংশ অনুভব, উচ্চ তাপমাত্রা, খিটখিটে মেজাজ, দুধ খেতে না পারা।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের সবগুলো।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q9">
+      <label>৯. শিশুর শরীরের বিশেষ অংশ নীল বর্ণ ধারন করলে কি কি পরীক্ষা করতে হবে?</label>
+      <item>
+        <label>শিশুর ঠোঁট, জিহবার অগ্রভাগ ও দাঁতের মাড়ি।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শিশুর পেট।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শিশুর পায়ের পাতা।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q10">
+      <label>১০. শিশুর সংকটাপন্ন অসুস্থতার চিকিৎসার ব্যবস্থাপনা কোন টি?</label>
+      <item>
+        <label>ইনজেকশন জেন্টামাইসিন ও মুখে এমক্সিসিলিন ড্রপ এর প্রথম ডোজ প্রদান।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>রেফার ও প্রয়োজনীয় পরামর্শ প্রদান।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>যদি পরিবার রোগীকে রেফার করতে না চায় তবে পরবর্তী চিকিৎসা।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q11">
+      <label>১১. বুকের নীচের অংশ মারাত্মকভাবে দেবে যাওয়া সনাক্ত করতে হবে কিভাবে?</label>
+      <item>
+        <label>শ্বাস গ্রহণের সময় শিশুর বুকের খাঁচার নীচের অংশ মারাত্মকভাবে দেবে যায় কিনা লক্ষ্য করতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শিশুর বুকের নীচের অংশ পুরোপুরি খুলে এ পর্যবেক্ষণ করতে হবে। এ পর্যবেক্ষণের জন্য শিশুকে অবশ্যই শান্ত থাকা অবস্থায় বুকের নীচের অংশ দেবে যাচ্ছে কিনা লক্ষ্য করতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শ্বাস-প্রশ্বাস লক্ষ্য করতে হবে না।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q12">
+      <label>১২. শিশুর নিম্ন তাপমাত্রা ও উচ্চ তাপমাত্রা কোনটি?</label>
+      <item>
+        <label>৯৫.০০ ডিগ্রি ফাঃ ও ৯৯.৪০ ডিগ্রি ফাঃ।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>৯৫.৯০ ডিগ্রি ফাঃ ও ১০০.৪০ ডিগ্রি ফাঃ।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>৯৫.৫০ ডিগ্রি ফাঃ ও</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q13">
+      <label>১৩. শিশুর মারাত্মক সংক্রমন এর চিকিৎসা ব্যবস্থাপনা কোনটি?</label>
+      <item>
+        <label>১ম ডোজ ইনজেকশন জেন্টামাইসিন ও এমক্সিসিলিন ড্রপ এবং রেফার।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শুধুমাত্র এমক্সিসিলিন ড্রপ - ০১ ডোজ।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>শুধুমাত্র এমক্সিসিলিন ড্রপ দিনে ০২ বার - ০৭ দিন।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q14">
+      <label>১৪. শিশুর মারাত্মক সংক্রমন এর চিকিৎসায় যদি পরিবার রোগীকে রেফার করতে না চায় সেক্ষেত্রে করণীয় কি?</label>
+      <item>
+        <label>এমক্সিসিলিন ড্রপ (দিনে ০২ বার - ০২ দিন)।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>এমক্সিসিলিন ড্রপ (দিনে ০১ বার - ০৭ দিন), ইনজেকশন জেন্টামাইসিন (দিনে ০১ বার - ০১ দিন)।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>ইনজেকশন জেন্টামাইসিন- ৫ থেকে ৭.৫ মি.গ্রা./কেজি/দিনে- ১বার ২ দিন এবং  এম·িসিলিন ড্রপ- ৫০ মি.গ্রা./কেজি/ডোজ দিনে-২বার ৭ দিন (চার্ট অনুযায়ী ।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q15">
+      <label>১৫. দ্রুত শ্বাস সনাক্ত করার জন্য শ্বাসের হার কিভাবে গণনা করতে হবে?</label>
+      <item>
+        <label>শিশুর শ্বাস-প্রশ্বাসের হার ০১ মিনিট অজও ঞরসবৎ কাঁটাযুক্ত ঘড়ি ব্যবহার করে গণনা করতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>শিশুর শ্বাস-প্রশ্বাসের গতি পরীক্ষার সময় শিশুকে অবশ্যই শান্ত রাখতে হবে ।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের সব কটি ০-৬ দিনের শিশুর জন্য।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter3_exam/c3_q16">
+      <label>১৬. দ্রুত শ্বাসের চিকিৎসা কোনটি?</label>
+      <item>
+        <label>এমক্সিসিলিন ড্রপ - প্রথম ডোজ প্রদান ও রেফার।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>এমক্সিসিলিন ড্রপ - ০২ ডোজ।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>এমক্সিসিলিন ড্রপ দিনে ০২ বার - ০৭ দিন।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter3_exam/c3_q17">
+      <label>১৭. শিশুর সংক্রমন চিকিৎসা চলাকালীন সময়ে শিশুকে কখন রেফার করতে হবে।</label>
+      <item>
+        <label>চিকিৎসা গ্রহণ করার ০৪ দিন পরেও শিশুর অবস্থার উন্নতি না হয়।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>খুব মারাত্মক অসুস্থতার নতুন কোন লক্ষণ বা উপসর্গ প্রকাশ পায় চিকিৎসা গ্রহণের ৪৮ ঘন্টার পর।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>চিকিৎসা গ্রহণ করার পরও (৮ম দিন) সম্পূর্ণ সুস্থ না হয় পরিবারটি ইউনিয়ন পর্যায়ের স্বাস্থ্য কেন্দ্রে চিকিৎসা সম্পূর্ণ করতে না চায়।</label>
+        <value>3</value>
+      </item>
+    </select>
+    <select appearance="button" ref="/chapter3_exam/c3_q18">
+      <label>১৮. শিশুকে রেফার করার ক্ষেত্রে পরিবারকে কি কি পরামর্শ দেয়া প্রয়োজন?</label>
+      <item>
+        <label>রেফারেল স্লিপ প্রদান করতে হবে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>মা’কে প্রয়োজনীয় পরামর্শ দিতে হবে: শিশুকে ঘন ঘন বুকের দুধ খাওয়াতে হবে, যদি শিশু বুকের দুধ চুষে খেতে না পারে তাহলে মা’য়ের দুধ গেলে শিশুকে বিকল্প পদ্ধতিতে খাওয়াতে হবে, শিশুকে উষ্ণ রাখতে হবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>ইউনিয়ন পর্যায়ের স্বাস্থ্যকর্মীরা রেফারের সময় অবশ্যই শিশুর পরিবারের যে কোন সদস্যের মোবাইল ফোন নম্বর (যদি থাকে) রাখবেন, যাতে পরবর্তীতে যথাযথভাবে ফলোআপ নিশ্চিত করা যায়। ইউনিয়ন পর্যায়ের স্বাস্থ্যকর্মীরা তাদের নিজেদের মোবাইল নম্বরটিও শিশুর পরিবারকে দিবেন যেন যেকোন জরুরী প্রয়োজনে অবশ্যই দ্রুত ইউনিয়ন পর্যায়ের স্বাস্থ্যকর্মীর সাথে দ্রুত যোগাযোগ করতে পারেন</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>রেফারের পূর্বে স্বাস্থ্যকর্মী বা মাঠ পরিদর্শক (স্বাস্থ্য পরিদর্শক, সহকারী স্বাস্থ্য পরিদর্শক বা পরিবার পরিকল্পনা পরিদর্শক) বা এনজিও তত্ত্বাবধায়কগণ অবশ্যই রেফারকৃত কেন্দ্রের সাথে যোগাযোগ করবেন এবং রোগীকে তথ্য প্রদান করবেন</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>যদি এ্যাম্বুলেন্স পাওয়া যায় তবে রেফারের জন্য তার বন্দোবস্ত করতে হবে। যদি না পাওয়া যায় তবে প্রচলিত যানবাহনের (সিএনজি, ভ্যান, রিক্সা, নৌকা ইত্যাদি) ব্যবস্থা নিশ্চিত করতে হবে। এক্ষেত্রে স্বাস্থ্যস্থ্যকেন্দ্রের কর্মীদের সর্বাত্মক সহযোগিতা প্রয়োজন, যাতে বিলম্বের কারণে শিশুটির মৃত্যু না ঘটে</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>তারকা চিহ্নিত লক্ষণ যুক্ত শিশুর ক্ষেত্রে প্রয়োজনে স্থানীয় গন্যমান্য ব্যক্তিদের সহায়তায় রেফার নিশ্চিত করতে হবে</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>উপোরের কোনোটি নয়</label>
+        <value>7</value>
+      </item>
+    </select>
+    <select appearance="button" ref="/chapter3_exam/c3_q19">
+      <label>১৯. কিভাবে ইনজেকশন দিতে হবে?</label>
+      <item>
+        <label>স্বাস্থ্য সেবাদানকারীকে ইনজেকশন প্রদানের পূর্বে হাত ভাল কওে সাবান দিয়ে ধোঁয়ে নিতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ইনজেকশন দেবার স্থানটি এন্টিসেপটিক ড্রপ দিয়ে (কেন্দ্র হতে বাইরের অংশে) মুড়ে নিতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>খাড়াভাবে ইনজেকশন দিতে হবে।</label>
+        <value>3</value>
+      </item>
+    </select>
+    <select appearance="button" ref="/chapter3_exam/c3_q20">
+      <label>২০. এমক্সিসিলিন সাসপেনশন তৈরী প্রণালী কোনটি?</label>
+      <item>
+        <label>পানি মিশানোর আগে বোতল ভালো করে ঝাঁকিয়ে নিতে হবে যেন পাউডার জমাট বেধে না থাকে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ফুটানো পানি ঠান্ডা করে সংমিশ্রণের জন্য ব্যবহার করতে হবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>সরবাহকৃত চামচের সাহায্যে দুই চা চামচ (১০ মি.লি.) পরিমান পানি বোতলে ঢেলে, পাউডার সম্পূর্ণ মিশে না যাওয়া পর্যন্ত ঝাঁকিয়ে নিতে হবে</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>প্রত্যেকবার সেবনের আগে বোতল ভালো করে ঝাঁকিয়ে নিতে হবে। (সংমিশ্রনের সাত দিনের মধ্যে প্রেডিয়াট্রিক ড্রপস ব্যবহার শেষ করতে হবে)</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>উপরের কোনোটি নয়</label>
+        <value>5</value>
+      </item>
+    </select>
+    <input ref="/chapter3_exam/score">
+      <label>আপনার স্কোর</label>
+    </input>
+  </h:body>
+</h:html>

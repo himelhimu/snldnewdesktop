@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1.6 After clearing and stimulation - Is the baby breathing well?</h:title>
+    <model>
+      <instance>
+        <session_6_chap_1_en id="six_session_first_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s6_q1/>
+          <cal1/>
+          <s6_q2/>
+          <cal2/>
+          <s6_q3/>
+          <cal3/>
+          <correctAns/>
+          <sco1/>
+          <sco2/>
+          <sco3/>
+          <sco0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_6_chap_1_en>
+      </instance>
+      <bind nodeset="/session_6_chap_1_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_1_en/s6_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_1_en/s6_q1  = 't',1,0)" nodeset="/session_6_chap_1_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_1_en/s6_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_1_en/s6_q2  = 't',1,0)" nodeset="/session_6_chap_1_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_6_chap_1_en/s6_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_6_chap_1_en/s6_q3  = 't',1,0)" nodeset="/session_6_chap_1_en/cal3" type="string"/>
+      <bind calculate=" /session_6_chap_1_en/cal1 + /session_6_chap_1_en/cal2 + /session_6_chap_1_en/cal3 " nodeset="/session_6_chap_1_en/correctAns" type="string"/>
+      <bind nodeset="/session_6_chap_1_en/sco1" readonly="true()" relevant=" /session_6_chap_1_en/correctAns  = 1" type="int"/>
+      <bind nodeset="/session_6_chap_1_en/sco2" readonly="true()" relevant=" /session_6_chap_1_en/correctAns  = 2" type="int"/>
+      <bind nodeset="/session_6_chap_1_en/sco3" readonly="true()" relevant=" /session_6_chap_1_en/correctAns  = 3" type="int"/>
+      <bind nodeset="/session_6_chap_1_en/sco0" readonly="true()" relevant=" /session_6_chap_1_en/correctAns  = 0" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_6_chap_1_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'05395c303b8a4e6bbdc68b609e90b6a9'" nodeset="/session_6_chap_1_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_6_chap_1_en/chapter1">
+      <label>Chapter 1</label>
+      <item>
+        <label>session_six.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_1_en/s6_q1">
+      <label>1. If a baby is not breathing well after drying, clearing the airway and rubbing the back 2 to 3 times, you should give</label>
+      <item>
+        <label>More stimulation</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Ventilation with bag and mask</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>No stimulation</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_1_en/s6_q2">
+      <label>2. Which baby is breathing well?</label>
+      <item>
+        <label>A baby who is breathing quietly and regularly</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>A baby who takes one deep breath followed by a long pause</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Shallow, irregular, slow or noisy breathing</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_6_chap_1_en/s6_q3">
+      <label>3. Which of the following signs must be monitored in a baby during the first few hours after birth?</label>
+      <item>
+        <label>Length</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Breathing</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Urine output</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_6_chap_1_en/sco1">
+      <label>Your Score 
+
+<output value=" /session_6_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_1_en/sco2">
+      <label>Your Score 
+
+<output value=" /session_6_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_1_en/sco3">
+      <label>Your Score 
+
+<output value=" /session_6_chap_1_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_6_chap_1_en/sco0">
+      <label>Your Score 
+
+<output value=" /session_6_chap_1_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

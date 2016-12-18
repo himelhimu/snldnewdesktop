@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>২.৪ শিশুর শারিরীক পরীক্ষা করুন</h:title>
+    <model>
+      <instance>
+        <session_4_chap_2 id="four_session_second_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s4_q1/>
+          <cal1/>
+          <s4_q2/>
+          <cal2/>
+          <s4_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_4_chap_2>
+      </instance>
+      <bind nodeset="/session_4_chap_2/chapter1" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_4_chap_2/s4_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_4_chap_2/s4_q1  = 't',1,0)" nodeset="/session_4_chap_2/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_4_chap_2/s4_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_4_chap_2/s4_q2  = 't',1,0)" nodeset="/session_4_chap_2/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_4_chap_2/s4_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_4_chap_2/s4_q3  = 't',1,0)" nodeset="/session_4_chap_2/cal3" type="string"/>
+      <bind calculate=" /session_4_chap_2/cal1 + /session_4_chap_2/cal2 + /session_4_chap_2/cal3 " nodeset="/session_4_chap_2/correctAns" type="string"/>
+      <bind calculate="if( /session_4_chap_2/cal1 + /session_4_chap_2/cal2 + /session_4_chap_2/cal3 =1,'১',' ')" nodeset="/session_4_chap_2/trans" type="string"/>
+      <bind calculate="if( /session_4_chap_2/cal1 + /session_4_chap_2/cal2 + /session_4_chap_2/cal3 =2,'২',' ')" nodeset="/session_4_chap_2/transs" type="string"/>
+      <bind calculate="if( /session_4_chap_2/cal1 + /session_4_chap_2/cal2 + /session_4_chap_2/cal3 =3,'৩',' ')" nodeset="/session_4_chap_2/transss" type="string"/>
+      <bind calculate="if( /session_4_chap_2/cal1 + /session_4_chap_2/cal2 + /session_4_chap_2/cal3 =0,'০',' ')" nodeset="/session_4_chap_2/transsss" type="string"/>
+      <bind nodeset="/session_4_chap_2/corrAns1" readonly="true()" relevant=" /session_4_chap_2/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_4_chap_2/corrAns2" readonly="true()" relevant=" /session_4_chap_2/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_4_chap_2/corrAns3" readonly="true()" relevant=" /session_4_chap_2/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_4_chap_2/corrAns4" readonly="true()" relevant=" /session_4_chap_2/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_4_chap_2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'f319f38da9ee484aaa3bb9a2a6d73bee'" nodeset="/session_4_chap_2/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_4_chap_2/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_four.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_4_chap_2/s4_q1">
+      <label>১. স্বাভাবিক নবজাতকের হাত ও পায়ের নড়াচড়া কেমন হবে?</label>
+      <item>
+        <label>হাত-পা সোজা থাকবে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>জাগ্রত অবস্থায় উভয় পাশের হাত ও পা সামঞ্জস্যপূর্ণভাবে নড়াচড়া করবে</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>হাত-পা ঝাঁকুনী দিয়ে নাড়াবে</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_4_chap_2/s4_q2">
+      <label>২. একটি সুস্থ শিশুর স্বাভাবিক তাপমাত্রা ও শ্বাসের হার কত হবে?</label>
+      <item>
+        <label>মিনিটে কমপক্ষে ৬৫ বার, ৩৮০ সেঃ/ ১০৪০ ফাঃ এর উপরে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>বুকের নীচের অংশ দেবে যাওয়া না থাকলে যে কোন সংখ্যক বার</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>মিনিটে ৩০-৫৯ বার, ৩৬.৫০-৩৭.৫০ সেঃ/ ৯৭.৭০-৯৯.৫০ ফাঃ</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_4_chap_2/s4_q3">
+      <label>৩. জন্মের ১ ঘন্টার মধ্যে নাভিরজ্জু থেকে কি নিঃসৃত হতে পারে?</label>
+      <item>
+        <label>কিছু পরিমাণ জলীয় পদার্থ</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>কয়েক ফোঁটা রক্ত</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>কোন নিঃসরণ থাকবে না</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <input ref="/session_4_chap_2/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_4_chap_2/trans "/>/৩</label>
+    </input>
+    <input ref="/session_4_chap_2/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_4_chap_2/transs "/>/৩</label>
+    </input>
+    <input ref="/session_4_chap_2/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_4_chap_2/transss "/>/৩</label>
+    </input>
+    <input ref="/session_4_chap_2/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_4_chap_2/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>
