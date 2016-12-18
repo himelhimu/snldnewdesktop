@@ -9,6 +9,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryPrompt;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,12 +22,17 @@ import java.util.ResourceBundle;
 /**
  * Created by sabbir on 12/15/16.
  */
-public class ReArrangeWidget implements Initializable {
+public class ReArrangeWidget extends QuestionWidget implements Initializable {
     @FXML
     private AnchorPane mAnchorPane;
 
     private ArrayList<ImageView> imageViews;
     private File DIRECTORY=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/rearrange");
+
+    public ReArrangeWidget(FormEntryPrompt p) {
+        super(p);
+    }
+
     public void setImages()
     {
         //mAnchorPane=new AnchorPane();
@@ -110,5 +117,25 @@ public class ReArrangeWidget implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setImages();
+    }
+
+    @Override
+    public IAnswerData getAnswer() {
+        return null;
+    }
+
+    @Override
+    public void clearAnswer() {
+
+    }
+
+    @Override
+    public void setFocus() {
+
+    }
+
+    @Override
+    public void setOnLongClickListener() {
+
     }
 }

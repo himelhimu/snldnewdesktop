@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2.7 Classify the baby</h:title>
+    <model>
+      <instance>
+        <session_7_chap_2_en id="seven_session_second_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s7_q1/>
+          <cal1/>
+          <s7_q2/>
+          <cal2/>
+          <s7_q3/>
+          <cal3/>
+          <correctAns/>
+          <cor1/>
+          <cor2/>
+          <cor3/>
+          <cor0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_7_chap_2_en>
+      </instance>
+      <bind nodeset="/session_7_chap_2_en/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_2_en/s7_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_2_en/s7_q1  = 't',1,0)" nodeset="/session_7_chap_2_en/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_2_en/s7_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_2_en/s7_q2  = 't',1,0)" nodeset="/session_7_chap_2_en/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_7_chap_2_en/s7_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_7_chap_2_en/s7_q3  = 't',1,0)" nodeset="/session_7_chap_2_en/cal3" type="string"/>
+      <bind calculate=" /session_7_chap_2_en/cal1 + /session_7_chap_2_en/cal2 + /session_7_chap_2_en/cal3 " nodeset="/session_7_chap_2_en/correctAns" type="string"/>
+      <bind nodeset="/session_7_chap_2_en/cor1" readonly="true()" relevant=" /session_7_chap_2_en/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_7_chap_2_en/cor2" readonly="true()" relevant=" /session_7_chap_2_en/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_7_chap_2_en/cor3" readonly="true()" relevant=" /session_7_chap_2_en/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_7_chap_2_en/cor0" readonly="true()" relevant=" /session_7_chap_2_en/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_7_chap_2_en/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'e710809ace014931bbb4c1cb6f7a0781'" nodeset="/session_7_chap_2_en/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_7_chap_2_en/chapter1">
+      <label>Chapter 2</label>
+      <item>
+        <label>session_seven.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_2_en/s7_q1">
+      <label>1. A 00 gm baby is unable to suck or swallow during the first 6 hours after birth. How would you classify this baby?</label>
+      <item>
+        <label>The baby is normal</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Baby with danger sign, and need advanced care</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>Baby is having a feeding problem</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_2_en/s7_q2">
+      <label>2. At 90 minutes of age, a 2500 gm baby with normal examination finding, is breathing 50 per minute, attached to breast and sucked for 10 minutes. How would you classify this baby?</label>
+      <item>
+        <label>The baby is normal</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>The baby is with danger sign, and needs advanced care</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>The baby is having a problem</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_7_chap_2_en/s7_q3">
+      <label>3. At 90 minutes of age, a 1700 gm baby with normal examination finding, fed only briefly at 30 minutes following delivery and temperature is 35.70C/96.260F. How would you classify this baby?</label>
+      <item>
+        <label>The baby is with abnormal (low) temperature</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>The baby is with danger sign, and needs advanced care</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>The baby is having feeding problem</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_7_chap_2_en/cor1">
+      <label>Your Score 
+<output value=" /session_7_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_2_en/cor2">
+      <label>Your Score 
+<output value=" /session_7_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_2_en/cor3">
+      <label>Your Score 
+<output value=" /session_7_chap_2_en/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_7_chap_2_en/cor0">
+      <label>Your Score 
+<output value=" /session_7_chap_2_en/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

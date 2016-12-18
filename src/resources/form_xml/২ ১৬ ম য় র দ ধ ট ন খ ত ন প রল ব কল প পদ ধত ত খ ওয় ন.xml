@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>২.১৬ মায়ের দুধ টেনে খেতে না পারলে, বিকল্প পদ্ধতিতে খাওয়ান</h:title>
+    <model>
+      <instance>
+        <session_16_chap_2 id="sixteen_session_second_chapter">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter2/>
+          <s16_q1/>
+          <cal1/>
+          <s16_q2/>
+          <cal2/>
+          <s16_q3/>
+          <cal3/>
+          <correctAns/>
+          <trans/>
+          <transs/>
+          <transss/>
+          <transsss/>
+          <corrAns1/>
+          <corrAns2/>
+          <corrAns3/>
+          <corrAns4/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_16_chap_2>
+      </instance>
+      <bind nodeset="/session_16_chap_2/chapter2" type="select1"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_16_chap_2/s16_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_16_chap_2/s16_q1  = 't',1,0)" nodeset="/session_16_chap_2/cal1" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_16_chap_2/s16_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_16_chap_2/s16_q2  = 't',1,0)" nodeset="/session_16_chap_2/cal2" type="string"/>
+      <bind constraint=". = 't'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_16_chap_2/s16_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_16_chap_2/s16_q3  = 't',1,0)" nodeset="/session_16_chap_2/cal3" type="string"/>
+      <bind calculate=" /session_16_chap_2/cal1 + /session_16_chap_2/cal2 + /session_16_chap_2/cal3 " nodeset="/session_16_chap_2/correctAns" type="string"/>
+      <bind calculate="if( /session_16_chap_2/cal1 + /session_16_chap_2/cal2 + /session_16_chap_2/cal3 =1,'১',' ')" nodeset="/session_16_chap_2/trans" type="string"/>
+      <bind calculate="if( /session_16_chap_2/cal1 + /session_16_chap_2/cal2 + /session_16_chap_2/cal3 =2,'২',' ')" nodeset="/session_16_chap_2/transs" type="string"/>
+      <bind calculate="if( /session_16_chap_2/cal1 + /session_16_chap_2/cal2 + /session_16_chap_2/cal3 =3,'৩',' ')" nodeset="/session_16_chap_2/transss" type="string"/>
+      <bind calculate="if( /session_16_chap_2/cal1 + /session_16_chap_2/cal2 + /session_16_chap_2/cal3 =0,'০',' ')" nodeset="/session_16_chap_2/transsss" type="string"/>
+      <bind nodeset="/session_16_chap_2/corrAns1" readonly="true()" relevant=" /session_16_chap_2/correctAns  = 1" type="string"/>
+      <bind nodeset="/session_16_chap_2/corrAns2" readonly="true()" relevant=" /session_16_chap_2/correctAns  = 2" type="string"/>
+      <bind nodeset="/session_16_chap_2/corrAns3" readonly="true()" relevant=" /session_16_chap_2/correctAns  = 3" type="string"/>
+      <bind nodeset="/session_16_chap_2/corrAns4" readonly="true()" relevant=" /session_16_chap_2/correctAns  = 0" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_16_chap_2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'0ec0177ffbfa49a49d81f5e22aba3501'" nodeset="/session_16_chap_2/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_16_chap_2/chapter2">
+      <label>chapter 2</label>
+      <item>
+        <label>session_sixteen.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_16_chap_2/s16_q1">
+      <label>১.কোন শিশুকে মায়ের দুধ গেলে খাওয়াতে হবে?</label>
+      <item>
+        <label>সব খাবার বমি করে ফেলে দেয় এমন শিশুকে</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>দুধ টেনে খেতে পারে না এমন শিশুকে</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>দুধ গিলতে পারে এমন শিশুকে</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_16_chap_2/s16_q2">
+      <label>২.কাপে খাওয়ানোর শুরুতে কি করবেন?</label>
+      <item>
+        <label>কাপ থেকে কিছু পরিমাণ দুধ চেটে খেতে দিবেন</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>শিশুর মুখে একচামচ দুধ দিবেন</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>ফোঁটা ফোঁটা দুধ বিরতিহীনভাবে শিশুর মুখের ভিতর ফেলবেন</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_16_chap_2/s16_q3">
+      <label>৩.জন্মের প্রথম কত ঘন্টা পর্যন্ত শিশুকে ৪০-৬০ মি.লি./কেজি দুধ খাওয়ানো যেতে পারে?</label>
+      <item>
+        <label>প্রথম ২৪ ঘন্টা পর্যন্ত</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>প্রথম ৪৮ ঘন্টা পর্যন্ত</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>উপরের কোনটিই নয়</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_16_chap_2/corrAns1">
+      <label>আপনার স্কোর 
+
+<output value=" /session_16_chap_2/trans "/>/৩</label>
+    </input>
+    <input ref="/session_16_chap_2/corrAns2">
+      <label>আপনার স্কোর 
+
+<output value=" /session_16_chap_2/transs "/>/৩</label>
+    </input>
+    <input ref="/session_16_chap_2/corrAns3">
+      <label>আপনার স্কোর 
+
+<output value=" /session_16_chap_2/transss "/>/৩</label>
+    </input>
+    <input ref="/session_16_chap_2/corrAns4">
+      <label>আপনার স্কোর 
+
+<output value=" /session_16_chap_2/transsss "/>/৩</label>
+    </input>
+  </h:body>
+</h:html>

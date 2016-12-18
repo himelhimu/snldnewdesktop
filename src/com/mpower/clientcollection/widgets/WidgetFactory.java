@@ -184,7 +184,9 @@ public class WidgetFactory {
                 }/*else if (appearance.equals("button")) {
             questionWidget = new SelectOneButtonWidget(fep);
         }*/else if (appearance.equals("picture_selection")) {
-           questionWidget = new PictureSelectionWidget(fep);
+           //questionWidget = new PictureSelectionWidget(fep);
+                    questionWidget=new ReArrangeWidget(fep);
+                    System.out.println("In widgetfactory re-arrange ####");
         }else if(appearance.equals("html")){
             //Log.d("LOG",fep.toString());
             questionWidget = new HtmlWidget(fep);

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>অধ্যায় ২ : সুস্থ ও অসুস্থ শিশুর পরিচর্যা (দ্বিতীয় মূল্যায়ণ)</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/chapter2_2_exam_final/c2_2_q8/1:label">
+            <value form="image">jr://images/c2_2_q8_1.png</value>
+            <value>Option1</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/7:label">
+            <value form="image">jr://images/common.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/3:label">
+            <value form="image">jr://images/c2_2_q8_3.png</value>
+            <value>Option3</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q4:label">
+            <value form="image">jr://images/c2_2_q4.png</value>
+            <value>৪. দুধ গলানোর সঠিক ধাপ কোনটি?</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/4:label">
+            <value form="image">jr://images/c2_2_q8_4.png</value>
+            <value>Option4</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q6:label">
+            <value form="image">jr://images/c2_2_q6.png</value>
+            <value>৬. কাপে বা চামুচে শিশুকে দুধ খাওয়ানোর ধাপ সমূহ কি কি?</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/6:label">
+            <value form="image">jr://images/c2_2_q8_6.png</value>
+            <value>Option6</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/5:label">
+            <value form="image">jr://images/c2_2_q8_5.png</value>
+            <value>Option5</value>
+          </text>
+          <text id="/chapter2_2_exam_final/c2_2_q8/2:label">
+            <value form="image">jr://images/c2_2_q8_2.png</value>
+            <value>Option2</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chapter2_2_exam_final id="chapter_2_2_exam">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <c2_2_q1/>
+          <cal1/>
+          <c2_2_q2/>
+          <cal2/>
+          <c2_2_q3/>
+          <cal3/>
+          <c2_2_q4/>
+          <cal4/>
+          <c2_2_q5/>
+          <cal5/>
+          <c2_2_q6/>
+          <cal6/>
+          <c2_2_q7/>
+          <cal7/>
+          <c2_2_q8/>
+          <cal8/>
+          <c2_2_q9/>
+          <cal9/>
+          <c2_2_q10/>
+          <cal10/>
+          <res/>
+          <score/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </chapter2_2_exam_final>
+      </instance>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q1" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q1  = '1',1,0)" nodeset="/chapter2_2_exam_final/cal1" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q2" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q2  = '1',1,0)" nodeset="/chapter2_2_exam_final/cal2" type="string"/>
+      <bind constraint=".= '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q3" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q3  = '3',1,0)" nodeset="/chapter2_2_exam_final/cal3" type="string"/>
+      <bind constraint=".= '1 2 3 4 5 6 7 8'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q4" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q4  = '1 2 3 4 5 6 7 8',1,0)" nodeset="/chapter2_2_exam_final/cal4" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q5" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q5  = '1',1,0)" nodeset="/chapter2_2_exam_final/cal5" type="string"/>
+      <bind constraint=".= '1 2 3 4 5 6'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q6" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q6  = '1 2 3 4 5 6',1,0)" nodeset="/chapter2_2_exam_final/cal6" type="string"/>
+      <bind constraint=".= '1'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q7" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q7  = '1',1,0)" nodeset="/chapter2_2_exam_final/cal7" type="string"/>
+      <bind constraint=".= '1 2 3 4 5 6'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q8" required="true()" type="select"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q8  = '1 2 3 4 5 6',1,0)" nodeset="/chapter2_2_exam_final/cal8" type="string"/>
+      <bind constraint=".= '3'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q9" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q9  = '3',1,0)" nodeset="/chapter2_2_exam_final/cal9" type="string"/>
+      <bind constraint=".= '7'" jr:constraintMsg="উত্তর ভুল" nodeset="/chapter2_2_exam_final/c2_2_q10" required="true()" type="select1"/>
+      <bind calculate="if( /chapter2_2_exam_final/c2_2_q10  = '7',1,0)" nodeset="/chapter2_2_exam_final/cal10" type="string"/>
+      <bind calculate=" /chapter2_2_exam_final/cal1  +  /chapter2_2_exam_final/cal2  +  /chapter2_2_exam_final/cal3  +  /chapter2_2_exam_final/cal4  +  /chapter2_2_exam_final/cal5  +  /chapter2_2_exam_final/cal6  +  /chapter2_2_exam_final/cal7  +  /chapter2_2_exam_final/cal8  +  /chapter2_2_exam_final/cal9  +  /chapter2_2_exam_final/cal10 " nodeset="/chapter2_2_exam_final/res" readonly="true()" type="string"/>
+      <bind calculate="if( /chapter2_2_exam_final/res  = 0,'০', if( /chapter2_2_exam_final/res  = 1,'১', if( /chapter2_2_exam_final/res  = 2,'২', if( /chapter2_2_exam_final/res  = 3,'৩', if( /chapter2_2_exam_final/res  = 4,'৪', if( /chapter2_2_exam_final/res  = 5,'৫', if( /chapter2_2_exam_final/res  = 6,'৬', if( /chapter2_2_exam_final/res  = 7,'৭', if( /chapter2_2_exam_final/res  = 8,'৮', if( /chapter2_2_exam_final/res  = 9,'৯', if( /chapter2_2_exam_final/res  = 10,'১০', ' ')))))))))))" nodeset="/chapter2_2_exam_final/score" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/chapter2_2_exam_final/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'79c444da6a064bb886b032a83f3884d1'" nodeset="/chapter2_2_exam_final/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q1">
+      <label>১. কোন শিশুদের KMC দেয়া হবে?</label>
+      <item>
+        <label>যে সকল শিশুর জন্ম ওজন ২০০০ গ্রামের নিচে ও অপরিনত</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>যে সকল শিশুর জন্ম ওজন ২৫০০ গ্রামের বেশি</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের কোনটিই নয়</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q2">
+      <label>২. প্রতিদিন কতক্ষণ KMC সেবা চালিয়ে যেতে হবে?</label>
+      <item>
+        <label>দিন-রাত্রি মিলিয়ে কমপক্ষে ২০ ঘন্ট।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>দিন-রাত্রি মিলিয়ে কমপক্ষে ১২ ঘন্ট।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>দিন-রাত্রি মিলিয়ে কমপক্ষে ০২ ঘন্ট।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q3">
+      <label>৩. কতদিন পর্যন্ত KMC চালিয়ে যেতে হবে?</label>
+      <item>
+        <label>যতদিন পর্যন্ত শিশুর ওজন ২৫০০ গ্রাম না হয়</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>মোট গর্ভকাল ৪০ সপ্তাহ পূর্ণ হয়</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>উপরের সবক’টি</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter2_2_exam_final/c2_2_q4">
+      <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q4:label')"/>
+      <item>
+        <label>দুধ গেলে বের করার আগে মাকে সাবান দিয়ে হাত ধুয়ে নিতে হবে, আরাম করে বসতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>উভয় স্তন পরিষ্কার পানি দিয়ে ধুয়ে পরিস্কার করে নিতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>দুধ সংগ্রহের জন্য একটি পরিষ্কার পাত্র নিতে হবে।</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>দুধের প্রবাহ বাড়াতে ম্যাসেজ করতে হবে (স্তন থেকে বোঁটার দিকে)।</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>বৃদ্ধাঙ্গুলি স্তনের উপরের দিকে ও তর্জনী স্তনের নীচের দিকে বোঁটা থেকে আনুমানিক ৪ সে.মি. পিছনে আলতোভাবে বাকী আঙ্গুল দিয়ে নীচ থেকে পুরো স্তন আগলে ধরতে হবে।</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>তারপর পিছন থেকে (বুকের খাঁচা থেকে স্তনের বোঁটার দিকে) চাপ প্রয়োগ করতে হবে এবং হাত ঘুরিয়ে স্তনের চর্তুপাশে চাপ প্রয়োগ করতে হবে।</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>দুধের ধারা যতক্ষণ অব্যাহত থাকবে ততক্ষণ দুধ গালাতে হবে</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>দুধের প্রবাহ বাড়াতে গরম পানিতে কাপড় ভিজিয়ে স্তনে সেক দেয়া যেতে পারে।</label>
+        <value>8</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q5">
+      <label>৫. যে শিশুটি খাওয়ার জন্য তৈরী তার কি কি বৈশিষ্ট্য থাকবে?</label>
+      <item>
+        <label>সজাগ থাকবে, মুখ হা করবে, আঙ্গুল চাঁটবে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ঘুমাবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>মুখ বন্ধ করে রাখবে</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="button" ref="/chapter2_2_exam_final/c2_2_q6">
+      <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q6:label')"/>
+      <item>
+        <label>১.কাপে শিশুকে দুধ খাওয়ানোর জন্য শিশুর থুতনীর নীচে কাপড়/তোয়ালে রাখতে হবে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>২.মাথা পিছন দিকে ধরে আধা সোজা অবস্থায় শিশুকে রাখতে হবে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>৩.শিশুর ঠোঁটের উপর দুধের কাপ আলতোভাবে ধরতে হবে।</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>৪.কাপটি একটু কাত করতে হবে যাতে দুধ শিশুর ঠোঁটে ও জিহবায় লাগে এবং শিশু দুধ চেটে খায়।</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>৫.দুধ মুখে ঢেলে দেয়া যাবে না। তাতে দুধ শিশুর শ্বাসনালীতে চলে যেতে পারে।</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>৬.শিশু স্বেচ্ছায় যতটুকু খাবে ততটুকুই খাওয়াতে হবে।</label>
+        <value>6</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q7">
+      <label>৭. কি কি উপায়ে শিশুকে মায়ের দুধ বিকল্প পদ্ধতিতে খাওয়ানো যায়?</label>
+      <item>
+        <label>কাপে/চামুচের মাধ্যমে।</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>ন্যাজো গ্যাস্ট্রিক টিউবের মাধ্যমে।</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>আই ভি ফ্লুইউ দিয়ে।</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select appearance="drag-drop" ref="/chapter2_2_exam_final/c2_2_q8">
+      <label>৮. নবজাতকের বিপদ চিহ্ন কোনটি?</label>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/chapter2_2_exam_final/c2_2_q8/7:label')"/>
+        <value>7</value>
+      </item>
+    </select>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q9">
+      <label>৯. জন্মের ২৪ ঘন্টাপর শরীরের কোন অংশে জন্ডিস দেথা দিলে মারাত্মক জন্ডিস হিসাবে চিহ্নিত হবে?</label>
+      <item>
+        <label>পেটে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>পিঠে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>হাতে ও পায়ের তালুতে</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/chapter2_2_exam_final/c2_2_q10">
+      <label>১০. যদি শিশুকে সঠিক চিকিৎসার জন্য উচ্চতর সেবা কেন্দ্রে রেফার করতে হয় তবে রেফারের ক্ষেত্রে কি কি করতে হবে?</label>
+      <item>
+        <label>শিশুর সাথে একটি রেফারেল নোট দিতে হবে</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>রেফারেল কেন্দ্রের সাথে যোগাযোগ করতে হবে</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>স্থানান্তরের সময় শিশুকে উষ্ণ রাখতে স্কিন-টু-স্কিন কেয়ার দেয়া অবস্থায় রেখে রেফার করতে হবে</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>শিশু খেতে পারলে ঘন ঘন মায়ের দুধ খাওয়াতে বলতে হবে,</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>রেফারের জন্য প্রয়োজনীয় যানবাহনের ব্যবস্থা করতে হবে (অ্যামবুলেন্স বা প্রচলিত যানবাহন, যেমন: সিএনজি, রিক্সা, ভ্যান, নৌকা ইত্যাদি)</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>শিশুকে কেন উচ্চতর সেবাকেন্দ্রে পাঠানো প্রয়োজন, তা পরিষ্কার করে শিশুর পরিবারের সদস্যদের কাছে বুঝিয়ে বলতে হবে</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>উপরের সবগুলো।</label>
+        <value>7</value>
+      </item>
+    </select1>
+    <input ref="/chapter2_2_exam_final/score">
+      <label>আপনার স্কোর</label>
+    </input>
+  </h:body>
+</h:html>
