@@ -27,6 +27,7 @@ public class SelectOneWidget extends QuestionWidget {
 
     public SelectOneWidget(FormEntryPrompt prompt) {
         super(prompt);
+        System.out.println("in SelectOneWidget #####");
         scrollPane=new ScrollPane();
         mItems = prompt.getSelectChoices();
         buttons = new ArrayList<RadioButton>();

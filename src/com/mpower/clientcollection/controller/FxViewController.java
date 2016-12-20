@@ -170,18 +170,18 @@ public class FxViewController implements Initializable {
         }else {
             //TODO
         }*/
-        PictureSelectWidget pictureSelectWidget=new PictureSelectWidget();
+       /* PictureSelectWidget pictureSelectWidget=new PictureSelectWidget();
         FXMLLoader fxmlLoader=new FXMLLoader(PictureSelectWidget.class.getResource(AppConfiguration.FXML_PATH+"htmlview.fxml"));
-        fxmlLoader.setController(pictureSelectWidget);
+        fxmlLoader.setController(pictureSelectWidget);*/
         /*try {
             pictureSelectWidget.mGridPane=fxmlLoader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }*/
 
-        Scene scene=new Scene(pictureSelectWidget.mGridPane,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
+       /* Scene scene=new Scene(pictureSelectWidget.mGridPane,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
         this.curStage.setScene(scene);
-        showCurStage();
+        showCurStage();*/
 
 
     }
@@ -202,8 +202,10 @@ public class FxViewController implements Initializable {
             System.out.println("Form Path:"+xml_path);
         }else if(title.equals("1_2")) {
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.SECOND_SESSION_FIRST_CHAPTER;
-        }else{
+        }else if(title.equals("1_3")){
             xml_path = AppConfiguration.FORM_XML_PATH+Constants.EXAM_1ST;
+        }else {
+            xml_path=AppConfiguration.FORM_XML_PATH+Constants.THIRTEEN_SESSION_FIRST_CHAPTER_EN;
         }
 
         isLoaded = fvc.loadformFromXML(xml_path);

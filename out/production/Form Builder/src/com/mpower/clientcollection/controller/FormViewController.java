@@ -106,7 +106,7 @@ public class FormViewController {
     private FormController fc = null;
     private Label mFormTitle = null;
 
-
+    private HashMap ansMap;
 
     public static final class FormsDirectory {
         FormsDirectory (){}
@@ -350,20 +350,13 @@ public class FormViewController {
         mNextButton=new Button("Next");
         mNextButton.setOnAction(event -> {
             System.out.println("Next Button CLicked");
-            //createNextView();
-            //createNextEvent();
-
-           // createNextView();
-            //createNextEvent();
 
             FormController formController=FormViewController.getInstance().getFormController();
             formController.stepToNextScreenEvent();
 
-            //showNextView();
 
         });
 
-       // FxViewController.getInstance().getCurrentLayout().add(mNextButton,getColIndex(),getRowIndex());
     }
 
     private void createNextEvent() {
@@ -375,7 +368,7 @@ public class FormViewController {
     }
 
     public void createSubmitButton(){
-         HashMap ansMap=new HashMap();
+         ansMap=new HashMap();
         mSubmitButton = new Button("Submit");
         mSubmitButton.setOnAction(e -> {
             System.out.print("submitt button clicked\n");
@@ -384,15 +377,30 @@ public class FormViewController {
             SaveToDisk mSavetoDiskTask = new SaveToDisk();
             boolean saveOutcome = mSavetoDiskTask.exportData(true);
             Iterator<FormIndex> it = FormViewController.getInstance().getAnswers().keySet().iterator();
+            FormController formController=getFormController();
+            FormIndex formIndex=formController.getFormIndex().createBeginningOfFormIndex();
+            FormEntryModel formEntryModel=getCurrentModel();
+            System.out.println("Form Prompt ="+formEntryModel.toString());
+            System.out.println("Form Index ="+formEntryModel.getFormIndex());
+            FormIndex newIndex;
+            /*//newIndex=formEntryModel.incrementIndex(formIndex);
+            formEntryModel.setQuestionIndex(newIndex);
+            FormEntryPrompt formEntryPrompt=formEntryModel.getQuestionPrompt();*/
+           // System.out.println("himel ="+FormViewController.getInstance().getFormController().saveAllScreenAnswers(FormViewController.getInstance().getAnswers(),false));
+
             while (it.hasNext()) {
                 FormIndex index = it.next();
+
+                formEntryModel.setQuestionIndex(index);
+
+                FormEntryPrompt formEntryPrompt=formEntryModel.getQuestionPrompt();
                 IAnswerData answer = FormViewController.getInstance().getAnswers().get(index);
-               // ansMap.put(index,answer);
+                if(answer!=null) System.out.println("sabbir ="+answer.getDisplayText().toString()+"Q Text :: "+formEntryPrompt.getLongText());
 
 
-//                System.out.print(answer.getValue().toString());
             }
-          //  createResultDIalog();
+
+            createResultDialog();
             try {
                 InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);
             } catch (SQLException e1) {
@@ -403,23 +411,50 @@ public class FormViewController {
         });
 
         FxViewController.getInstance().getCurrentLayout().add(mSubmitButton,getColIndex(),getRowIndex());
-        //FxViewController.getInstance().getCurrentLayout().setContent(mSubmitButton);
-        //FxViewController.getInstance().getCurrentLayout().getChildren().add(mSubmitButton);
 
 
     }
 
-    private void createResultDIalog() {
+    private void createResultDialog() {
+        FormController formController=getFormController();
+        formController.getCaptionPrompt();
+        FormEntryModel model=getCurrentModel();
+       // model.decrementIndex(formController.getFormIndex().getTerminal());
+        FormEntryPrompt prompt =model.getQuestionPrompt();
+        System.out.println("Test Value = " + prompt.getLongText());
         Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
-        resultAlert.setHeaderText("Your answerwes");
-        resultAlert.setContentText(getAnswers().toString());
-        widgets.clear();
+        resultAlert.setHeaderText("Result");
+        resultAlert.setContentText(prompt.getLongText());
+        /*widgets.clear();
         FormController formViewController=FormViewController.getInstance().getFormController();
         FormEntryPrompt formEntryPrompt=formViewController.getQuestionPrompt(formViewController.getFormIndex().getTerminal());
         WidgetFactory.createWidgetFromPrompt(formEntryPrompt);
         widgets.add(WidgetFactory.createWidgetFromPrompt(formEntryPrompt));
         AnchorPane anchorPane=new AnchorPane();
-        anchorPane.getChildren().add((Node) getWidget().get(1));
+        anchorPane.getChildren().add((Node) getWidget().get(1));*/
+        // FxViewController.getInstance().getCurrentLayout().add(anchorPane,getColIndex(),getRowIndex());
+        //WidgetFactory.createWidgetFromPrompt(prompt);
+        //resultAlert.setContentText(getAnswers().toString());
+        // resultAlert.setContentText(formController.getQuestionPrompt(formController.getFormIndex().getTerminal().toString()));
+        resultAlert.showAndWait();
+
+    }
+
+
+    private void createResultDialog_old() {
+        Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
+        resultAlert.setHeaderText("Your answerwes");
+        /*for(int i=0;i<ansMap.size();i++){
+          resultAlert.setContentText(ansMap.get(i).toString());
+        }*/
+        resultAlert.setContentText(getAnswers().toString());
+        /*widgets.clear();
+        FormController formViewController=FormViewController.getInstance().getFormController();
+        FormEntryPrompt formEntryPrompt=formViewController.getQuestionPrompt(formViewController.getFormIndex().getTerminal());
+        WidgetFactory.createWidgetFromPrompt(formEntryPrompt);
+        widgets.add(WidgetFactory.createWidgetFromPrompt(formEntryPrompt));
+        AnchorPane anchorPane=new AnchorPane();
+        anchorPane.getChildren().add((Node) getWidget().get(1));*/
        // FxViewController.getInstance().getCurrentLayout().add(anchorPane,getColIndex(),getRowIndex());
         //WidgetFactory.createWidgetFromPrompt(prompt);
         //resultAlert.setContentText(getAnswers().toString());
@@ -551,11 +586,8 @@ public class FormViewController {
 
     private void createFormTitle(String formTitle) {
         mFormTitle = new Label(formTitle);
-       FxViewController.getInstance().getCurrentLayout().add(mFormTitle,this.getColIndex(),this.getRowIndex());
-      //  FxViewController.getInstance().getCurrentLayout().getChildren().add(mFormTitle);
+        FxViewController.getInstance().getCurrentLayout().add(mFormTitle,this.getRowIndex(),this.getColIndex());
         this.incRowIndex();
-
-       /* addComponent(mFormTitle,1,0,GridBagConstraints.BOTH);*/
     }
 
     public void incRowIndex(){
@@ -576,131 +608,5 @@ public class FormViewController {
     public int getColIndex(){
         return this.mColIdx;
     }
-
-
-
-  /*//Sabbir
-    private void showNextView() {
-        /////////*//*******************//*///////////
-
-        System.out.println("I'm in view");
-
-        FormController formController = FormViewController.getInstance()
-                .getFormController();
-        System.out.println("Test 1" + formController.getQuestionPrompt().getQuestionText());
-        boolean isHtmlQues = false;
-        if (formController.getEvent() != FormEntryController.EVENT_BEGINNING_OF_FORM) {
-            //int event_ = formController.stepToPreviousScreenEvent();
-            try {
-                int event_ = formController.getEvent();
-                String appearence = formController.getQuestionPrompt().getAppearanceHint();
-                if (event_ != FormEntryController.EVENT_BEGINNING_OF_FORM && appearence != null && appearence.equalsIgnoreCase("html")) {
-                    //TODO SNL mPower:
-                    if (formController.getQuestionPrompt().getAppearanceHint().equals("html")) {
-                        isHtmlQues = true;
-                        //((FxViewController)clearAnswer();
-                        //test=false;
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            formController.stepToNextScreenEvent();
-            System.out.println("Test 2:" + formController.getQuestionPrompt().getQuestionText());
-        }
-        /////*//***********************//*///////
-
-
-        if (formController.getEvent() != FormEntryController.EVENT_END_OF_FORM) {
-            // get constraint behavior preference value with appropriate default
-           *//* String constraint_behavior = PreferenceManager.getDefaultSharedPreferences(this)
-                    .getString(PreferencesActivity.KEY_CONSTRAINT_BEHAVIOR,
-                            PreferencesActivity.CONSTRAINT_BEHAVIOR_DEFAULT);*//*
-            //test=false;
-            if (formController.currentPromptIsQuestion()) {
-                    createNextView();
-                // if constraint behavior says we should validate on swipe, do so
-                *//*if (constraint_behavior.equals(PreferencesActivity.CONSTRAINT_BEHAVIOR_ON_SWIPE) && !isHtmlQues) {
-                    if (!saveAnswersForCurrentScreen(EVALUATE_CONSTRAINTS)) {
-                        // A constraint was violated so a dialog should be showing.
-                        mBeenSwiped = false;
-                        return;
-                    }
-
-                    // otherwise, just save without validating (constraints will be validated on finalize)
-                } else
-
-                    saveAnswersForCurrentScreen(DO_NOT_EVALUATE_CONSTRAINTS);
-            }
-*//*
-                *//*if (formController.getEvent() == FormEntryController.EVENT_BEGINNING_OF_FORM || isHtmlQues) {
-
-                    createNextView();
-                }*//*
-
-            } else {
-              //  mBeenSwiped = false;
-              // createNextView();
-            }
-        }
-    }
-
-    *//*
-    * This method has to create as per snl requirements. Like: next view would be viewed after
-    * getting confirmation through dialog.
-    * *//*
-    private void createNextView(){
-        System.out.println("I'm in 2nd view");
-       // FxViewController.getInstance().setCurrentView("Form", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-        FormController formController = FormViewController.getInstance()
-                .getFormController();
-        View next;
-      FormIndex idx=FormIndex.createBeginningOfFormIndex();
-
-
-
-        int event = formController.stepToNextScreenEvent();
-        FormEntryModel model=FormViewController.getInstance().getCurrentModel();
-        //FormEntryPrompt prompt = model.getQuestionPrompt(idx);
-        FormEntryPrompt prompt = model.getQuestionPrompt();
-       // WidgetFactory.createWidgetFromPrompt(prompt);
-        switch (event) {
-
-            case FormEntryController.EVENT_QUESTION:
-               // FxViewController.getInstance().setCurrentView("Form", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-               // WidgetFactory.createWidgetFromPrompt(prompt);
-                try {
-                    parseEntireFormNew();
-                } catch (InvalidReferenceException e) {
-                    e.printStackTrace();
-                }
-                break;
-
-            case FormEntryController.EVENT_GROUP:
-                *//*FxViewController.getInstance().setCurrentView("Form", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                // create a savepoint
-               // FormEntryPrompt prompt = model.getQuestionPrompt(idx);
-                WidgetFactory.createWidgetFromPrompt(prompt);*//*
-
-                break;
-            case FormEntryController.EVENT_END_OF_FORM:
-
-                break;
-            case FormEntryController.EVENT_REPEAT:
-
-                break;
-            case FormEntryController.EVENT_PROMPT_NEW_REPEAT:
-
-                break;
-            case FormEntryController.EVENT_REPEAT_JUNCTURE:
-
-                // skip repeat junctures until we implement them
-                break;
-            default:
-                break;
-        }
-    }*/
-
-
 
 }

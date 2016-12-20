@@ -32,7 +32,9 @@ public class ReArrangeWidget extends QuestionWidget{
 
     public ReArrangeWidget(FormEntryPrompt p) {
         super(p);
+        System.out.println("In ReArrangeWidget ###");
         mAnchorPane=new AnchorPane();
+        mAnchorPane.setPrefSize(400,400);
         initialize();
     }
 
@@ -98,7 +100,7 @@ public class ReArrangeWidget extends QuestionWidget{
     private ImageView getImage(String s) {
         System.out.println(s);
 
-        Image image=new Image("file:"+s);
+        Image image=new Image("file:"+s,100,100,false,false);
         System.out.println(image.impl_getUrl());
 
         return new ImageView(image);

@@ -46,6 +46,7 @@ public class WidgetFactory {
         QuestionWidget questionWidget = null;
 
         switch (fep.getControlType()) {
+
             case Constants.CONTROL_INPUT:
                 switch (fep.getDataType()) {                 
                 
@@ -98,23 +99,12 @@ public class WidgetFactory {
                             System.out.println("I'm here in html");
                         	questionWidget = new HtmlWidget(fep);
                         }else {
-                            String text = fep.getLongText();
-                            if(fep.getLongText().endsWith(".html"))
-                            {
-                                //new MatchingWithLineWidget();
-                                //questionWidget = new HtmlWidget(fep);
-                               // System.out.println("I'm hwere");
-                                //questionWidget=new HtmlWidget(fep);
-                            }
-                            else {
-
-                                questionWidget = new StringWidget(fep);
-                            }
-
+                            System.out.println("****Calling String Widget***");
+                            questionWidget = new StringWidget(fep);
                         }
                         break;
                     default:
-                       // questionWidget = new StringWidget(context, fep);
+                        questionWidget = new StringWidget(fep);
                         break;
                 }
                 //if(questionWidget != null)
@@ -158,6 +148,8 @@ public class WidgetFactory {
                        // questionWidget = new GridWidget(context, fep, numColumns, true);
                     } else {
                         //questionWidget = new GridWidget(context, fep, numColumns, false);
+                        System.out.println("## Calling PictureSelectWidget ###");
+                        questionWidget=new PictureSelectWidget(fep);
                     }
                 } else if (appearance.equals("minimal")) {
                     //questionWidget = new SpinnerWidget(context, fep);
@@ -184,15 +176,15 @@ public class WidgetFactory {
                 }/*else if (appearance.equals("button")) {
             questionWidget = new SelectOneButtonWidget(fep);
         }*/else if (appearance.equals("picture_selection")) {
-           questionWidget = new PictureSelectionWidget(fep);
+                    System.out.println("@@@ Calling PictureSelectWidget ####");
+                    questionWidget = new PictureSelectWidget(fep);
                     //questionWidget=new ReArrangeWidget(fep);
-                    System.out.println("In widgetfactory PictureSeletion ####");
+
         }else if(appearance.equals("html")){
             //Log.d("LOG",fep.toString());
             questionWidget = new HtmlWidget(fep);
             System.out.println("WidgetFactory html Call  "+fep.toString());
         } else {
-                    //System.out.println("In WidgetFactory String********");
                     questionWidget = new SelectOneWidget(fep);
                 }
 
@@ -222,10 +214,13 @@ public class WidgetFactory {
                    // questionWidget = new LabelWidget(context, fep);
                 }else if (appearance.equals("rearrange")) {
                    // questionWidget = new ReArrangeWidget(context, fep);
+                    System.out.println("In widget factory Rearrange##");
                     questionWidget=new ReArrangeWidget(fep);
-                    System.out.println("In widget factory *#*# Rearrange##");
+
                 }else if (appearance.equals("rearrange_four")) {
                     //questionWidget = new ReArrangeFourWidget(context, fep);
+                    System.out.println("##Calling ReArrangeFourWidget ###");
+                    questionWidget=new ReArrangeFourWidget(fep);
                 }else if (appearance.equals("drag-drop")) {
                    // questionWidget=new DragDropWidgetNew(fep);
                     //LogUtils.informationLog(new WidgetFactory(), " Found Drag-dropWidget");
@@ -235,7 +230,8 @@ public class WidgetFactory {
                     //LogUtils.informationLog(new WidgetFactory(), " Found LineDrawWidget");
                     questionWidget = new MatchingWithLineWidget(fep);
                 } else {
-                    //questionWidget = new SelectMultiWidget(context, fep);
+                    System.out.println("** Calling SelectMultiWidget###");
+                    questionWidget = new SelectMultiWidget(fep);
                 }
                 break;
             case Constants.CONTROL_TRIGGER:

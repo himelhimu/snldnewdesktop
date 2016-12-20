@@ -12,7 +12,7 @@ public class Constants {
 
     public static final String NONE = "none";
 
-    public static final String FIRST_SESSION_FIRST_CHAPTER = "11.xml";
+    public static final String FIRST_SESSION_FIRST_CHAPTER = "ch1s1.xml";
     //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
     public static final String SECOND_SESSION_FIRST_CHAPTER = "2_exam.xml";
     public static final String THIRD_SESSION_FIRST_CHAPTER = "third_session_first_chapter";
@@ -26,7 +26,7 @@ public class Constants {
     public static final String TENTH_SESSION_FIRST_CHAPTER = "ten_session_first_chapter";
     public static final String ELEVENTH_SESSION_FIRST_CHAPTER = "eleven_session_first_chapter";
     public static final String TWELVTH_SESSION_FIRST_CHAPTER = "twelve_session_first_chapter";
-    public static final String THIRTEEN_SESSION_FIRST_CHAPTER = "chapter_1_exam";
+    public static final String THIRTEEN_SESSION_FIRST_CHAPTER = "Chapter 1 Helping Babies Breathe.xml";
 
 
     public static final String FIRST_SESSION_SECOND_CHAPTER = "first_session_second_chapter";
@@ -75,10 +75,11 @@ public class Constants {
     public static final String TENTH_SESSION_FIRST_CHAPTER_EN = "ten_session_first_chapter_en";
     public static final String ELEVENTH_SESSION_FIRST_CHAPTER_EN = "eleven_session_first_chapter_en";
     public static final String TWELVTH_SESSION_FIRST_CHAPTER_EN = "twelve_session_first_chapter_en";
-    public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "chapter_1_exam_en";
+    public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "Chapter 1 Helping Babies Breathe.xml";
 
     //Test for Exam
     public static final String EXAM_1ST="Chapter 2 Healthy and Sick Newborn Care First Exam.xml";
+    public static final String EXAM_2ND="ch1_exam_1.xml";
     //Second Chapter English
 
     public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "first_session_second_chapter_en";
@@ -114,4 +115,8 @@ public class Constants {
     public static final String SECOND_SESSION_THIRD_CHAPTER_EN = "second_session_third_chapter_en";
     //  public static final String THIRD_SESSION_THIRD_CHAPTER_EN = "third_session_third_chapter_en";
     public static final String EXAM_SESSION_THIRD_CHAPTER_EN = "chapter_3_exam_en";
+
+
+    //Test,Sabbir
+    public static final String TEST_EXAM_2ND="Chapter 2 Healthy and Sick Newborn Care Second Exam.xml";
 }

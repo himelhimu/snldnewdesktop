@@ -68,7 +68,7 @@ public class AppConfiguration {
         VIDEO_PATH              = prop.getProperty("VIDEO_PATH","/resources/video/");
 
         XFORM_XML_PATH          = prop.getProperty("XFORM_XML_PATH","/home/sabbir/Downloads/Form Builder/src/resources/form_xml/test_html_with_ques.xml");
-        FORM_XML_PATH           = prop.getProperty("FORM_XML_PATH","/home/sabbir/Downloads/snlForms/");
+        FORM_XML_PATH           = prop.getProperty("FORM_XML_PATH","/resources/form_xml/");
 
 
         XFORM_CHAPTER_1_1_XML   = prop.getProperty("XFORM_CHAPTER_1_1_XML","test_html_with_ques.xml");

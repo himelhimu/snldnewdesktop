@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
  * Created by sabbir on 12/12/16.
  */
 public class DragDropWidget extends QuestionWidget{
-    public AnchorPane mAnchorPane;
+    public Pane mAnchorPane;
     private FormEntryPrompt mPrompt;
     private int[] buttonValue;
     private Label mAnswerText;
@@ -37,12 +37,14 @@ public class DragDropWidget extends QuestionWidget{
     private ArrayList<ImageView> formImagesList;
 
     //ImageViews for holding images
-    private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4;
+    private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4,imageView5;
 
     public DragDropWidget(FormEntryPrompt prompt)
     {
         super(prompt);
+        System.out.println("In drag&drop widget #####");
         mAnchorPane=new AnchorPane();
+        mAnchorPane.setPrefSize(300,300);
         mPrompt=prompt;
         initialize();
     }
@@ -106,15 +108,18 @@ public class DragDropWidget extends QuestionWidget{
         imageView2=new javafx.scene.image.ImageView();
         imageView3=new javafx.scene.image.ImageView();
         imageView4=new javafx.scene.image.ImageView();
+        imageView5=new ImageView();
 
-        Image image1=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_1.png"));
+        Image image1=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_8.png"));
         imageView1.setImage(image1);
-        Image image2=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png"));
+        Image image2=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_11.png"));
         imageView2.setImage(image2);
-        Image image3=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_3.png"));
+        Image image3=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_13.png"));
         imageView3.setImage(image3);
-        Image image4=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png"));
+        Image image4=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_14.png"));
         imageView4.setImage(image4);
+        Image image5=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/common.png"));
+        imageView5.setImage(image5);
 
         ArrayList<javafx.scene.image.ImageView> images=new ArrayList<>();
 
@@ -122,6 +127,7 @@ public class DragDropWidget extends QuestionWidget{
         images.add(imageView2);
         images.add(imageView3);
         images.add(imageView4);
+        images.add(imageView5);
 
 
         for(int i=0;i<images.size();i++){
@@ -141,8 +147,11 @@ public class DragDropWidget extends QuestionWidget{
         }
 
         FormViewController fvc=FormViewController.getInstance();
-        FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getRowIndex(),fvc.getColIndex());
+        FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getColIndex(),fvc.getRowIndex());
+       // fvc.incRowIndex();
+        FxViewController.getInstance().getCurrentLayout().add(imageView5,fvc.getColIndex(),fvc.getRowIndex());
         fvc.incRowIndex();
+
         imageView1.setOnMousePressed(this::imageDragged);
         imageView2.setOnMousePressed(this::imageDragged);
         imageView3.setOnMousePressed(this::imageDragged);

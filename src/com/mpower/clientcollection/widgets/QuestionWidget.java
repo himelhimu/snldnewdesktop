@@ -14,11 +14,6 @@
 
 package com.mpower.clientcollection.widgets;
 
-
-import javax.swing.*;
-
-
-
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 import javafx.scene.control.Label;
@@ -28,7 +23,6 @@ import javafx.scene.text.Font;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryPrompt;
 
-import java.text.Normalizer;
 
 
 public abstract class QuestionWidget {
@@ -69,7 +63,7 @@ public abstract class QuestionWidget {
         mPrompt = p;
 
         addQuestionText(p);
-        //addHelpText(p);
+        addHelpText(p);
     }
     public FormEntryPrompt getPrompt() {
         return mPrompt;
@@ -94,6 +88,7 @@ public abstract class QuestionWidget {
      * TextView to fit the rest of the space, then the image if applicable.
      */
     protected void addQuestionText(FormEntryPrompt p) {
+        System.out.println("Long Text = " + p.getLongText());
         String imageURI = p.getImageText();
         String audioURI = p.getAudioText();
         String videoURI = p.getSpecialFormQuestionText("video");

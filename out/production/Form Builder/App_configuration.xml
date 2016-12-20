@@ -13,9 +13,13 @@
     <entry key="COURSE_OVERVIEW_WINDOW">Course Overview</entry>
 
     <entry key="IMG_PATH">/resources/img/</entry>
+    <entry key="IMG_DRAG_DROP_PATH">/resources/img/dragdrop/</entry>
+ <entry key="IMG_REARRANGE_PATH">/resources/img/rearrange/</entry>
+ <entry key="IMG_REARRANGE_FOUR_PATH">/resources/img/rearrangefour/</entry>
     <entry key="FXML_PATH">/resources/fxml/</entry>
     <entry key="VIDEO_PATH">/resources/video/</entry>
-    <entry key="FORM_XML_PATH">/home/sabbir/Downloads/snlForms/cncp/forms/</entry>
+
+   <entry key="FORM_XML_PATH">/home/sabbir/Downloads/snlForms/cncp/forms/</entry>
 
     <entry key="XFORM_CHAPTER_1_1_XML">test_html_with_ques.xml</entry>
     <entry key="XFORM_CHAPTER_1_2_XML">testing_desktop_2.xml</entry>

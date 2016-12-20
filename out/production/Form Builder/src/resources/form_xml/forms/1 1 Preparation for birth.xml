@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1.1 Preparation for birth</h:title>
+    <model>
+      <instance>
+        <session_1_chap_1_prep_for_birth id="first_session_first_chapter_en">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <chapter1/>
+          <s1_q1/>
+          <cal1/>
+          <s1_q2/>
+          <cal2/>
+          <s1_q3/>
+          <cal3/>
+          <correctAns/>
+          <sco1/>
+          <sco2/>
+          <sco3/>
+          <sco0/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </session_1_chap_1_prep_for_birth>
+      </instance>
+      <bind nodeset="/session_1_chap_1_prep_for_birth/chapter1" type="select1"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_1_prep_for_birth/s1_q1" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_1_prep_for_birth/s1_q1  = 't',1,0)" nodeset="/session_1_chap_1_prep_for_birth/cal1" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_1_prep_for_birth/s1_q2" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_1_prep_for_birth/s1_q2  = 't',1,0)" nodeset="/session_1_chap_1_prep_for_birth/cal2" type="string"/>
+      <bind constraint=".='t'" jr:constraintMsg="উত্তর ভুল" nodeset="/session_1_chap_1_prep_for_birth/s1_q3" required="true()" type="select1"/>
+      <bind calculate="if( /session_1_chap_1_prep_for_birth/s1_q3  = 't',1,0)" nodeset="/session_1_chap_1_prep_for_birth/cal3" type="string"/>
+      <bind calculate=" /session_1_chap_1_prep_for_birth/cal1 + /session_1_chap_1_prep_for_birth/cal2 + /session_1_chap_1_prep_for_birth/cal3 " nodeset="/session_1_chap_1_prep_for_birth/correctAns" type="string"/>
+      <bind nodeset="/session_1_chap_1_prep_for_birth/sco1" readonly="true()" relevant=" /session_1_chap_1_prep_for_birth/correctAns  = 1" type="int"/>
+      <bind nodeset="/session_1_chap_1_prep_for_birth/sco2" readonly="true()" relevant=" /session_1_chap_1_prep_for_birth/correctAns  = 2" type="int"/>
+      <bind nodeset="/session_1_chap_1_prep_for_birth/sco3" readonly="true()" relevant=" /session_1_chap_1_prep_for_birth/correctAns  = 3" type="int"/>
+      <bind nodeset="/session_1_chap_1_prep_for_birth/sco0" readonly="true()" relevant=" /session_1_chap_1_prep_for_birth/correctAns  = 0" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/session_1_chap_1_prep_for_birth/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'cef9edaa3da14df28535758804546f80'" nodeset="/session_1_chap_1_prep_for_birth/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 appearance="html" ref="/session_1_chap_1_prep_for_birth/chapter1">
+      <label>Chapter 1</label>
+      <item>
+        <label>session_one.html</label>
+        <value>h</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_1_prep_for_birth/s1_q1">
+      <label>When should a skilled person be present at a birth?</label>
+      <item>
+        <label>If problems occur</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>At every birth</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>After every birth</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_1_prep_for_birth/s1_q2">
+      <label>What is the equipment using during safe delivary?</label>
+      <item>
+        <label>Safe Delivary Kit</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Suction device, sthetescope, watch/timer, bag and mask</label>
+        <value>ff</value>
+      </item>
+      <item>
+        <label>Both of the above</label>
+        <value>t</value>
+      </item>
+    </select1>
+    <select1 appearance="button" ref="/session_1_chap_1_prep_for_birth/s1_q3">
+      <label>What is the correct steps of disinfection of bag, mask and sucker?</label>
+      <item>
+        <label>By submersion in 0.5% chlorine solution for 10 munites, boiling for 20 munites or by autoclaving</label>
+        <value>t</value>
+      </item>
+      <item>
+        <label>By submersion in 0.5% chlorine solution for 10 munites only</label>
+        <value>f</value>
+      </item>
+      <item>
+        <label>Boiling for  20 munites or by autoclaving only</label>
+        <value>ff</value>
+      </item>
+    </select1>
+    <input ref="/session_1_chap_1_prep_for_birth/sco1">
+      <label>Your Score 
+
+<output value=" /session_1_chap_1_prep_for_birth/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_1_prep_for_birth/sco2">
+      <label>Your Score 
+
+<output value=" /session_1_chap_1_prep_for_birth/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_1_prep_for_birth/sco3">
+      <label>Your Score 
+
+<output value=" /session_1_chap_1_prep_for_birth/correctAns "/>/3</label>
+    </input>
+    <input ref="/session_1_chap_1_prep_for_birth/sco0">
+      <label>Your Score 
+
+<output value=" /session_1_chap_1_prep_for_birth/correctAns "/>/3</label>
+    </input>
+  </h:body>
+</h:html>

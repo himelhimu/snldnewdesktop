@@ -16,14 +16,16 @@ package com.mpower.clientcollection.widgets;
 
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
+import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.core.model.data.StringData;
 import org.javarosa.form.api.FormEntryPrompt;
 
-
-
+import javax.swing.text.View;
+import java.util.Vector;
 
 
 /**
@@ -35,6 +37,9 @@ import org.javarosa.form.api.FormEntryPrompt;
 public class StringWidget extends QuestionWidget {
 	private static final String ROWS = "rows";
 
+	private Vector<SelectChoice> mItems;
+	private FormEntryPrompt mPrompt;
+
     boolean mReadOnly = false;
     protected TextField mAnswer;
 
@@ -45,6 +50,9 @@ public class StringWidget extends QuestionWidget {
 
     protected StringWidget(FormEntryPrompt prompt, boolean derived) {
         super(prompt);
+        System.out.println("In StringWidget ####");
+        mItems= (Vector<SelectChoice>) prompt.getSelectChoices();
+        mPrompt=prompt;
         mAnswer = new TextField();
         mAnswer.setId(""+QuestionWidget.newUniqueId());
         mReadOnly = prompt.isReadOnly();
@@ -52,16 +60,25 @@ public class StringWidget extends QuestionWidget {
         mAnswer.setPrefWidth(200);
         mAnswer.setPrefHeight(20);
 
+        /*if (mItems!=null){
+            for (int i=0;i<mItems.size();i++){
+                mAnswer.setText(mPrompt.getSelectChoiceText(mItems.get(i)));
+            }*/
+        //}
         String s = prompt.getAnswerText();
         if (s != null) mAnswer.setText(s);
         FormViewController fvc = FormViewController.getInstance();
         //FxViewController.getInstance().getCurrentLayout().setContent(mAnswer);
         FxViewController.getInstance().getCurrentLayout().add(mAnswer,fvc.getColIndex(),fvc.getRowIndex());
-        //FxViewController.getInstance().getCurrentLayout().getChildren().add(mAnswer);
+        //FxViewController.getInstance().getCurrentLayout().gfetChildren().add(mAnswer);
         fvc.incRowIndex();
         //fvc.decColIndex();
 
         //FormViewController.getInstance().addComponent(mAnswer,2,1,GridBagConstraints.HORIZONTAL);
+
+        // edited by Ratna
+        if(mReadOnly)
+            mAnswer.setVisible(false);
 
     }
 

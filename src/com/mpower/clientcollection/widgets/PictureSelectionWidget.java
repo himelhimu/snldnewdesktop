@@ -46,10 +46,12 @@ public class PictureSelectionWidget extends QuestionWidget {
     public PictureSelectionWidget(FormEntryPrompt prompt) {
 
         super(prompt);
-        System.out.println("In the PictureSelectioin Widget################");
+        System.out.println("In the PictureSelection Widget ################");
         mAnchorPane=new AnchorPane();
         mItems=(Vector<SelectChoice>) prompt.getSelectChoices();
         imageViewButton=new ArrayList<>();
+
+        setImages();
 
         //mItems = prompt.getSelectChoices();
         //buttons = new ArrayList<ImageView>();
