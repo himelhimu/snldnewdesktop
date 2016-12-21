@@ -8,6 +8,7 @@ import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -26,6 +27,7 @@ public class MatchingWithLineWidget extends QuestionWidget {
     private Line mSecLine = null;
     private Line mThirdLine = null;
     private Line mFourthLine = null;
+    private Line mFifthLine = null;
     private ImageView mFirstImage = null;
     private ImageView mSecondImage = null;
     private ImageView mThirdImage = null;
@@ -62,13 +64,17 @@ public class MatchingWithLineWidget extends QuestionWidget {
                 // drag, TODO:
                 // get the last line from out app ??
                 // add current point to the line
-               // ImageView imageView=(ImageView) event.getSource();
+//               ImageView imageView=(ImageView) event.getPickResult().getIntersectedNode();
                 switch ( mLineCount ){
 
                     case 1:
                         //ImageView imageView=(ImageView) event.getSource();
 
-                        System.out.println("Event PickResult :"+event.getPickResult());
+
+                        //ImageView imageView1= new ImageView(node);
+                        //System.out.println("### ImageHeight ##"+imageView.getFitHeight());
+
+                        //System.out.println("Event PickResult :"+event.getPickResult());
                         setLineEndPoint(mFirstLine,event.getX(),event.getY());
                         break;
                     case 2:
@@ -81,6 +87,9 @@ public class MatchingWithLineWidget extends QuestionWidget {
                     case 4:
                         setLineEndPoint(mFourthLine,event.getX(),event.getY());
                         break;
+                    case 5:
+                        setLineEndPoint(mFifthLine,event.getX(),event.getY());
+                        break;
                 }
             } else if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
                 System.out.println("press"+mLineCount);
@@ -90,8 +99,16 @@ public class MatchingWithLineWidget extends QuestionWidget {
                 // add current point to the line
                 // add line to our application (into draw pane)
                // ImageView imageView=(ImageView) event.getSource();
+                Node node=event.getPickResult().getIntersectedNode();
+
+                if (node instanceof ImageView)
+                    System.out.println("### Node :"+node);
+                else System.out.println("@@@@ Sorry Bro###");
                 switch ( mLineCount ){
                     case 1:
+//                        ImageView imageView= new ImageView(String.valueOf((Node)event.getPickResult().getIntersectedNode()));
+
+
                         setLineStartPoint(mFirstLine,event.getX(),event.getY());
                         mFirstLine.setVisible(true);
 
@@ -108,9 +125,12 @@ public class MatchingWithLineWidget extends QuestionWidget {
                         setLineStartPoint(mFourthLine,event.getX(),event.getY());
                         mFourthLine.setVisible(true);
                         break;
+                    case 5:
+                        setLineStartPoint(mFifthLine,event.getX(),event.getY());
+                        break;
                     default:
                         showLines(true);
-                        mLineCount = 0;
+                        //mLineCount = 0;
                         break;
                 }
 
@@ -133,7 +153,7 @@ public class MatchingWithLineWidget extends QuestionWidget {
 
 
 
-        mDrawPane.getChildren().addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine);
+        mDrawPane.getChildren().addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine,mFifthLine);
         mDrawPane.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage,imageView5,imageView6,imageView7,imageView8,
                 imageView9,imageView10,imageView11,imageView12,imageView13,
                 imageView14,imageView15,imageView16,imageView17,imageView18);
@@ -230,6 +250,10 @@ public class MatchingWithLineWidget extends QuestionWidget {
         mFourthLine = new Line();
         mFourthLine.setStrokeWidth(5);
         mFourthLine.setId("l4");
+
+        mFifthLine=new Line();
+        mFifthLine.setStrokeWidth(5);
+        mFifthLine.setId("l5");
     }
 
     private void initImage() {
@@ -292,9 +316,9 @@ public class MatchingWithLineWidget extends QuestionWidget {
 
         imageView5.relocate(0,0);
         imageView6.relocate(10,30);
-        imageView7.relocate(40,30);
-        imageView8.relocate(80,30);
-        imageView9.relocate(120,30);
+        imageView7.relocate(40,60);
+        imageView8.relocate(80,90);
+        imageView9.relocate(120,195);
         imageView10.relocate(290,110);
         imageView11.relocate(170,140);
         imageView12.relocate(145,170);
@@ -321,6 +345,7 @@ public class MatchingWithLineWidget extends QuestionWidget {
         mSecLine.setVisible(isvisible);
         mThirdLine.setVisible(isvisible);
         mFourthLine.setVisible(isvisible);
+        mFifthLine.setVisible(isvisible);
     }
 
 }

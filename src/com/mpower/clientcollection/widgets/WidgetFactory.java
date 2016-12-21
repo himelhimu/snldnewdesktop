@@ -42,7 +42,6 @@ public class WidgetFactory {
         // for now, all appearance tags are in english...
         appearance = appearance.toLowerCase(Locale.ENGLISH);
 
-        
         QuestionWidget questionWidget = null;
 
         switch (fep.getControlType()) {

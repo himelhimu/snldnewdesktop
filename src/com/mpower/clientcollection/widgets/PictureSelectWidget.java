@@ -16,10 +16,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryPrompt;
 
@@ -33,14 +30,14 @@ import java.util.ResourceBundle;
  * Created by sabbir on 12/15/16.
  */
 public class PictureSelectWidget extends QuestionWidget {
-    public AnchorPane mAnchorPane;
+    public FlowPane mFlowPane;
     ArrayList<ImageView> imageViews;
     private File DIRECTORY_NEW=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/c1_exam");
    public PictureSelectWidget(FormEntryPrompt prompt)
     {
         super(prompt);
         System.out.println("Im in PictureSelectWidget ###");
-        mAnchorPane=new AnchorPane();
+        mFlowPane=new FlowPane();
         setImages();
     }
 
@@ -119,15 +116,15 @@ public class PictureSelectWidget extends QuestionWidget {
 
         for(int i=0;i<imageViews.size();i++)
         {
-            mAnchorPane.getChildren().add(imageViews.get(i));
+            mFlowPane.getChildren().add(imageViews.get(i));
         }
 
 /*        ImageView imageView2=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png")));
         ImageView imageView3=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_3.png")));
         ImageView imageView4=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png")));*/
-        for (int i=0;i<mAnchorPane.getChildren().size();i++) {
+        for (int i=0;i<mFlowPane.getChildren().size();i++) {
             //node.setOnMouseDragEntered(mouseDragged());
-            Node node=mAnchorPane.getChildren().get(i);
+            Node node=mFlowPane.getChildren().get(i);
             node.addEventHandler(MouseEvent.MOUSE_DRAGGED, event -> {
                 double imgX = event.getX();
                 double imgY = event.getY();
@@ -151,7 +148,7 @@ public class PictureSelectWidget extends QuestionWidget {
         };
 */
         FormViewController formViewController=FormViewController.getInstance();
-        FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,formViewController.getColIndex(),formViewController.getRowIndex());
+        FxViewController.getInstance().getCurrentLayout().add(mFlowPane,formViewController.getColIndex(),formViewController.getRowIndex());
         formViewController.incRowIndex();
     }
 

@@ -2,15 +2,20 @@ package com.mpower.clientcollection.widgets;
 
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryPrompt;
 
@@ -25,15 +30,18 @@ import java.util.ResourceBundle;
  * Created by sabbir on 12/15/16.
  */
 public class ReArrangeWidget extends QuestionWidget{
-    private AnchorPane mAnchorPane;
+    private FlowPane mAnchorPane;
 
     private ArrayList<ImageView> imageViews;
     private File DIRECTORY=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/rearrange");
+    private static String ANSWER="";
+    private int mRowIdx=0;
+    private int mColIdx=0;
 
     public ReArrangeWidget(FormEntryPrompt p) {
         super(p);
         System.out.println("In ReArrangeWidget ###");
-        mAnchorPane=new AnchorPane();
+        mAnchorPane=new FlowPane();
         mAnchorPane.setPrefSize(400,400);
         initialize();
     }
@@ -60,7 +68,9 @@ public class ReArrangeWidget extends QuestionWidget{
 
         for(int i=0;i<imageViews.size();i++)
         {
-            mAnchorPane.getChildren().add(imageViews.get(i));
+            mAnchorPane.getChildren().add(this.getColIndex(), imageViews.get(i));
+            this.incColIndex();
+            imageViews.get(i).setId(String.valueOf(i));
         }
 
 /*        ImageView imageView2=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png")));
@@ -68,17 +78,42 @@ public class ReArrangeWidget extends QuestionWidget{
         ImageView imageView4=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png")));*/
         for (int i=0;i<mAnchorPane.getChildren().size();i++) {
             //node.setOnMouseDragEntered(mouseDragged());
-            Node node=mAnchorPane.getChildren().get(i);
+            Node node = mAnchorPane.getChildren().get(i);
+
+            if (node instanceof ImageView) {
+
+                final ImageView imageView = (ImageView) node;
+                // imageView.getId();
+                /*imageView.setId(String.valueOf(i));
+                ANSWER =ANSWER+imageView.getId();*/
+                imageView.setId(String.valueOf(i));
+
                 node.addEventHandler(MouseEvent.MOUSE_DRAGGED, event -> {
                     double imgX = event.getX();
                     double imgY = event.getY();
 
+                   /* imageView.setX(imgX);
+                    imageView.setY(imgY);*/
+
+                    /*node.setLayoutX(imgX);
+                    node.setLayoutY(imgY);*/
                     node.setTranslateX(imgX);
                     node.setTranslateY(imgY);
-                    //event.consume();
-                });
-        }
+                    ((ImageView) node).setX(imgX);
+                    ((ImageView) node).setY(imgY);
+                    event.consume();
+                    System.out.println("### Answer Till Now :" + ANSWER);
 
+                });
+
+                node.addEventHandler(MouseEvent.MOUSE_RELEASED,event -> {
+
+                    ANSWER =ANSWER+imageView.getId();
+                    System.out.println("## Answer Till Now :" + ANSWER);
+
+                });
+            } else System.out.println("########################NO");
+        }
         /*handler= (EventHandler<MouseEvent>) event -> {
             double imgX=event.getX();
             double imgY=event.getY();
@@ -94,6 +129,29 @@ public class ReArrangeWidget extends QuestionWidget{
         FormViewController formViewController=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,formViewController.getColIndex(),formViewController.getRowIndex());
         formViewController.incRowIndex();
+
+        createOkButton();
+    }
+
+    private void createOkButton() {
+        Button okButton=new Button("OK");
+        okButton.addEventHandler(ActionEvent.ACTION, event -> {
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            if (ANSWER.contains("01234567891011")){
+                alert.setHeaderText("ANSWER CORRECT");
+                alert.setContentText("OK");
+                ANSWER="";
+            }else {
+                alert.setHeaderText("ANSWER WRONG");
+                alert.setContentText("Start Again");
+                ANSWER="";
+            }
+            alert.showAndWait();
+
+        });
+
+        mAnchorPane.getChildren().add(this.getColIndex(), okButton);
+        this.incColIndex();
     }
 
 
@@ -145,5 +203,24 @@ public class ReArrangeWidget extends QuestionWidget{
     @Override
     public void setOnLongClickListener() {
 
+    }
+
+    public void incRowIndex(){
+        this.mRowIdx++;
+    }
+    public void decRowIndex(){
+        this.mRowIdx--;
+    }
+    public void incColIndex(){
+        this.mColIdx++;
+    }
+    public void decColIndex(){
+        this.mColIdx--;
+    }
+    public int getRowIndex(){
+        return this.mRowIdx;
+    }
+    public int getColIndex(){
+        return this.mColIdx;
     }
 }

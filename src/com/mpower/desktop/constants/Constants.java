@@ -62,19 +62,17 @@ public class Constants {
     //For English Chapters
 
     public static final String FIRST_SESSION_FIRST_CHAPTER_EN = "1 1 Preparation for birth.xml";
-    //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
     public static final String SECOND_SESSION_FIRST_CHAPTER_EN = "1 2 At birth Dry thoroughly.xml";
     public static final String THIRD_SESSION_FIRST_CHAPTER_EN= "1 3 Evaluation after drying Is the baby crying.xml";
-    public static final String FORTH_SESSION_FIRST_CHAPTER_EN = "four_session_first_chapter_en";
-    public static final String FIFTH_SESSION_FIRST_CHAPTER_EN = "five_session_first_chapter_en";
-    public static final String SIXTH_SESSION_FIRST_CHAPTER_EN = "six_session_first_chapter_en";
-    //public static final String SEVENTH_SESSION_FIRST_CHAPTER_EN = "chapter_1_exam";
-    public static final String SEVENTH_SESSION_FIRST_CHAPTER_EN = "seven_session_first_chapter_en";
-    public static final String EIGHTH_SESSION_FIRST_CHAPTER_EN = "eight_session_first_chapter_en";
-    public static final String NINETH_SESSION_FIRST_CHAPTER_EN = "nine_session_first_chapter_en";
-    public static final String TENTH_SESSION_FIRST_CHAPTER_EN = "ten_session_first_chapter_en";
-    public static final String ELEVENTH_SESSION_FIRST_CHAPTER_EN = "eleven_session_first_chapter_en";
-    public static final String TWELVTH_SESSION_FIRST_CHAPTER_EN = "twelve_session_first_chapter_en";
+    public static final String FORTH_SESSION_FIRST_CHAPTER_EN = "1 4 If the baby is crying Provide Routin Care.xml";
+    public static final String FIFTH_SESSION_FIRST_CHAPTER_EN = "1 5 If not crying Clear the airway and stimulate breathing.xml";
+    public static final String SIXTH_SESSION_FIRST_CHAPTER_EN = "1 6 After clearing and stimulation Is the baby breathing well.xml";
+    public static final String SEVENTH_SESSION_FIRST_CHAPTER_EN = "1 7 Vantilate with bag and mask To Establish breathing.xml";
+    public static final String EIGHTH_SESSION_FIRST_CHAPTER_EN = "1 8 During ventilation Is the baby breathing well.xml";
+    public static final String NINETH_SESSION_FIRST_CHAPTER_EN = "1 9 If chest is not moving Call for help.xml";
+    public static final String TENTH_SESSION_FIRST_CHAPTER_EN = "1 10 If Baby is not breathing well Evaluate heart rate.xml";
+    public static final String ELEVENTH_SESSION_FIRST_CHAPTER_EN = "1 11 Heart rate is normal Ventilate till breathing well.xml";
+    public static final String TWELVTH_SESSION_FIRST_CHAPTER_EN = "1 12 If baby doesn t breath Continue Ventilation and Provide Advanced Care.xml";
     public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "Chapter 1 Helping Babies Breathe.xml";
 
     //Test for Exam

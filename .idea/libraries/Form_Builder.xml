@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Form Builder">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/Form_Builder_jar/Form Builder.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -33,12 +33,11 @@ import javafx.util.Duration;
 import org.w3c.dom.Document;
 
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 public class Main extends Application {
     public static Pane splashLayout;
@@ -47,6 +46,7 @@ public class Main extends Application {
     private WebView webView;
     private static Stage mainStage;
     private final static String APP_CONFIGURATION_FILE =  "App_configuration.xml";
+    private static String JAR_PATH="";
 
     //Sabbir
     public static boolean isSplashLoaded=false;
@@ -56,6 +56,9 @@ public class Main extends Application {
     @Override public void init() {
         //initSplashScreen();
         initAppProperties();
+        JAR_PATH=getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        String source=JAR_PATH;
+        UnZip.copy(JAR_PATH,source);
         try {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {
@@ -160,5 +163,63 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+
+    public static class UnZip {
+
+        public static void copy(String path,String sorce) {
+           /* String destDir = "/tmp/";
+            String sourceJar = "your_src.jar";*/
+
+            String destDir = path;
+            String sourceJar = sorce;
+
+            try (ZipInputStream zis = new ZipInputStream(new BufferedInputStream(new FileInputStream(sourceJar)))) {
+                ZipEntry zipEntry;
+                while ((zipEntry = zis.getNextEntry()) != null) {
+                    File newDestination = new File(destDir + zipEntry.getName());
+                    if (zipEntry.isDirectory()) {
+                        unzipDir(newDestination);
+                    } else {
+                        unzipFile(newDestination, zis);
+                    }
+                }
+            } catch (IOException ex) {
+                System.err.println("input file coud not be read " + ex.getMessage());
+            }
+        }
+
+        private static void unzipFile(File file, final ZipInputStream zis) {
+            System.out.printf("extract to: %s - ", file.getAbsoluteFile());
+            if (file.exists()) {
+                System.out.println("already exist");
+                return;
+            }
+            int count;
+            try (BufferedOutputStream dest = new BufferedOutputStream(new FileOutputStream(file), BUFFER_SIZE)) {
+                while ((count = zis.read(BUFFER, 0, BUFFER_SIZE)) != -1) {
+                    dest.write(BUFFER, 0, count);
+                }
+                dest.flush();
+                System.out.println("");
+            } catch (IOException ex) {
+                System.err.println("file could not be created " + ex.getMessage());
+            }
+        }
+
+        private static void unzipDir(File dir) {
+            System.out.printf("create directory: %s - ", dir);
+            if (dir.exists()) {
+                System.out.println("already exist");
+            } else if (dir.mkdirs()) {
+                System.out.println("successful");
+            } else {
+                System.out.println("failed");
+            }
+        }
+
+        static final int BUFFER_SIZE = 2048;
+        static byte[] BUFFER = new byte[BUFFER_SIZE];
     }
 }

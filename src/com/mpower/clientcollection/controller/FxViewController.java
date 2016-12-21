@@ -88,7 +88,7 @@ public class FxViewController implements Initializable {
         //mGridMainLayout.setAlignment(Pos.CENTER);
         mGridMainLayout.setHgap(5);
         mGridMainLayout.setVgap(5);
-        mGridMainLayout.setPadding(new Insets(5));
+        mGridMainLayout.setPadding(new Insets(20));
        // mGridMainLayout.setScaleShape(true);
 
 

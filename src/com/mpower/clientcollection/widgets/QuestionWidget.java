@@ -92,6 +92,12 @@ public abstract class QuestionWidget {
         String imageURI = p.getImageText();
         String audioURI = p.getAudioText();
         String videoURI = p.getSpecialFormQuestionText("video");
+        System.out.println("Bind Attribute  "+p.getBindAttributes());
+        System.out.println("Data Type  "+p.getDataType());
+        System.out.println("Select choices  "+p.getSelectChoices());
+        System.out.println("Bind Attribute  "+p.getBindAttributes());
+
+        System.out.println("@@ URIs from FormEntryPrompt $$"+imageURI);
 
         // shown when image is clicked
         String bigImageURI = p.getSpecialFormQuestionText("big-image");

@@ -1,222 +1,9 @@
 
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.desktop.database.InitializeDatabase database is locked
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/11.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care Second Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/ch1s1.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
@@ -229,22 +16,17 @@ com.mpower.clientcollection.controller.FxViewController: Successfully load: /hom
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
@@ -291,10 +73,8 @@ com.mpower.clientcollection.controller.FxViewController: Successfully load: /hom
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
@@ -303,7 +83,6 @@ com.mpower.clientcollection.controller.FxViewController: Successfully load: /hom
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
@@ -312,9 +91,7 @@ com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
@@ -355,8 +132,6 @@ com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 2 Healthy and Sick Newborn Care First Exam.xml
-com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/Chapter 1 Helping Babies Breathe.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
 com.mpower.clientcollection.controller.FxViewController: Successfully load: /home/sabbir/Downloads/snlForms/cncp/forms/2_exam.xml
 com.mpower.clientcollection.controller.FxViewController: Initialized
