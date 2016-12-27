@@ -63,6 +63,7 @@ public class FxViewController implements Initializable {
     }
 
     public void showCurStage(){
+        this.curStage.setResizable(true);
         this.curStage.show();
     }
 
@@ -75,7 +76,7 @@ public class FxViewController implements Initializable {
         mGridMainLayout.setHgap(5);
         mGridMainLayout.setVgap(5);
         mGridMainLayout.setPadding(new Insets(20));
-        mGridMainLayout.setScaleShape(true);
+        //mGridMainLayout.setScaleShape(true);
 
 
 
@@ -159,7 +160,7 @@ public class FxViewController implements Initializable {
     private void showFormViewStage(String title) {
       //  mGridMainLayout = null;
         setCurrentLayout();
-        Scene scene = new Scene(scrollPane, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT);
+        Scene scene = new Scene(scrollPane);
         curStage.setScene(scene);
 
 
@@ -183,13 +184,11 @@ public class FxViewController implements Initializable {
             xml_path=Constants.SIXTH_SESSION_FIRST_CHAPTER_EN;
         }else if (title.equals("1_7")){
             xml_path=Constants.SEVENTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_8")){
-            xml_path=Constants.EIGHTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_9")){
-            xml_path=Constants.NINETH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("quiz_1_1")){
+        }else if (title.equals("quiz_1_1"))
+        {
             xml_path=Constants.EXAM_1ST;
         }
+
         //TODO ratna
         fvc.setCurrentFormName(xml_path);
         isLoaded = fvc.loadformFromXML(xml_path);

@@ -17,6 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryPrompt;
 
@@ -24,78 +25,40 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 /**
  * Created by sabbir on 12/15/16.
  */
 public class PictureSelectWidget extends QuestionWidget {
     public FlowPane mFlowPane;
+    private List<SelectChoice> mItems;
     ArrayList<ImageView> imageViews;
+    private String mCurrentPath="";
+    private File CURRENT_DIRECTORY=null;
     private File DIRECTORY_NEW=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/c1_exam");
    public PictureSelectWidget(FormEntryPrompt prompt)
     {
         super(prompt);
         System.out.println("Im in PictureSelectWidget ###");
         mFlowPane=new FlowPane();
+        mItems= prompt.getSelectChoices();
+        mCurrentPath=System.getProperty("user.dir");
+        String currentFormPath = FormViewController.getInstance().getCurrentFormName();
+        String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
+        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/"+ mPrompt.getSelectChoiceText(mItems.get(0)) ;
         setImages();
-    }
-
-   /* public void initialize() {
-        System.out.println("in init ####");
-        setProgressBar();
-
-        FormViewController fvc=FormViewController.getInstance();
-        FxViewController.getInstance().getCurrentLayout().add(,fvc.getColIndex(),fvc.getRowIndex());
-        fvc.incRowIndex();
-    }
-
-    private void setProgressBar() {
-        Button button=new Button("CLICK ME");
-        System.out.println("in progressbar @@@@");
-        mProgressBar=new ProgressBar();
-        mProgressBar.setAccessibleText("Andromeda");
-
-        *//*mGridPane.getChildren().add(mProgressBar);
-        mGridPane.getChildren().add(button);*//*
-        mGridPane.add(mProgressBar,0,1);
-        mGridPane.add(button,1,1);
-
-        HBox hBox=addHbox();
-        addStackPane(hBox);
-
-        addToGridPane(stackPane);
 
     }
-
-    private void addToGridPane(StackPane stackPane) {
-       mGridPane.getChildren().add(stackPane);
-    }
-
-    private void addStackPane(HBox hBox) {
-       stackPane=stackpane();
-       stackPane.getChildren().addAll(hBox);
-    }
-
-    private StackPane stackpane() {
-       StackPane stackPane=new StackPane();
-       return stackPane;
-    }
-
-    private HBox addHbox() {
-        HBox hBox =new HBox();
-        Button newButton=new Button("Main Menu");
-        hBox.getChildren().add(newButton);
-
-        newButton.addEventHandler(MouseEvent.MOUSE_CLICKED,event -> {
-
-            FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
-        });
-        return hBox;
-    }*/
 
     public void setImages()
     {
+        //String fileName=mPrompt.getSelectChoiceText(mItems.get(1));
+        String fileName=mPrompt.getSelectItemText(mItems.get(0).selection());
+        System.out.println("### after substring "+fileName);
+        //String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/"+ mPrompt.getSelectChoiceText(mItems.get(0));
         //mAnchorPane=new AnchorPane();
         imageViews=new ArrayList<>();
         ArrayList<String> allImagesList=new ArrayList<>();
@@ -111,29 +74,11 @@ public class PictureSelectWidget extends QuestionWidget {
 
         }
 
-
-
-
         for(int i=0;i<imageViews.size();i++)
         {
             mFlowPane.getChildren().add(imageViews.get(i));
         }
 
-/*        ImageView imageView2=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png")));
-        ImageView imageView3=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_3.png")));
-        ImageView imageView4=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png")));*/
-        for (int i=0;i<mFlowPane.getChildren().size();i++) {
-            //node.setOnMouseDragEntered(mouseDragged());
-            Node node=mFlowPane.getChildren().get(i);
-            node.addEventHandler(MouseEvent.MOUSE_DRAGGED, event -> {
-                double imgX = event.getX();
-                double imgY = event.getY();
-
-                node.setTranslateX(imgX);
-                node.setTranslateY(imgY);
-                event.consume();
-            });
-        }
 
         /*handler= (EventHandler<MouseEvent>) event -> {
             double imgX=event.getX();
@@ -181,7 +126,8 @@ public class PictureSelectWidget extends QuestionWidget {
 
     @Override
     public IAnswerData getAnswer() {
-        return null;
+
+       return null;
     }
 
     @Override

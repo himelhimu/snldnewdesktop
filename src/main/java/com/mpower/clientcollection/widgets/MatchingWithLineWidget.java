@@ -7,7 +7,11 @@ package com.mpower.clientcollection.widgets;
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
+import com.sun.prism.image.ViewPort;
 import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -35,7 +39,7 @@ public class MatchingWithLineWidget extends QuestionWidget {
     private final int IMAGE_HEIGHT = 100;
     private final int IMAGE_WIDTH = 100;
 
-    private Pane mDrawPane = null;
+    private BorderPane mDrawPane = null;
     private int mLineCount = 1;
 
     public ImageView imageView5,imageView6,imageView7,imageView8,imageView9,imageView10,imageView11,imageView12,imageView13,imageView14,imageView15,imageView16,imageView17,imageView18;
@@ -43,10 +47,8 @@ public class MatchingWithLineWidget extends QuestionWidget {
     public MatchingWithLineWidget(FormEntryPrompt fep) {
         super(fep);
         System.out.println("in MatchingWithLineWidget #####");
-        mDrawPane = new Pane();
+        mDrawPane = new BorderPane();
         mDrawPane.setStyle("-fx-border-color: blue;");
-        mDrawPane.setPrefWidth(400);
-        mDrawPane.setPrefHeight(500);
         /*String url=AppConfiguration.IMG_PATH+"bg.png";
         Image image=new Image(Main.class.getResourceAsStream(AppConfiguration.IMG_PATH+"bg.png"));
         BackgroundImage myBI= new BackgroundImage(new Image(url,32,32,false,true),
@@ -65,7 +67,43 @@ public class MatchingWithLineWidget extends QuestionWidget {
                 // get the last line from out app ??
                 // add current point to the line
 //               ImageView imageView=(ImageView) event.getPickResult().getIntersectedNode();
-                switch ( mLineCount ){
+                Node node=event.getPickResult().getIntersectedNode();
+                if (node instanceof ImageView) {
+                    double x1 = ((ImageView) node).getX();
+                    double y1 = ((ImageView) node).getY();
+                    System.out.println("### Node :" + node);
+
+                    switch ( mLineCount ){
+
+                        case 1:
+                            //ImageView imageView=(ImageView) event.getSource();
+
+
+                            //ImageView imageView1= new ImageView(node);
+                            //System.out.println("### ImageHeight ##"+imageView.getFitHeight());
+
+                            //System.out.println("Event PickResult :"+event.getPickResult());
+                            setLineEndPoint(mFirstLine,event.getX(),event.getY());
+                            break;
+                        case 2:
+                            // ImageView imageView=(ImageView) event.getSource();
+                            setLineEndPoint(mSecLine,event.getX(),event.getY());
+                            break;
+                        case 3:
+                            setLineEndPoint(mThirdLine,event.getX(),event.getY());
+                            break;
+                        case 4:
+                            setLineEndPoint(mFourthLine,event.getX(),event.getY());
+                            break;
+                        case 5:
+                            setLineEndPoint(mFifthLine,event.getX(),event.getY());
+                            break;
+                    }
+
+                }else {
+                    event.consume();
+                }
+                /*switch ( mLineCount ){
 
                     case 1:
                         //ImageView imageView=(ImageView) event.getSource();
@@ -90,7 +128,7 @@ public class MatchingWithLineWidget extends QuestionWidget {
                     case 5:
                         setLineEndPoint(mFifthLine,event.getX(),event.getY());
                         break;
-                }
+                }*/
             } else if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
                 System.out.println("press"+mLineCount);
 
@@ -102,9 +140,47 @@ public class MatchingWithLineWidget extends QuestionWidget {
                 Node node=event.getPickResult().getIntersectedNode();
 
                 if (node instanceof ImageView)
+                {
+                    double x1=((ImageView) node).getX();
+                    double y1=((ImageView) node).getY();
                     System.out.println("### Node :"+node);
-                else System.out.println("@@@@ Sorry Bro###");
-                switch ( mLineCount ){
+
+                    switch ( mLineCount ){
+                        case 1:
+//                        ImageView imageView= new ImageView(String.valueOf((Node)event.getPickResult().getIntersectedNode()));
+
+
+                            setLineStartPoint(mFirstLine,event.getX(),event.getY());
+                            mFirstLine.setVisible(true);
+
+                            break;
+                        case 2:
+                            setLineStartPoint(mSecLine,event.getX(),event.getY());
+                            mSecLine.setVisible(true);
+                            break;
+                        case 3:
+                            setLineStartPoint(mThirdLine,event.getX(),event.getY());
+                            mThirdLine.setVisible(true);
+                            break;
+                        case 4:
+                            setLineStartPoint(mFourthLine,event.getX(),event.getY());
+                            mFourthLine.setVisible(true);
+                            break;
+                        case 5:
+                            setLineStartPoint(mFifthLine,event.getX(),event.getY());
+                            break;
+                        default:
+                            showLines(false);
+                            mLineCount = 0;
+                            break;
+                    }
+
+
+                } else{
+                    System.out.println("@@@@ Sorry Bro###");
+                    event.consume();
+                }
+                /*switch ( mLineCount ){
                     case 1:
 //                        ImageView imageView= new ImageView(String.valueOf((Node)event.getPickResult().getIntersectedNode()));
 
@@ -129,10 +205,10 @@ public class MatchingWithLineWidget extends QuestionWidget {
                         setLineStartPoint(mFifthLine,event.getX(),event.getY());
                         break;
                     default:
-                        showLines(true);
-                        //mLineCount = 0;
+                        showLines(false);
+                        mLineCount = 0;
                         break;
-                }
+                }*/
 
             } else if(event.getEventType() == MouseEvent.MOUSE_RELEASED){
                 //System.out.print("mouse released"+mLineCount);
@@ -154,9 +230,28 @@ public class MatchingWithLineWidget extends QuestionWidget {
 
 
         mDrawPane.getChildren().addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine,mFifthLine);
-        mDrawPane.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage,imageView5,imageView6,imageView7,imageView8,
+
+        /*mDrawPane.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage,imageView5,imageView6,imageView7,imageView8,
                 imageView9,imageView10,imageView11,imageView12,imageView13,
-                imageView14,imageView15,imageView16,imageView17,imageView18);
+                imageView14,imageView15,imageView16,imageView17,imageView18);*/
+
+        HBox hBox1=new HBox();
+        hBox1.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage);
+
+        HBox hBox2=new HBox();
+        hBox2.getChildren().addAll(imageView5,imageView6,imageView7,imageView8);
+
+        HBox hBox3=new HBox();
+        hBox3.getChildren().addAll(imageView9,imageView10,imageView11,imageView12,imageView13);
+
+        HBox hBox4=new HBox();
+        hBox4.getChildren().addAll(imageView14,imageView15,imageView16,imageView17,imageView18);
+
+
+        mDrawPane.setTop(hBox1);
+        mDrawPane.setLeft(hBox2);
+        mDrawPane.setRight(hBox3);
+        mDrawPane.setCenter(hBox4);
 
       /*  mFirstImage.addEventHandler(MouseEvent.MOUSE_DRAGGED,drawLineHandler);
         mFirstImage.addEventHandler(MouseEvent.MOUSE_PRESSED,drawLineHandler);

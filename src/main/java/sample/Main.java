@@ -55,20 +55,20 @@ public class Main extends Application {
 
 
     @Override public void init() {
+        try {
+            InitializeDatabase.get_instance();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         mCurrentPath=System.getProperty("user.dir");
-
         //initSplashScreen();
         initAppProperties();
         JAR_PATH=getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         System.out.println("****jar path = " + JAR_PATH);
         File file =new File(String.valueOf(this.getClass().getClassLoader().getResourceAsStream("test_snl_db.db")));
         String dbSource="";
-        try {
-             dbSource=file.getCanonicalPath();
-            System.out.println("@@@ Canonical path "+dbSource);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        dbSource=file.getAbsolutePath();
+        System.out.println("@@@ absoultue path "+dbSource);
         //String source=getClass().getResourceAsStream("/resources/test_snl_db.db").toString();
         UnZip.copy(JAR_PATH,dbSource);
         try {
@@ -90,7 +90,6 @@ public class Main extends Application {
             System.out.println("***initial value from xml2222222222***");
             //load the xml file into properties format
             props.loadFromXML(is);
-
             System.out.println("where props = "+ props);
             AppConfiguration.setValueFromProperties(props);
         } catch (Exception e) {
@@ -121,10 +120,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //showSplash(primaryStage);
         mainStage = primaryStage;
-        mainStage.setAlwaysOnTop(true);
+        //mainStage.setAlwaysOnTop(true);
         mainStage.initStyle(StageStyle.DECORATED);
-        //mainStage.setResizable(true);
-        //mainStage.setMinWidth(600);
+        mainStage.setResizable(true);
+        mainStage.setMinWidth(600);
         mainStage.setMinHeight(500);
         FxViewController.getInstance().showMainStage();
 
@@ -166,6 +165,7 @@ public class Main extends Application {
     }
 
 
+    //Sabbir
     public static class UnZip {
 
         public static void copy(String path,String sorce) {
