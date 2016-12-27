@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #103063;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.IntroViewController">
+   <children>
+      <ImageView fitHeight="97.0" fitWidth="97.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="doctor_shahidullah.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="82.0" layoutY="40.0" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: gray;" text="Prof. Dr. Shahidullah&#10;&#10;Dept head of nanotology&#10;" />
+      <MediaView fx:id="intro_media_view" fitHeight="250.0" fitWidth="320.0" layoutX="266.0" layoutY="63.0">
+      </MediaView>
+      <Button layoutX="487.0" layoutY="354.0" mnemonicParsing="false" onAction="#startChapterView" text="Forward" />
+      <Button layoutX="32.0" layoutY="354.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Back" />
+   </children>
+</AnchorPane>
