@@ -2,6 +2,7 @@ package com.mpower.clientcollection.controller;
 
 /**
  * Created by hemel on 4/11/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 
 import com.mpower.desktop.config.AppConfiguration;
@@ -46,15 +47,13 @@ public class FxViewController implements Initializable {
 
     //UI related variables
     private Stage curStage;
-    Parent root = null;
+    private Parent root = null;
 
     private ScrollPane scrollPane;
     private GridPane mGridMainLayout;
     @FXML
     private Pane splashlayout;
     private Pane splashPane;
-    //operation Variables
-    //public boolean INITIALIZED = false;
 
     private FxViewController(){
         this.curStage =  Main.getMainStage();
@@ -76,7 +75,7 @@ public class FxViewController implements Initializable {
         mGridMainLayout.setHgap(5);
         mGridMainLayout.setVgap(5);
         mGridMainLayout.setPadding(new Insets(20));
-        //mGridMainLayout.setScaleShape(true);
+        mGridMainLayout.setScaleShape(true);
 
 
 
@@ -84,16 +83,10 @@ public class FxViewController implements Initializable {
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
+        scrollPane.setPannable(true);
 
     }
 
-    private void addToMainLayout() {
-        scrollPane=new ScrollPane();
-        scrollPane.setPrefSize(600,600);
-        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
-        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
-        scrollPane.setContent(mGridMainLayout);
-    }
 
     public GridPane getCurrentLayout()
     {
@@ -117,48 +110,11 @@ public class FxViewController implements Initializable {
         }
         else if ( view_type == AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW ){
             showCourseOverviewStage();
-        }else if (view_type==AppConfiguration.VIEW_TYPE.TEST){
-            showTestStage();
         }
-    }
-
-    private void showTestStage() {
-      /*  Parent tempRoot=null;
-        try {
-            tempRoot=FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"test.fxml"));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (tempRoot!=null) {
-            //DragDropWidget dragDropWidgetNew=new DragDropWidget();
-            *//*ReArrangeWidget reArrangeWidget=new ReArrangeWidget();
-            reArrangeWidget.setImages();*//*
-            Scene scene=new Scene(tempRoot,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
-            this.curStage.setScene(scene);
-            showCurStage();
-        }else {
-            //TODO
-        }*/
-       /* PictureSelectWidget pictureSelectWidget=new PictureSelectWidget();
-        FXMLLoader fxmlLoader=new FXMLLoader(PictureSelectWidget.class.getResource(AppConfiguration.FXML_PATH+"htmlview.fxml"));
-        fxmlLoader.setController(pictureSelectWidget);*/
-        /*try {
-            pictureSelectWidget.mGridPane=fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
-       /* Scene scene=new Scene(pictureSelectWidget.mGridPane,AppConfiguration.SCREEN_WIDTH,AppConfiguration.SCREEN_HEIGHT);
-        this.curStage.setScene(scene);
-        showCurStage();*/
-
-
     }
 
     private void showFormViewStage(String title) {
-      //  mGridMainLayout = null;
+        mGridMainLayout = null;
         setCurrentLayout();
         Scene scene = new Scene(scrollPane);
         curStage.setScene(scene);
@@ -166,8 +122,74 @@ public class FxViewController implements Initializable {
 
         FormViewController fvc = FormViewController.getInstance();
         fvc.clearInstance();
-        boolean isLoaded = false;
+        boolean isLoaded;
         String xml_path = "";
+        switch (title) {
+            case "1_1":
+                //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+                xml_path = Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+                System.out.println("Form Path:" + xml_path);
+                break;
+            case "1_2":
+                xml_path = Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_3":
+                xml_path = Constants.THIRD_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_4":
+                xml_path = Constants.FOURTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_5":
+                xml_path = Constants.FIFTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_6":
+                xml_path = Constants.SIXTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_7":
+                xml_path = Constants.SEVENTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "quiz_1_1":
+                xml_path = Constants.EXAM_1ST;
+                break;
+            case "2_1":
+                //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+                xml_path = Constants.FIRST_SESSION_SECOND_CHAPTER_EN;
+                System.out.println("Form Path:" + xml_path);
+                break;
+            case "2_2":
+                xml_path = Constants.SECOND_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_3":
+                xml_path = Constants.THIRD_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_4":
+                xml_path = Constants.FOURTH_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_5":
+                xml_path = Constants.FIFTH_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_6":
+                xml_path = Constants.SIXTH_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_7":
+                xml_path = Constants.SEVENTH_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "quiz_2_1":
+                xml_path = Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
+                break;
+            case "3_1":
+                xml_path = Constants.FIRST_SESSION_THIRD_CHAPTER_EN;
+                break;
+            case "3_2":
+                xml_path = Constants.SECOND_SESSION_THIRD_CHAPTER_EN;
+                break;
+            case "quiz_3_1":
+                xml_path = Constants.EXAM_SESSION_THIRD_CHAPTER_EN;
+                break;
+        }
+
+
+        /*String xml_path = "";
         if(title.equals("1_1")){
             //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
             xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
@@ -187,7 +209,32 @@ public class FxViewController implements Initializable {
         }else if (title.equals("quiz_1_1"))
         {
             xml_path=Constants.EXAM_1ST;
-        }
+        }else if(title.equals("2_1")){
+            //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+            xml_path=Constants.FIRST_SESSION_SECOND_CHAPTER_EN;
+            System.out.println("Form Path:"+xml_path);
+        }else if(title.equals("2_2")) {
+            xml_path =Constants.SECOND_SESSION_SECOND_CHAPTER_EN;
+        }else if(title.equals("1_3")){
+            xml_path = Constants.THIRD_SESSION_SECOND_CHAPTER_EN;
+        }else if (title.equals("1_4")){
+            xml_path=Constants.FOURTH_SESSION_SECOND_CHAPTER_EN;
+        }else if (title.equals("1_5")){
+            xml_path=Constants.FIFTH_SESSION_SECOND_CHAPTER_EN;
+        }else if (title.equals("1_6")){
+            xml_path=Constants.SIXTH_SESSION_SECOND_CHAPTER_EN;
+        }else if (title.equals("1_7")){
+            xml_path=Constants.SEVENTH_SESSION_SECOND_CHAPTER_EN;
+        }else if (title.equals("quiz_1_1"))
+        {
+            xml_path=Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
+        }else if (title.equals("3_1")){
+            xml_path=Constants.FIRST_SESSION_THIRD_CHAPTER_EN;
+        }else if (title.equals("3_2")){
+            xml_path=Constants.SECOND_SESSION_THIRD_CHAPTER_EN;
+        }else if (title.equals("quiz_3_1")){
+            xml_path=Constants.EXAM_SESSION_THIRD_CHAPTER_EN;
+        }*/
 
         //TODO ratna
         fvc.setCurrentFormName(xml_path);
@@ -204,7 +251,7 @@ public class FxViewController implements Initializable {
 
 
 
-    //TODO Ratna
+    //TODO Sabbir
     private void showCourseOverviewStage() {
         curStage.setTitle(AppConfiguration.COURSE_OVERVIEW_WINDOW);
         Parent tmpRoot = null;
@@ -286,7 +333,6 @@ public class FxViewController implements Initializable {
     private void loadSplashScreen() {
         try {
             splashPane= FXMLLoader.load(getClass().getResource("/resources/fxml/splash_screen.fxml"));
-            //root.getChildrenUnmodifiable().setAll(splashLayout);
             mGridMainLayout.getChildren().addAll(splashPane);
 
 
@@ -349,7 +395,7 @@ public class FxViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        AnchorPane anchorPane=new AnchorPane(splashPane);
+      //  AnchorPane anchorPane=new AnchorPane(splashPane);
         //loadSplashScreen(splashPane,curStage);
     }
 }

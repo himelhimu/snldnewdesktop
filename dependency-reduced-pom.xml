@@ -3,14 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>groupId</groupId>
   <artifactId>CNCP</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>1.0</version>
   <build>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
-      </resource>
-      <resource>
-        <directory>src/main/resources/form_xml</directory>
       </resource>
       <resource>
         <directory>src/main/resources/fxml</directory>
@@ -38,9 +35,13 @@
           </execution>
         </executions>
         <configuration>
+          <appName>CNCP</appName>
           <vendor>mpower</vendor>
           <mainClass>sample.Main</mainClass>
-          <bundler>EXE</bundler>
+          <needShortcut>true</needShortcut>
+          <bundleArguments>
+            <icon.ico>src/main/resources/icon.ico</icon.ico>
+          </bundleArguments>
         </configuration>
       </plugin>
       <plugin>

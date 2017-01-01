@@ -32,6 +32,7 @@ import java.util.Vector;
 
 /**
  * Created by sabbir on 12/15/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class PictureSelectWidget extends QuestionWidget {
     public FlowPane mFlowPane;

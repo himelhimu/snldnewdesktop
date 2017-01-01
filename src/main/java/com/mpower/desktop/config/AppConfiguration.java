@@ -4,6 +4,7 @@ import java.util.Properties;
 
 /**
  * Created by hemel on 4/13/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class AppConfiguration {
     public enum VIEW_TYPE  {FORM_VIEW,TUT_VIEW,REG_VIEW,LOGIN_VIEW,INTRO_VIEW,COURSE_OVERVIEW,TEST}

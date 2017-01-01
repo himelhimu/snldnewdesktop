@@ -24,6 +24,7 @@ import java.sql.SQLException;
 
 /**
  * Created by hemel on 4/11/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class RegistrationController {
     private Stage regStage;

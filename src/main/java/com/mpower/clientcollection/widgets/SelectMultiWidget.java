@@ -36,6 +36,7 @@ import org.javarosa.form.api.FormEntryPrompt;
  * 
  * @author Carl Hartung (carlhartung@gmail.com)
  * @author Yaw Anokwa (yanokwa@gmail.com)
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class  SelectMultiWidget extends QuestionWidget {
     private boolean mCheckboxInit = true;

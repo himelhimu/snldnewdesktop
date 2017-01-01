@@ -33,6 +33,7 @@ import java.util.Vector;
  *
  * @author Carl Hartung (carlhartung@gmail.com)
  * @author Yaw Anokwa (yanokwa@gmail.com)
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class StringWidget extends QuestionWidget {
 	private static final String ROWS = "rows";

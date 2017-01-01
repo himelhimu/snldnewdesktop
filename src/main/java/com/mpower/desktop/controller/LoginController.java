@@ -15,6 +15,7 @@ import java.sql.Statement;
 
 /**
  * Login Controller.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class LoginController extends AnchorPane {
 
@@ -35,13 +36,13 @@ public class LoginController extends AnchorPane {
             createErrorDIalog("Please provide username & password");
             FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
         } else {
-            //  boolean isvalid = isUserValid(userId.getText(),password.getText());
-            boolean isvalid = false;
-            try {
+            boolean isvalid = isUserValid(userId.getText(),password.getText());
+           // boolean isvalid = false;
+            /*try {
                 isvalid = InitializeDatabase.get_instance().isUserExistAndValid(userId.getText(), password.getText());
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+            }*/
 
             if (isvalid) {
                 try {

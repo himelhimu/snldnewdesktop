@@ -31,6 +31,7 @@ import java.util.Vector;
  * @author Carl Hartung (carlhartung@gmail.com)
  * @author Yaw Anokwa (yanokwa@gmail.com)
  * @author Ratna Halder (ratnacse06@gmail.com)
+ *  @author sabbir sabbir@mpower-social.com
  */
 
 public class PictureSelectionWidget extends QuestionWidget {

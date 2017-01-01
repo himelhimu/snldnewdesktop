@@ -11,6 +11,7 @@ import java.sql.Statement;
 
 /**
  * Created by hemel on 4/18/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class IntroViewController {
     public void startChapterView(ActionEvent actionEvent) {

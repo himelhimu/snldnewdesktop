@@ -1,9 +1,13 @@
 package sample;
 
+/** @author sabbir sabbir@mpower-social.com
+* */
+
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.database.InitializeDatabase;
+import com.sun.javafx.tk.Toolkit;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -55,7 +59,7 @@ public class Main extends Application {
 
 
     @Override public void init() {
-        AppLogger.getLoggerInstance().writeLog("In Main Init **",true);
+        AppLogger.getLoggerInstance().writeLog("*** In Main Init **",true);
         try {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {
@@ -64,20 +68,20 @@ public class Main extends Application {
         mCurrentPath=System.getProperty("user.dir");
         //initSplashScreen();
         initAppProperties();
-        JAR_PATH=getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-        System.out.println("****jar path = " + JAR_PATH);
-        File file =new File(String.valueOf(this.getClass().getClassLoader().getResourceAsStream("test_snl_db.db")));
-        String dbSource="";
-        dbSource=file.getAbsolutePath();
-        System.out.println("@@@ absoultue path "+dbSource);
+        //JAR_PATH=getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+       // System.out.println("****jar path = " + JAR_PATH);
+        //File file =new File(String.valueOf(this.getClass().getClassLoader().getResourceAsStream("test_snl_db.db")));
+       // String dbSource="";
+        //dbSource=file.getAbsolutePath();
+       // System.out.println("@@@ absoultue path "+dbSource);
         //String source=getClass().getResourceAsStream("/resources/test_snl_db.db").toString();
-        UnZip.copy(JAR_PATH,dbSource);
-        try {
+        //UnZip.copy(JAR_PATH,dbSource);
+      /*  try {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {
             e.printStackTrace();
             AppLogger.getLoggerInstance().writeLog("Database Initialization failed: "+e.getMessage(),AppConfiguration.APPLICATION_DEBUG);
-        }
+        }*/
     }
 
     private void initAppProperties() {
@@ -121,11 +125,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //showSplash(primaryStage);
         mainStage = primaryStage;
-        //mainStage.setAlwaysOnTop(true);
+        mainStage.sizeToScene();
+        mainStage.setAlwaysOnTop(true);
         mainStage.initStyle(StageStyle.DECORATED);
-        mainStage.setResizable(true);
         mainStage.setMinWidth(600);
         mainStage.setMinHeight(500);
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/icon.png")));
         FxViewController.getInstance().showMainStage();
 
     }
