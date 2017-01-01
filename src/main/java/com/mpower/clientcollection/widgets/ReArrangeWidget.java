@@ -16,7 +16,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryCaption;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.io.File;
@@ -24,25 +26,62 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
  * Created by sabbir on 12/15/16.
  */
 public class ReArrangeWidget extends QuestionWidget{
+    private  String imageNameFInal="";
     private FlowPane mAnchorPane;
-
+    private String mCurrentPath="";
     private ArrayList<ImageView> imageViews;
-    private File DIRECTORY=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/rearrange");
+    //private File DIRECTORY=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/rearrange");
+    private File testDIrectory=null;
     private static String ANSWER="";
     private int mRowIdx=0;
     private int mColIdx=0;
+    private List<SelectChoice> mItems;
+
+    private ArrayList<String> imageArrayList=null;
 
     public ReArrangeWidget(FormEntryPrompt p) {
         super(p);
         System.out.println("In ReArrangeWidget ###");
         mAnchorPane=new FlowPane();
+        imageArrayList=new ArrayList<>();
         mAnchorPane.setPrefSize(400,400);
+        mItems= p.getSelectChoices();
+        mCurrentPath=System.getProperty("user.dir");
+        String currentFormPath = FormViewController.getInstance().getCurrentFormName();
+        String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
+
+        for (int i=0;i<mItems.size();i++)
+        {
+            String imageUri =
+                    mPrompt.getSpecialFormSelectChoiceText(mItems.get(i),
+                            FormEntryCaption.TEXT_FORM_IMAGE);
+
+            String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+            System.out.println("****image url = " + imageName);
+            imageArrayList.add(imageName);
+            //imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+            System.out.println("***after substring "+imageNameFInal);
+        }
+        /*String imageUri =
+                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
+                        FormEntryCaption.TEXT_FORM_IMAGE);
+
+        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+        System.out.println("****image url = " + imageName);
+        imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+        System.out.println("***after substring "+imageNameFInal);*/
+        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
+        System.out.println("*** Currentpath from pictureselect "+directoryName);
+
+
+        testDIrectory=new File(directoryName);
         initialize();
     }
 
@@ -53,7 +92,7 @@ public class ReArrangeWidget extends QuestionWidget{
         ArrayList<String> allImagesList=new ArrayList<>();
         try {
 
-            allImagesList=getAllImages(DIRECTORY);
+            allImagesList=getAllImages(testDIrectory);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -170,11 +209,18 @@ public class ReArrangeWidget extends QuestionWidget{
 
         File[] files=directory.listFiles();
         //assert files != null;
-        for (File file: files != null ? files : new File[0]){
-            if (file!=null && file.getName().toLowerCase().endsWith(".png")){
-                resultList.add(file.getAbsolutePath());
+        for (int i=0;i<imageArrayList.size();i++){
+            for (File file: files != null ? files : new File[0]){
+                if (file!=null && file.getName().contains(imageArrayList.get(i)) && file.getName().toLowerCase().endsWith(".png")){
+                    resultList.add(file.getAbsolutePath());
+                }
             }
         }
+       /* for (File file: files != null ? files : new File[0]){
+            if (file!=null && file.getName().contains(imageNameFInal) && file.getName().toLowerCase().endsWith(".png")){
+                resultList.add(file.getAbsolutePath());
+            }
+        }*/
 
         return resultList;
 

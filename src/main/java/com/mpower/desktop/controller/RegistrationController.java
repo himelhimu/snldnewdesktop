@@ -174,7 +174,7 @@ public class RegistrationController {
 
     private void callLoginPage() {
         try {
-            root=FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"Login.xml"));
+            root=FXMLLoader.load(getClass().getResource("/Login.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -55,6 +55,7 @@ public class Main extends Application {
 
 
     @Override public void init() {
+        AppLogger.getLoggerInstance().writeLog("In Main Init **",true);
         try {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {

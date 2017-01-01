@@ -270,7 +270,7 @@ public class FxViewController implements Initializable {
 
     public void showMainStage(){
         curStage.setTitle(AppConfiguration.APPLICATION_NAME);
-        curStage.setIconified(true);
+        curStage.setIconified(false);
         try {
            // root = FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"registration.fxml"));
             root = FXMLLoader.load(getClass().getResource("/registration.fxml"));

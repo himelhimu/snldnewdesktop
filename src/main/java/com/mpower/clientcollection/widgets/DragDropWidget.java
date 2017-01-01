@@ -12,17 +12,25 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryCaption;
 import org.javarosa.form.api.FormEntryPrompt;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
  * Created by sabbir on 12/12/16.
  */
 public class DragDropWidget extends QuestionWidget{
+    private  File testDIrectory=null;
+    private  String imageNameFInal="";
+    private  String mCurrentPath="";
     public Pane mAnchorPane;
     private FormEntryPrompt mPrompt;
     private int[] buttonValue;
@@ -30,14 +38,18 @@ public class DragDropWidget extends QuestionWidget{
     private int numBerOfImagePicked=1;
     private Button resetButton;
 
+    private int mRowIdx=0;
+    private int mColIdx=0;
+
     private double imgX,imgY;
     private double startX,startY;
     private double distX,distY;
-
+    private List<SelectChoice> mItems;
     private ArrayList<ImageView> formImagesList;
 
     //ImageViews for holding images
     private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4,imageView5;
+    private ArrayList<ImageView> imageViews;
 
     public DragDropWidget(FormEntryPrompt prompt)
     {
@@ -46,16 +58,28 @@ public class DragDropWidget extends QuestionWidget{
         mAnchorPane=new AnchorPane();
         mAnchorPane.setPrefSize(300,300);
         mPrompt=prompt;
-        initialize();
-    }
+        mItems= prompt.getSelectChoices();
+        mCurrentPath=System.getProperty("user.dir");
+        String currentFormPath = FormViewController.getInstance().getCurrentFormName();
+        String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
+
+        String imageUri =
+                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
+                        FormEntryCaption.TEXT_FORM_IMAGE);
+        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+        System.out.println("****image url = " + imageName);
+        imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+        System.out.println("***after substring "+imageNameFInal);
+        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
+        System.out.println("*** Currentpath from pictureselect "+directoryName);
 
 
-    public void initialize() {
-       // mPane.autosize();
-
+        testDIrectory=new File(directoryName);
         setImages();
-
     }
+
+
+
 
     private void imageDropprd(MouseEvent event) {
         System.out.println("inside dropped  ####");
@@ -129,8 +153,32 @@ public class DragDropWidget extends QuestionWidget{
         images.add(imageView4);
         images.add(imageView5);
 
+        imageViews=new ArrayList<>();
+        ArrayList<String> allImagesList=new ArrayList<>();
+        try {
 
-        for(int i=0;i<images.size();i++){
+            allImagesList=getAllImages(testDIrectory);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i=0;i<allImagesList.size();i++){
+            imageViews.add(getImage(allImagesList.get(i)));
+
+        }
+
+
+
+
+        for(int i=0;i<imageViews.size();i++)
+        {
+            mAnchorPane.getChildren().add(this.getColIndex(), imageViews.get(i));
+            this.incColIndex();
+            imageViews.get(i).setId(String.valueOf(i));
+        }
+
+
+       /* for(int i=0;i<images.size();i++){
             //HBox hBox=new HBox();
             //mGridPane.getChildren().add(images.get(i));
            FormViewController formViewController=FormViewController.getInstance();
@@ -144,7 +192,7 @@ public class DragDropWidget extends QuestionWidget{
 
            // mPane.borderProperty();
 
-        }
+        }*/
 
         FormViewController fvc=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getColIndex(),fvc.getRowIndex());
@@ -166,6 +214,32 @@ public class DragDropWidget extends QuestionWidget{
 
     }
 
+    private ImageView getImage(String s) {
+        System.out.println(s);
+
+        Image image=new Image("file:"+s,100,100,false,false);
+        image.isPreserveRatio();
+        System.out.println(image.impl_getUrl());
+
+        return new ImageView(image);
+    }
+
+    private ArrayList<String> getAllImages(File directory) throws IOException
+    {
+        ArrayList<String> resultList=new ArrayList<>();
+
+        File[] files=directory.listFiles();
+        //assert files != null;
+        for (File file: files != null ? files : new File[0]){
+            if (file!=null && file.getName().startsWith(imageNameFInal) && file.getName().toLowerCase().endsWith(".png")){
+                resultList.add(file.getAbsolutePath());
+            }
+        }
+
+        return resultList;
+
+    }
+
     @Override
     public IAnswerData getAnswer() {
         return null;
@@ -184,5 +258,24 @@ public class DragDropWidget extends QuestionWidget{
     @Override
     public void setOnLongClickListener() {
 
+    }
+
+    public void incRowIndex(){
+        this.mRowIdx++;
+    }
+    public void decRowIndex(){
+        this.mRowIdx--;
+    }
+    public void incColIndex(){
+        this.mColIdx++;
+    }
+    public void decColIndex(){
+        this.mColIdx--;
+    }
+    public int getRowIndex(){
+        return this.mRowIdx;
+    }
+    public int getColIndex(){
+        return this.mColIdx;
     }
 }

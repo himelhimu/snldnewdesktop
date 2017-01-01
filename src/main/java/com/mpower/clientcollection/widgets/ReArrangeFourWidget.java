@@ -18,12 +18,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
+import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryCaption;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by sabbir on 12/20/16.
@@ -31,18 +34,42 @@ import java.util.ArrayList;
 public class ReArrangeFourWidget extends QuestionWidget {
     private FlowPane mAnchorPane;
     ArrayList<ImageView> imageViews;
-
+    private List<SelectChoice> mItems;
     private Canvas mCanvas;
     private double INC_X=20,INC_W=150;
     private File DIRECTORY=new File(AppConfiguration.IMG_PATH+"rearrangefour/");
     private File DIRECTORY_NEW=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/rearrangefour");
     private static String ANSWER="";
     private int j=1;
-
+    private File testDIrectory=null;
+    private String mCurrentPath="";
+    private  String imageNameFInal="";
+    private ArrayList<String> imageArrayList=null;
     public ReArrangeFourWidget(FormEntryPrompt prompt){
         super(prompt);
         mAnchorPane=new FlowPane();
+        mItems= prompt.getSelectChoices();
         mAnchorPane.setPrefSize(400,400);
+        imageArrayList=new ArrayList<>();
+        mCurrentPath=System.getProperty("user.dir");
+        String currentFormPath = FormViewController.getInstance().getCurrentFormName();
+        String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
+        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
+        System.out.println("*** Currentpath from pictureselect "+directoryName);
+        testDIrectory=new File(directoryName);
+
+        for (int i=0;i<mItems.size();i++)
+        {
+            String imageUri =
+                    mPrompt.getSpecialFormSelectChoiceText(mItems.get(i),
+                            FormEntryCaption.TEXT_FORM_IMAGE);
+
+            String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+            System.out.println("****image url = " + imageName);
+            imageArrayList.add(imageName);
+            //imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+            System.out.println("***after substring "+imageNameFInal);
+        }
         setImages();
        // drawCircle();
 
@@ -90,9 +117,6 @@ public class ReArrangeFourWidget extends QuestionWidget {
             imageViews.add(getImage(allImagesList.get(i)));
 
         }
-
-
-
 
         for(int i=0;i<imageViews.size();i++)
         {
@@ -223,11 +247,18 @@ public class ReArrangeFourWidget extends QuestionWidget {
 
         File[] files=directory.listFiles();
         //assert files != null;
-        for (File file: files != null ? files : new File[0]){
-            if (file!=null && file.getName().toLowerCase().endsWith(".png")){
-                resultList.add(file.getAbsolutePath());
+        for (int i=0;i<imageArrayList.size();i++){
+            for (File file: files != null ? files : new File[0]){
+                if (file!=null && file.getName().contains(imageArrayList.get(i)) && file.getName().toLowerCase().endsWith(".png")){
+                    resultList.add(file.getAbsolutePath());
+                }
             }
         }
+        /*for (File file: files != null ? files : new File[0]){
+            if (file!=null &&  && file.getName().toLowerCase().endsWith(".png")){
+                resultList.add(file.getAbsolutePath());
+            }
+        }*/
 
         return resultList;
 
