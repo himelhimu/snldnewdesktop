@@ -9,6 +9,7 @@ import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
+import com.mpower.desktop.controller.RegistrationController;
 import com.mpower.desktop.database.InitializeDatabase;
 
 import javafx.animation.FadeTransition;
@@ -49,7 +50,7 @@ public class FxViewController implements Initializable {
     private Stage curStage;
     private Parent root = null;
 
-    private ScrollPane scrollPane;
+    private ScrollPane scrollPane=null;
     private GridPane mGridMainLayout;
     @FXML
     private Pane splashlayout;
@@ -83,7 +84,6 @@ public class FxViewController implements Initializable {
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
-        scrollPane.setPannable(true);
 
     }
 
@@ -126,12 +126,12 @@ public class FxViewController implements Initializable {
         String xml_path = "";
         switch (title) {
             case "1_1":
-                //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
                 xml_path = Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
                 System.out.println("Form Path:" + xml_path);
                 break;
             case "1_2":
-                xml_path = Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
+                if (RegistrationController.current_user_type==0) xml_path = Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
                 break;
             case "1_3":
                 xml_path = Constants.THIRD_SESSION_FIRST_CHAPTER_EN;
@@ -152,7 +152,6 @@ public class FxViewController implements Initializable {
                 xml_path = Constants.EXAM_1ST;
                 break;
             case "2_1":
-                //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
                 xml_path = Constants.FIRST_SESSION_SECOND_CHAPTER_EN;
                 System.out.println("Form Path:" + xml_path);
                 break;
@@ -177,6 +176,38 @@ public class FxViewController implements Initializable {
             case "quiz_2_1":
                 xml_path = Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
                 break;
+            case "2_8":
+                xml_path = Constants.EIGHT_SESSION_SECOND_CHAPTER_EN;
+                System.out.println("Form Path:" + xml_path);
+                break;
+            case "2_9":
+                xml_path = Constants.NINE_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_10":
+                xml_path = Constants.TENTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "2_11":
+                xml_path = Constants.ELEVEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_12":
+                xml_path = Constants.TWELVE_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_13":
+                xml_path = Constants.THIRTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_14":
+                xml_path = Constants.FOURTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_15":
+                xml_path = Constants.FIFTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_16":
+                xml_path = Constants.SIXTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "quiz_2_2":
+                xml_path = Constants.SECOND_EXAM_SECOND_CHAPTER_EN;
+                break;
+
             case "3_1":
                 xml_path = Constants.FIRST_SESSION_THIRD_CHAPTER_EN;
                 break;
@@ -188,55 +219,6 @@ public class FxViewController implements Initializable {
                 break;
         }
 
-
-        /*String xml_path = "";
-        if(title.equals("1_1")){
-            //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
-            xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
-            System.out.println("Form Path:"+xml_path);
-        }else if(title.equals("1_2")) {
-            xml_path =Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
-        }else if(title.equals("1_3")){
-            xml_path = Constants.THIRD_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_4")){
-            xml_path=Constants.FOURTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_5")){
-            xml_path=Constants.FIFTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_6")){
-            xml_path=Constants.SIXTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("1_7")){
-            xml_path=Constants.SEVENTH_SESSION_FIRST_CHAPTER_EN;
-        }else if (title.equals("quiz_1_1"))
-        {
-            xml_path=Constants.EXAM_1ST;
-        }else if(title.equals("2_1")){
-            //xml_path =AppConfiguration.FORM_XML_PATH+Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
-            xml_path=Constants.FIRST_SESSION_SECOND_CHAPTER_EN;
-            System.out.println("Form Path:"+xml_path);
-        }else if(title.equals("2_2")) {
-            xml_path =Constants.SECOND_SESSION_SECOND_CHAPTER_EN;
-        }else if(title.equals("1_3")){
-            xml_path = Constants.THIRD_SESSION_SECOND_CHAPTER_EN;
-        }else if (title.equals("1_4")){
-            xml_path=Constants.FOURTH_SESSION_SECOND_CHAPTER_EN;
-        }else if (title.equals("1_5")){
-            xml_path=Constants.FIFTH_SESSION_SECOND_CHAPTER_EN;
-        }else if (title.equals("1_6")){
-            xml_path=Constants.SIXTH_SESSION_SECOND_CHAPTER_EN;
-        }else if (title.equals("1_7")){
-            xml_path=Constants.SEVENTH_SESSION_SECOND_CHAPTER_EN;
-        }else if (title.equals("quiz_1_1"))
-        {
-            xml_path=Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
-        }else if (title.equals("3_1")){
-            xml_path=Constants.FIRST_SESSION_THIRD_CHAPTER_EN;
-        }else if (title.equals("3_2")){
-            xml_path=Constants.SECOND_SESSION_THIRD_CHAPTER_EN;
-        }else if (title.equals("quiz_3_1")){
-            xml_path=Constants.EXAM_SESSION_THIRD_CHAPTER_EN;
-        }*/
-
-        //TODO ratna
         fvc.setCurrentFormName(xml_path);
         isLoaded = fvc.loadformFromXML(xml_path);
         if(isLoaded)
@@ -250,8 +232,6 @@ public class FxViewController implements Initializable {
     }
 
 
-
-    //TODO Sabbir
     private void showCourseOverviewStage() {
         curStage.setTitle(AppConfiguration.COURSE_OVERVIEW_WINDOW);
         Parent tmpRoot = null;
@@ -277,7 +257,8 @@ public class FxViewController implements Initializable {
             e.printStackTrace();
         }
         assert tmpRoot != null;
-        this.curStage.setScene(new Scene(tmpRoot));
+        ScrollPane sp=new ScrollPane(tmpRoot);
+        this.curStage.setScene(new Scene(sp));
 
         showCurStage();
     }
@@ -319,12 +300,11 @@ public class FxViewController implements Initializable {
         curStage.setTitle(AppConfiguration.APPLICATION_NAME);
         curStage.setIconified(false);
         try {
-           // root = FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"registration.fxml"));
+
             root = FXMLLoader.load(getClass().getResource("/registration.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //this.curStage.setScene(new Scene(root, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT));
         this.curStage.setScene(new Scene(root));
         showCurStage();
     }

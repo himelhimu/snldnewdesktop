@@ -91,7 +91,7 @@ public class Main extends Application {
         InputStream is = null;
         try {
             is = new FileInputStream(mCurrentPath+"/"+APP_CONFIGURATION_FILE);
-            //is = new FileInputStream("./"+APP_CONFIGURATION_FILE);//TODO ratna
+            //is = new FileInputStream("./"+APP_CONFIGURATION_FILE);//TODO ratn
             System.out.println("***initial value from xml2222222222***");
             //load the xml file into properties format
             props.loadFromXML(is);
@@ -125,10 +125,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //showSplash(primaryStage);
         mainStage = primaryStage;
-        mainStage.sizeToScene();
-        mainStage.setAlwaysOnTop(true);
+        //mainStage.sizeToScene();
+        //mainStage.setAlwaysOnTop(true);
         mainStage.initStyle(StageStyle.DECORATED);
-        mainStage.setMinWidth(600);
+        mainStage.setMinWidth(640);
         mainStage.setMinHeight(500);
         mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/icon.png")));
         FxViewController.getInstance().showMainStage();

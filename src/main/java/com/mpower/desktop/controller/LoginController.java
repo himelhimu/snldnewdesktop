@@ -30,12 +30,6 @@ public class LoginController extends AnchorPane {
     private boolean isNewUser = false;
 
     public void processLogin(ActionEvent event) {
-        String username = userId.getText();
-        String passWord = password.getText();
-        if (username.equals("") || passWord.equals("")) {
-            createErrorDIalog("Please provide username & password");
-            FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
-        } else {
             boolean isvalid = isUserValid(userId.getText(),password.getText());
            // boolean isvalid = false;
             /*try {
@@ -46,24 +40,22 @@ public class LoginController extends AnchorPane {
 
             if (isvalid) {
                 try {
-                    isNewUser = InitializeDatabase.get_instance().isUserNew(username);
+                    isNewUser = InitializeDatabase.get_instance().isUserNew(userId.getText());
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
                 if (isNewUser) {
                     System.out.println("***NEW USER***");
-                    setUserStatus(false, username);
+                    setUserStatus(false, userId.getText());
                     FxViewController.getInstance().setCurrentView("Intro Video", AppConfiguration.VIEW_TYPE.INTRO_VIEW);
                 } else
                     FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
-            } else {
-                createErrorDIalog("UserName or Password Incorrect");
-                FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
+            }else {
+                FxViewController.getInstance().setCurrentView("LOGIN", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
             }
 
 
         }
-    }
 
 
 
@@ -89,9 +81,9 @@ public class LoginController extends AnchorPane {
         try {
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement st = id.getConnection().createStatement();
-            String loginSql = "SELECT password FROM "+AppConfiguration.LOGIN_INFO+" WHERE username like \""+username+"\" LIMIT 1;";
+            String loginSql = "SELECT password FROM login WHERE username like \""+username+"\" LIMIT 1;";
             System.out.println("**LoginSql = " + loginSql);
-            ResultSet rs = st.executeQuery(loginSql);
+            ResultSet rs=st.executeQuery(loginSql);
             if(rs.next()) {
                 if (rs.getString(1).equals(password)){
                     System.out.print("user is Valid.");

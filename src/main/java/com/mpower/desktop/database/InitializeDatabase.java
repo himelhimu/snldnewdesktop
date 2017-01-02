@@ -31,7 +31,7 @@ public class InitializeDatabase {
             //****RATNA***//TODO
             //mConn = DriverManager.getConnection("jdbc:sqlite::/home/sabbir/Desktop/test/test_snl_db.db"+AppConfiguration.DB_FILE_NAME);
            //mConn = DriverManager.getConnection("jdbc:sqlite:/home/sabbir/Desktop/test/test_snl_db.db");
-            mConn=DriverManager.getConnection("jdbc:sqlite:"+mCurrentPath+"/test_snl_db.db");
+            mConn=DriverManager.getConnection("jdbc:sqlite:./test_snl_db.db");
             System.out.println("Testing = " + mConn.toString());
 
             if (mConn == null || mConn.isClosed()) System.err.print("connection cannot be established.");
@@ -105,8 +105,8 @@ public class InitializeDatabase {
         try {
             System.out.println("***Connection = "+mConn);
             //tmpst = this.mConn.createStatement();
-            mConn = DriverManager.getConnection("jdbc:sqlite:"+mCurrentPath+"/test_snl_db.db");
-            tmpst = mConn.createStatement();
+            //mConn = DriverManager.getConnection("jdbc:sqlite:"+mCurrentPath+"/test_snl_db.db");
+            tmpst = this.mConn.createStatement();
             String loginQuery = "SELECT EXISTS(SELECT password FROM "+AppConfiguration.LOGIN_INFO+" WHERE username=\""+username+"\" LIMIT 1);";
             System.out.println("Login query = " + loginQuery);
             rs = tmpst.executeQuery(loginQuery);
@@ -218,7 +218,7 @@ public class InitializeDatabase {
     {
         try {
             if(this.mConn==null || this.mConn.isClosed()) {
-                this.mConn = DriverManager.getConnection("jdbc:sqlite:"+mCurrentPath+AppConfiguration.DB_FILE_NAME);
+                this.mConn = DriverManager.getConnection("jdbc:sqlite:./test_snl_db.db");
             }
         } catch (SQLException e) {
             //e.printStackTrace();

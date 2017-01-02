@@ -64,7 +64,7 @@ public class RegistrationController {
     @FXML
     private ImageView iv_profession;
 
-    private int current_user_type = -1;
+    public static int current_user_type = -1;
 
     public void initRegistrationPage(ActionEvent actionEvent) {
             //current_user_type = -1;

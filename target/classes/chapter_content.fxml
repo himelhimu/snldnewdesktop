@@ -11,137 +11,498 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.control.ScrollPane?>
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #40755a;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.ContentViewController">
-      <children>
-         <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #6180DF;" text="Chapter 1: Help Babies to Breath">
-            <font>
-               <Font size="26.0" />
-            </font>
-         </Label>
-         <HBox prefHeight="129.0" prefWidth="600.0">
-            <VBox.margin>
-               <Insets top="10.0" />
-            </VBox.margin>
-            <children>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <children>
-                     <ImageView fx:id="session_1_1" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="unlock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
-                  </children>
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-               </VBox>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_2" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
-                  </children>
-               </VBox>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_3" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
-                  </children>
-               </VBox>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_4" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
-                  </children>
-               </VBox>
-            </children>
-         </HBox>
-         <HBox prefHeight="128.0" prefWidth="600.0">
-            <children>
-               <VBox prefHeight="128.0" prefWidth="93.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_5" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="16.0" prefWidth="97.0" text="chap1:label5" />
-                  </children>
-               </VBox>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_6" disable="true" fitHeight="98.0" fitWidth="120.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="16.0" prefWidth="102.0" text="chap1:label6" />
-                  </children>
-               </VBox>
-               <VBox prefHeight="110.0" prefWidth="96.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_7" disable="true" fitHeight="96.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="lock.jpg" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="16.0" prefWidth="96.0" text="chap1:label7" />
-                  </children>
-               </VBox>
-               <VBox prefHeight="200.0" prefWidth="100.0">
-                  <HBox.margin>
-                     <Insets left="20.0" right="20.0" />
-                  </HBox.margin>
-                  <children>
-                     <ImageView fx:id="session_1_quiz" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="quiz.png" />
-                        </image>
-                     </ImageView>
-                     <Label prefHeight="16.0" prefWidth="101.0" text="popupquiz" />
-                  </children>
-               </VBox>
-            </children>
-         </HBox>
-         <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #40755a;">
-            <children>
-               <Button fx:id="back_button" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="26.0" prefWidth="99.0" text="Back" />
-               <Button fx:id="forward_button" layoutX="436.0" layoutY="16.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="101.0" text="Forward" />
-            </children>
-         </Pane>
-      </children>
-      <padding>
-         <Insets top="10.0" />
-      </padding>
-   </VBox>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import  javafx.scene.layout.FlowPane?>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #40755a;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.ContentViewController" >
+   <children>
+      <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #6180DF;" text="Chapter 1: Help Babies to Breath">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_1_1" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_2" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_3" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_4" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="128.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="128.0" prefWidth="93.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_5" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="97.0" text="chap1:label5" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_6" disable="true" fitHeight="98.0" fitWidth="120.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="102.0" text="chap1:label6" />
+               </children>
+            </VBox>
+            <VBox prefHeight="110.0" prefWidth="96.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_7" disable="true" fitHeight="96.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="96.0" text="chap1:label7" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_1_quiz" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="quiz.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="101.0" text="popupquiz" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
 
+
+
+
+      <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #6180DF;" text="Chapter 2: Care About Healthy and Unhealthy Baby">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_2_1" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_2" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_3" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_4" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="128.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="128.0" prefWidth="93.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_5" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="97.0" text="chap1:label5" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_6" disable="true" fitHeight="98.0" fitWidth="120.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="102.0" text="chap1:label6" />
+               </children>
+            </VBox>
+            <VBox prefHeight="110.0" prefWidth="96.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_7" disable="true" fitHeight="96.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="96.0" text="chap1:label7" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_quiz" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="quiz.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="101.0" text="popupquiz" />
+               </children>
+            </VBox>
+
+
+
+
+         </children>
+      </HBox>
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_2_8" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_9" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_10" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_11" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_2_12" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_13" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_14" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_15" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_2_16" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_17" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_18" disable="true" fitHeight="101.0" fitWidth="107.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="101.0" text="chap1:label3" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_2_quiz_2" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="26.0" prefWidth="101.0" text="chap1:label4" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #6180DF;" text="Chapter 1: Help Babies to Breath">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="129.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="session_3_1" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="unlock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="97.0" text="Chap1:label1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_3_2" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="lock.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="31.0" prefWidth="98.0" text="chap1: :Label2" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="session_3_quiz" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="quiz.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="16.0" prefWidth="101.0" text="popupquiz" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #40755a;">
+         <children>
+            <Button fx:id="back_button" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="26.0" prefWidth="99.0" text="Back" />
+            <Button fx:id="forward_button" layoutX="436.0" layoutY="16.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="101.0" text="Forward" />
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

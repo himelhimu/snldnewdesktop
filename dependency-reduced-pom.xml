@@ -42,6 +42,7 @@
           <bundleArguments>
             <icon.ico>src/main/resources/icon.ico</icon.ico>
           </bundleArguments>
+          <additionalAppResources>/home/sabbir/Desktop/SNLFORMS</additionalAppResources>
         </configuration>
       </plugin>
       <plugin>
