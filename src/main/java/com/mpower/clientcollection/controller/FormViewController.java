@@ -14,6 +14,15 @@ import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.javarosa.core.model.FormDef;
 import org.javarosa.core.model.FormIndex;
 import org.javarosa.core.model.GroupDef;
@@ -35,8 +44,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.net.URISyntaxException;
-import java.net.URL;
+import java.net.*;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -56,6 +64,10 @@ public class FormViewController {
     /**
      * Classes needed to serialize objects. Need to put anything from JR in here.
      */
+    public static String TEST_URL="http://demo.mpower-social.com:8080/snluser/submission";
+    public static String DEFAULT_URL="http://demo.mpower-social.com:8080/";
+    public static String DEFAULT_URL_TEST="http://demo.mpower-social.com:8080/snluser/submission";
+    public static String SUBMISSION_URL_STRING="submission";
     public final static String[] SERIALIABLE_CLASSES = {
             "org.javarosa.core.services.locale.ResourceFileDataSource", // JavaRosaCoreModule
             "org.javarosa.core.services.locale.TableLocaleSource", // JavaRosaCoreModule
@@ -169,7 +181,7 @@ public class FormViewController {
         return this.currentFormName;
     }
 
-    public boolean isFormValid_old(FormEntryModel model,String formPath)  {
+    /*public boolean isFormValid_old(FormEntryModel model,String formPath)  {
         INITIALIZED = false;
         try {
             INITIALIZED = parseEntireForm(model);
@@ -183,7 +195,7 @@ public class FormViewController {
             e.printStackTrace();
         }
         return INITIALIZED;
-    }
+    }*/
 
     public boolean isFormValid(FormEntryModel model,String formName)  {
         INITIALIZED = false;
@@ -300,7 +312,7 @@ public class FormViewController {
     }
 
 
-    private boolean parseEntireFormNew() throws InvalidReferenceException {
+   /* private boolean parseEntireFormNew() throws InvalidReferenceException {
         INITIALIZED = true;
 
         FormIndex idx = FormViewController.getInstance().getFormController().getFormIndex();
@@ -350,9 +362,9 @@ public class FormViewController {
             }
         }
         return INITIALIZED;
-    }
+    }*/
 
-    public void createNextButton() {
+   /* public void createNextButton() {
 
         mNextButton=new Button("Next");
         mNextButton.setOnAction(event -> {
@@ -364,15 +376,15 @@ public class FormViewController {
 
         });
 
-    }
+    }*/
 
-    private void createNextEvent() {
+  /*  private void createNextEvent() {
         System.out.println("Inside th createNextEvent method");
-        /*FormController formController=FormViewController.getInstance().getFormController();
-        formController.stepToNextScreenEvent();*/
+        *//*FormController formController=FormViewController.getInstance().getFormController();
+        formController.stepToNextScreenEvent();*//*
         FormEntryController formEntryController=FormViewController.getInstance().getFormEntryController();
         formEntryController.stepToNextEvent();
-    }
+    }*/
 
     public void createSubmitButton(){
          ansMap=new HashMap();
@@ -402,11 +414,18 @@ public class FormViewController {
 
                 FormEntryPrompt formEntryPrompt=formEntryModel.getQuestionPrompt();
                 IAnswerData answer = FormViewController.getInstance().getAnswers().get(index);
-                if(answer!=null) System.out.println("sabbir ="+answer.getDisplayText().toString()+"Q Text :: "+formEntryPrompt.getLongText());
+               // if(answer!=null) System.out.println("sabbir ="+answer.getDisplayText().toString()+"Q Text :: "+formEntryPrompt.getLongText());
 
 
             }
+            Thread thread=new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    uploadFileToServer();
+                }
+            });
 
+            //uploadFileToServer();
             createResultDialog();
             try {
                 InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);
@@ -414,6 +433,7 @@ public class FormViewController {
                 e1.printStackTrace();
             }
             FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+            thread.start();
 
         });
 
@@ -422,53 +442,79 @@ public class FormViewController {
 
     }
 
+    private void uploadFileToServer() {
+        //String serverUrl="httP://192.168.23.118:8001/login/?";
+        String serverUrl="http://demo.mpower-social.com:8080/login/?";
+        org.apache.http.client.HttpClient httpClient= HttpClients.createDefault();
+
+        ///TODO
+        String loginUrl=null;
+        List<NameValuePair> params = new LinkedList<NameValuePair>();
+        params.add(new BasicNameValuePair("username", "snluser"));
+        params.add(new BasicNameValuePair("password", "12345678"));
+        String paramString = URLEncodedUtils.format(params, "utf-8");
+        loginUrl+= paramString;
+
+        File instanceFile = new File(SaveToDisk.instancePath);
+        System.out.println("** InstancePath "+SaveToDisk.instancePath);
+
+        /*//File submissionFile = new File(instanceFile.getParentFile(), "submission.xml");
+        File submissionFile=null;
+        FormController formController=FormViewController.getInstance().getFormController();*/
+        //submissionFile = new File(instanceFile);
+
+        //System.out.println("** SubmmisonFile "+submissionFile);
+
+        MultipartEntity multipartEntity=new MultipartEntity();
+        FileBody fileBody=new FileBody(instanceFile,"text/xml");
+        System.out.println("*** Filebody "+fileBody);
+        multipartEntity.addPart("xml_submission_file",fileBody);
+
+
+        HttpPost httpPost =new HttpPost();
+        URL url1 = null;
+        try {
+            url1 = new URL(URLDecoder.decode(TEST_URL, "utf-8"));
+        } catch (MalformedURLException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        URI u = null;
+        try {
+            u = url1.toURI();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        httpPost.setURI(u);
+        //TODO Sabbir
+        httpPost.setEntity(multipartEntity);
+
+        System.out.println("** URL "+url1+"** URI "+u);
+        HttpResponse httpResponse=null;
+        try {
+            httpResponse=httpClient.execute(httpPost);
+            System.out.println("***HttpResponse "+httpResponse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        HttpEntity httpEntity=httpResponse.getEntity();
+        System.out.println("*** HttpEnttity "+httpEntity);
+
+    }
+
     private void createResultDialog() {
         FormController formController=getFormController();
         formController.getCaptionPrompt();
         FormEntryModel model=getCurrentModel();
-       // model.decrementIndex(formController.getFormIndex().getTerminal());
         FormEntryPrompt prompt =model.getQuestionPrompt();
         System.out.println("Test Value = " + prompt.getLongText());
         Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
         resultAlert.setHeaderText("Result");
         resultAlert.setContentText(prompt.getLongText());
-        /*widgets.clear();
-        FormController formViewController=FormViewController.getInstance().getFormController();
-        FormEntryPrompt formEntryPrompt=formViewController.getQuestionPrompt(formViewController.getFormIndex().getTerminal());
-        WidgetFactory.createWidgetFromPrompt(formEntryPrompt);
-        widgets.add(WidgetFactory.createWidgetFromPrompt(formEntryPrompt));
-        AnchorPane anchorPane=new AnchorPane();
-        anchorPane.getChildren().add((Node) getWidget().get(1));*/
-        // FxViewController.getInstance().getCurrentLayout().add(anchorPane,getColIndex(),getRowIndex());
-        //WidgetFactory.createWidgetFromPrompt(prompt);
-        //resultAlert.setContentText(getAnswers().toString());
-        // resultAlert.setContentText(formController.getQuestionPrompt(formController.getFormIndex().getTerminal().toString()));
         resultAlert.showAndWait();
 
     }
 
 
-    private void createResultDialog_old() {
-        Alert resultAlert=new Alert(Alert.AlertType.INFORMATION);
-        resultAlert.setHeaderText("Your answerwes");
-        /*for(int i=0;i<ansMap.size();i++){
-          resultAlert.setContentText(ansMap.get(i).toString());
-        }*/
-        resultAlert.setContentText(getAnswers().toString());
-        /*widgets.clear();
-        FormController formViewController=FormViewController.getInstance().getFormController();
-        FormEntryPrompt formEntryPrompt=formViewController.getQuestionPrompt(formViewController.getFormIndex().getTerminal());
-        WidgetFactory.createWidgetFromPrompt(formEntryPrompt);
-        widgets.add(WidgetFactory.createWidgetFromPrompt(formEntryPrompt));
-        AnchorPane anchorPane=new AnchorPane();
-        anchorPane.getChildren().add((Node) getWidget().get(1));*/
-       // FxViewController.getInstance().getCurrentLayout().add(anchorPane,getColIndex(),getRowIndex());
-        //WidgetFactory.createWidgetFromPrompt(prompt);
-        //resultAlert.setContentText(getAnswers().toString());
-       // resultAlert.setContentText(formController.getQuestionPrompt(formController.getFormIndex().getTerminal().toString()));
-        resultAlert.showAndWait();
-
-    }
 
 
     public  ArrayList getWidget(){
@@ -508,7 +554,7 @@ public class FormViewController {
         System.out.println("** Final formPath  "+formPath);
         String filePath=formPath+path;
         System.out.println("##LoadformXMl path "+filePath);
-        ClassLoader classLoader=getClass().getClassLoader();
+        //ClassLoader classLoader=getClass().getClassLoader();
         File src = null;
         try {
             src = new File(filePath);//url.toURI()

@@ -1,2 +1,3 @@
 
 com.mpower.clientcollection.controller.FxViewController: Initialized
+com.mpower.clientcollection.controller.FxViewController: Initialized

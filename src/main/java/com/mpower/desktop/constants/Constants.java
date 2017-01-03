@@ -99,7 +99,7 @@ public class Constants {
     public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "first_session_second_chapter_en";
     public static final String SECOND_SESSION_SECOND_CHAPTER_EN = "second_session_second_chapter_en";
     public static final String THIRD_SESSION_SECOND_CHAPTER_EN = "third_session_second_chapter_en";
-    public static final String FORTH_SESSION_SECOND_CHAPTER_EN = "four_session_second_chapter_en";
+    public static final String FOURTH_SESSION_SECOND_CHAPTER_EN = "four_session_second_chapter_en";
     public static final String FIFTH_SESSION_SECOND_CHAPTER_EN = "five_session_second_chapter_en";
     public static final String SIXTH_SESSION_SECOND_CHAPTER_EN = "six_session_second_chapter_en";
     public static final String SEVENTH_SESSION_SECOND_CHAPTER_EN = "seven_session_second_chapter_en";

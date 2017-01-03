@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2fa7bc;" stylesheets="Login.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.LoginController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="20.0" prefHeight="77.0" prefWidth="573.0" stylesheets="Login.css" text="Login Credential" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
          <font>

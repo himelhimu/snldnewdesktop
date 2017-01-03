@@ -63,7 +63,7 @@ public class RegistrationController {
     @FXML
     private ImageView iv_profession;
 
-    private int current_user_type = -1;
+    public static int current_user_type = -1;
 
     public void initRegistrationPage(ActionEvent actionEvent) {
             //current_user_type = -1;
@@ -88,7 +88,11 @@ public class RegistrationController {
         } else if(button_fwd.isSelected()){
             prof_image = new Image(Main.class.getResourceAsStream("/fwv.png"));
             current_user_type = 2;
+        }else if (button_sacmo.isSelected()){
+            prof_image=new Image(Main.class.getResourceAsStream("/sacmo.png"));
+            current_user_type=4;
         }
+
         Node imageview = root.lookup("#iv_profession");
         ((ImageView) imageview).setImage(prof_image);
         imageview.setId(""+current_user_type);
@@ -173,8 +177,9 @@ public class RegistrationController {
     }
 
     private void callLoginPage() {
+		logInStage=Main.getMainStage();
         try {
-            root=FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"Login.xml"));
+            root=FXMLLoader.load(getClass().getResource("Login.xml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -30,35 +30,39 @@ public class LoginController extends AnchorPane {
 
     public void processLogin(ActionEvent event) {
         String username = userId.getText();
-        String passWord=password.getText();
-        //if (username.equals("") || passWord.equals("")) {}
-      //  boolean isvalid = isUserValid(userId.getText(),password.getText());
-        boolean isvalid = false;
-        try {
-            isvalid = InitializeDatabase.get_instance().isUserExistAndValid(userId.getText(),password.getText());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        if(isvalid){
-            try {
-                isNewUser = InitializeDatabase.get_instance().isUserNew(username);
+        String passWord = password.getText();
+        if (username.equals("") || passWord.equals("")) {
+            createErrorDIalog("Please provide username & password");
+            FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
+        } else {
+            boolean isvalid = isUserValid(userId.getText(),password.getText());
+           // boolean isvalid = false;
+           /* try {
+                isvalid = InitializeDatabase.get_instance().isUserExistAndValid(userId.getText(), password.getText());
             } catch (SQLException e) {
                 e.printStackTrace();
+            }*/
+
+            if (isvalid) {
+                try {
+                    isNewUser = InitializeDatabase.get_instance().isUserNew(username);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                if (isNewUser) {
+                    System.out.println("***NEW USER***");
+                    setUserStatus(false, username);
+                    FxViewController.getInstance().setCurrentView("Intro Video", AppConfiguration.VIEW_TYPE.INTRO_VIEW);
+                } else
+                    FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+            } else {
+               // createErrorDIalog("UserName or Password Incorrect");
+                FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
             }
-            if(isNewUser) {
-                System.out.println("***NEW USER***");
-                setUserStatus(false, username);
-                FxViewController.getInstance().setCurrentView("Intro Video", AppConfiguration.VIEW_TYPE.INTRO_VIEW);
-            }
-            else
-                FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
-        } else{
-            FxViewController.getInstance().setCurrentView("Login", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
-        }
 
 
         }
+    }
 
 
 
@@ -79,8 +83,8 @@ public class LoginController extends AnchorPane {
     }
 
     private boolean isUserValid(String username, String password) {
-        /*if (username.isEmpty() || password.isEmpty()) {createErrorDIalog("Please provide credentials"); return false;}
-        else*/
+        if (username.isEmpty() || password.isEmpty()) {createErrorDIalog("Please provide credentials"); return false;}
+        else
         try {
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement st = id.getConnection().createStatement();
@@ -123,7 +127,7 @@ public class LoginController extends AnchorPane {
         Alert alert=new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setHeaderText(s);
-        alert.setContentText("You didn't enter anything...");
+        alert.setContentText(s);
         alert.showAndWait();
     }
 

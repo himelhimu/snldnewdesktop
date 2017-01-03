@@ -31,16 +31,16 @@ public class AppConfiguration {
     public static String XFORM_CHAPTER_1_3_XML = "";
 
     //DATABASE TABLE NAME
-    /*public static String DB_FILE_NAME = "test_snl_db";
+   public static String DB_FILE_NAME = "test_snl_db";
     public static String REGISTRATION_INFO = "registration_info";
     public static String LOGIN_INFO = "login";
     public static String PROGRESS_INFO = "progress_record";
-    */
 
+/*
     public static String DB_FILE_NAME = "";
     public static String REGISTRATION_INFO = "";
     public static String LOGIN_INFO = "";
-    public static String PROGRESS_INFO = "";
+    public static String PROGRESS_INFO = "";*/
 
     //Sabbir
     //Chapter 1 english

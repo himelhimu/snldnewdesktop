@@ -19,6 +19,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.form.api.FormEntryCaption;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.io.File;
@@ -38,7 +39,13 @@ public class PictureSelectWidget extends QuestionWidget {
     ArrayList<ImageView> imageViews;
     private String mCurrentPath="";
     private File CURRENT_DIRECTORY=null;
-    private File DIRECTORY_NEW=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/c1_exam");
+    //TODO
+    private String imageNameFInal="";
+    private boolean q5=false;
+    private String ques5file="";
+    private String ques12File="";
+    private File testDIrectory=null;
+    private File DIRECTORY_1=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/c1_exam");
    public PictureSelectWidget(FormEntryPrompt prompt)
     {
         super(prompt);
@@ -48,7 +55,19 @@ public class PictureSelectWidget extends QuestionWidget {
         mCurrentPath=System.getProperty("user.dir");
         String currentFormPath = FormViewController.getInstance().getCurrentFormName();
         String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
-        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/"+ mPrompt.getSelectChoiceText(mItems.get(0)) ;
+
+        String imageUri =
+                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
+                        FormEntryCaption.TEXT_FORM_IMAGE);
+        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+        System.out.println("****image url = " + imageName);
+        imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+        System.out.println("***after substring "+imageNameFInal);
+        String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
+        System.out.println("*** Currentpath from pictureselect "+directoryName);
+
+
+        testDIrectory=new File(directoryName);
         setImages();
 
     }
@@ -57,14 +76,14 @@ public class PictureSelectWidget extends QuestionWidget {
     {
         //String fileName=mPrompt.getSelectChoiceText(mItems.get(1));
         String fileName=mPrompt.getSelectItemText(mItems.get(0).selection());
-        System.out.println("### after substring "+fileName);
+        //System.out.println("### after substring "+fileName);
         //String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/"+ mPrompt.getSelectChoiceText(mItems.get(0));
         //mAnchorPane=new AnchorPane();
         imageViews=new ArrayList<>();
         ArrayList<String> allImagesList=new ArrayList<>();
         try {
 
-            allImagesList=getAllImages(DIRECTORY_NEW);
+            allImagesList=getAllImages(testDIrectory);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,18 +99,6 @@ public class PictureSelectWidget extends QuestionWidget {
         }
 
 
-        /*handler= (EventHandler<MouseEvent>) event -> {
-            double imgX=event.getX();
-            double imgY=event.getY();
-
-            for (Node node: mAnchorPane.getChildren())
-            {
-                node.setLayoutX(imgX);
-                node.setLayoutY(imgY);
-            }
-            event.consume();
-        };
-*/
         FormViewController formViewController=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mFlowPane,formViewController.getColIndex(),formViewController.getRowIndex());
         formViewController.incRowIndex();
@@ -115,7 +122,7 @@ public class PictureSelectWidget extends QuestionWidget {
         File[] files=directory.listFiles();
         //assert files != null;
         for (File file: files != null ? files : new File[0]){
-            if (file!=null && file.getName().startsWith("c1q1") && file.getName().toLowerCase().endsWith(".png")){
+            if (file!=null && file.getName().startsWith(imageNameFInal) && file.getName().toLowerCase().endsWith(".png")){
                 resultList.add(file.getAbsolutePath());
             }
         }
