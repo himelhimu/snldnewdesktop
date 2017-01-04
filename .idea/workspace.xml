@@ -2,44 +2,378 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10bf4ae2-1ed8-46c6-82fd-4f2068234b30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_wl_en.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_25_l_en.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/ch_2_13_l_en.png" afterPath="$PROJECT_DIR$/src/main/resources/ch_2_13_g_en.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/ch_2_13_wl_en.png" afterPath="$PROJECT_DIR$/src/main/resources/ch_2_13_l_en.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/ch_2_25_l_en.png" afterPath="$PROJECT_DIR$/src/main/resources/ch_2_25_g_en.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CNCP-1.0-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/CNCP-1.0-jar-with-dependencies.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_l_en.png" afterPath="$PROJECT_DIR$/target/classes/ch_2_13_l_en.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FormViewController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FormViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FxViewController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FxViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration$VIEW_TYPE.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration$VIEW_TYPE.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppLogger.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/constants/Constants.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/constants/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/ContentViewController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/ContentViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/IntroViewController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/IntroViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/RegistrationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sample/AppPreloader.class" afterPath="$PROJECT_DIR$/target/classes/sample/AppPreloader.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CNCP-1.0-jar-with-dependencies.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Login.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/LoginLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/app_main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/bangla_chapter_content.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q12_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q12_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q12_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q15-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q15-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q15-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q15-4.1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q15-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1_exam/c1q20_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q2_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/c1q4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_10_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_10_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_11_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_11_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_12_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_12_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_13_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_13_wl_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_1_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_1_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_2_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_2_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_3_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_3_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_4_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_4_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_5_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_5_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_6_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_6_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_7_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_7_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_8_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_8_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_9_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_1_9_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_10_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_10_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_10_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_10_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_11_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_11_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_11_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_11_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_12_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_12_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_12_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_12_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_13_wl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_14_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_14_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_14_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_14_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_15_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_15_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_15_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_15_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_16_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_16_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_16_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_16_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_17_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_17_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_17_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_17_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_18_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_18_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_18_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_18_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_19_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_19_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_19_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_19_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_1_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_1_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_1_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_1_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_20_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_20_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_20_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_20_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_21_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_21_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_21_lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_21_wl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_22_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_22_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_23_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_23_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_24_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_24_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_25_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_25_wl_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_2_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_2_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_2_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_2_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_3_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_3_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_3_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_3_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_4_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_4_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_4_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_4_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_5_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_5_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_5_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_5_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_6_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_6_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_6_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_6_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_7_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_7_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_7_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_7_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_8_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_8_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_8_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_8_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_9_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_9_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_9_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_2_9_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_1_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_1_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_1_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_1_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_2_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_2_g_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_2_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_2_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_3_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_3_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_3_l_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_3_wl_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_4_g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ch_3_4_l.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_1_1_en.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_content.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_content_new.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_five.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_five_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_four.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_four_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_info_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_one.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_six.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_six_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_three.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_three_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_two.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/chapter_two_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FormViewController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FormViewController$FormsDirectory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FormViewController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/controller/FxViewController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/logic/FormController$FailedConstraint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/logic/FormController$InstanceMetadata.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/logic/FormController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/tasks/SaveToDisk.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/utilities/FileUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/DragDropWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/HtmlWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/MatchingWithLineWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/PictureSelectWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/PictureSelectionWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/QuestionWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/ReArrangeFourWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/ReArrangeWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/SelectMultiWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/SelectOneButtonWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/SelectOneWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/StringWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/TextWidget.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/clientcollection/widgets/WidgetFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration$VIEW_TYPE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/config/AppLogger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/constants/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/ContentViewController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/IntroViewController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/controller/RegistrationController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mpower/desktop/database/InitializeDatabase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/common.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/Login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/app_main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/css/registration.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/doctor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/doctor_shahidullah.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/c1q20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/c1q20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/c1q20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/c1q20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/c1q20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dragdrop/common.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fwd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fwv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/Login.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/bangla_chapter_content.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/chapter_content.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/chapter_content_new.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/htmlview.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/introductory_video.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/registration.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/registration_new.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/registration_profession.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/fxml/splash_screen.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/htmlview.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/icon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/images.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/LoginLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q12_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q12_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q12_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q15-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q15-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q15-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q15-4.1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q15-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/c1_exam/c1q20_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/doctor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/doctor_shahidullah.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/c1q20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/c1q20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/c1q20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/c1q20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/c1q20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/dragdrop/common.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/fwd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/fwv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/i.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/images.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/lock.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/nurse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/quiz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrange/c1q2_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrangefour/c1q4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrangefour/c1q4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrangefour/c1q4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/rearrangefour/c1q4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/sacmo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/splash_screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/img/unlock.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/intro.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/introductory_video.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/lock.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/m.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/nurse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/FormValidator$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/FormValidator$FakePreloadHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/FormValidator$JTextAreaOutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/FormValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/StubPropertyManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/odk/validate/ViewForm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/quiz.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrange/c1q2_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrangefour/c1q4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrangefour/c1q4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrangefour/c1q4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/rearrangefour/c1q4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/registration.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/registration.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/registration_new.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/registration_profession.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sacmo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/AppPreloader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/Main$UnZip.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/splash_screen.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/splash_screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/unlock.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/video/intro.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNCP.iml" afterPath="$PROJECT_DIR$/CNCP.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FormViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FormViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/config/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/config/AppConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/config/AppLogger.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/config/AppLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/constants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/ContentViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/ContentViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/IntroViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/IntroViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/RegistrationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/AppPreloader.java" afterPath="$PROJECT_DIR$/src/main/java/sample/AppPreloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/chapter_content_new.fxml" afterPath="$PROJECT_DIR$/target/classes/chapter_content_new.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/chapter_content_new.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/chapter_content_new.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +399,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="82" column="76" lean-forward="true" selection-start-line="82" selection-start-column="76" selection-end-line="82" selection-end-column="76" />
+              <caret line="82" column="76" lean-forward="false" selection-start-line="82" selection-start-column="76" selection-end-line="82" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -74,8 +408,8 @@
       <file leaf-file-name="RegistrationController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="209" column="39" lean-forward="false" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6049#6050#0" expanded="true" />
@@ -181,20 +515,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Form Builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CNCP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form Builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -840,7 +1160,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="728" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -853,10 +1173,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2701909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2701909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1266,7 +1586,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="82" column="76" lean-forward="true" selection-start-line="82" selection-start-column="76" selection-end-line="82" selection-end-column="76" />
+          <caret line="82" column="76" lean-forward="false" selection-start-line="82" selection-start-column="76" selection-end-line="82" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -1283,8 +1603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="222" column="5" lean-forward="true" selection-start-line="222" selection-start-column="5" selection-end-line="222" selection-end-column="5" />
+        <state relative-caret-position="45">
+          <caret line="209" column="39" lean-forward="false" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6049#6050#0" expanded="true" />
