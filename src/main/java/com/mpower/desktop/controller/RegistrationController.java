@@ -16,19 +16,30 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClients;
+import org.json.simple.JSONObject;
 import sample.Main;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
  * Created by hemel on 4/11/16.
+ * @author sabbir sabbir@mpower-social.com
  */
 public class RegistrationController {
     private Stage regStage;
     private Stage logInStage;
     private Parent root = null;
+
+    private static String SERVER_URL="";
 
     @FXML
     private ToggleButton button_doctor;
@@ -64,6 +75,7 @@ public class RegistrationController {
     private ImageView iv_profession;
 
     public static int current_user_type = -1;
+    private static String SELECTED_PROFILE=null;
 
     public void initRegistrationPage(ActionEvent actionEvent) {
             //current_user_type = -1;
@@ -82,15 +94,19 @@ public class RegistrationController {
         if (button_doctor.isSelected()) {
             prof_image = new Image(Main.class.getResourceAsStream("/doctor.png"));
             current_user_type = 0;
+            SELECTED_PROFILE="Doctor";
         } else if(button_nurse.isSelected()){
             prof_image = new Image(Main.class.getResourceAsStream("/nurse.png"));
             current_user_type = 1;
+            SELECTED_PROFILE="Nurse";
         } else if(button_fwd.isSelected()){
             prof_image = new Image(Main.class.getResourceAsStream("/fwv.png"));
             current_user_type = 2;
+            SELECTED_PROFILE="Fwv";
         }else if (button_sacmo.isSelected()){
             prof_image=new Image(Main.class.getResourceAsStream("/sacmo.png"));
-            current_user_type=4;
+            current_user_type=3;
+            SELECTED_PROFILE="Sacmo";
         }
 
         Node imageview = root.lookup("#iv_profession");
@@ -141,6 +157,8 @@ public class RegistrationController {
 
                 current_user_type = Integer.parseInt(iv_profession.getId());
 
+
+
                 PreparedStatement tmpLogin = id.getLoginStatement();
                 tmpLogin.setString(1,username);
                 tmpLogin.setInt(2,current_user_type);
@@ -152,6 +170,15 @@ public class RegistrationController {
                 tmpLogin.close();
                 id.closeDBConnection();
 
+                String gender=rb_male.isSelected() ? "Male":"Female";
+                Thread thread=new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        registerOnServer(email,name,mobile,password,gender,username,address);
+                    }
+                });
+                //registerOnServer(email,name,mobile,password,gender,username,address);
+
             }
 
         } catch (SQLException e) {
@@ -159,6 +186,40 @@ public class RegistrationController {
             AppLogger.getLoggerInstance().writeLog("\n"+getClass().getName()+e.getMessage(),AppConfiguration.APPLICATION_DEBUG);
         }
         FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
+    }
+
+    private void registerOnServer(String email, String name, String mobile, String password, String gender, String username, String address) {
+        HttpClient httpClient= HttpClients.createDefault();
+        HttpPost httpPost=new HttpPost(SERVER_URL);
+
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("address",address);
+        jsonObject.put("password",password);
+        jsonObject.put("country","Bangladesh");
+        jsonObject.put("po","-");
+        jsonObject.put("username",username);
+        jsonObject.put("mobile",mobile);
+        jsonObject.put("email",email);
+        jsonObject.put("gender",gender);
+        jsonObject.put("name",name);
+        jsonObject.put("division","-");
+        jsonObject.put("profile",SELECTED_PROFILE);
+       // jsonObject.putAll(dataMap);
+
+        System.out.println("** JSON Data"+jsonObject);
+        StringEntity stringEntity=null;
+        try {
+             stringEntity=new StringEntity(jsonObject.toString());
+             httpPost.addHeader("content-type","application/json");
+             httpPost.setEntity(stringEntity);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        try {
+            httpClient.execute(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

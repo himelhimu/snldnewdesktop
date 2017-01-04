@@ -2,12 +2,14 @@ package com.mpower.clientcollection.controller;
 
 /**
  * Created by hemel on 4/11/16.
+ * @author sabbir sabbir@mpower-social.com
  */
 
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
+import com.mpower.desktop.controller.LoginController;
 import com.mpower.desktop.controller.RegistrationController;
 import com.mpower.desktop.database.InitializeDatabase;
 
@@ -82,6 +84,8 @@ public class FxViewController implements Initializable {
 
 
         scrollPane=new ScrollPane();
+        scrollPane.setPrefHeight(600);
+        scrollPane.setPrefWidth(700);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
@@ -149,6 +153,21 @@ public class FxViewController implements Initializable {
             case "1_7":
                 xml_path = Constants.SEVENTH_SESSION_FIRST_CHAPTER_EN;
                 break;
+            case "1_8":
+                xml_path = Constants.EIGHTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_9":
+                xml_path = Constants.NINETH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_10":
+                xml_path = Constants.TENTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_11":
+                xml_path = Constants.ELEVENTH_SESSION_FIRST_CHAPTER_EN;
+                break;
+            case "1_12":
+                xml_path = Constants.TWELVTH_SESSION_FIRST_CHAPTER_EN;
+                break;
             case "quiz_1_1":
                 xml_path = Constants.EXAM_1ST;
                 break;
@@ -173,9 +192,6 @@ public class FxViewController implements Initializable {
             case "2_7":
                 xml_path = Constants.SEVENTH_SESSION_SECOND_CHAPTER_EN;
                 break;
-            case "quiz_2_1":
-                xml_path = Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
-                break;
             case "2_8":
                 xml_path = Constants.EIGHT_SESSION_SECOND_CHAPTER_EN;
                 break;
@@ -183,7 +199,7 @@ public class FxViewController implements Initializable {
                 xml_path = Constants.NINE_SESSION_SECOND_CHAPTER_EN;
                 break;
             case "2_10":
-                xml_path = Constants.TENTH_SESSION_FIRST_CHAPTER_EN;
+                xml_path = Constants.TENTH_SESSION_SECOND_CHAPTER_EN;
                 break;
             case "2_11":
                 xml_path = Constants.ELEVEN_SESSION_SECOND_CHAPTER_EN;
@@ -191,17 +207,38 @@ public class FxViewController implements Initializable {
             case "2_12":
                 xml_path = Constants.TWELVE_SESSION_SECOND_CHAPTER_EN;
                 break;
-            case "2_13":
-                xml_path = Constants.THIRTEEN_SESSION_SECOND_CHAPTER_EN;
+            case "quiz_2_1":
+                xml_path = Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
                 break;
             case "2_14":
-                xml_path = Constants.FOURTEEN_SESSION_SECOND_CHAPTER_EN;
+                xml_path = Constants.THIRTEEN_SESSION_SECOND_CHAPTER_EN;
                 break;
             case "2_15":
-                xml_path = Constants.FIFTEEN_SESSION_SECOND_CHAPTER_EN;
+                xml_path = Constants.FOURTEEN_SESSION_SECOND_CHAPTER_EN;
                 break;
             case "2_16":
+                xml_path = Constants.FIFTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_17":
                 xml_path = Constants.SIXTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_18":
+                xml_path = Constants.SEVENTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_19":
+                xml_path = Constants.EIGHTEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_20":
+                xml_path = Constants.NINETEEN_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_21":
+                xml_path = Constants.TWENTY_SESSION_SECOND_CHAPTTER_EN;
+                break;
+            case "2_22":
+                xml_path = Constants.TWENTY_ONE_SESSION_SECOND_CHAPTER_EN;
+                break;
+            case "2_23":
+                xml_path = Constants.TWENTY_TWO_SESSION_CHAPTER_EN;
                 break;
             case "quiz_2_2":
                 xml_path = Constants.SECOND_EXAM_SECOND_CHAPTER_EN;
@@ -236,25 +273,53 @@ public class FxViewController implements Initializable {
     private void showCourseOverviewStage() {
         curStage.setTitle(AppConfiguration.COURSE_OVERVIEW_WINDOW);
         Parent tmpRoot = null;
+        boolean removeENfromImageName=false;
+        String englishChapterContent="/chapter_content_new.fxml";
+        String banglaChapterContent="/bangla_chapter_content.fxml";
+        String ENimageNameSuffix="_l_en.png";
+        String BNimageNameSuffix="_l.png";
+        //String chapterImageName="";
         try{
-            tmpRoot = FXMLLoader.load(getClass().getResource("/chapter_content_new.fxml"));
+            if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1){
+                 removeENfromImageName=false;
+                 tmpRoot = FXMLLoader.load(getClass().getResource(englishChapterContent));
+            }else {
+                 removeENfromImageName=true;
+                 tmpRoot = FXMLLoader.load(getClass().getResource(banglaChapterContent));
+            }
+
             String currProg = InitializeDatabase.get_instance().getCurrUserProgress(ContentViewController.current_user);
 
             if( currProg != "" ){
                 int chapter = Integer.parseInt(currProg.split("_")[0]);
                 int session = Integer.parseInt(currProg.split("_")[1]);
-                String chapterImageName1="ch_"+String.valueOf(chapter)+"_"+String.valueOf(session)+"_l_en.png";
-                System.out.println("** ChapterImageName "+chapterImageName1);
+
+                //System.out.println("** ChapterImageName "+chapterImageName1);
                // Image unlock_image1 = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName1));
                 for(int i=1;i<=chapter;i++){
                     for(int j=1;j<=session+1;j++){
                         Node progressImage = tmpRoot.lookup("#session_"+i+"_"+j);
                         if(progressImage != null){
-                            String chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+"_l_en.png";
+                            if (!removeENfromImageName){
+
+                                //String chapterImageName1="ch_"+String.valueOf(chapter)+"_"+String.valueOf(session)+"_l_en.png";
+                              String   chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+ENimageNameSuffix;
+                                System.out.println("*** ChapterImageName "+chapterImageName);
+                                Image unlock_image = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName));
+                                ((ImageView) progressImage).setImage(unlock_image);
+                                progressImage.setDisable(false);
+                            }else {
+                                String chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+BNimageNameSuffix;
+                                System.out.println("*** ChapterImageName "+chapterImageName);
+                                Image unlock_image = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName));
+                                ((ImageView) progressImage).setImage(unlock_image);
+                                progressImage.setDisable(false);
+                            }
+                           /* String chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+"_l_en.png";
                             System.out.println("** ChapterImageName "+chapterImageName);
                             Image unlock_image = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName));
                             ((ImageView) progressImage).setImage(unlock_image);
-                            progressImage.setDisable(false);
+                            progressImage.setDisable(false);*/
                         }
                     }
                 }
@@ -264,6 +329,7 @@ public class FxViewController implements Initializable {
         }
         assert tmpRoot != null;
         ScrollPane scrollPane1=new ScrollPane(tmpRoot);
+        scrollPane1.setPrefHeight(600);
         this.curStage.setScene(new Scene(scrollPane1));
 
         showCurStage();

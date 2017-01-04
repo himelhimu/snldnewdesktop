@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 
 /**
  * Created by hemel on 4/24/16.
+ * @author sabbir sabbir@mpower-social.com
  */
 public class ContentViewController {
     @FXML
@@ -70,8 +71,28 @@ public class ContentViewController {
                     FxViewController.getInstance().setCurrentView("1_7", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
+                case "session_1_8":
+                    current_session = "1_8";
+                    FxViewController.getInstance().setCurrentView("1_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_1_9":
+                    current_session = "1_9";
+                    FxViewController.getInstance().setCurrentView("1_9", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_1_10":
+                    current_session = "1_10";
+                    FxViewController.getInstance().setCurrentView("1_10", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_1_11":
+                    current_session = "1_11";
+                    FxViewController.getInstance().setCurrentView("1_11", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
                 case "session_1_quiz":
-                    current_session = "quiz_1_1";
+                    current_session = "2_0";
                     FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
                 case "session_2_1":
@@ -109,10 +130,6 @@ public class ContentViewController {
                     FxViewController.getInstance().setCurrentView("2_7", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
-                case "session_2_quiz_1":
-                    current_session = "quiz_2_1";
-                    FxViewController.getInstance().setCurrentView("quiz_2_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    break;
                 case "session_2_8":
                     current_session = "2_8";
                     FxViewController.getInstance().setCurrentView("2_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
@@ -138,9 +155,9 @@ public class ContentViewController {
                     FxViewController.getInstance().setCurrentView("2_12", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("sixth Image clicked." + current_user);
                     break;
-                case "session_2_13":
+                case "session_2_quiz_1":
                     current_session = "2_13";
-                    FxViewController.getInstance().setCurrentView("2_13", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    FxViewController.getInstance().setCurrentView("quiz_2_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_14":
@@ -149,19 +166,58 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_15":
-                    current_session = "2_13";
+                    current_session = "2_15";
                     FxViewController.getInstance().setCurrentView("2_15", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_16":
-                    current_session = "2_14";
+                    current_session = "2_16";
                     FxViewController.getInstance().setCurrentView("2_16", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
-                case "session_2_quiz_2":
-                    current_session = "quiz_2_2";
-                    FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                case "session_2_17":
+                    current_session = "2_17";
+                    FxViewController.getInstance().setCurrentView("2_17", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
                     break;
+                case "session_2_18":
+                    current_session = "2_18";
+                    FxViewController.getInstance().setCurrentView("2_18", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_2_19":
+                    current_session = "2_19";
+                    FxViewController.getInstance().setCurrentView("2_19", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_2_20":
+                    current_session = "2_20";
+                    FxViewController.getInstance().setCurrentView("2_20", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_2_21":
+                    current_session = "2_21";
+                    FxViewController.getInstance().setCurrentView("2_21", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+                case "session_2_22":
+                    current_session = "2_22";
+                    FxViewController.getInstance().setCurrentView("2_22", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+
+                case "session_2_23":
+                    current_session = "2_23";
+                    FxViewController.getInstance().setCurrentView("2_23", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+
+                case "session_2_quiz_2":
+                    current_session = "3_0";
+                    FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+
                 case "session_3_1":
                     current_session = "3_1";
                     FxViewController.getInstance().setCurrentView("3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
@@ -178,7 +234,7 @@ public class ContentViewController {
                     //System.out.print("Fourth Image clicked." + current_user);
                     break;
                 case "session_3_quiz":
-                    current_session = "quiz_3_1";
+                    current_session = "1_0";
                     FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
             }

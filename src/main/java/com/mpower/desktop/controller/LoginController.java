@@ -15,6 +15,7 @@ import java.sql.Statement;
 
 /**
  * Login Controller.
+ * @author sabbir sabbir@mpower-social.com
  */
 public class LoginController extends AnchorPane {
 
@@ -27,6 +28,9 @@ public class LoginController extends AnchorPane {
     @FXML
     Label errorMessage;
     private boolean isNewUser = false;
+
+    //For detecting user type
+    public static int USER_TYPE=-1;
 
     public void processLogin(ActionEvent event) {
         String username = userId.getText();
@@ -88,12 +92,16 @@ public class LoginController extends AnchorPane {
         try {
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement st = id.getConnection().createStatement();
-            String loginSql = "SELECT password FROM "+AppConfiguration.LOGIN_INFO+" WHERE username like \""+username+"\" LIMIT 1;";
+            String loginSql = "SELECT password,user_type FROM "+AppConfiguration.LOGIN_INFO+" WHERE username like \""+username+"\" LIMIT 1;";
             System.out.println("**LoginSql = " + loginSql);
             ResultSet rs = st.executeQuery(loginSql);
+
             if(rs.next()) {
                 if (rs.getString(1).equals(password)){
+                    System.out.println("** Return form Database query "+rs.getString(1)+" 2nd Column "+rs.getString(2));
                     System.out.print("user is Valid.");
+                    USER_TYPE=Integer.valueOf(rs.getString(2));
+                    System.out.println("*** UserType "+USER_TYPE);
                     ContentViewController.current_user = username;
                     return true;
                 }else{

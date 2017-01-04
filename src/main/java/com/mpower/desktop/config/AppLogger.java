@@ -13,6 +13,7 @@ import static java.nio.file.StandardOpenOption.CREATE;
 
 /**
  * Created by hemel on 4/26/16.
+ * @author sabbir sabbir@mpower-social.com
  */
 public class AppLogger {
     private Path p = null;

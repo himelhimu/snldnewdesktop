@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 /**
  * Created by hemel on 4/11/16.
+ * @author sabbir sabbir@mpower-social.com
  */
 public class AppPreloader extends Preloader {
     ProgressBar bar;

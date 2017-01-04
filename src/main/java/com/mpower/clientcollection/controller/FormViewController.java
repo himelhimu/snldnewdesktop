@@ -425,7 +425,6 @@ public class FormViewController {
                 }
             });
 
-            //uploadFileToServer();
             createResultDialog();
             try {
                 InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);

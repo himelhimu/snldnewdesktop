@@ -2,6 +2,7 @@ package com.mpower.desktop.constants;
 
 /**
  * Created by sabbir on 12/6/16.
+ *  @author sabbir sabbir@mpower-social.com
  */
 public class Constants {
 
@@ -12,7 +13,7 @@ public class Constants {
 
     public static final String NONE = "none";
 
-    public static final String FIRST_SESSION_FIRST_CHAPTER = ".xml";
+    public static final String FIRST_SESSION_FIRST_CHAPTER = "১ ১ প রসব র প র ব প রয় জন য় প রস ত ত.xml";
     //public static final String SECOND_SESSION_FIRST_CHAPTER = "multi_language_test";
     public static final String SECOND_SESSION_FIRST_CHAPTER = "2_exam.xml";
     public static final String THIRD_SESSION_FIRST_CHAPTER = "third_session_first_chapter";
@@ -76,59 +77,44 @@ public class Constants {
     public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "Chapter 1 Helping Babies Breathe.xml";
 
 
-   /* public static final String FIRST_SESSION_FIRST_CHAPTER_EN = "Preparation_for_birth_bn.xml";
-    public static final String SECOND_SESSION_FIRST_CHAPTER_EN = "At_birth_Dry_thoroughly_bn.xml";
-    public static final String THIRD_SESSION_FIRST_CHAPTER_EN= "Evaluation_after_drying_Is_the_baby_crying.xml";
-    public static final String FOURTH_SESSION_FIRST_CHAPTER_EN = "If_the_baby_is_crying_Provide_Routin_Care_bn.xml";
-    public static final String FIFTH_SESSION_FIRST_CHAPTER_EN = "If_not_crying_Clear_the_airway_and_stimulate_breathing_bn.xml";
-    public static final String SIXTH_SESSION_FIRST_CHAPTER_EN = "After_clearing_and_stimulation_Is_the_baby_breathing_well_bn.xml";
-    public static final String SEVENTH_SESSION_FIRST_CHAPTER_EN = "Family.xml";
-    public static final String EIGHTH_SESSION_FIRST_CHAPTER_EN = "1 8 During ventilation Is the baby breathing well.xml";
-    public static final String NINETH_SESSION_FIRST_CHAPTER_EN = "1 9 If chest is not moving Call for help.xml";
-    public static final String TENTH_SESSION_FIRST_CHAPTER_EN = "1 10 If Baby is not breathing well Evaluate heart rate.xml";
-    public static final String ELEVENTH_SESSION_FIRST_CHAPTER_EN = "1 11 Heart rate is normal Ventilate till breathing well.xml";
-    public static final String TWELVTH_SESSION_FIRST_CHAPTER_EN = "1 12 If baby doesn t breath Continue Ventilation and Provide Advanced Care.xml";
-    public static final String THIRTEEN_SESSION_FIRST_CHAPTER_EN = "Chapter 1 Helping Babies Breathe.xml";
-*/
-
     //Test for Exam
     public static final String EXAM_1ST="Chapter 1 Helping Babies Breathe.xml";
     public static final String EXAM_2ND="ch1_exam_1.xml";
     //Second Chapter English
 
-    public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "first_session_second_chapter_en";
-    public static final String SECOND_SESSION_SECOND_CHAPTER_EN = "second_session_second_chapter_en";
-    public static final String THIRD_SESSION_SECOND_CHAPTER_EN = "third_session_second_chapter_en";
-    public static final String FOURTH_SESSION_SECOND_CHAPTER_EN = "four_session_second_chapter_en";
-    public static final String FIFTH_SESSION_SECOND_CHAPTER_EN = "five_session_second_chapter_en";
-    public static final String SIXTH_SESSION_SECOND_CHAPTER_EN = "six_session_second_chapter_en";
-    public static final String SEVENTH_SESSION_SECOND_CHAPTER_EN = "seven_session_second_chapter_en";
-    public static final String EIGHT_SESSION_SECOND_CHAPTER_EN = "eight_session_second_chapter_en";
-    public static final String NINE_SESSION_SECOND_CHAPTER_EN = "nine_session_second_chapter_en";
-    public static final String TENTH_SESSION_SECOND_CHAPTER_EN = "ten_session_second_chapter_en";
-    public static final String ELEVEN_SESSION_SECOND_CHAPTER_EN = "eleven_session_second_chapter_en";
-    public static final String TWELVE_SESSION_SECOND_CHAPTER_EN = "twelve_session_second_chapter_en";
-    public static final String FIRST_EXAM_SECOND_CHAPTER_EN = "chapter_2_1_exam_en";
-    public static final String THIRTEEN_SESSION_SECOND_CHAPTER_EN = "thirteen_session_second_chapter_en";
-    public static final String FOURTEEN_SESSION_SECOND_CHAPTER_EN = "fourteen_session_second_chapter_en";
-    public static final String FIFTEEN_SESSION_SECOND_CHAPTER_EN = "fifteen_session_second_chapter_en";
-    public static final String SIXTEEN_SESSION_SECOND_CHAPTER_EN = "sixteen_session_second_chapter_en";
-    public static final String SEVENTEEN_SESSION_SECOND_CHAPTER_EN = "seventeen_session_second_chapter_en";
-    public static final String EIGHTEEN_SESSION_SECOND_CHAPTER_EN = "eighteen_session_second_chapter_en";
-    public static final String NINETEEN_SESSION_SECOND_CHAPTER_EN = "nineteen_session_second_chapter_en";
-    public static final String TWENTY_SESSION_SECOND_CHAPTTER_EN="twenty_session_second_chapter_en";
-    public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER_EN="twenty_one_session_second_chapter_en";
-    public static final String TWENTY_TWO_SESSION_CHAPTER_EN="twenty_two_session_second_chapter_en";
-    public static final String TWENTY_THREE_SESSION_SECOND_CHAPTER_EN="twenty_three_session_second_chapter_en";
+    public static final String FIRST_SESSION_SECOND_CHAPTER_EN = "2 1 Continue skin to skin care and monitor breathing.xml";
+    public static final String SECOND_SESSION_SECOND_CHAPTER_EN = "2 2 Initiate breastfeeding Within one hour after birth.xml";
+    public static final String THIRD_SESSION_SECOND_CHAPTER_EN = "2 3 Provide cord care.xml";
+    public static final String FOURTH_SESSION_SECOND_CHAPTER_EN = "2 4 Examine the baby.xml";
+    public static final String FIFTH_SESSION_SECOND_CHAPTER_EN = "2 5 Measure temperature.xml";
+    public static final String SIXTH_SESSION_SECOND_CHAPTER_EN = "2 6 Measure birth weight.xml";
+    public static final String SEVENTH_SESSION_SECOND_CHAPTER_EN = "2 7 Classify the baby.xml";
+    public static final String EIGHT_SESSION_SECOND_CHAPTER_EN = "2 8 Continue support for breastfeeding.xml";
+    public static final String NINE_SESSION_SECOND_CHAPTER_EN = "2 9 Assess feeding difficulties advice on breastfeeding problems.xml";
+    public static final String TENTH_SESSION_SECOND_CHAPTER_EN = "2 10 For a healthy baby maintain normal temperature.xml";
+    public static final String ELEVEN_SESSION_SECOND_CHAPTER_EN = "2 11 Start immunization Within one day after birth.xml";
+    public static final String TWELVE_SESSION_SECOND_CHAPTER_EN = "2 12 Time of discharge Guide parents.xml";
+    public static final String FIRST_EXAM_SECOND_CHAPTER_EN = "Chapter 2 Healthy and Sick Newborn Care First Exam.xml";
+    public static final String THIRTEEN_SESSION_SECOND_CHAPTER_EN = "2 13 Improve thermal care for abnormal temperature.xml";
+    public static final String FOURTEEN_SESSION_SECOND_CHAPTER_EN = "2 14 Provide Kangaroo Mother Care.xml";
+    public static final String FIFTEEN_SESSION_SECOND_CHAPTER_EN = "2 15 Express breast milk.xmln";
+    public static final String SIXTEEN_SESSION_SECOND_CHAPTER_EN = "2 16 Alternate feeding method if cannot feed directly.xml";
+    public static final String SEVENTEEN_SESSION_SECOND_CHAPTER_EN = "2 17 Assess Danger Signs.xml";
+    public static final String EIGHTEEN_SESSION_SECOND_CHAPTER_EN = "2 18 Appropriate appropriate Management.xml";
+    public static final String NINETEEN_SESSION_SECOND_CHAPTER_EN = "2 19 Recognize Severe Jaundice.xml";
+    public static final String TWENTY_SESSION_SECOND_CHAPTTER_EN="2 20 Recognize Convulsion.xml";
+    public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER_EN="2 21 Identification of serious bacterial infection.xml";
+    public static final String TWENTY_TWO_SESSION_CHAPTER_EN="2 22 Identification of Meningitis.xml";
+    public static final String TWENTY_THREE_SESSION_SECOND_CHAPTER_EN="2 23 Provide Supportive Care to Sick Newborn.xml";
     public static final String TWENTY_FOUR_SESSION_SECOND_CHAPTER_EN="twenty_four_session_second_chapter_en";
-    public static final String SECOND_EXAM_SECOND_CHAPTER_EN = "chapter_2_2_exam_en";
+    public static final String SECOND_EXAM_SECOND_CHAPTER_EN = "Chapter 2 Healthy and Sick Newborn Care Second Exam.xml";
     /* public static final String TWENTY_SESSION_SECOND_CHAPTER = "twenty_session_second_chapter";
      public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER = "twenty_one_session_second_chapter";
  */
-    public static final String FIRST_SESSION_THIRD_CHAPTER_EN = "first_session_third_chapter_en";
-    public static final String SECOND_SESSION_THIRD_CHAPTER_EN = "second_session_third_chapter_en";
+    public static final String FIRST_SESSION_THIRD_CHAPTER_EN = "3 1 Perform quick check and recognize four conditions.xml";
+    public static final String SECOND_SESSION_THIRD_CHAPTER_EN = "3 2 Determine Gestational Age.xml";
     //  public static final String THIRD_SESSION_THIRD_CHAPTER_EN = "third_session_third_chapter_en";
-    public static final String EXAM_SESSION_THIRD_CHAPTER_EN = "chapter_3_exam_en";
+    public static final String EXAM_SESSION_THIRD_CHAPTER_EN = "Chapter 3 Antenatal Corticosteroid ACS.xml";
 
 
     //Test,Sabbir
