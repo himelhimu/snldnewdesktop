@@ -34,4 +34,11 @@ com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main 
 com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
 com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
 com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init ***** In Main Init **
 com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized*** In Main Init **
+com.mpower.clientcollection.controller.FxViewController: Initialized

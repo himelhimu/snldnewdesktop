@@ -90,31 +90,31 @@ public class Constants {
     public static final String SIXTH_SESSION_SECOND_CHAPTER_EN = "2 6 Measure birth weight.xml";
     public static final String SEVENTH_SESSION_SECOND_CHAPTER_EN = "2 7 Classify the baby.xml";
     public static final String EIGHT_SESSION_SECOND_CHAPTER_EN = "2 8 Continue support for breastfeeding.xml";
-    public static final String NINE_SESSION_SECOND_CHAPTER_EN = "nine_session_second_chapter_en";
-    public static final String TENTH_SESSION_SECOND_CHAPTER_EN = "ten_session_second_chapter_en";
-    public static final String ELEVEN_SESSION_SECOND_CHAPTER_EN = "eleven_session_second_chapter_en";
-    public static final String TWELVE_SESSION_SECOND_CHAPTER_EN = "twelve_session_second_chapter_en";
+    public static final String NINE_SESSION_SECOND_CHAPTER_EN = "2 9 Assess feeding difficulties advice on breastfeeding problems.xml";
+    public static final String TENTH_SESSION_SECOND_CHAPTER_EN = "2 10 For a healthy baby maintain normal temperature.xml";
+    public static final String ELEVEN_SESSION_SECOND_CHAPTER_EN = "2 11 Start immunization Within one day after birth.xml";
+    public static final String TWELVE_SESSION_SECOND_CHAPTER_EN = "2 12 Time of discharge Guide parents.xml";
     public static final String FIRST_EXAM_SECOND_CHAPTER_EN = "Chapter 2 Healthy and Sick Newborn Care First Exam.xml";
-    public static final String THIRTEEN_SESSION_SECOND_CHAPTER_EN = "thirteen_session_second_chapter_en";
-    public static final String FOURTEEN_SESSION_SECOND_CHAPTER_EN = "fourteen_session_second_chapter_en";
-    public static final String FIFTEEN_SESSION_SECOND_CHAPTER_EN = "fifteen_session_second_chapter_en";
-    public static final String SIXTEEN_SESSION_SECOND_CHAPTER_EN = "sixteen_session_second_chapter_en";
-    public static final String SEVENTEEN_SESSION_SECOND_CHAPTER_EN = "seventeen_session_second_chapter_en";
-    public static final String EIGHTEEN_SESSION_SECOND_CHAPTER_EN = "eighteen_session_second_chapter_en";
-    public static final String NINETEEN_SESSION_SECOND_CHAPTER_EN = "nineteen_session_second_chapter_en";
-    public static final String TWENTY_SESSION_SECOND_CHAPTTER_EN="twenty_session_second_chapter_en";
-    public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER_EN="twenty_one_session_second_chapter_en";
-    public static final String TWENTY_TWO_SESSION_CHAPTER_EN="twenty_two_session_second_chapter_en";
-    public static final String TWENTY_THREE_SESSION_SECOND_CHAPTER_EN="twenty_three_session_second_chapter_en";
+    public static final String THIRTEEN_SESSION_SECOND_CHAPTER_EN = "2 13 Improve thermal care for abnormal temperature.xml";
+    public static final String FOURTEEN_SESSION_SECOND_CHAPTER_EN = "2 14 Provide Kangaroo Mother Care.xml";
+    public static final String FIFTEEN_SESSION_SECOND_CHAPTER_EN = "2 15 Express breast milk.xmln";
+    public static final String SIXTEEN_SESSION_SECOND_CHAPTER_EN = "2 16 Alternate feeding method if cannot feed directly.xml";
+    public static final String SEVENTEEN_SESSION_SECOND_CHAPTER_EN = "2 17 Assess Danger Signs.xml";
+    public static final String EIGHTEEN_SESSION_SECOND_CHAPTER_EN = "2 18 Appropriate appropriate Management.xml";
+    public static final String NINETEEN_SESSION_SECOND_CHAPTER_EN = "2 19 Recognize Severe Jaundice.xml";
+    public static final String TWENTY_SESSION_SECOND_CHAPTTER_EN="2 20 Recognize Convulsion.xml";
+    public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER_EN="2 21 Identification of serious bacterial infection.xml";
+    public static final String TWENTY_TWO_SESSION_CHAPTER_EN="2 22 Identification of Meningitis.xml";
+    public static final String TWENTY_THREE_SESSION_SECOND_CHAPTER_EN="2 23 Provide Supportive Care to Sick Newborn.xml";
     public static final String TWENTY_FOUR_SESSION_SECOND_CHAPTER_EN="twenty_four_session_second_chapter_en";
-    public static final String SECOND_EXAM_SECOND_CHAPTER_EN = "chapter_2_2_exam_en";
+    public static final String SECOND_EXAM_SECOND_CHAPTER_EN = "Chapter 2 Healthy and Sick Newborn Care Second Exam.xml";
     /* public static final String TWENTY_SESSION_SECOND_CHAPTER = "twenty_session_second_chapter";
      public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER = "twenty_one_session_second_chapter";
  */
-    public static final String FIRST_SESSION_THIRD_CHAPTER_EN = "first_session_third_chapter_en";
-    public static final String SECOND_SESSION_THIRD_CHAPTER_EN = "second_session_third_chapter_en";
+    public static final String FIRST_SESSION_THIRD_CHAPTER_EN = "3 1 Perform quick check and recognize four conditions.xml";
+    public static final String SECOND_SESSION_THIRD_CHAPTER_EN = "3 2 Determine Gestational Age.xml";
     //  public static final String THIRD_SESSION_THIRD_CHAPTER_EN = "third_session_third_chapter_en";
-    public static final String EXAM_SESSION_THIRD_CHAPTER_EN = "chapter_3_exam_en";
+    public static final String EXAM_SESSION_THIRD_CHAPTER_EN = "Chapter 3 Antenatal Corticosteroid ACS.xml";
 
 
     //Test,Sabbir

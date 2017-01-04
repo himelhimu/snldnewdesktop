@@ -19,6 +19,8 @@ public class SaveToDisk {
      * @param markCompleted
      * @return
      */
+    //Sabbir for using later
+    public static  String instancePath=null;
     public boolean exportData(boolean markCompleted) {
         FormController formController = FormViewController.getInstance().getFormController();
 
@@ -26,7 +28,8 @@ public class SaveToDisk {
         try {
             payload = formController.getFilledInFormXml();
             // write out xml
-            String instancePath = formController.getInstancePath().getAbsolutePath();
+            //Sabbir
+            instancePath = formController.getInstancePath().getAbsolutePath();
             exportXmlFile(payload, instancePath);
 
         } catch (IOException e) {

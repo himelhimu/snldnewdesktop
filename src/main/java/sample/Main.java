@@ -10,6 +10,7 @@ import com.mpower.desktop.database.InitializeDatabase;
 import com.sun.javafx.tk.Toolkit;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -19,10 +20,7 @@ import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ScrollBar;
+import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -34,11 +32,15 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.HttpClients;
 import org.w3c.dom.Document;
 
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -53,10 +55,13 @@ public class Main extends Application {
     private static String JAR_PATH="";
     private String mCurrentPath="";
 
+    private static String SERVER_URL="";
     //Sabbir
     public static boolean isSplashLoaded=false;
+    public static long START_TIME=System.currentTimeMillis();
 
 
+    public static boolean exit=false;
 
     @Override public void init() {
         AppLogger.getLoggerInstance().writeLog("*** In Main Init **",true);
@@ -127,11 +132,43 @@ public class Main extends Application {
         mainStage = primaryStage;
         //mainStage.sizeToScene();
         //mainStage.setAlwaysOnTop(true);
+        //final boolean exit=false;
         mainStage.initStyle(StageStyle.DECORATED);
         mainStage.setMinWidth(640);
         mainStage.setMinHeight(500);
         mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/icon.png")));
         FxViewController.getInstance().showMainStage();
+        mainStage.setOnCloseRequest(event -> {
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("Application Closing");
+            alert.setContentText("Do you really want to exit?");
+            Optional<ButtonType> result=alert.showAndWait();
+            if (result.get() ==ButtonType.OK){
+                long duration=(System.currentTimeMillis()-START_TIME)/1000;
+                Thread thread=new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                       sendTimeToServer(duration);
+                    }
+                });
+                thread.start();
+                //sendTimeToServer(duration);
+                System.out.println("** Current time "+duration);
+                if (exit)  Platform.exit();
+                else thread.run();
+            }else if (result.get()==ButtonType.CANCEL){
+                event.consume();
+                alert.close();
+            }
+        });
+
+    }
+
+    private void sendTimeToServer(long duration) {
+        HttpClient httpClient= HttpClients.createDefault();
+        HttpPost httpPost=new HttpPost(SERVER_URL);
+
+        exit=true;
 
     }
 
