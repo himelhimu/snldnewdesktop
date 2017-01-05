@@ -8,10 +8,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import sample.Main;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 /**
  * Login Controller.
@@ -31,6 +37,8 @@ public class LoginController extends AnchorPane {
 
     //For detecting user type
     public static int USER_TYPE=-1;
+
+    public static String CURRENT_PROFFESION="";
 
     public void processLogin(ActionEvent event) {
         String username = userId.getText();
@@ -101,8 +109,33 @@ public class LoginController extends AnchorPane {
                     System.out.println("** Return form Database query "+rs.getString(1)+" 2nd Column "+rs.getString(2));
                     System.out.print("user is Valid.");
                     USER_TYPE=Integer.valueOf(rs.getString(2));
+                    switch (USER_TYPE){
+                        case 0:
+                            CURRENT_PROFFESION="Doctor";
+                        case 1:
+                            CURRENT_PROFFESION="Nurse";
+                        case 2:
+                            CURRENT_PROFFESION="FWV";
+                        case 3:
+                            CURRENT_PROFFESION="SACMO";
+                    }
                     System.out.println("*** UserType "+USER_TYPE);
                     ContentViewController.current_user = username;
+                    Main.isLoggedIn=true;
+                    File configFile = new File("./config.properties");
+
+                    try {
+                        Properties props = new Properties();
+                        props.setProperty("username", username);
+                        props.setProperty("password",password);
+                        FileWriter writer = new FileWriter(configFile);
+                        props.store(writer, "user settings");
+                        writer.close();
+                    } catch (FileNotFoundException ex) {
+                        // file does not exist
+                    } catch (IOException ex) {
+                        // I/O error
+                    }
                     return true;
                 }else{
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);

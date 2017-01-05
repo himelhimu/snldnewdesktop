@@ -22,6 +22,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
@@ -37,8 +39,10 @@ import javafx.util.Duration;
 import org.javarosa.form.api.FormEntryModel;
 import sample.Main;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.util.Optional;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 
@@ -66,7 +70,6 @@ public class FxViewController implements Initializable {
     }
 
     public void showCurStage(){
-        this.curStage.setResizable(true);
         this.curStage.show();
     }
 
@@ -106,6 +109,7 @@ public class FxViewController implements Initializable {
         }
         else if( view_type == AppConfiguration.VIEW_TYPE.REG_VIEW){
             showMainStage();
+            //jumpBackIn();
         }
         else if ( view_type == AppConfiguration.VIEW_TYPE.LOGIN_VIEW ){
             showLoginStage();
@@ -370,16 +374,47 @@ public class FxViewController implements Initializable {
 
     public void showMainStage(){
         curStage.setTitle(AppConfiguration.APPLICATION_NAME);
-        curStage.setIconified(true);
+
         try {
-           // root = FXMLLoader.load(getClass().getResource(AppConfiguration.FXML_PATH+"registration.fxml"));
             root = FXMLLoader.load(getClass().getResource("/registration.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //this.curStage.setScene(new Scene(root, AppConfiguration.SCREEN_WIDTH, AppConfiguration.SCREEN_HEIGHT));
         this.curStage.setScene(new Scene(root));
         showCurStage();
+        jumpBackIn();
+    }
+
+    void jumpBackIn(){
+        System.out.println("*** In JumpBackIn ");
+        InputStream is=null;
+        try {
+            FileInputStream fileInputStream=new FileInputStream("./config.properties");
+            is=fileInputStream;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Properties props=new Properties();
+        try {
+            props.load(is);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (!props.isEmpty()){
+            String userName= props.getProperty("username");
+
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("Log in as"+userName);
+
+            Optional<ButtonType> result=alert.showAndWait();
+            if (result.get()== ButtonType.OK){
+                FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+            }else {
+                //TODO do nothing
+                alert.close();
+            }
+        }
     }
 
     //Sabbir

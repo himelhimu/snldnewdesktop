@@ -12,7 +12,7 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.ContentViewController">
     <children>
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="Chapter 1: Help Babies to Breath" textFill="WHITE">
+        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="অধ্যায় ১- হেল্পিং বেবিজ ব্রিদ" textFill="WHITE">
             <font>
                 <Font size="26.0" />
             </font>
@@ -26,7 +26,7 @@
                     <children>
                         <ImageView fx:id="session_1_1" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_1_l_en.png" />
+                                <Image url="@../ch_1_1_l.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -41,7 +41,7 @@
                     <children>
                         <ImageView fx:id="session_1_2" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_2_g_en.png" />
+                                <Image url="@../ch_1_2_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -53,7 +53,7 @@
                     <children>
                         <ImageView fx:id="session_1_3" disable="true" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_3_g_en.png" />
+                                <Image url="@../ch_1_3_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -65,7 +65,7 @@
                     <children>
                         <ImageView fx:id="session_1_4" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_4_g_en.png" />
+                                <Image url="@../ch_1_4_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -81,7 +81,7 @@
                     <children>
                         <ImageView fx:id="session_1_5" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_5_g_en.png" />
+                                <Image url="@../ch_1_5_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -93,7 +93,7 @@
                     <children>
                         <ImageView fx:id="session_1_6" disable="true" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_6_g_en.png" />
+                                <Image url="@../ch_1_6_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -105,7 +105,7 @@
                     <children>
                         <ImageView fx:id="session_1_quiz" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../ch_1_13_l_en.png" />
+                                <Image url="@../ch_1_7_g.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -117,7 +117,7 @@
                 </VBox>
             </children>
         </HBox>
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="Chapter 2: Care About Healthy and Unhealthy babies" textFill="WHITE">
+        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text=" অধ্যায় ২- সুস্থ ও অসুস্থ শিশুর পরিচর্যা" textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
@@ -129,7 +129,7 @@
             <children>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <ImageView fx:id="session_2_1" disable="false" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_1" disable="false" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_1_g.png" />
                             </image>
@@ -144,7 +144,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_2" disable="true" fitHeight="100.0" fitWidth="98.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_2" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_2_g.png" />
                             </image>
@@ -156,7 +156,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_3" disable="true" fitHeight="115.0" fitWidth="92.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_3" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_3_g.png" />
                             </image>
@@ -184,7 +184,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_5" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_5" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_5_g.png" />
                             </image>
@@ -196,7 +196,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_6" disable="true" fitHeight="98.0" fitWidth="120.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_6" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_6_g.png" />
                             </image>
@@ -208,7 +208,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_7" disable="true" fitHeight="96.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_7" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_7_g.png" />
                             </image>
@@ -220,7 +220,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_8" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_8" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_8_g.png" />
                             </image>
@@ -238,7 +238,7 @@
             <children>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <ImageView fx:id="session_2_9" disable="true" fitHeight="100.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_9" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_9_g.png" />
                             </image>
@@ -253,7 +253,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_10" disable="true" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_10" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_10_g.png" />
                             </image>
@@ -277,7 +277,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_12" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_12" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_12_g.png" />
                             </image>
@@ -308,7 +308,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_14" disable="true" fitHeight="100.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_14" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_14_g.png" />
                             </image>
@@ -320,7 +320,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_15" disable="true" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_15" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_15_g.png" />
                             </image>
@@ -348,7 +348,7 @@
             <children>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <ImageView fx:id="session_2_17" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_17" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_17_g.png" />
                             </image>
@@ -363,7 +363,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_18" disable="true" fitHeight="100.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_18" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_18_g.png" />
                             </image>
@@ -375,7 +375,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_19" disable="true" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_19" disable="true" fitHeight="110.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_19_g.png" />
                             </image>
@@ -416,7 +416,7 @@
                 </VBox>
             </children>
         </HBox>
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="Chapter 3:Child Infection System" textFill="WHITE">
+        <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="অধ্যায় ৩- শিশুর সংক্রমণ ব্যবস্থাপনা" textFill="WHITE">
             <font>
                 <Font size="26.0" />
             </font>

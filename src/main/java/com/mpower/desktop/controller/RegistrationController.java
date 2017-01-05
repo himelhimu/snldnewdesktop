@@ -28,6 +28,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -75,7 +77,7 @@ public class RegistrationController {
     private ImageView iv_profession;
 
     public static int current_user_type = -1;
-    private static String SELECTED_PROFILE=null;
+    public static String SELECTED_PROFILE="";
 
     public void initRegistrationPage(ActionEvent actionEvent) {
             //current_user_type = -1;
@@ -116,76 +118,105 @@ public class RegistrationController {
         regStage.setScene(new Scene(root));
         regStage.show();
     }
+
+    private boolean validateData(String mobile, String email) {
+        // return !mobile.isEmpty() && mobile.length() == 11 && validateEmail(email);
+        return !mobile.isEmpty() && mobile.length() == 11 && validateMobile(mobile) && validateEmail(email);
+    }
+
+    private boolean validateMobile(String mobile) {
+        Pattern pattern = Pattern.compile("\\d{11}");
+        Matcher matcher = pattern.matcher(mobile);
+
+        return matcher.find();
+    }
+
+    private boolean validateEmail(String email) {
+        final Pattern VALID_EMAIL_ADDRESS_REGEX =
+                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+        Matcher matcher=VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+
+        return matcher.find();
+    }
     
     @FXML
     protected void registeruser(ActionEvent actionEvent) {
-        String name = tf_name.getText();
-        String address = tf_addr.getText();
-        String email = tf_email.getText();
-        String mobile = tf_mobile.getText();
-        String password = tf_pass.getText();
-        String retypepassword = tf_retypass.getText();
-        String username = tf_username.getText();
-        try {
-            InitializeDatabase id = InitializeDatabase.get_instance();
-            if(id.isUserExistAndValid(username,password)){
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("User Exists");
-                alert.setHeaderText("Already Registered");
-                String s ="User Already Exists.. Please Login to view..";
-                alert.setContentText(s);
-                alert.show();
-                //System.out.print("User Already Exists.. Please Login to view..");
-            } else {
-                PreparedStatement tmpPrepS = id.getRegisterStatement();
-                tmpPrepS.setInt(1, 1);
-                tmpPrepS.setString(2, name);
-                tmpPrepS.setInt(3, rb_male.isSelected() ? 1 : 2);
-                tmpPrepS.setString(4, address);
-                tmpPrepS.setString(5, mobile);
-                tmpPrepS.setString(6, email);
-                tmpPrepS.setString(7, username);
-                tmpPrepS.setString(8, password);
-                tmpPrepS.addBatch();
-                id.getConnection().setAutoCommit(false);
-                //TODO Sabbir
+        if (validateData(tf_mobile.getText(), tf_email.getText())) {
+            String name = tf_name.getText();
+            String address = tf_addr.getText();
+            String email = tf_email.getText();
+            String mobile = tf_mobile.getText();
+            String password = tf_pass.getText();
+            String retypepassword = tf_retypass.getText();
+            String username = tf_username.getText();
+            try {
+                InitializeDatabase id = InitializeDatabase.get_instance();
+                if (id.isUserExistAndValid(username, password)) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("User Exists");
+                    alert.setHeaderText("Already Registered");
+                    String s = "User Already Exists.. Please Login to view..";
+                    alert.setContentText(s);
+                    alert.show();
+                    //System.out.print("User Already Exists.. Please Login to view..");
+                } else {
+                    PreparedStatement tmpPrepS = id.getRegisterStatement();
+                    tmpPrepS.setInt(1, 1);
+                    tmpPrepS.setString(2, name);
+                    tmpPrepS.setInt(3, rb_male.isSelected() ? 1 : 2);
+                    tmpPrepS.setString(4, address);
+                    tmpPrepS.setString(5, mobile);
+                    tmpPrepS.setString(6, email);
+                    tmpPrepS.setString(7, username);
+                    tmpPrepS.setString(8, password);
+                    tmpPrepS.addBatch();
+                    id.getConnection().setAutoCommit(false);
+                    //TODO Sabbir
                 /*id.getConnection().close();
                 id.getConnection();*/
-                tmpPrepS.executeBatch();
-                id.getConnection().setAutoCommit(true);
-                tmpPrepS.close();
+                    tmpPrepS.executeBatch();
+                    id.getConnection().setAutoCommit(true);
+                    tmpPrepS.close();
 
-                current_user_type = Integer.parseInt(iv_profession.getId());
+                    current_user_type = Integer.parseInt(iv_profession.getId());
 
 
+                    PreparedStatement tmpLogin = id.getLoginStatement();
+                    tmpLogin.setString(1, username);
+                    tmpLogin.setInt(2, current_user_type);
+                    tmpLogin.setString(3, password);
+                    tmpLogin.addBatch();
+                    id.getConnection().setAutoCommit(false);
+                    tmpLogin.executeBatch();
+                    id.getConnection().setAutoCommit(true);
+                    tmpLogin.close();
+                    id.closeDBConnection();
 
-                PreparedStatement tmpLogin = id.getLoginStatement();
-                tmpLogin.setString(1,username);
-                tmpLogin.setInt(2,current_user_type);
-                tmpLogin.setString(3,password);
-                tmpLogin.addBatch();
-                id.getConnection().setAutoCommit(false);
-                tmpLogin.executeBatch();
-                id.getConnection().setAutoCommit(true);
-                tmpLogin.close();
-                id.closeDBConnection();
+                    String gender = rb_male.isSelected() ? "Male" : "Female";
+                    Thread thread = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            registerOnServer(email, name, mobile, password, gender, username, address);
+                        }
+                    });
+                    //TODO Start the Thread
+                    //registerOnServer(email,name,mobile,password,gender,username,address);
 
-                String gender=rb_male.isSelected() ? "Male":"Female";
-                Thread thread=new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        registerOnServer(email,name,mobile,password,gender,username,address);
-                    }
-                });
-                //registerOnServer(email,name,mobile,password,gender,username,address);
+                }
 
+            } catch (SQLException e) {
+                e.printStackTrace();
+                AppLogger.getLoggerInstance().writeLog("\n" + getClass().getName() + e.getMessage(), AppConfiguration.APPLICATION_DEBUG);
             }
+            FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
+        }else {
+            Alert alert =new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Email or Mobile Not Valid");
+            alert.setContentText("Mobile should be 11 digit & Email should be valid");
+            alert.showAndWait();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            AppLogger.getLoggerInstance().writeLog("\n"+getClass().getName()+e.getMessage(),AppConfiguration.APPLICATION_DEBUG);
+            FxViewController.getInstance().setCurrentView(AppConfiguration.REGISTRATION_INFO, AppConfiguration.VIEW_TYPE.REG_VIEW);
         }
-        FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
     }
 
     private void registerOnServer(String email, String name, String mobile, String password, String gender, String username, String address) {

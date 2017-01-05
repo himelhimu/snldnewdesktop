@@ -6,6 +6,10 @@ package com.mpower.desktop.constants;
  */
 public class Constants {
 
+    public static final String SERVER_URL="http://demo.mpower-social.com:8080/";
+    public static final String USER_LOGIN_URL="login/?";
+    public static final String LOG_TIME_URL="usermodule/update-log-time";
+
     public static final String DOCTOR = "Doctor";
     public static final String NURSE = "Nurse";
     public static final String FWV = "FWV";

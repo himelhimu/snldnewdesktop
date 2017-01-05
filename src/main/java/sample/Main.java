@@ -3,9 +3,13 @@ package sample;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
+import com.mpower.desktop.controller.ContentViewController;
+import com.mpower.desktop.controller.LoginController;
+import com.mpower.desktop.controller.RegistrationController;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -15,10 +19,7 @@ import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ScrollBar;
+import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -30,12 +31,27 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.HttpClients;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.w3c.dom.Document;
 
 
 import java.io.*;
+import java.net.*;
+import java.nio.charset.Charset;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -47,12 +63,23 @@ public class Main extends Application {
     private static Stage mainStage;
     private final static String APP_CONFIGURATION_FILE =  "App_configuration.xml";
     private static String JAR_PATH="";
-    private String mCurrentPath="";
+    public static String mCurrentPath="";
 
     //Sabbir
     public static boolean isSplashLoaded=false;
+    public static long START_TIME=System.currentTimeMillis();
 
+    public static boolean exit=false;
 
+    public String SERVER_URL="";
+
+    /*public static String STARTING_DATE_TIME= String.valueOf(LocalDateTime.now());
+    public static String CURRENT_DATE_TIME="";*/
+
+    public static String STARTING_DATE_TIME=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+    public static String CURRENT_DATE_TIME="";
+
+    public static boolean isLoggedIn=false;
 
     @Override public void init() {
         AppLogger.getLoggerInstance().writeLog("In Main Init **",true);
@@ -60,7 +87,7 @@ public class Main extends Application {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {
             e.printStackTrace();
-            AppLogger.getLoggerInstance().writeLog("Databse Initialization Failed :"+e.getMessage(),false);
+            AppLogger.getLoggerInstance().writeLog("Database Initialization Failed :"+e.getMessage(),false);
         }
         mCurrentPath=System.getProperty("user.dir");
         //initSplashScreen();
@@ -126,8 +153,123 @@ public class Main extends Application {
         mainStage.setMinWidth(600);
         mainStage.setMinHeight(500);
         FxViewController.getInstance().showMainStage();
+        mainStage.setOnCloseRequest(event -> {
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("Application Closing");
+            alert.setContentText("Do you really want to exit?");
+
+            Optional<ButtonType> result=alert.showAndWait();
+            if (result.get()==ButtonType.OK){
+                long duration=(System.currentTimeMillis()-START_TIME)/1000;
+                //CURRENT_DATE_TIME= String.valueOf(LocalDateTime.now());
+                CURRENT_DATE_TIME=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+                System.out.println("** CurrentDateTime "+CURRENT_DATE_TIME);
+                System.out.println("** StartingDateTime "+STARTING_DATE_TIME);
+                Thread thread=new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            sendTimeToServer(STARTING_DATE_TIME,CURRENT_DATE_TIME);
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                if (isLoggedIn) thread.start();
+                else ;
+
+                System.out.println("*** Used Time "+duration);
+                if(exit) Platform.exit();
+                else ;
+            }else {
+                event.consume();
+                alert.close();
+            }
+        });
 
     }
+
+    private void sendTimeToServer(String startingDateTime, String currentDateTime) throws UnsupportedEncodingException {
+        String serverUrl="http://192.168.23.251:8001/usermodule/update-log-time/";
+        HttpClient httpClient= HttpClients.createDefault();
+        HttpPost httpPost=new HttpPost();
+
+        HashMap<String,String> dataMap=new HashMap<>();
+       // dataMap.put("user_id", ContentViewController.current_user);
+        dataMap.put("user_id", "snluser");
+        dataMap.put("login_time",startingDateTime);
+        dataMap.put("logout_time",currentDateTime);
+        dataMap.put("user_profile",LoginController.CURRENT_PROFFESION);
+
+        JSONObject jsonObject=new JSONObject(dataMap);
+
+
+        //Iterator x = jsonObject.keys();
+       // Iterator x = jsonObject.toJSONString();
+        JSONArray jsonArray=new JSONArray();
+        jsonArray.add(jsonObject);
+        System.out.println("** JSONArray "+jsonArray);
+
+
+        MultipartEntity multipartEntity=new MultipartEntity();
+        StringBody sb = new StringBody(jsonArray.toString(), "application/json", Charset.forName("UTF-8"));
+
+        multipartEntity.addPart("data", sb);
+        httpPost.setEntity(multipartEntity);
+
+        /*StringEntity stringEntity=null;
+        try {
+             System.out.println("** DATAJSON "+jsonArray);
+             stringEntity=new StringEntity(jsonArray.toString());
+
+
+             httpPost.addHeader("Content-type","application/json");
+
+             httpPost.setEntity(stringEntity);
+            System.out.println("*** HttpPost "+httpPost);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }*/
+       /* try {
+            httpClient.execute(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        URL url1 = null;
+        try {
+            url1 = new URL(URLDecoder.decode(serverUrl, "utf-8"));
+        } catch (MalformedURLException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        URI u = null;
+        try {
+            u = url1.toURI();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
+        httpPost.setURI(u);
+
+       HttpResponse httpResponse=null;
+        try {
+            httpResponse=httpClient.execute(httpPost);
+            System.out.println("** HttPResponse "+httpResponse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        HttpEntity httpEntity=null;
+        httpEntity=httpResponse.getEntity();
+        System.out.println(" **HttpEntity "+httpEntity);
+
+        exit=true;
+    }
+
+    /*private void sendTimeToServer() {
+        HttpClient httpClient= HttpClients.createDefault();
+        HttpPost httpPost=new HttpPost();
+
+        exit=true;
+    }*/
 
     /*private void showMainStage(){
         //mainStage = new Stage(StageStyle.DECORATED);
