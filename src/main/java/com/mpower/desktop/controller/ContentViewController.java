@@ -91,6 +91,11 @@ public class ContentViewController {
                     FxViewController.getInstance().setCurrentView("1_11", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
+                case "session_1_12":
+                    current_session = "1_12";
+                    FxViewController.getInstance().setCurrentView("1_12", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
                 case "session_1_quiz":
                     current_session = "2_0";
                     FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);

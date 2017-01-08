@@ -60,9 +60,9 @@ public class Constants {
      public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER = "twenty_one_session_second_chapter";
  */
     public static final String FIRST_SESSION_THIRD_CHAPTER = "3 1 Perform quick check and recognize four conditions_bn.xml";
-    public static final String SECOND_SESSION_THIRD_CHAPTER = "3 2 Determine Gestational Age.xml";
-    public static final String THIRD_SESSION_THIRD_CHAPTER = "third_session_third_chapter";
-    public static final String EXAM_SESSION_THIRD_CHAPTER = "Chapter 3 Antenatal Corticosteroid ACS.xml";
+    public static final String SECOND_SESSION_THIRD_CHAPTER = "3 2 Determine Gestational Age_bn.xml";
+    public static final String THIRD_SESSION_THIRD_CHAPTER = "3_3_bn.xml";
+    public static final String EXAM_SESSION_THIRD_CHAPTER = "Chapter 3 Antenatal Corticosteroid ACS_bn.xml";
 
 
     //For English Chapters

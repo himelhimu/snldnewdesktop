@@ -202,7 +202,7 @@ public class FxViewController implements Initializable {
             case "quiz_1_1":
                 if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EXAM_1ST;
-                else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
+                else xml_path=Constants.SEVENTH_SESSION_FIRST_CHAPTER;
                 break;
             case "2_1":
                 if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
@@ -425,6 +425,7 @@ public class FxViewController implements Initializable {
         assert tmpRoot != null;
         ScrollPane scrollPane1=new ScrollPane(tmpRoot);
         scrollPane1.setPrefHeight(600);
+        scrollPane1.setVvalue(0);
         this.curStage.setScene(new Scene(scrollPane1));
 
         showCurStage();

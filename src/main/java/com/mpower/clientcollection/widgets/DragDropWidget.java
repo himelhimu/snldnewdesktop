@@ -50,9 +50,9 @@ public class DragDropWidget extends QuestionWidget{
     private double startX,startY;
     private double distX,distY;
     private List<SelectChoice> mItems;
-    private ArrayList<ImageView> formImagesList;
+    private ArrayList<String> formImagesList;
     private String answerId;
-
+    private String theImageName=null;
     //ImageViews for holding images
     private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4,imageView5;
     private ArrayList<ImageView> imageViews;
@@ -61,7 +61,8 @@ public class DragDropWidget extends QuestionWidget{
     {
         super(prompt);
         System.out.println("In drag&drop widget #####");
-        mAnchorPane=new AnchorPane();
+        mAnchorPane=new FlowPane();
+        formImagesList=new ArrayList<>();
         mAnchorPane.setPrefSize(300,300);
         mPrompt=prompt;
         mItems= prompt.getSelectChoices();
@@ -69,12 +70,22 @@ public class DragDropWidget extends QuestionWidget{
         String currentFormPath = FormViewController.getInstance().getCurrentFormName();
         String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
 
-        String imageUri =
+        for (int i=0;i<mItems.size();i++){
+            String imageUri =
+                    mPrompt.getSpecialFormSelectChoiceText(mItems.get(i),
+                            FormEntryCaption.TEXT_FORM_IMAGE);
+            String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+            formImagesList.add(imageName);
+            System.out.println("****image url = " + imageName);
+        }
+
+       /* String imageUri =
                 mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
                         FormEntryCaption.TEXT_FORM_IMAGE);
         String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
-        System.out.println("****image url = " + imageName);
-        imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
+        System.out.println("****image url = " + imageName);*/
+
+       // imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
         System.out.println("***after substring "+imageNameFInal);
         String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
         System.out.println("*** Currentpath from pictureselect "+directoryName);
@@ -127,9 +138,9 @@ public class DragDropWidget extends QuestionWidget{
        /* mGridPane.setLayoutY(imgX);
         mGridPane.setLayoutY(imgY);*/
        // mGridPane.add(imageView,newIndex,newRow);
-
-     /*   imageView.setLayoutY(imgX);
-        imageView.setLayoutY(imgY)*/;
+/*
+        imageView.setLayoutY(imgX);
+        imageView.setLayoutX(imgY);*/
 
         imageView.setX(imgX);
         imageView.setY(imgY);
@@ -157,22 +168,12 @@ public class DragDropWidget extends QuestionWidget{
         //mAnchorPane=new AnchorPane();
        // mTilePane=new TilePane();
         //mPane.setPadding(new Insets(5));
-        imageView1=new javafx.scene.image.ImageView();
+        /*imageView1=new javafx.scene.image.ImageView();
         imageView2=new javafx.scene.image.ImageView();
         imageView3=new javafx.scene.image.ImageView();
         imageView4=new javafx.scene.image.ImageView();
         imageView5=new ImageView();
 
-        Image image1=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_8.png"));
-        imageView1.setImage(image1);
-        Image image2=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_11.png"));
-        imageView2.setImage(image2);
-        Image image3=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_13.png"));
-        imageView3.setImage(image3);
-        Image image4=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/c1q20_14.png"));
-        imageView4.setImage(image4);
-        Image image5=new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/dragdrop/common.png"));
-        imageView5.setImage(image5);
 
         ArrayList<javafx.scene.image.ImageView> images=new ArrayList<>();
 
@@ -180,7 +181,7 @@ public class DragDropWidget extends QuestionWidget{
         images.add(imageView2);
         images.add(imageView3);
         images.add(imageView4);
-        images.add(imageView5);
+        images.add(imageView5);*/
 
         imageViews=new ArrayList<>();
         ArrayList<String> allImagesList=new ArrayList<>();
@@ -201,9 +202,10 @@ public class DragDropWidget extends QuestionWidget{
 
         for(int i=0;i<imageViews.size();i++)
         {
-            mAnchorPane.getChildren().add(this.getColIndex(), imageViews.get(i));
-            this.incColIndex();
+            mAnchorPane.getChildren().add(imageViews.get(i));
             imageViews.get(i).setId(String.valueOf(i));
+            imageViews.get(i).setOnMousePressed(this::imageDragged);
+            imageViews.get(i).setOnMouseDragged(this::imageDropprd);
         }
 
 
@@ -222,22 +224,17 @@ public class DragDropWidget extends QuestionWidget{
            // mPane.borderProperty();
 
         }*/
+       imageView5=new ImageView();
+       Image image=new Image(this.getClass().getResourceAsStream("/common.png"));
+       imageView5.setImage(image);
 
         FormViewController fvc=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getColIndex(),fvc.getRowIndex());
-       // fvc.incRowIndex();
+        /*fvc.incRowIndex();
         FxViewController.getInstance().getCurrentLayout().add(imageView5,fvc.getColIndex(),fvc.getRowIndex());
-        fvc.incRowIndex();
+        fvc.incRowIndex();*/
 
-        imageView1.setOnMousePressed(this::imageDragged);
-        imageView2.setOnMousePressed(this::imageDragged);
-        imageView3.setOnMousePressed(this::imageDragged);
-        imageView4.setOnMousePressed(this::imageDragged);
 
-        imageView1.setOnMouseDragged(this::imageDropprd);
-        imageView2.setOnMouseDragged(this::imageDropprd);
-        imageView3.setOnMouseDragged(this::imageDropprd);
-        imageView4.setOnMouseDragged(this::imageDropprd);
 
 
 
@@ -248,7 +245,7 @@ public class DragDropWidget extends QuestionWidget{
 
         Image image=new Image("file:"+s,100,100,false,false);
         image.isPreserveRatio();
-        System.out.println(image.impl_getUrl());
+        System.out.println("** Loaded Image "+s);
 
         return new ImageView(image);
     }
@@ -260,9 +257,13 @@ public class DragDropWidget extends QuestionWidget{
         File[] files=directory.listFiles();
         //assert files != null;
         for (File file: files != null ? files : new File[0]){
-            if (file!=null && file.getName().startsWith(imageNameFInal) && file.getName().toLowerCase().endsWith(".png")){
-                resultList.add(file.getAbsolutePath());
+            for (int i=0;i<formImagesList.size();i++)
+            {
+                if (file!=null && file.getName().equals(formImagesList.get(i)) && file.getName().toLowerCase().endsWith(".png")){
+                    resultList.add(file.getAbsolutePath());
+                }
             }
+
         }
 
         return resultList;
