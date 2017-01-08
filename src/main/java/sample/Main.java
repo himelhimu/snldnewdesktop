@@ -55,7 +55,7 @@ public class Main extends Application {
     private static String JAR_PATH="";
     private String mCurrentPath="";
 
-    private static String SERVER_URL="";
+    private static String SERVER_URL="http://demo.mpower-social.com:8080/usermodule/update-log-time";
     //Sabbir
     public static boolean isSplashLoaded=false;
     public static long START_TIME=System.currentTimeMillis();
@@ -90,17 +90,17 @@ public class Main extends Application {
     }
 
     private void initAppProperties() {
-        System.out.println("***initial value from xml***");
+        //System.out.println("***initial value from xml***");
         Properties props = new Properties();
 
         InputStream is = null;
         try {
             is = new FileInputStream(mCurrentPath+"/"+APP_CONFIGURATION_FILE);
             //is = new FileInputStream("./"+APP_CONFIGURATION_FILE);//TODO ratn
-            System.out.println("***initial value from xml2222222222***");
+           // System.out.println("***initial value from xml2222222222***");
             //load the xml file into properties format
             props.loadFromXML(is);
-            System.out.println("where props = "+ props);
+            //System.out.println("where props = "+ props);
             AppConfiguration.setValueFromProperties(props);
         } catch (Exception e) {
             e.printStackTrace();
