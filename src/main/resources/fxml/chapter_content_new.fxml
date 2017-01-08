@@ -167,15 +167,32 @@
                <Insets left="20.0" right="20.0" />
             </HBox.margin>
             <children>
-               <ImageView fx:id="session_1_quiz" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="session_1_12" fitHeight="101.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@../ch_1_13_l_en.png" />
+                     <Image url="@../ch_1_12_g_en.png" />
                   </image>
                </ImageView>
             </children>
          </VBox>
       </children>
    </HBox>
+
+       <HBox prefHeight="128.0" prefWidth="600.0">
+           <children>
+               <VBox prefHeight="128.0" prefWidth="93.0">
+                   <HBox.margin>
+                       <Insets left="20.0" right="20.0" />
+                   </HBox.margin>
+                   <children>
+                       <ImageView fx:id="session_1_quiz" disable="true" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="@../ch_1_13_l_en.png" />
+                           </image>
+                       </ImageView>
+                   </children>
+               </VBox>
+           </children>
+       </HBox>
       <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="Chapter 2: Care About Healthy and Unhealthy babies" textFill="WHITE">
          <font>
             <Font size="25.0" />
@@ -502,15 +519,35 @@
                   <Insets left="20.0" right="20.0" />
                </HBox.margin>
                <children>
-                  <ImageView fx:id="session_2_quiz_2" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="session_2_24" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../ch_2_25_g_en.png" />
+                        <Image url="@../ch_2_24_g_en.png" />
                      </image>
                   </ImageView>
                </children>
             </VBox>
          </children>
       </HBox>
+
+       <HBox prefHeight="129.0" prefWidth="600.0">
+           <VBox.margin>
+               <Insets top="10.0" />
+           </VBox.margin>
+           <children>
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                   <children>
+                       <ImageView fx:id="session_2_quiz_2" fitHeight="97.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="@../ch_2_25_g_en.png" />
+                           </image>
+                       </ImageView>
+                   </children>
+                   <HBox.margin>
+                       <Insets left="20.0" right="20.0" />
+                   </HBox.margin>
+               </VBox>
+           </children>
+       </HBox>
       <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="Chapter 3:Child Infection System" textFill="WHITE">
          <font>
             <Font size="26.0" />

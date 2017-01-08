@@ -108,10 +108,12 @@ public class FxViewController implements Initializable {
             showFormViewStage(title);
         }
         else if( view_type == AppConfiguration.VIEW_TYPE.REG_VIEW){
+            Main.isLoggedIn=false;
             showMainStage();
             //jumpBackIn();
         }
         else if ( view_type == AppConfiguration.VIEW_TYPE.LOGIN_VIEW ){
+            Main.isLoggedIn=false;
             showLoginStage();
         }
         else if ( view_type == AppConfiguration.VIEW_TYPE.INTRO_VIEW ){
@@ -136,125 +138,214 @@ public class FxViewController implements Initializable {
         String xml_path = "";
         switch (title) {
             case "1_1":
-                xml_path = Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1){
+                    xml_path = Constants.FIRST_SESSION_FIRST_CHAPTER_EN;
+                }else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
+
                 System.out.println("Form Path:" + xml_path);
                 break;
             case "1_2":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                xml_path = Constants.SECOND_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.SECOND_SESSION_FIRST_CHAPTER;
                 break;
             case "1_3":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.THIRD_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.THIRD_SESSION_FIRST_CHAPTER;
                 break;
             case "1_4":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FOURTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.FOURTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_5":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIFTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.FIFTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_6":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SIXTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.SIXTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_7":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SEVENTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.SEVENTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_8":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EIGHTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.EIGHTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_9":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.NINETH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.NINETH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_10":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TENTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.TENTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_11":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.ELEVENTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.ELEVENTH_SESSION_FIRST_CHAPTER;
                 break;
             case "1_12":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TWELVTH_SESSION_FIRST_CHAPTER_EN;
+                else xml_path=Constants.TWELVTH_SESSION_FIRST_CHAPTER;
                 break;
             case "quiz_1_1":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EXAM_1ST;
+                else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
                 break;
             case "2_1":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIRST_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FIRST_SESSION_SECOND_CHAPTER;
                 break;
             case "2_2":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SECOND_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SECOND_SESSION_SECOND_CHAPTER;
                 break;
             case "2_3":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.THIRD_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.THIRD_SESSION_SECOND_CHAPTER;
                 break;
             case "2_4":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FOURTH_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FOURTH_SESSION_SECOND_CHAPTER_EN;
                 break;
             case "2_5":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIFTH_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FIFTH_SESSION_SECOND_CHAPTER;
                 break;
             case "2_6":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SIXTH_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SIXTH_SESSION_SECOND_CHAPTER;
                 break;
             case "2_7":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SEVENTH_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SEVENTH_SESSION_SECOND_CHAPTER;
                 break;
             case "2_8":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EIGHT_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.EIGHT_SESSION_SECOND_CHAPTER;
                 break;
             case "2_9":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.NINE_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.NINE_SESSION_SECOND_CHAPTER;
                 break;
             case "2_10":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TENTH_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.TENTH_SESSION_SECOND_CHAPTER;
                 break;
             case "2_11":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.ELEVEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.ELEVEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_12":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TWELVE_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.TWELVE_SESSION_SECOND_CHAPTER;
                 break;
             case "quiz_2_1":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIRST_EXAM_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FIRST_EXAM_SECOND_CHAPTER;
                 break;
             case "2_14":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.THIRTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.THIRTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_15":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FOURTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FOURTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_16":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIFTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.FIFTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_17":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SIXTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SIXTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_18":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SEVENTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SEVENTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_19":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EIGHTEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.EIGHTEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_20":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.NINETEEN_SESSION_SECOND_CHAPTER_EN;
+                else xml_path=Constants.NINETEEN_SESSION_SECOND_CHAPTER;
                 break;
             case "2_21":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TWENTY_SESSION_SECOND_CHAPTTER_EN;
+                //else xml_path=Constants.TWENTY_SESSION_SECOND_CHAPTTER;
                 break;
             case "2_22":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TWENTY_ONE_SESSION_SECOND_CHAPTER_EN;
+               // else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
                 break;
             case "2_23":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.TWENTY_TWO_SESSION_CHAPTER_EN;
+                //else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
+                break;
+            case "2_24":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
+                    xml_path = Constants.TWENTY_THREE_SESSION_SECOND_CHAPTER_EN;
+                //else xml_path=Constants.FIRST_SESSION_FIRST_CHAPTER;
                 break;
             case "quiz_2_2":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SECOND_EXAM_SECOND_CHAPTER_EN;
+                else xml_path=Constants.SECOND_EXAM_SECOND_CHAPTER;
                 break;
             case "3_1":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.FIRST_SESSION_THIRD_CHAPTER_EN;
+                else xml_path=Constants.FIRST_SESSION_THIRD_CHAPTER;
                 break;
             case "3_2":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.SECOND_SESSION_THIRD_CHAPTER_EN;
+                else xml_path=Constants.SECOND_SESSION_THIRD_CHAPTER;
+                break;
+            case "3_3":
+                 xml_path=Constants.THIRD_SESSION_THIRD_CHAPTER;
                 break;
             case "quiz_3_1":
+                if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
                 xml_path = Constants.EXAM_SESSION_THIRD_CHAPTER_EN;
+                else xml_path=Constants.EXAM_SESSION_THIRD_CHAPTER;
                 break;
         }
 
@@ -385,7 +476,7 @@ public class FxViewController implements Initializable {
         jumpBackIn();
     }
 
-    void jumpBackIn(){
+    private void jumpBackIn(){
         System.out.println("*** In JumpBackIn ");
         InputStream is=null;
         try {
@@ -405,11 +496,15 @@ public class FxViewController implements Initializable {
             String userName= props.getProperty("username");
 
             Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("Log in as"+userName);
+            alert.setHeaderText("Log in as  "+userName);
 
             Optional<ButtonType> result=alert.showAndWait();
             if (result.get()== ButtonType.OK){
+                int userType= Integer.parseInt(props.getProperty("user_type"));
+                LoginController.USER_TYPE=userType;
+                Main.isLoggedIn=true;
                 FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+
             }else {
                 //TODO do nothing
                 alert.close();

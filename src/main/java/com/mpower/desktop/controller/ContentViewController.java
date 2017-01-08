@@ -212,6 +212,12 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
 
+                case "session_2_24":
+                    current_session = "2_24";
+                    FxViewController.getInstance().setCurrentView("2_24", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    //System.out.print("Seventh Image clicked." + current_user);
+                    break;
+
                 case "session_2_quiz_2":
                     current_session = "3_0";
                     FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
@@ -230,7 +236,7 @@ public class ContentViewController {
                     break;
                 case "session_3_3":
                     current_session = "3_3";
-                    FxViewController.getInstance().setCurrentView("3_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    FxViewController.getInstance().setCurrentView("3_3", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Fourth Image clicked." + current_user);
                     break;
                 case "session_3_quiz":

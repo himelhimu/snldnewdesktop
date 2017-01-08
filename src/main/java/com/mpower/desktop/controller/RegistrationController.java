@@ -3,6 +3,7 @@ package com.mpower.desktop.controller;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
+import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -16,14 +17,19 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.HttpClients;
 import org.json.simple.JSONObject;
 import sample.Main;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.*;
+import java.nio.charset.Charset;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -162,6 +168,7 @@ public class RegistrationController {
                 } else {
                     PreparedStatement tmpPrepS = id.getRegisterStatement();
                     tmpPrepS.setInt(1, 1);
+                    //tmpPrepS.setString(1, "1");
                     tmpPrepS.setString(2, name);
                     tmpPrepS.setInt(3, rb_male.isSelected() ? 1 : 2);
                     tmpPrepS.setString(4, address);
@@ -190,6 +197,7 @@ public class RegistrationController {
                     tmpLogin.executeBatch();
                     id.getConnection().setAutoCommit(true);
                     tmpLogin.close();
+
                     id.closeDBConnection();
 
                     String gender = rb_male.isSelected() ? "Male" : "Female";
@@ -238,19 +246,39 @@ public class RegistrationController {
        // jsonObject.putAll(dataMap);
 
         System.out.println("** JSON Data"+jsonObject);
-        StringEntity stringEntity=null;
+        MultipartEntity multipartEntity=new MultipartEntity();
+        StringBody sb=null;
         try {
-             stringEntity=new StringEntity(jsonObject.toString());
-             httpPost.addHeader("content-type","application/json");
-             httpPost.setEntity(stringEntity);
+             sb = new StringBody(jsonObject.toString(), "application/json", Charset.forName("UTF-8"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        multipartEntity.addPart("reg",sb);
+        httpPost.setEntity(multipartEntity);
+
+        URL url1 = null;
         try {
-            httpClient.execute(httpPost);
+            url1 = new URL(URLDecoder.decode(Constants.SERVER_URL, "utf-8"));
+        } catch (MalformedURLException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        URI u = null;
+        try {
+            u = url1.toURI();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        httpPost.setURI(u);
+
+        HttpResponse httpResponse=null;
+        try {
+            httpResponse=httpClient.execute(httpPost);
+            System.out.println("** HttpResponse "+httpResponse);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
 
 

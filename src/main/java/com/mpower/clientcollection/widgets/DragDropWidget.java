@@ -6,6 +6,8 @@ import com.mpower.clientcollection.controller.FxViewController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -14,7 +16,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
+import org.javarosa.core.model.data.SelectOneData;
+import org.javarosa.core.model.data.helper.Selection;
 import org.javarosa.form.api.FormEntryCaption;
+import org.javarosa.form.api.FormEntryController;
 import org.javarosa.form.api.FormEntryPrompt;
 
 import java.io.File;
@@ -46,6 +51,7 @@ public class DragDropWidget extends QuestionWidget{
     private double distX,distY;
     private List<SelectChoice> mItems;
     private ArrayList<ImageView> formImagesList;
+    private String answerId;
 
     //ImageViews for holding images
     private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4,imageView5;
@@ -73,7 +79,7 @@ public class DragDropWidget extends QuestionWidget{
         String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
         System.out.println("*** Currentpath from pictureselect "+directoryName);
 
-
+        answerId="";
         testDIrectory=new File(directoryName);
         setImages();
     }
@@ -82,6 +88,7 @@ public class DragDropWidget extends QuestionWidget{
 
 
     private void imageDropprd(MouseEvent event) {
+        FormViewController formViewController=FormViewController.getInstance();
         System.out.println("inside dropped  ####");
         /*imgX= event.getX()-distX;
         imgY=event.getY()-distY;*/
@@ -91,6 +98,28 @@ public class DragDropWidget extends QuestionWidget{
 
 
         ImageView imageView= (ImageView) event.getSource();
+
+        Node node=(Node) event.getSource();
+        if (node instanceof ImageView){
+            answerId = node.getId();
+            System.out.println("** mItems "+mItems.size());
+
+            SelectChoice sc = mItems.get(Integer.valueOf(answerId));
+            System.out.println("** Testing ");
+            int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
+            if (status == FormEntryController.ANSWER_OK) {
+                // correct
+                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Answer Correct ");
+                alert.show();
+            }else {
+                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Answer Wrong ");
+                alert.show();
+            }
+            System.out.println("***status = " + status);
+
+        }
 
        /* int newIndex=mGridPane.getColumnIndex(imageView);
         int newRow=mGridPane.getRowIndex(imageView);*/
@@ -116,7 +145,7 @@ public class DragDropWidget extends QuestionWidget{
         startY=event.getY();
 
 
-        ImageView  imageView=(ImageView) event.getSource();
+
 
         distX=startX-imgX;
         distY=startY-imgY;
@@ -242,6 +271,10 @@ public class DragDropWidget extends QuestionWidget{
 
     @Override
     public IAnswerData getAnswer() {
+        if(answerId != null) {
+            SelectChoice sc = mItems.get(Integer.valueOf(answerId));
+            return new SelectOneData(new Selection(sc));
+        }
         return null;
     }
 

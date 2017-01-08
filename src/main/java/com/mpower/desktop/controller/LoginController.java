@@ -82,7 +82,9 @@ public class LoginController extends AnchorPane {
         try{
             InitializeDatabase id = InitializeDatabase.get_instance();
             Statement stmt = id.getConnection().createStatement();
+            String stauts="0";
             String sql = "UPDATE "+AppConfiguration.REGISTRATION_INFO+" set isNew = 0 where user_name like \""+username+"\";";
+            //String sql = "UPDATE "+AppConfiguration.REGISTRATION_INFO+" set isNew ="+stauts+"where user_name like \""+username+"\";";
             stmt.executeUpdate(sql);
             id.getConnection().setAutoCommit(false);
             id.getConnection().commit();
@@ -121,13 +123,15 @@ public class LoginController extends AnchorPane {
                     }
                     System.out.println("*** UserType "+USER_TYPE);
                     ContentViewController.current_user = username;
+
                     Main.isLoggedIn=true;
-                    File configFile = new File("./config.properties");
+                    File configFile = new File("config.properties");
 
                     try {
                         Properties props = new Properties();
                         props.setProperty("username", username);
                         props.setProperty("password",password);
+                        props.setProperty("user_type",String.valueOf(USER_TYPE));
                         FileWriter writer = new FileWriter(configFile);
                         props.store(writer, "user settings");
                         writer.close();

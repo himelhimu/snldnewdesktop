@@ -3,6 +3,7 @@ package sample;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
+import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.controller.LoginController;
 import com.mpower.desktop.controller.RegistrationController;
@@ -83,6 +84,12 @@ public class Main extends Application {
 
     @Override public void init() {
         AppLogger.getLoggerInstance().writeLog("In Main Init **",true);
+        File f=new File("config.properties");
+        try {
+            f.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         try {
             InitializeDatabase.get_instance();
         } catch (SQLException e) {
@@ -180,7 +187,6 @@ public class Main extends Application {
 
                 System.out.println("*** Used Time "+duration);
                 if(exit) Platform.exit();
-                else ;
             }else {
                 event.consume();
                 alert.close();
@@ -190,7 +196,7 @@ public class Main extends Application {
     }
 
     private void sendTimeToServer(String startingDateTime, String currentDateTime) throws UnsupportedEncodingException {
-        String serverUrl="http://192.168.23.251:8001/usermodule/update-log-time/";
+        //String serverUrl="http://192.168.23.251:8001/usermodule/update-log-time/";
         HttpClient httpClient= HttpClients.createDefault();
         HttpPost httpPost=new HttpPost();
 
@@ -217,27 +223,9 @@ public class Main extends Application {
         multipartEntity.addPart("data", sb);
         httpPost.setEntity(multipartEntity);
 
-        /*StringEntity stringEntity=null;
-        try {
-             System.out.println("** DATAJSON "+jsonArray);
-             stringEntity=new StringEntity(jsonArray.toString());
-
-
-             httpPost.addHeader("Content-type","application/json");
-
-             httpPost.setEntity(stringEntity);
-            System.out.println("*** HttpPost "+httpPost);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }*/
-       /* try {
-            httpClient.execute(httpPost);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         URL url1 = null;
         try {
-            url1 = new URL(URLDecoder.decode(serverUrl, "utf-8"));
+            url1 = new URL(URLDecoder.decode(Constants.LOG_TIME_URL, "utf-8"));
         } catch (MalformedURLException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -253,6 +241,7 @@ public class Main extends Application {
        HttpResponse httpResponse=null;
         try {
             httpResponse=httpClient.execute(httpPost);
+            exit=true;
             System.out.println("** HttPResponse "+httpResponse);
         } catch (IOException e) {
             e.printStackTrace();
@@ -261,7 +250,7 @@ public class Main extends Application {
         httpEntity=httpResponse.getEntity();
         System.out.println(" **HttpEntity "+httpEntity);
 
-        exit=true;
+
     }
 
     /*private void sendTimeToServer() {

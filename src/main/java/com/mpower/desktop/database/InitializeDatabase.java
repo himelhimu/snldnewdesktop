@@ -50,7 +50,7 @@ public class InitializeDatabase {
     private void createTableIfNotExist() {
         try {
             //***RATNA TODO
-            String regTableSql = "CREATE TABLE IF NOT EXISTS "+AppConfiguration.REGISTRATION_INFO+" (isNew NUMERIC,name varchar(200), gender smallint, Address varchar(200), mobile_no varchar(20), email varchar(35), user_name varchar(200), password varchar(200));";
+            String regTableSql = "CREATE TABLE IF NOT EXISTS "+AppConfiguration.REGISTRATION_INFO+" (isNew varchar(2),name varchar(200), gender smallint, Address varchar(200), mobile_no varchar(20), email varchar(35), user_name varchar(200), password varchar(200));";
             System.out.println("**Table statement = " + regTableSql);
             //mStatement.executeUpdate("CREATE TABLE IF NOT EXISTS "+AppConfiguration.REGISTRATION_INFO+" (isNew NUMERIC,name varchar(200), gender smallint, Address varchar(200), mobile_no varchar(20), email varchar(35), user_name varchar(200), password varchar(200));");
             mStatement.executeUpdate(regTableSql);
@@ -89,7 +89,7 @@ public class InitializeDatabase {
 
     private void createRegisterStatement() throws SQLException {
         mPrepRegister = this.mConn.prepareStatement(
-                "insert into "+AppConfiguration.REGISTRATION_INFO+" values (?,?,?,?,?,?,?,?);");
+                "insert into registration_info values (?,?,?,?,?,?,?,?);");
     }
     public PreparedStatement getRegisterStatement()
     {
@@ -143,7 +143,7 @@ public class InitializeDatabase {
 
             ResultSet rs = st.executeQuery(query);
             if(rs.next()){
-                if(rs.getInt(1) == 1)
+                if(rs.getInt(1) ==1 )
                     return true;
                 else
                     return false;

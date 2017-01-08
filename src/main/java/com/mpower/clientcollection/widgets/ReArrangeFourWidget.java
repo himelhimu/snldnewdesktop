@@ -69,6 +69,7 @@ public class ReArrangeFourWidget extends QuestionWidget {
             imageArrayList.add(imageName);
             //imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
             System.out.println("***after substring "+imageNameFInal);
+
         }
         setImages();
        // drawCircle();
@@ -108,7 +109,7 @@ public class ReArrangeFourWidget extends QuestionWidget {
         ArrayList<String> allImagesList=new ArrayList<>();
         try {
 
-            allImagesList=getAllImages(DIRECTORY_NEW);
+            allImagesList=getAllImages(testDIrectory);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -236,7 +237,7 @@ public class ReArrangeFourWidget extends QuestionWidget {
 
         Image image=new Image("file:"+s,100,100,false,false);
         image.isPreserveRatio();
-        System.out.println(image.impl_getUrl());
+        //System.out.println(image.impl_getUrl());
 
         return new ImageView(image);
     }

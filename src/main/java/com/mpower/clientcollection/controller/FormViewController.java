@@ -7,6 +7,7 @@ import com.mpower.clientcollection.widgets.QuestionWidget;
 import com.mpower.clientcollection.widgets.WidgetFactory;
 
 import com.mpower.desktop.config.AppConfiguration;
+import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.event.ActionEvent;
@@ -473,7 +474,7 @@ public class FormViewController {
         HttpPost httpPost =new HttpPost();
         URL url1 = null;
         try {
-            url1 = new URL(URLDecoder.decode(TEST_URL, "utf-8"));
+            url1 = new URL(URLDecoder.decode(Constants.FORM_SUBMIT_URL, "utf-8"));
         } catch (MalformedURLException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
