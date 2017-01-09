@@ -158,7 +158,7 @@ public class Main extends Application {
         mainStage = primaryStage;
         mainStage.initStyle(StageStyle.DECORATED);
         mainStage.setMinWidth(600);
-        mainStage.setMinHeight(500);
+        mainStage.setMinHeight(600);
         FxViewController.getInstance().showMainStage();
         mainStage.setOnCloseRequest(event -> {
             Alert alert=new Alert(Alert.AlertType.CONFIRMATION);

@@ -55,7 +55,7 @@ public class Constants {
     public static final String SEVENTEEN_SESSION_SECOND_CHAPTER = "2 17 Assess Danger Signs_bn.xml";
     public static final String EIGHTEEN_SESSION_SECOND_CHAPTER = "2 18 Appropriate appropriate Management_bn.xml";
     public static final String NINETEEN_SESSION_SECOND_CHAPTER = "2 19 Recognize Severe Jaundice_bn.xml";
-    public static final String SECOND_EXAM_SECOND_CHAPTER = "chapter_2_2_exam";
+    public static final String SECOND_EXAM_SECOND_CHAPTER = "chapter_2_2_exam_bn.xml";
     /* public static final String TWENTY_SESSION_SECOND_CHAPTER = "twenty_session_second_chapter";
      public static final String TWENTY_ONE_SESSION_SECOND_CHAPTER = "twenty_one_session_second_chapter";
  */

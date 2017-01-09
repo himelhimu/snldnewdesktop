@@ -41,6 +41,7 @@
           <bundleArguments>
             <icon.ico>src/main/resources/icon.ico</icon.ico>
           </bundleArguments>
+          <additionalAppResources>C:\Users\user\Desktop\snlforms\forms\</additionalAppResources>
         </configuration>
       </plugin>
       <plugin>

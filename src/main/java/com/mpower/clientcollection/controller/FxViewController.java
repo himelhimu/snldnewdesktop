@@ -88,7 +88,7 @@ public class FxViewController implements Initializable {
 
         scrollPane=new ScrollPane();
         scrollPane.setPrefHeight(600);
-        scrollPane.setPrefWidth(700);
+        scrollPane.setPrefWidth(750);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
@@ -201,7 +201,7 @@ public class FxViewController implements Initializable {
                 break;
             case "quiz_1_1":
                 if (LoginController.USER_TYPE==0 || LoginController.USER_TYPE==1)
-                xml_path = Constants.EXAM_1ST;
+                xml_path = Constants.THIRTEEN_SESSION_FIRST_CHAPTER_EN;
                 else xml_path=Constants.SEVENTH_SESSION_FIRST_CHAPTER;
                 break;
             case "2_1":
@@ -503,6 +503,7 @@ public class FxViewController implements Initializable {
             if (result.get()== ButtonType.OK){
                 int userType= Integer.parseInt(props.getProperty("user_type"));
                 LoginController.USER_TYPE=userType;
+                ContentViewController.current_user=userName;
                 Main.isLoggedIn=true;
                 FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
 
