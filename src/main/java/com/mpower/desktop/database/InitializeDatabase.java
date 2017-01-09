@@ -3,6 +3,7 @@ package com.mpower.desktop.database;
 /**
  * Created by hemel on 4/17/16.
  * @author Sabbir
+ * @author Sabbir (sabbir@mpower-social.com)
  */
 
 import com.mpower.desktop.config.AppConfiguration;

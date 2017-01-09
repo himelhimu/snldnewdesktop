@@ -4,26 +4,16 @@ import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
-import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.controller.LoginController;
-import com.mpower.desktop.controller.RegistrationController;
 import com.mpower.desktop.database.InitializeDatabase;
-import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -31,30 +21,32 @@ import javafx.scene.web.WebView;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.Duration;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.HttpClients;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.w3c.dom.Document;
-
-
 import java.io.*;
 import java.net.*;
 import java.nio.charset.Charset;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
+/*
+
+* @author Sabbir (sabbir@mpower-social.com)
+*
+*
+*
+*
+*/
 
 public class Main extends Application {
     public static Pane splashLayout;
@@ -122,7 +114,7 @@ public class Main extends Application {
         InputStream is = null;
         try {
             is = new FileInputStream(mCurrentPath+"/"+APP_CONFIGURATION_FILE);
-            //is = new FileInputStream("./"+APP_CONFIGURATION_FILE);//TODO ratna
+            //is = new FileInputStream("./"+APP_CONFIGURATION_FILE);//TODO
             System.out.println("***initial value from xml2222222222***");
             //load the xml file into properties format
             props.loadFromXML(is);

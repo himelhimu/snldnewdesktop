@@ -59,16 +59,13 @@ import org.odk.validate.StubPropertyManager;
 
 /**
  * Created by hemel on 3/30/16.
+ * @author Sabbir (sabbir@mpower-social.com)
  */
 public class FormViewController {
 
     /**
      * Classes needed to serialize objects. Need to put anything from JR in here.
      */
-    public static String TEST_URL="http://demo.mpower-social.com:8080/snluser/submission";
-    public static String DEFAULT_URL="http://demo.mpower-social.com:8080/";
-    public static String DEFAULT_URL_TEST="http://demo.mpower-social.com:8080/snluser/submission";
-    public static String SUBMISSION_URL_STRING="submission";
     public final static String[] SERIALIABLE_CLASSES = {
             "org.javarosa.core.services.locale.ResourceFileDataSource", // JavaRosaCoreModule
             "org.javarosa.core.services.locale.TableLocaleSource", // JavaRosaCoreModule

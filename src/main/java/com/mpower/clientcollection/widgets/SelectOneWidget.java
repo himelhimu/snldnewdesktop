@@ -18,6 +18,7 @@ import java.util.Vector;
 
 /**
  * Created by hemel on 4/19/16.
+ * @author Sabbir (sabbir@mpower-social.com)
  */
 public class SelectOneWidget extends QuestionWidget {
     List<SelectChoice> mItems; // may take a while to compute
