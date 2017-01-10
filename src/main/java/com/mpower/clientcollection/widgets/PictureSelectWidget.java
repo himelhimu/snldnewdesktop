@@ -74,14 +74,6 @@ public class PictureSelectWidget extends QuestionWidget {
             System.out.println("****image url = " + imageName);
             imagesToShow.add(imageName);
         }
-        /*String imageUri =
-                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
-                        FormEntryCaption.TEXT_FORM_IMAGE);
-        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
-        theImage=imageName;
-        System.out.println("****image url = " + imageName);
-        imagesToShow.add(imageName);*/
-        //imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
         System.out.println("***after substring "+imageNameFInal);
         String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
         System.out.println("*** Currentpath from pictureselect "+directoryName);
@@ -96,12 +88,7 @@ public class PictureSelectWidget extends QuestionWidget {
     public void setImages()
     {
         FormViewController formViewController=FormViewController.getInstance();
-
-        //String fileName=mPrompt.getSelectChoiceText(mItems.get(1));
         String fileName=mPrompt.getSelectItemText(mItems.get(0).selection());
-        //System.out.println("### after substring "+fileName);
-        //String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/"+ mPrompt.getSelectChoiceText(mItems.get(0));
-        //mAnchorPane=new AnchorPane();
         imageViews=new ArrayList<>();
         ArrayList<String> allImagesList=new ArrayList<>();
         try {

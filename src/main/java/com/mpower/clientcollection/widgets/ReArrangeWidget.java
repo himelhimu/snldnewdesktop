@@ -69,14 +69,6 @@ public class ReArrangeWidget extends QuestionWidget{
             //imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
             System.out.println("***after substring "+imageNameFInal);
         }
-        /*String imageUri =
-                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
-                        FormEntryCaption.TEXT_FORM_IMAGE);
-
-        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
-        System.out.println("****image url = " + imageName);
-        imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
-        System.out.println("***after substring "+imageNameFInal);*/
         String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
         System.out.println("*** Currentpath from pictureselect "+directoryName);
 
@@ -111,10 +103,6 @@ public class ReArrangeWidget extends QuestionWidget{
             this.incColIndex();
             imageViews.get(i).setId(String.valueOf(i));
         }
-
-/*        ImageView imageView2=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png")));
-        ImageView imageView3=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_3.png")));
-        ImageView imageView4=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png")));*/
         for (int i=0;i<mAnchorPane.getChildren().size();i++) {
             //node.setOnMouseDragEntered(mouseDragged());
             Node node = mAnchorPane.getChildren().get(i);
@@ -131,11 +119,6 @@ public class ReArrangeWidget extends QuestionWidget{
                     double imgX = event.getX();
                     double imgY = event.getY();
 
-                   /* imageView.setX(imgX);
-                    imageView.setY(imgY);*/
-
-                    /*node.setLayoutX(imgX);
-                    node.setLayoutY(imgY);*/
                     node.setTranslateX(imgX);
                     node.setTranslateY(imgY);
                     ((ImageView) node).setX(imgX);
@@ -153,18 +136,6 @@ public class ReArrangeWidget extends QuestionWidget{
                 });
             } else System.out.println("########################NO");
         }
-        /*handler= (EventHandler<MouseEvent>) event -> {
-            double imgX=event.getX();
-            double imgY=event.getY();
-
-            for (Node node: mAnchorPane.getChildren())
-            {
-                node.setLayoutX(imgX);
-                node.setLayoutY(imgY);
-            }
-            event.consume();
-        };
-*/
         FormViewController formViewController=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,formViewController.getColIndex(),formViewController.getRowIndex());
         formViewController.incRowIndex();

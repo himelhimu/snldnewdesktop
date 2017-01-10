@@ -79,24 +79,6 @@ public class  SelectMultiWidget extends QuestionWidget {
 
                 }
                 mCheckboxes.add(c);
-                // when clicked, check for readonly before toggling
-               /* c.setOnAction(new CheckBox. {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (!mCheckboxInit && mPrompt.isReadOnly()) {
-                            if (buttonView.isChecked()) {
-                                buttonView.setChecked(false);
-                               	ClientCollection.getInstance().getActivityLogger().logInstanceAction(this, "onItemClick.deselect", 
-                            			mItems.get((Integer)buttonView.getTag()).getValue(), mPrompt.getIndex());
-                            } else {
-                                buttonView.setChecked(true);
-                               	ClientCollection.getInstance().getActivityLogger().logInstanceAction(this, "onItemClick.select", 
-                            			mItems.get((Integer)buttonView.getTag()).getValue(), mPrompt.getIndex());
-                            }
-                        }
-                    }
-                });*/
-
                 String audioURI = null;
                 audioURI =
                         prompt.getSpecialFormSelectChoiceText(mItems.get(i),
@@ -113,19 +95,6 @@ public class  SelectMultiWidget extends QuestionWidget {
                 String bigImageURI = null;
                 bigImageURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i), "big-image");
 
-              /*  MediaLayout mediaLayout = new MediaLayout(getContext());
-                mediaLayout.setAVT(prompt.getIndex(), "." + Integer.toString(i), c, audioURI, imageURI, videoURI, bigImageURI);
-                addView(mediaLayout);
-
-                // Last, add the dividing line between elements (except for the last element)
-                ImageView divider = new ImageView(getContext());
-                divider.setBackgroundResource(android.R.drawable.divider_horizontal_bright);
-                if (i != mItems.size() - 1) {
-                    addView(divider);
-                }
-
-            }
-        }*/
 
                 mCheckboxInit = false;
 

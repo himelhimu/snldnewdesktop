@@ -50,8 +50,8 @@ public class SelectOneButtonWidget extends QuestionWidget {
     public SelectOneButtonWidget(FormEntryPrompt prompt) {
         super(prompt);
         System.out.println("In the SelectOneButton####");
-       // mItems = prompt.getSelectChoices();
-        mItems=prompt.getSelectChoices();
+        // mItems = prompt.getSelectChoices();
+        mItems = prompt.getSelectChoices();
         buttons = new ArrayList<>();
 
 
@@ -74,39 +74,16 @@ public class SelectOneButtonWidget extends QuestionWidget {
                 newButton.setFocusable(!prompt.isReadOnly());
                 newButton.setOnClickListener(onButtonClicked);*/
 
-               newButton=new Button();
-               newButton.setText(prompt.getSelectChoiceText(mItems.get(i)));
-               newButton.setId(""+QuestionWidget.newUniqueId());
-               newButton.setFocusTraversable(!prompt.isReadOnly());
-               newButton.setOnAction(event -> {
-                   onButtonClicked();
-               });
+                newButton = new Button();
+                newButton.setText(prompt.getSelectChoiceText(mItems.get(i)));
+                newButton.setId("" + QuestionWidget.newUniqueId());
+                newButton.setFocusTraversable(!prompt.isReadOnly());
+                newButton.setOnAction(event -> {
+                    onButtonClicked();
+                });
 
                 buttons.add(newButton);
 
-               /* buttons.add(newButton);*/
-
-               /* if (mItems.get(i).getValue().equals(s)) {
-                    //r.setChecked(true);TODO
-                    clickedButtonText = newButton.getText().toString();
-                    newButton.setBackgroundColor(getResources().getColor(R.color.button_color));
-                }else{
-                    newButton.setBackgroundColor(Color.LTGRAY);
-                }*/
-
-              /* LinearLayout testLayout = new LinearLayout(context);
-                LayoutParams testParams = new LayoutParams(LayoutParams.FILL_PARENT,
-                        LayoutParams.FILL_PARENT);
-                testParams.setMargins(40, 5, 40, 5);
-                testLayout.setLayoutParams(testParams);
-                buttonLayout.addView(testLayout);*/
-
-             /*   MediaLayout mediaLayoutTest = new MediaLayout(getContext());
-                ImageView dividerTest = new ImageView(getContext());
-                dividerTest.setBackgroundResource(android.R.drawable.divider_horizontal_bright);
-                mediaLayoutTest.addDivider(dividerTest);
-                buttonLayout.addView(mediaLayoutTest);
-*/
                 String audioURI = null;
                 audioURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i),
                         FormEntryCaption.TEXT_FORM_AUDIO);
@@ -123,30 +100,12 @@ public class SelectOneButtonWidget extends QuestionWidget {
                 bigImageURI = prompt.getSpecialFormSelectChoiceText(
                         mItems.get(i), "big-image");
 
-                /*MediaLayout mediaLayout = new MediaLayout(getContext());
-                mediaLayout.setAVT(prompt.getIndex(), "." + Integer.toString(i), newButton, audioURI, imageURI,
-                        videoURI, bigImageURI);
-
-                if (i != mItems.size() - 1) {
-                    // Last, add the dividing line (except for the last element)
-                    ImageView divider = new ImageView(getContext());
-                    divider.setBackgroundResource(android.R.drawable.divider_horizontal_bright);
-                    mediaLayout.addDivider(divider);
-                }
-                buttonLayout.addView(mediaLayout);*/
+                FormViewController formViewController = FormViewController.getInstance();
+                /// FxViewController.getInstance().getCurrentLayout().setContent(newButton);
+                FxViewController.getInstance().getCurrentLayout().add(newButton, formViewController.getColIndex(), formViewController.getRowIndex());
+                formViewController.incColIndex();
             }
         }
-    /*    buttonLayout.setOrientation(LinearLayout.VERTICAL);
-
-        // The buttons take up the right half of the screen
-        LayoutParams buttonParams = new LayoutParams(LayoutParams.FILL_PARENT,
-                LayoutParams.WRAP_CONTENT);
-        buttonParams.setMargins(40, 50, 40, 0);
-        addView(buttonLayout, buttonParams);*/
-        FormViewController formViewController=FormViewController.getInstance();
-       /// FxViewController.getInstance().getCurrentLayout().setContent(newButton);
-        FxViewController.getInstance().getCurrentLayout().add(newButton,formViewController.getColIndex(), formViewController.getRowIndex());
-        formViewController.incColIndex();
     }
 
     private void onButtonClicked() {

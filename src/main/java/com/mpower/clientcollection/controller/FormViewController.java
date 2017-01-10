@@ -179,22 +179,6 @@ public class FormViewController {
         return this.currentFormName;
     }
 
-    /*public boolean isFormValid_old(FormEntryModel model,String formPath)  {
-        INITIALIZED = false;
-        try {
-            INITIALIZED = parseEntireForm(model);
-            if (INITIALIZED)
-               // setCurrentModel(model);
-                setFormEntryController(model,formPath);
-                setFormController(formPath);
-
-
-        } catch (InvalidReferenceException e) {
-            e.printStackTrace();
-        }
-        return INITIALIZED;
-    }*/
-
     public boolean isFormValid(FormEntryModel model,String formName)  {
         INITIALIZED = false;
         try {
@@ -309,81 +293,6 @@ public class FormViewController {
         return INITIALIZED;
     }
 
-
-   /* private boolean parseEntireFormNew() throws InvalidReferenceException {
-        INITIALIZED = true;
-
-        FormIndex idx = FormViewController.getInstance().getFormController().getFormIndex();
-        FormEntryModel model = FormViewController.getInstance().getCurrentModel();
-
-        Set<String> loops = new HashSet<String>();
-        // step through every value in the form
-       // FormIndex idx = FormIndex.createBeginningOfFormIndex();
-        int event;
-        createFormTitle(model.getFormTitle());
-        for (;;) {
-            idx = model.incrementIndex(idx);
-            event = model.getEvent(idx);
-            if ( event == FormEntryController.EVENT_BEGINNING_OF_FORM ) {
-                //createNextButton();
-                // createNextView();
-                break;
-            }
-            if ( event == FormEntryController.EVENT_END_OF_FORM ) {
-                createSubmitButton();
-                break;
-            }
-
-            if (event == FormEntryController.EVENT_PROMPT_NEW_REPEAT) {
-                String elementPath = idx.getReference().toString().replaceAll("\\[\\d+\\]", "");
-                if ( !loops.contains(elementPath) ) {
-                    loops.add(elementPath);
-                    model.getForm().createNewRepeat(idx);
-                    idx = model.getFormIndex();
-                }
-            } else if (event == FormEntryController.EVENT_GROUP) {
-                GroupDef gd = (GroupDef) model.getForm().getChild(idx);
-                if ( gd.getChildren() == null || gd.getChildren().size() == 0 ) {
-                    INITIALIZED = false;
-                    //setError(true);
-                    String elementPath = idx.getReference().toString().replaceAll("\\[\\d+\\]", "");
-                    System.err.println("Group has no children! Group: " + elementPath + ". The XML is invalid.\n");
-
-                }
-            } else if (event != FormEntryController.EVENT_QUESTION) {
-                continue;
-            } else {
-
-                FormEntryPrompt prompt = model.getQuestionPrompt(idx);
-                WidgetFactory.createWidgetFromPrompt(prompt);
-
-            }
-        }
-        return INITIALIZED;
-    }*/
-
-   /* public void createNextButton() {
-
-        mNextButton=new Button("Next");
-        mNextButton.setOnAction(event -> {
-            System.out.println("Next Button CLicked");
-
-            FormController formController=FormViewController.getInstance().getFormController();
-            formController.stepToNextScreenEvent();
-
-
-        });
-
-    }*/
-
-  /*  private void createNextEvent() {
-        System.out.println("Inside th createNextEvent method");
-        *//*FormController formController=FormViewController.getInstance().getFormController();
-        formController.stepToNextScreenEvent();*//*
-        FormEntryController formEntryController=FormViewController.getInstance().getFormEntryController();
-        formEntryController.stepToNextEvent();
-    }*/
-
     public void createSubmitButton(){
          ansMap=new HashMap();
         mSubmitButton = new Button("Submit");
@@ -399,11 +308,6 @@ public class FormViewController {
             FormEntryModel formEntryModel=getCurrentModel();
             System.out.println("Form Prompt ="+formEntryModel.toString());
             System.out.println("Form Index ="+formEntryModel.getFormIndex());
-            FormIndex newIndex;
-            /*//newIndex=formEntryModel.incrementIndex(formIndex);
-            formEntryModel.setQuestionIndex(newIndex);
-            FormEntryPrompt formEntryPrompt=formEntryModel.getQuestionPrompt();*/
-           // System.out.println("himel ="+FormViewController.getInstance().getFormController().saveAllScreenAnswers(FormViewController.getInstance().getAnswers(),false));
 
             while (it.hasNext()) {
                 FormIndex index = it.next();

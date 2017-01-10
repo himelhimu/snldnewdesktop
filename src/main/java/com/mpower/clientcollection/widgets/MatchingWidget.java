@@ -48,6 +48,11 @@ public class MatchingWidget extends QuestionWidget {
     private Line mThirdLine = null;
     private Line mFourthLine = null;
     private Line mFifthLine = null;
+    private Line mSixthLine=null;
+    private Line mSeventhLine=null;
+    private Line mEightLine=null;
+    private Line mNineLine=null;
+    private Line mTenLine=null;
     private ImageView mFirstImage = null;
     private ImageView mSecondImage = null;
     private ImageView mThirdImage = null;
@@ -142,37 +147,30 @@ public class MatchingWidget extends QuestionWidget {
                         case 5:
                             setLineEndPoint(mFifthLine,event.getX(),event.getY());
                             break;
+                        case 6:
+                            setLineEndPoint(mSixthLine,event.getX(),event.getY());
+                            break;
+                        case 7:
+                            setLineEndPoint(mSeventhLine,event.getX(),event.getY());
+
+                            break;
+                        case 8:
+                            setLineEndPoint(mEightLine,event.getX(),event.getY());
+
+                            break;
+                        case 9:
+                            setLineEndPoint(mNineLine,event.getX(),event.getY());
+
+                            break;
+                        case 10:
+                            setLineEndPoint(mTenLine,event.getX(),event.getY());
+
+                            break;
                     }
 
                 }else {
                     event.consume();
                 }
-                /*switch ( mLineCount ){
-
-                    case 1:
-                        //ImageView imageView=(ImageView) event.getSource();
-
-
-                        //ImageView imageView1= new ImageView(node);
-                        //System.out.println("### ImageHeight ##"+imageView.getFitHeight());
-
-                        //System.out.println("Event PickResult :"+event.getPickResult());
-                        setLineEndPoint(mFirstLine,event.getX(),event.getY());
-                        break;
-                    case 2:
-                       // ImageView imageView=(ImageView) event.getSource();
-                        setLineEndPoint(mSecLine,event.getX(),event.getY());
-                        break;
-                    case 3:
-                        setLineEndPoint(mThirdLine,event.getX(),event.getY());
-                        break;
-                    case 4:
-                        setLineEndPoint(mFourthLine,event.getX(),event.getY());
-                        break;
-                    case 5:
-                        setLineEndPoint(mFifthLine,event.getX(),event.getY());
-                        break;
-                }*/
             } else if (event.getEventType() == MouseEvent.MOUSE_PRESSED) {
                 System.out.println("press"+mLineCount);
 
@@ -191,7 +189,6 @@ public class MatchingWidget extends QuestionWidget {
 
                     switch ( mLineCount ){
                         case 1:
-//                        ImageView imageView= new ImageView(String.valueOf((Node)event.getPickResult().getIntersectedNode()));
 
 
                             setLineStartPoint(mFirstLine,event.getX(),event.getY());
@@ -214,6 +211,26 @@ public class MatchingWidget extends QuestionWidget {
                             setLineStartPoint(mFifthLine,event.getX(),event.getY());
                             mFifthLine.setVisible(true);
                             break;
+                        case 6:
+                            setLineStartPoint(mSixthLine,event.getX(),event.getY());
+                            mSixthLine.setVisible(true);
+                            break;
+                        case 7:
+                            setLineStartPoint(mSeventhLine,event.getX(),event.getY());
+                            mSeventhLine.setVisible(true);
+                            break;
+                        case 8:
+                            setLineStartPoint(mEightLine,event.getX(),event.getY());
+                            mEightLine.setVisible(true);
+                            break;
+                        case 9:
+                            setLineStartPoint(mNineLine,event.getX(),event.getY());
+                            mNineLine.setVisible(true);
+                            break;
+                        case 10:
+                            setLineStartPoint(mTenLine,event.getX(),event.getY());
+                            mTenLine.setVisible(true);
+                            break;
                         default:
                             showLines(false);
                             mLineCount = 0;
@@ -225,35 +242,6 @@ public class MatchingWidget extends QuestionWidget {
                     System.out.println("@@@@ Sorry Bro###");
                     event.consume();
                 }
-                /*switch ( mLineCount ){
-                    case 1:
-//                        ImageView imageView= new ImageView(String.valueOf((Node)event.getPickResult().getIntersectedNode()));
-
-
-                        setLineStartPoint(mFirstLine,event.getX(),event.getY());
-                        mFirstLine.setVisible(true);
-
-                        break;
-                    case 2:
-                        setLineStartPoint(mSecLine,event.getX(),event.getY());
-                        mSecLine.setVisible(true);
-                        break;
-                    case 3:
-                        setLineStartPoint(mThirdLine,event.getX(),event.getY());
-                        mThirdLine.setVisible(true);
-                        break;
-                    case 4:
-                        setLineStartPoint(mFourthLine,event.getX(),event.getY());
-                        mFourthLine.setVisible(true);
-                        break;
-                    case 5:
-                        setLineStartPoint(mFifthLine,event.getX(),event.getY());
-                        break;
-                    default:
-                        showLines(false);
-                        mLineCount = 0;
-                        break;
-                }*/
 
             } else if(event.getEventType() == MouseEvent.MOUSE_RELEASED){
                 //System.out.print("mouse released"+mLineCount);
@@ -277,58 +265,7 @@ public class MatchingWidget extends QuestionWidget {
 
 
 
-       mFlowPane.getChildren().addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine,mFifthLine);
-        //mFlowPane.addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine,mFifthLine);
-
-        /*mDrawPane.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage,imageView5,imageView6,imageView7,imageView8,
-                imageView9,imageView10,imageView11,imageView12,imageView13,
-                imageView14,imageView15,imageView16,imageView17,imageView18);*/
-
-      /*  mFlowPane.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage,imageView5,imageView6,imageView7,imageView8,
-                imageView9,imageView10,imageView11,imageView12,imageView13,
-                imageView14,imageView15,imageView16,imageView17,imageView18);*/
-
-       /* HBox hBox1=new HBox();
-        hBox1.getChildren().addAll(mFirstImage,mSecondImage,mThirdImage,mFourthImage);
-
-        HBox hBox2=new HBox();
-        hBox2.getChildren().addAll(imageView5,imageView6,imageView7,imageView8);
-
-        HBox hBox3=new HBox();
-        hBox3.getChildren().addAll(imageView9,imageView10,imageView11,imageView12,imageView13);
-
-        HBox hBox4=new HBox();
-        hBox4.getChildren().addAll(imageView14,imageView15,imageView16,imageView17,imageView18);
-
-
-        mFlowPane.getChildren().addAll(hBox1,hBox2,hBox3,hBox4);*/
-
-       /* mDrawPane.setTop(hBox1);
-        mDrawPane.setLeft(hBox2);
-        mDrawPane.setRight(hBox3);
-        mDrawPane.setCenter(hBox4);*/
-
-      /*  mFirstImage.addEventHandler(MouseEvent.MOUSE_DRAGGED,drawLineHandler);
-        mFirstImage.addEventHandler(MouseEvent.MOUSE_PRESSED,drawLineHandler);
-        mFirstImage.addEventHandler(MouseEvent.MOUSE_RELEASED,drawLineHandler);
-
-        mSecondImage.addEventHandler(MouseEvent.MOUSE_DRAGGED,drawLineHandler);
-        mSecondImage.addEventHandler(MouseEvent.MOUSE_PRESSED,drawLineHandler);
-        mSecondImage.addEventHandler(MouseEvent.MOUSE_RELEASED,drawLineHandler);
-
-        mThirdImage.addEventHandler(MouseEvent.MOUSE_DRAGGED,drawLineHandler);
-        mThirdImage.addEventHandler(MouseEvent.MOUSE_PRESSED,drawLineHandler);
-        mThirdImage.addEventHandler(MouseEvent.MOUSE_RELEASED,drawLineHandler);
-
-        mFourthImage.addEventHandler(MouseEvent.MOUSE_DRAGGED,drawLineHandler);
-        mFourthImage.addEventHandler(MouseEvent.MOUSE_PRESSED,drawLineHandler);
-        mFourthImage.addEventHandler(MouseEvent.MOUSE_RELEASED,drawLineHandler);*/
-
-
-     // mFlowPane.getChildren().add(mDrawPane);
-        /*FormViewController fvc = FormViewController.getInstance();
-        FxViewController.getInstance().getCurrentLayout().add(mFlowPane, fvc.getColIndex(), fvc.getRowIndex());
-        fvc.incRowIndex();*/
+       mFlowPane.getChildren().addAll(mFirstLine,mSecLine,mThirdLine,mFourthLine,mFifthLine,mSixthLine,mSeventhLine,mEightLine,mNineLine, mTenLine);
 
     }
 
@@ -501,6 +438,26 @@ public class MatchingWidget extends QuestionWidget {
         mFifthLine=new Line();
         mFifthLine.setStrokeWidth(5);
         mFifthLine.setId("l5");
+
+        mSixthLine=new Line();
+        mSixthLine.setStrokeWidth(5);
+        mSixthLine.setId("l6");
+
+        mSeventhLine=new Line();
+        mSeventhLine.setId("l7");
+        mSeventhLine.setStrokeWidth(5);
+
+        mEightLine=new Line();
+        mSeventhLine.setStrokeWidth(5);
+        mEightLine.setId("l8");
+
+        mNineLine=new Line();
+        mNineLine.setStrokeWidth(5);
+        mNineLine.setId("l9");
+
+        mTenLine=new Line();
+        mTenLine.setStrokeWidth(5);
+        mTenLine.setId("l10");
     }
 
     private void initImage() {
@@ -593,6 +550,11 @@ public class MatchingWidget extends QuestionWidget {
         mThirdLine.setVisible(isvisible);
         mFourthLine.setVisible(isvisible);
         mFifthLine.setVisible(isvisible);
+        mSixthLine.setVisible(isvisible);
+        mSeventhLine.setVisible(isvisible);
+        mEightLine.setVisible(isvisible);
+        mNineLine.setVisible(isvisible);
+        mTenLine.setVisible(isvisible);
     }
 
 }

@@ -49,38 +49,6 @@ public class HtmlWidget extends QuestionWidget{
 
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(browser);
-
-        /*webEngine.getLoadWorker().stateProperty()
-                .addListener(new ChangeListener<State>() {
-                    @Override
-                    public void changed(ObservableValue ov, State oldState, State newState) {
-
-                        if (newState == Worker.State.SUCCEEDED) {
-                            stage.setTitle(webEngine.getLocation());
-                        }
-
-                    }
-                });*/
-      //  webEngine.load("http://java2s.com");
-        //webEngine.load(prompt.toString());
-        //scrollPane.setPrefViewportWidth(300);
-     /*String htmlUri = ""+mPrompt.getSelectChoiceText(mItems.get(0));
-        String htmlFileName="";
-        try {
-            htmlFileName= ReferenceManager._().DeriveReference(prompt.toString()).getLocalURI();
-            System.out.println("htmlFileName"+htmlFileName);
-        } catch (InvalidReferenceException e) {
-            e.printStackTrace();
-        }
-        String htmlUri="jr://images/"+mPrompt.getSelectChoiceText(mItems.get(0));
-
-        String htmlFileName="";
-
-        try {
-            htmlFileName+=ReferenceManager._().DeriveReference(htmlUri).getLocalURI();
-        } catch (InvalidReferenceException e) {
-            e.printStackTrace();
-        }*/
         String mCurrentPath=System.getProperty("user.dir");
         String currentFormPath = FormViewController.getInstance().getCurrentFormName();
         String formFileName = currentFormPath.substring(0, currentFormPath.lastIndexOf("."));
@@ -88,8 +56,6 @@ public class HtmlWidget extends QuestionWidget{
 
         String htmlPathOld="file:"+"/home/sabbir/Downloads/snlForms/cncp/forms/1 1 Preparation for birth-media/session_one.html";
         System.out.println("htmlPath"+htmlPath);
-
-       // webEngine.loadContent(htmlPath, "UTF-8");
         webEngine.load(htmlPath);
 
         FormViewController fvc = FormViewController.getInstance();

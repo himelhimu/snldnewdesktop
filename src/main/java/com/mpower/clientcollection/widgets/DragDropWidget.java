@@ -82,14 +82,6 @@ public class DragDropWidget extends QuestionWidget{
             formImagesList.add(imageName);
             System.out.println("****image url = " + imageName);
         }
-
-       /* String imageUri =
-                mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
-                        FormEntryCaption.TEXT_FORM_IMAGE);
-        String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
-        System.out.println("****image url = " + imageName);*/
-
-       // imageNameFInal=imageName.substring(0,imageName.indexOf("_"));
         System.out.println("***after substring "+imageNameFInal);
         String directoryName = mCurrentPath + "/forms/" +formFileName+ "-media/";
         System.out.println("*** Currentpath from pictureselect "+directoryName);
@@ -127,49 +119,6 @@ public class DragDropWidget extends QuestionWidget{
             event.setDropCompleted(true);
         }
         answerId += imageView.getId();
-
-       // SelectChoice sc = mItems.get(Integer.valueOf(answerId));
-
-        /*int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
-        if (status == FormEntryController.ANSWER_OK) {
-            // correct
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Answer Correct ");
-            alert.show();
-        }else {
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Answer Wrong ");
-            alert.show();
-        }
-        System.out.println("***status = " + status);
-
-        if (node instanceof ImageView){
-            answerId = node.getId();
-            System.out.println("** mItems "+mItems.size());*/
-
-           /* Dragboard dragboard=event.getDragboard();
-
-            if (dragboard.hasImage())
-            {
-                ((ImageView) node).setImage(dragboard.getImage());
-            }*/
-
-            /*SelectChoice sc = mItems.get(Integer.valueOf(answerId));
-            System.out.println("** Testing ");
-            int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
-            if (status == FormEntryController.ANSWER_OK) {
-                // correct
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("Answer Correct ");
-                alert.show();
-            }else {
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("Answer Wrong ");
-                alert.show();
-            }
-            System.out.println("***status = " + status);*/
-
-      //  }
 
 
 
@@ -277,9 +226,6 @@ public class DragDropWidget extends QuestionWidget{
 
         FormViewController fvc=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,fvc.getColIndex(),fvc.getRowIndex());
-        /*fvc.incRowIndex();
-        FxViewController.getInstance().getCurrentLayout().add(imageView5,fvc.getColIndex(),fvc.getRowIndex());
-        fvc.incRowIndex();*/
         createOkButton();
 
 

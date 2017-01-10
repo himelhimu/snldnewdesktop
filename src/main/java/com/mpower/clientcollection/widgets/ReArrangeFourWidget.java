@@ -127,9 +127,6 @@ public class ReArrangeFourWidget extends QuestionWidget {
             j++;
         }
 
-/*        ImageView imageView2=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_2.png")));
-        ImageView imageView3=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_3.png")));
-        ImageView imageView4=new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("resources/img/rearrange/c1q2_4.png")));*/
         for (int i=0;i<mAnchorPane.getChildren().size();i++) {
             //node.setOnMouseDragEntered(mouseDragged());
             Node node = mAnchorPane.getChildren().get(i);
@@ -168,42 +165,6 @@ public class ReArrangeFourWidget extends QuestionWidget {
                 });
             } else System.out.println("########################NO");
         }
-
-        /*mAnchorPane.addEventHandler(MouseEvent.MOUSE_DRAGGED,event -> {
-            Node node= (Node) mAnchorPane.getChildren().get(1);
-            ImageView imageView=null;
-            if (node instanceof ImageView) {
-                imageView = (ImageView) node;
-                imageView.getId();
-                ANSWER += imageView.getId();
-                System.out.println("## Answer Till Now :" + ANSWER);
-
-                node.addEventHandler(MouseEvent.MOUSE_DRAGGED,event1 -> {
-                    double imgX = event1.getX();
-                    double imgY = event1.getY();
-
-                    node.setTranslateX(imgX);
-                    node.setTranslateY(imgY);
-                    event.consume();
-                    event1.consume();
-
-
-                });
-            }else System.out.println("########################NO");
-        });*/
-
-        /*handler= (EventHandler<MouseEvent>) event -> {
-            double imgX=event.getX();
-            double imgY=event.getY();
-
-            for (Node node: mAnchorPane.getChildren())
-            {
-                node.setLayoutX(imgX);
-                node.setLayoutY(imgY);
-            }
-            event.consume();
-        };
-*/
         FormViewController formViewController=FormViewController.getInstance();
         FxViewController.getInstance().getCurrentLayout().add(mAnchorPane,formViewController.getColIndex(),formViewController.getRowIndex());
         formViewController.incRowIndex();
