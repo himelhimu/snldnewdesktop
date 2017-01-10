@@ -58,6 +58,8 @@ public class DragDropWidget extends QuestionWidget{
     private javafx.scene.image.ImageView imageView1,imageView2,imageView3,imageView4,imageView5;
     private ArrayList<ImageView> imageViews;
 
+    private List<String> answerList=null;
+
     public DragDropWidget(FormEntryPrompt prompt)
     {
         super(prompt);
@@ -66,6 +68,7 @@ public class DragDropWidget extends QuestionWidget{
         formImagesList=new ArrayList<>();
         mAnchorPane.setPrefSize(300,300);
         mPrompt=prompt;
+        answerList=new ArrayList<>();
         mItems= prompt.getSelectChoices();
         mCurrentPath=System.getProperty("user.dir");
         String currentFormPath = FormViewController.getInstance().getCurrentFormName();
@@ -222,6 +225,7 @@ public class DragDropWidget extends QuestionWidget{
 
         imageView.setOnDragDropped(this::imageDropped);
 
+        answerList.add(imageView.getId());
 
         answerId += imageView.getId();
 
@@ -315,8 +319,13 @@ public class DragDropWidget extends QuestionWidget{
 
     @Override
     public IAnswerData getAnswer() {
-        /*if(answerId != null) {
+       /* if(answerId != null) {
             SelectChoice sc = mItems.get(Integer.valueOf(answerId));
+            return new SelectOneData(new Selection(sc));
+        }
+        return null;*/
+       /* for(int i=0;i<answerList.size();i++ ) {
+            SelectChoice sc = mItems.get(answerList.get(i));
             return new SelectOneData(new Selection(sc));
         }*/
         return null;

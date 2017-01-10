@@ -227,7 +227,8 @@ public class WidgetFactory {
                     questionWidget = new DragDropWidget(fep);
                 }else if(appearance.equals("line_draw")){
                     //LogUtils.informationLog(new WidgetFactory(), " Found LineDrawWidget");
-                    questionWidget = new MatchingWithLineWidget(fep);
+                    //questionWidget = new MatchingWithLineWidget(fep);
+                    questionWidget=new MatchingWidget(fep);
                 } else {
                     System.out.println("** Calling SelectMultiWidget###");
                     questionWidget = new SelectMultiWidget(fep);
