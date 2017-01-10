@@ -99,7 +99,7 @@ public class DragDropWidget extends QuestionWidget{
 
 
 
-    private void imageDropprd(DragEvent event) {
+    private void imageDropped(DragEvent event) {
         FormViewController formViewController=FormViewController.getInstance();
         System.out.println("inside dropped  ####");
         /*imgX= event.getX()-distX;
@@ -123,10 +123,10 @@ public class DragDropWidget extends QuestionWidget{
             imageView.setImage(dragboard.getImage());
             event.setDropCompleted(true);
         }
-
+        answerId += imageView.getId();
 
        // SelectChoice sc = mItems.get(Integer.valueOf(answerId));
-        answerId += imageView.getId();
+
         /*int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
         if (status == FormEntryController.ANSWER_OK) {
             // correct
@@ -168,26 +168,6 @@ public class DragDropWidget extends QuestionWidget{
 
       //  }
 
-       /* int newIndex=mGridPane.getColumnIndex(imageView);
-        int newRow=mGridPane.getRowIndex(imageView);*/
-
-       /* mGridPane.setLayoutY(imgX);
-        mGridPane.setLayoutY(imgY);*/
-       // mGridPane.add(imageView,newIndex,newRow);
-/*
-        imageView.setLayoutY(imgX);
-        imageView.setLayoutX(imgY);*/
-
-       /* imageView.setX(imgX);
-        imageView.setY(imgY);*/
-
-       /*imageView.setTranslateX(imgX);
-       imageView.setTranslateY(imgY);*/
-/*
-       mAnchorPane.setLayoutX(imgX);
-       mAnchorPane.setLayoutY(imgY);*/
-
-//        mFlowPane.getChildren().add(imageView);
 
 
     }
@@ -201,7 +181,7 @@ public class DragDropWidget extends QuestionWidget{
         if (event.getGestureSource() != imageView &&
                 event.getDragboard().hasImage()) {
             /* allow for both copying and moving, whatever user chooses */
-            event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+            event.acceptTransferModes(TransferMode.NONE);
         }
 
     }
@@ -220,21 +200,6 @@ public class DragDropWidget extends QuestionWidget{
                 answerId="";
             }
             alert.showAndWait();
-         /* FormViewController formViewController=FormViewController.getInstance();
-            SelectChoice sc = mItems.get(Integer.valueOf(answerId));
-            System.out.println("** AnswerId  "+answerId);
-            int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
-            if (status == FormEntryController.ANSWER_OK) {
-                // correct
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("Answer Correct ");
-                alert.show();
-            }else {
-                Alert alert=new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("Answer Wrong ");
-                alert.show();
-            }
-            System.out.println("***status = " + status);*/
         });
 
         mAnchorPane.getChildren().add(okButton);
@@ -247,30 +212,18 @@ public class DragDropWidget extends QuestionWidget{
         FormViewController formViewController=FormViewController.getInstance();
         Dragboard db = imageView.startDragAndDrop(TransferMode.ANY);
 
+        imageView.setVisible(false);
+
         ClipboardContent clipboardContent=new ClipboardContent();
         clipboardContent.putImage(imageView.getImage());
         db.setContent(clipboardContent);
         event.consume();
 
 
-        imageView.setOnDragDropped(this::imageDropprd);
+        imageView.setOnDragDropped(this::imageDropped);
 
 
         answerId += imageView.getId();
-        /*SelectChoice sc = mItems.get(Integer.valueOf(answerId));
-        System.out.println("** Testing ");
-        int status = formViewController.getFormController().answerQuestion(mPrompt.getIndex(),new SelectOneData(new Selection(sc)));
-        if (status == FormEntryController.ANSWER_OK) {
-            // correct
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Answer Correct ");
-            alert.show();
-        }else {
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Answer Wrong ");
-            alert.show();
-        }
-        System.out.println("***status = " + status);*/
 
 
         startX= event.getX();
@@ -286,23 +239,6 @@ public class DragDropWidget extends QuestionWidget{
 
     private void setImages() {
         System.out.println("Inside setImages ###");
-        //mAnchorPane=new AnchorPane();
-       // mTilePane=new TilePane();
-        //mPane.setPadding(new Insets(5));
-        /*imageView1=new javafx.scene.image.ImageView();
-        imageView2=new javafx.scene.image.ImageView();
-        imageView3=new javafx.scene.image.ImageView();
-        imageView4=new javafx.scene.image.ImageView();
-        imageView5=new ImageView();
-
-
-        ArrayList<javafx.scene.image.ImageView> images=new ArrayList<>();
-
-        images.add(imageView1);
-        images.add(imageView2);
-        images.add(imageView3);
-        images.add(imageView4);
-        images.add(imageView5);*/
 
         imageViews=new ArrayList<>();
         ArrayList<String> allImagesList=new ArrayList<>();
@@ -326,27 +262,11 @@ public class DragDropWidget extends QuestionWidget{
             mAnchorPane.getChildren().add(imageViews.get(i));
             imageViews.get(i).setId(String.valueOf(i));
             imageViews.get(i).setOnDragDetected(this::imageDragged);
-            imageViews.get(i).setOnDragDropped(this::imageDropprd);
-            /*imageViews.get(i).setOnMousePressed(this::imageDragged);
-            imageViews.get(i).setOnMouseDragged(this::imageDropprd);*/
+            imageViews.get(i).setOnDragDropped(this::imageDropped);
+            imageViews.get(i).setOnDragOver(this::dragOver);
         }
 
 
-       /* for(int i=0;i<images.size();i++){
-            //HBox hBox=new HBox();
-            //mGridPane.getChildren().add(images.get(i));
-           FormViewController formViewController=FormViewController.getInstance();
-           // mGridPane.add(images.get(i),formViewController.getColIndex(),formViewController.getRowIndex());
-            //formViewController.incColIndex();
-           // hBox.getChildren().add(images.get(i));
-
-           // mFlowPane.getChildren().add(images.get(i));
-            mAnchorPane.getChildren().add(images.get(i));
-            mAnchorPane.borderProperty();
-
-           // mPane.borderProperty();
-
-        }*/
        imageView5=new ImageView();
        Image image=new Image(this.getClass().getResourceAsStream("/common.png"));
        imageView5.setImage(image);
@@ -356,7 +276,7 @@ public class DragDropWidget extends QuestionWidget{
         /*fvc.incRowIndex();
         FxViewController.getInstance().getCurrentLayout().add(imageView5,fvc.getColIndex(),fvc.getRowIndex());
         fvc.incRowIndex();*/
-createOkButton();
+        createOkButton();
 
 
 
