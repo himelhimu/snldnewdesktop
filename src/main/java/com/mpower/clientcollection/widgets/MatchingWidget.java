@@ -6,6 +6,7 @@ package com.mpower.clientcollection.widgets;
 
 import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -58,6 +59,7 @@ public class MatchingWidget extends QuestionWidget {
     private int mLineCount = 1;
     private AnchorPane anchorPane=null;
     private Pane myPane=null;
+    private String answer="";
     public ImageView imageView5,imageView6,imageView7,imageView8,imageView9,imageView10,imageView11,imageView12,imageView13,imageView14,imageView15,imageView16,imageView17,imageView18;
 
     public MatchingWidget(FormEntryPrompt fep) {
@@ -371,9 +373,29 @@ public class MatchingWidget extends QuestionWidget {
         FxViewController.getInstance().getCurrentLayout().add(mFlowPane, fvc.getColIndex(), fvc.getRowIndex());
         fvc.incRowIndex();
 
+        createOkButton();
 
 
+    }
 
+    private void createOkButton() {
+        Button okButton=new Button("OK");
+        okButton.addEventHandler(ActionEvent.ACTION, event -> {
+            Alert alert=new Alert(Alert.AlertType.INFORMATION);
+            if ( answer.equals("0123456789") || answer.contains("0123456789")){
+                alert.setHeaderText("ANSWER CORRECT");
+                alert.setContentText("OK");
+                answer="";
+            }else {
+                alert.setHeaderText("ANSWER WRONG");
+                alert.setContentText("Start Again");
+                answer="";
+                mLineCount=0;
+            }
+            alert.showAndWait();
+        });
+
+        mDrawPane.getChildren().add(okButton);
     }
 
     private ImageView getImage(String s) {
