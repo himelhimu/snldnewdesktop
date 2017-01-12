@@ -30,8 +30,10 @@ public class ContentViewController {
 
     public static String current_user = "";
     public static String current_session = "1_0";
+    public static boolean isBanglaContent=false;
 
     public void onMouseClicked(Event event) {
+        if (LoginController.USER_TYPE==2 || LoginController.USER_TYPE==3) isBanglaContent=true;
         if(event.getSource() instanceof ImageView) {
             String imageViewID = ((ImageView) event.getSource()).getId();
             switch (imageViewID) {
@@ -72,8 +74,16 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_1_8":
-                    current_session = "1_8";
-                    FxViewController.getInstance().setCurrentView("1_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    if (isBanglaContent) {
+                        current_session = "2_0";
+                        FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    }
+                    else {
+                        current_session = "1_8";
+                        FxViewController.getInstance().setCurrentView("1_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    }
+
+
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_1_9":
@@ -170,6 +180,7 @@ public class ContentViewController {
                     current_session="2_13";
                     FxViewController.getInstance().setCurrentView("quiz_2_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
+
                 case "session_2_13":
                     current_session = "2_13";
                     FxViewController.getInstance().setCurrentView("quiz_2_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
@@ -233,7 +244,7 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_quiz_2":
-                    current_session="2_13";
+                    current_session="3_0";
                     FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
 
@@ -259,11 +270,11 @@ public class ContentViewController {
                     //System.out.print("Fourth Image clicked." + current_user);
                     break;
                 case "session_3_quiz":
-                    current_session="1_0";
+                    current_session="3_4";
                     FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
                 case "session_3_5":
-                    current_session = "1_0";
+                    current_session = "3_4";
                     FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
             }

@@ -60,6 +60,8 @@ public class FxViewController implements Initializable {
     @FXML
     private Pane splashlayout;
     private Pane splashPane;
+
+    public MediaPlayer player=null;
     //operation Variables
     //public boolean INITIALIZED = false;
 
@@ -109,6 +111,7 @@ public class FxViewController implements Initializable {
         }
         else if( view_type == AppConfiguration.VIEW_TYPE.REG_VIEW){
             Main.isLoggedIn=false;
+            player.stop();
             showMainStage();
             //jumpBackIn();
         }
@@ -392,7 +395,7 @@ public class FxViewController implements Initializable {
                 //System.out.println("** ChapterImageName "+chapterImageName1);
                // Image unlock_image1 = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName1));
                 for(int i=1;i<=chapter;i++){
-                    for(int j=1;j<=session+1;j++){
+                    for(int j=0;j<=session+1;j++){
                         Node progressImage = tmpRoot.lookup("#session_"+i+"_"+j);
                         if(progressImage != null){
                             if (!removeENfromImageName){
@@ -400,15 +403,17 @@ public class FxViewController implements Initializable {
                                 //String chapterImageName1="ch_"+String.valueOf(chapter)+"_"+String.valueOf(session)+"_l_en.png";
                               String   chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+ENimageNameSuffix;
                                 System.out.println("*** ChapterImageName "+chapterImageName);
+                                progressImage.setDisable(false);
                                 Image unlock_image = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName));
                                 ((ImageView) progressImage).setImage(unlock_image);
-                                progressImage.setDisable(false);
+
                             }else {
                                 String chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+BNimageNameSuffix;
                                 System.out.println("*** ChapterImageName "+chapterImageName);
+                                progressImage.setDisable(false);
                                 Image unlock_image = new javafx.scene.image.Image(this.getClass().getClassLoader().getResourceAsStream(chapterImageName));
                                 ((ImageView) progressImage).setImage(unlock_image);
-                                progressImage.setDisable(false);
+
                             }
                            /* String chapterImageName="ch_"+String.valueOf(i)+"_"+String.valueOf(j)+"_l_en.png";
                             System.out.println("** ChapterImageName "+chapterImageName);
@@ -440,7 +445,7 @@ public class FxViewController implements Initializable {
             //Media intro_vid = new Media(getClass().getResource("/intro.mp4").toExternalForm());
             Media intro_vid = new Media(getClass().getResource("/intro.mp4").toExternalForm());
             System.out.println("**Video Path "+intro_vid);
-            MediaPlayer player = new MediaPlayer(intro_vid);
+            player = new MediaPlayer(intro_vid);
             player.play();
             Node mediaviewNode = tmproot.lookup("#intro_media_view");
             ((MediaView) mediaviewNode).setMediaPlayer(player);

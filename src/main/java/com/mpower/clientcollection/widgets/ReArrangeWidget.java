@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
@@ -16,6 +17,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Popup;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.form.api.FormEntryCaption;
@@ -141,6 +145,27 @@ public class ReArrangeWidget extends QuestionWidget{
         formViewController.incRowIndex();
 
         createOkButton();
+        //createHelpButton();
+    }
+
+    private void createHelpButton() {
+        Button helpButton=new Button("Help");
+        helpButton.addEventFilter(ActionEvent.ACTION,event -> {
+            Popup popup=new Popup();
+            String helpText="Re-arrange the pictures anywhere then click OK button";
+            Label helpLabel=new Label();
+            helpLabel.setText(helpText);
+            helpLabel.setPrefHeight(200);
+            helpLabel.setPrefWidth(200);
+            final Window window=new Stage();
+            popup.getContent().add(helpLabel);
+            popup.show(window);
+
+            popup.setOnCloseRequest(event1 -> {
+                popup.hide();
+            });
+        });
+        mAnchorPane.getChildren().add(helpButton);
     }
 
     private void createOkButton() {
