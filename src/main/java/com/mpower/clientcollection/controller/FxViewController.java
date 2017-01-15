@@ -90,7 +90,7 @@ public class FxViewController implements Initializable {
 
         scrollPane=new ScrollPane();
         scrollPane.setPrefHeight(600);
-        scrollPane.setPrefWidth(750);
+        scrollPane.setPrefWidth(650);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
@@ -111,7 +111,7 @@ public class FxViewController implements Initializable {
         }
         else if( view_type == AppConfiguration.VIEW_TYPE.REG_VIEW){
             Main.isLoggedIn=false;
-            player.stop();
+            //player.stop();
             showMainStage();
             //jumpBackIn();
         }
@@ -430,6 +430,7 @@ public class FxViewController implements Initializable {
         assert tmpRoot != null;
         ScrollPane scrollPane1=new ScrollPane(tmpRoot);
         scrollPane1.setPrefHeight(600);
+        scrollPane1.setPrefWidth(650);
         scrollPane1.setVvalue(0);
         this.curStage.setScene(new Scene(scrollPane1));
 
@@ -477,7 +478,7 @@ public class FxViewController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.curStage.setScene(new Scene(root));
+        this.curStage.setScene(new Scene(root,650,600));
         showCurStage();
         jumpBackIn();
     }

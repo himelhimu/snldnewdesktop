@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.ContentViewController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.ContentViewController">
     <children>
         <Label alignment="CENTER" prefHeight="16.0" prefWidth="598.0" style="-fx-background-color: #77577A;" text="অধ্যায় ১- হেল্পিং বেবিজ ব্রিদ" textFill="WHITE">
             <font>
@@ -478,8 +478,7 @@
         </HBox>
         <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #77577A;">
             <children>
-                <Button fx:id="back_button" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="26.0" prefWidth="99.0" text="Back" />
-                <Button fx:id="forward_button" layoutX="436.0" layoutY="16.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Forward" />
+                <Button fx:id="back_button" layoutX="240.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="30.0" prefWidth="150.0" text="Log Out" />
             </children>
         </Pane>
     </children>

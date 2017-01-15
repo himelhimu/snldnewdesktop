@@ -8,18 +8,18 @@
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <GridPane fx:controller="com.mpower.desktop.controller.RegistrationController"
-          stylesheets="/css/registration.css" prefHeight="500" prefWidth="700"
-          xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="10" vgap="10">
+          stylesheets="/css/registration.css" prefHeight="600" prefWidth="650"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" hgap="10" vgap="10">
     <fx:define>
         <ToggleGroup fx:id="profession_toggle_group"/>
     </fx:define>
-    <Label GridPane.rowIndex="0" GridPane.columnSpan="3" GridPane.columnIndex="0" alignment="TOP_CENTER" fx:id="registration_title">Choose your Occupation</Label>
+    <Label GridPane.rowIndex="0" GridPane.columnSpan="3"  alignment="TOP_CENTER" fx:id="registration_title">Choose your Occupation</Label>
     <ToggleButton fx:id="button_doctor" GridPane.rowIndex="1" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
-            <ImageView fx:id="doctor_reg"
+            <ImageView fx:id="doctor_reg" layoutX="29.0" layoutY="44.0"
                        fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="/doctor.png" backgroundLoading="true"/>
+                    <Image url="/img/doctor.png" backgroundLoading="true"/>
                 </image>
             </ImageView>
         </graphic>
@@ -29,36 +29,35 @@
             <ImageView fx:id="nurse_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="/nurse.png" backgroundLoading="true"/>
+                    <Image url="/img/nurse.png" backgroundLoading="true"/>
                 </image>
             </ImageView>
         </graphic>
     </ToggleButton>
-    <ToggleButton fx:id="button_fwd" GridPane.rowIndex="1" GridPane.columnIndex="2" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <ToggleButton  fx:id="button_fwd" GridPane.rowIndex="2" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="fwd_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="/fwv.png" backgroundLoading="true"/>
+                    <Image url="/img/fwv.png" backgroundLoading="true"/>
                 </image>
             </ImageView>
         </graphic>
     </ToggleButton>
-    <ToggleButton fx:id="button_sacmo" GridPane.rowIndex="1" GridPane.columnIndex="3" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <ToggleButton fx:id="button_sacmo" GridPane.rowIndex="2" GridPane.columnIndex="1" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="sacmo_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="/sacmo.png" backgroundLoading="true"/>
+                    <Image url="/img/sacmo.png" backgroundLoading="true"/>
                 </image>
             </ImageView>
         </graphic>
     </ToggleButton>
-    <Button fx:id="button_reg" GridPane.rowIndex="2" GridPane.columnSpan="3" disable="true" onAction="#initRegistrationPage"
+    <Button  prefHeight="30.0" prefWidth="200.0"  alignment="CENTER" fx:id="button_reg" GridPane.rowIndex="3" GridPane.columnSpan="3" disable="true" onAction="#initRegistrationPage"
             text="Registration"/>
-
-    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="3" alignment="TOP_LEFT" text="Already Registered?"></Label>
-    <Button  alignment="BOTTOM_RIGHT" fx:id="button_login" GridPane.rowIndex="4" GridPane.columnSpan="3" onAction="#initLogin"
+    <Label GridPane.rowIndex="4"   GridPane.columnSpan="3" alignment="CENTER">Already Registered?</Label>
+    <Button GridPane.rowIndex="5" prefHeight="30.0" prefWidth="200.0" alignment="CENTER" fx:id="button_login" GridPane.columnSpan="3" onAction="#initLogin"
             text="Login"/>
 
 

@@ -178,7 +178,7 @@ public class LoginController extends AnchorPane {
 
 
     public void processRegister(ActionEvent actionEvent) {
-        FxViewController.getInstance().setCurrentView("register", AppConfiguration.VIEW_TYPE.REG_VIEW);
+        FxViewController.getInstance().setCurrentView("Register", AppConfiguration.VIEW_TYPE.REG_VIEW);
     }
 }
 

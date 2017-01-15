@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.RegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.RegistrationController">
    <children>
-      <VBox layoutX="14.0" layoutY="107.0" prefHeight="139.0" prefWidth="255.0">
+      <VBox layoutX="14.0" layoutY="150.0" prefHeight="139.0" prefWidth="255.0">
          <children>
             <TextField fx:id="tf_name" prefHeight="29.0" prefWidth="249.0" promptText="Enter Your Name">
                <VBox.margin>
@@ -42,12 +42,12 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </opaqueInsets>
       </VBox>
-      <ImageView fx:id="iv_profession" fitHeight="94.0" fitWidth="116.0" layoutX="235.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iv_profession" fitHeight="150.0" fitWidth="116.0" layoutX="235.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/doctor.png" />
          </image>
       </ImageView>
-      <VBox layoutX="300.0" layoutY="107.0" prefHeight="139.0" prefWidth="292.0">
+      <VBox layoutX="300.0" layoutY="150.0" prefHeight="139.0" prefWidth="292.0">
          <children>
             <HBox prefHeight="27.0" prefWidth="292.0">
                <fx:define>
@@ -87,7 +87,7 @@
             </PasswordField>
          </children>
       </VBox>
-      <Button fx:id="bt_register" layoutX="446.0" layoutY="317.0" mnemonicParsing="false" onAction="#registeruser" text="Register" />
-      <Button fx:id="bt_prev" layoutX="38.0" layoutY="317.0" mnemonicParsing="false" onAction="#gotoPreviousScreen" text="Previous" />
+      <Button prefHeight="30.0" prefWidth="150.0" fx:id="bt_register" layoutX="446.0" layoutY="400.0" mnemonicParsing="false" onAction="#registeruser" text="Register" />
+      <Button prefHeight="30.0" prefWidth="150.0" fx:id="bt_prev" layoutX="38.0" layoutY="400.0" mnemonicParsing="false" onAction="#gotoPreviousScreen" text="Previous" />
    </children>
 </AnchorPane>

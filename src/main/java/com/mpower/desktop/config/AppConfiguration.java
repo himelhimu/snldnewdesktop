@@ -16,10 +16,10 @@ public class AppConfiguration {
     public static int SPLASH_WIDTH = 0;
     public static int SPLASH_HEIGHT = 0;
     //Window Titles
-    public static String APPLICATION_NAME = "";
-    public static String LOGIN_NAME = "";
-    public static String INTRO_WINDOW = "";
-    public static String COURSE_OVERVIEW_WINDOW = "";
+    public static String APPLICATION_NAME = "CNCP E Learning";
+    public static String LOGIN_NAME = "CNCP Login";
+    public static String INTRO_WINDOW = "WelCome";
+    public static String COURSE_OVERVIEW_WINDOW = "CNCP E Learning";
 
     public static String IMG_PATH = "";
     public static String FXML_PATH = "";
