@@ -6,24 +6,25 @@ import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import sample.Main;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 /**
  * Login Controller.
  * @author sabbir sabbir@mpower-social.com
  */
-public class LoginController extends AnchorPane {
+public class LoginController extends AnchorPane implements Initializable {
 
     @FXML
     TextField userId;
@@ -40,7 +41,10 @@ public class LoginController extends AnchorPane {
 
     public static String CURRENT_PROFFESION="";
 
+
+
     public void processLogin(ActionEvent event) {
+       // jumpBackIn();
         String username = userId.getText();
         String passWord = password.getText();
         if (username.equals("") || passWord.equals("")) {
@@ -73,6 +77,47 @@ public class LoginController extends AnchorPane {
             }
 
 
+        }
+    }
+
+    private void jumpBackIn(){
+        System.out.println("*** In JumpBackIn ");
+        InputStream is=null;
+        try {
+            FileInputStream fileInputStream=new FileInputStream("./config.properties");
+            is=fileInputStream;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Properties props=new Properties();
+        try {
+            props.load(is);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (!props.isEmpty()){
+            String userName= props.getProperty("username");
+            String passWord=props.getProperty("password");
+
+            userId.setText(userName);
+            password.setText(passWord);
+
+            /*Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText("Log in as  "+userName);
+
+            Optional<ButtonType> result=alert.showAndWait();
+            if (result.get()== ButtonType.OK){
+                int userType= Integer.parseInt(props.getProperty("user_type"));
+                LoginController.USER_TYPE=userType;
+                ContentViewController.current_user=userName;
+                Main.isLoggedIn=true;
+                FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+
+            }else {
+                //TODO do nothing
+                alert.close();
+            }*/
         }
     }
 
@@ -179,6 +224,11 @@ public class LoginController extends AnchorPane {
 
     public void processRegister(ActionEvent actionEvent) {
         FxViewController.getInstance().setCurrentView("Register", AppConfiguration.VIEW_TYPE.REG_VIEW);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        jumpBackIn();
     }
 }
 

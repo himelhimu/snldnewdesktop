@@ -478,7 +478,7 @@ public class FxViewController implements Initializable {
         }
         this.curStage.setScene(new Scene(root,650,600));
         showCurStage();
-        jumpBackIn();
+        //jumpBackIn();
     }
 
     private void jumpBackIn(){
