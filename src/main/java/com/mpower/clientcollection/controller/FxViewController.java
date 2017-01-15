@@ -431,9 +431,7 @@ public class FxViewController implements Initializable {
         ScrollPane scrollPane1=new ScrollPane(tmpRoot);
         scrollPane1.setPrefHeight(600);
         scrollPane1.setPrefWidth(650);
-        scrollPane1.setVvalue(0);
         this.curStage.setScene(new Scene(scrollPane1));
-
         showCurStage();
     }
 

@@ -262,6 +262,7 @@ public class FormViewController {
             }
             if ( event == FormEntryController.EVENT_END_OF_FORM ) {
                 createSubmitButton();
+                crateBackButton();
                 break;
             }
 
@@ -293,9 +294,19 @@ public class FormViewController {
         return INITIALIZED;
     }
 
+    private void crateBackButton() {
+        Button backButton=new Button("Back");
+        backButton.setPrefSize(100,30);
+        backButton.setOnAction(event -> {
+            FxViewController.getInstance().setCurrentView(AppConfiguration.COURSE_OVERVIEW_WINDOW, AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
+        });
+        FxViewController.getInstance().getCurrentLayout().add(backButton,getColIndex(),getRowIndex());
+    }
+
     public void createSubmitButton(){
          ansMap=new HashMap();
         mSubmitButton = new Button("Submit");
+        mSubmitButton.setPrefSize(100,30);
         mSubmitButton.setOnAction(e -> {
             System.out.print("submitt button clicked\n");
             FormController.FailedConstraint constraint = FormViewController.getInstance().getFormController().saveAllScreenAnswers(
@@ -339,8 +350,7 @@ public class FormViewController {
         });
 
         FxViewController.getInstance().getCurrentLayout().add(mSubmitButton,getColIndex(),getRowIndex());
-
-
+        incRowIndex();
     }
 
     private void uploadFileToServer() {
