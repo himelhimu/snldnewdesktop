@@ -17,7 +17,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -72,7 +72,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="128.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="128.0" prefWidth="800.0">
          <children>
             <VBox prefHeight="128.0" prefWidth="93.0">
                <HBox.margin>
@@ -124,7 +124,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="128.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="128.0" prefWidth="800.0">
       <children>
          <VBox prefHeight="128.0" prefWidth="93.0">
             <HBox.margin>
@@ -177,7 +177,7 @@
       </children>
    </HBox>
 
-       <HBox prefHeight="128.0" prefWidth="600.0">
+       <HBox alignment="CENTER" prefHeight="128.0" prefWidth="800.0">
            <children>
                <VBox prefHeight="128.0" prefWidth="93.0">
                    <HBox.margin>
@@ -198,7 +198,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -253,7 +253,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="128.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="128.0" prefWidth="800.0">
          <children>
             <VBox prefHeight="128.0" prefWidth="93.0">
                <HBox.margin>
@@ -307,7 +307,7 @@
 
          </children>
       </HBox>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -362,7 +362,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -417,7 +417,7 @@
             </VBox>
          </children>
       </HBox>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -473,7 +473,7 @@
          </children>
       </HBox>
 
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -529,7 +529,7 @@
          </children>
       </HBox>
 
-       <HBox prefHeight="129.0" prefWidth="600.0">
+       <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
            <VBox.margin>
                <Insets top="10.0" />
            </VBox.margin>
@@ -553,7 +553,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <HBox prefHeight="129.0" prefWidth="600.0">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="800.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
@@ -596,7 +596,7 @@
             </VBox>
          </children>
       </HBox>
-      <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #77577A;">
+      <Pane prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #77577A;">
          <children>
             <Button alignment="CENTER" fx:id="back_button" layoutX="270.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="30.0" prefWidth="150.0" text="Log Out" />
          </children>

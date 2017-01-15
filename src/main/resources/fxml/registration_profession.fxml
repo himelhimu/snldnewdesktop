@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.RegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.RegistrationController">
    <children>
       <VBox layoutX="14.0" layoutY="150.0" prefHeight="139.0" prefWidth="255.0">
          <children>
@@ -87,7 +87,7 @@
             </PasswordField>
          </children>
       </VBox>
-      <Button prefHeight="30.0" prefWidth="150.0" fx:id="bt_register" layoutX="446.0" layoutY="400.0" mnemonicParsing="false" onAction="#registeruser" text="Register" />
-      <Button prefHeight="30.0" prefWidth="150.0" fx:id="bt_prev" layoutX="38.0" layoutY="400.0" mnemonicParsing="false" onAction="#gotoPreviousScreen" text="Previous" />
+      <Button fx:id="bt_register" layoutX="446.0" layoutY="400.0" mnemonicParsing="false" onAction="#registeruser" prefHeight="30.0" prefWidth="150.0" text="Register" />
+      <Button fx:id="bt_prev" layoutX="38.0" layoutY="400.0" mnemonicParsing="false" onAction="#gotoPreviousScreen" prefHeight="30.0" prefWidth="150.0" text="Previous" />
    </children>
 </AnchorPane>

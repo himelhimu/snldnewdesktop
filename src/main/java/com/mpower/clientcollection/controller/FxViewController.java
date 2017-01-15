@@ -89,8 +89,8 @@ public class FxViewController implements Initializable {
 
 
         scrollPane=new ScrollPane();
-        scrollPane.setPrefHeight(600);
-        scrollPane.setPrefWidth(650);
+        scrollPane.setPrefHeight(700);
+        scrollPane.setPrefWidth(800);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         scrollPane.setContent(mGridMainLayout);
@@ -429,8 +429,8 @@ public class FxViewController implements Initializable {
         }
         assert tmpRoot != null;
         ScrollPane scrollPane1=new ScrollPane(tmpRoot);
-        scrollPane1.setPrefHeight(600);
-        scrollPane1.setPrefWidth(650);
+        scrollPane1.setPrefHeight(700);
+        scrollPane1.setPrefWidth(800);
         this.curStage.setScene(new Scene(scrollPane1));
         showCurStage();
     }
@@ -476,7 +476,7 @@ public class FxViewController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.curStage.setScene(new Scene(root,650,600));
+        this.curStage.setScene(new Scene(root,800,700));
         showCurStage();
         //jumpBackIn();
     }

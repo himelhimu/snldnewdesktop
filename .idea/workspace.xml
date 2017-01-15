@@ -4,7 +4,13 @@
     <list default="true" id="10bf4ae2-1ed8-46c6-82fd-4f2068234b30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,18 +32,18 @@
       <file leaf-file-name="FxViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="497" column="9" lean-forward="false" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
+            <state relative-caret-position="236">
+              <caret line="478" column="56" lean-forward="false" selection-start-line="478" selection-start-column="56" selection-end-line="478" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bangla_chapter_content.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml">
+      <file leaf-file-name="chapter_content_new.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1814">
-              <caret line="480" column="55" lean-forward="false" selection-start-line="480" selection-start-column="55" selection-end-line="480" selection-end-column="55" />
+            <state relative-caret-position="252">
+              <caret line="197" column="32" lean-forward="false" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -85,18 +91,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/widgets/WidgetFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/ContentViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/IntroViewController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/desktop/config/AppConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/widgets/StringWidget.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FormViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/desktop/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/registration.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/Login.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml" />
       </list>
     </option>
   </component>
@@ -137,6 +143,224 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mpower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mpower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clientcollection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mpower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clientcollection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CNCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,36 +825,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="149" column="33" lean-forward="true" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="90" column="93" lean-forward="false" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/Login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/css/app_main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -659,17 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="154" column="48" lean-forward="false" selection-start-line="154" selection-start-column="48" selection-end-line="154" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -719,17 +902,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/registration.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/widgets/SelectMultiWidget.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -770,17 +942,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10710">
-          <caret line="595" column="19" lean-forward="true" selection-start-line="595" selection-start-column="19" selection-end-line="595" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FormViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -808,12 +969,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="497" column="9" lean-forward="false" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/introductory_video.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="111" lean-forward="false" selection-start-line="7" selection-start-column="111" selection-end-line="7" selection-end-column="111" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/registration.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/registration_profession.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="130" lean-forward="false" selection-start-line="15" selection-start-column="130" selection-end-line="15" selection-end-column="130" />
+          <folding>
+            <marker date="1484482879163" expanded="true" signature="4491:4525" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="151" column="31" lean-forward="false" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/Login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/bangla_chapter_content.fxml">
@@ -821,8 +1028,29 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1814">
-          <caret line="480" column="55" lean-forward="false" selection-start-line="480" selection-start-column="55" selection-end-line="480" selection-end-column="55" />
+        <state relative-caret-position="162">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <marker date="1484482879056" expanded="true" signature="20271:20607" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mpower/clientcollection/controller/FxViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="478" column="56" lean-forward="false" selection-start-line="478" selection-start-column="56" selection-end-line="478" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/chapter_content_new.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="197" column="32" lean-forward="false" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
           <folding />
         </state>
       </provider>

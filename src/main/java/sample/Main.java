@@ -149,8 +149,8 @@ public class Main extends Application {
         //showSplash(primaryStage);
         mainStage = primaryStage;
         mainStage.initStyle(StageStyle.DECORATED);
-        mainStage.setMinWidth(600);
-        mainStage.setMinHeight(600);
+        mainStage.setMinWidth(800);
+        mainStage.setMinHeight(700);
         mainStage.setResizable(false);
         FxViewController.getInstance().showMainStage();
         mainStage.setOnCloseRequest(event -> {
