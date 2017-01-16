@@ -65,14 +65,14 @@ public class  SelectMultiWidget extends QuestionWidget {
         }
 
         if (mItems != null) {
-            for (int i = 0; i < mItems.size(); i++) {
+            for (SelectChoice mItem : mItems) {
                 // no checkbox group so id by answer + offset
                 CheckBox c = new CheckBox();
-                c.setText(prompt.getSelectChoiceText(mItems.get(i)));
+                c.setText(prompt.getSelectChoiceText(mItem));
 
                 for (int vi = 0; vi < ve.size(); vi++) {
                     // match based on value, not key
-                    if (mItems.get(i).getValue().equals(ve.elementAt(vi).getValue())) {
+                    if (mItem.getValue().equals(ve.elementAt(vi).getValue())) {
                         c.setSelected(true);
                         break;
                     }
@@ -81,19 +81,19 @@ public class  SelectMultiWidget extends QuestionWidget {
                 mCheckboxes.add(c);
                 String audioURI = null;
                 audioURI =
-                        prompt.getSpecialFormSelectChoiceText(mItems.get(i),
+                        prompt.getSpecialFormSelectChoiceText(mItem,
                                 FormEntryCaption.TEXT_FORM_AUDIO);
 
                 String imageURI = null;
                 imageURI =
-                        prompt.getSpecialFormSelectChoiceText(mItems.get(i),
+                        prompt.getSpecialFormSelectChoiceText(mItem,
                                 FormEntryCaption.TEXT_FORM_IMAGE);
 
                 String videoURI = null;
-                videoURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i), "video");
+                videoURI = prompt.getSpecialFormSelectChoiceText(mItem, "video");
 
                 String bigImageURI = null;
-                bigImageURI = prompt.getSpecialFormSelectChoiceText(mItems.get(i), "big-image");
+                bigImageURI = prompt.getSpecialFormSelectChoiceText(mItem, "big-image");
 
 
                 mCheckboxInit = false;
@@ -104,10 +104,10 @@ public class  SelectMultiWidget extends QuestionWidget {
 
 
         }
-        for (int i=0;i<mCheckboxes.size();i++){
+        for (CheckBox mCheckboxe : mCheckboxes) {
 
-            //mAnchorPane.getChildren().add(mCheckboxes.get(i));
-            mAnchorPane.add(mCheckboxes.get(i),n,r);
+            // mAnchorPane.getChildren().add(mCheckboxes.get(i));
+            mAnchorPane.add(mCheckboxe, n, r);
             r++;
         }
 

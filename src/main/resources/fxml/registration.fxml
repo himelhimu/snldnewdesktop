@@ -13,8 +13,9 @@
     <fx:define>
         <ToggleGroup fx:id="profession_toggle_group"/>
     </fx:define>
-    <Label GridPane.rowIndex="0" GridPane.columnSpan="3"  alignment="TOP_CENTER" fx:id="registration_title">Choose your Occupation</Label>
-    <ToggleButton fx:id="button_doctor" GridPane.rowIndex="1" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <Label GridPane.columnSpan="4" GridPane.rowIndex="0" alignment="TOP_CENTER">Comprehensive Newborn Care Package(CNCP)</Label>
+    <Label layoutY="30" GridPane.rowIndex="1" GridPane.columnSpan="3"  alignment="TOP_CENTER" fx:id="registration_title">Choose your Profession</Label>
+    <ToggleButton fx:id="button_doctor" GridPane.rowIndex="2" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="doctor_reg" layoutX="29.0" layoutY="44.0"
                        fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -24,7 +25,7 @@
             </ImageView>
         </graphic>
     </ToggleButton>
-    <ToggleButton fx:id="button_nurse" GridPane.rowIndex="1" GridPane.columnIndex="1" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <ToggleButton fx:id="button_nurse" GridPane.rowIndex="2" GridPane.columnIndex="1" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="nurse_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -34,7 +35,7 @@
             </ImageView>
         </graphic>
     </ToggleButton>
-    <ToggleButton  fx:id="button_fwd" GridPane.rowIndex="2" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <ToggleButton  fx:id="button_fwd" GridPane.rowIndex="3" GridPane.columnIndex="0" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="fwd_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -44,7 +45,7 @@
             </ImageView>
         </graphic>
     </ToggleButton>
-    <ToggleButton fx:id="button_sacmo" GridPane.rowIndex="2" GridPane.columnIndex="1" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
+    <ToggleButton fx:id="button_sacmo" GridPane.rowIndex="3" GridPane.columnIndex="1" toggleGroup="$profession_toggle_group" onMouseClicked="#onImageClicked">
         <graphic>
             <ImageView fx:id="sacmo_reg"
                        layoutX="29.0" layoutY="44.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -54,10 +55,10 @@
             </ImageView>
         </graphic>
     </ToggleButton>
-    <Button  prefHeight="30.0" prefWidth="200.0"  alignment="CENTER" fx:id="button_reg" GridPane.rowIndex="3" GridPane.columnSpan="3" disable="true" onAction="#initRegistrationPage"
+    <Button  prefHeight="30.0" prefWidth="200.0"  alignment="CENTER" fx:id="button_reg" GridPane.rowIndex="4" GridPane.columnSpan="3" disable="true" onAction="#initRegistrationPage"
             text="Registration"/>
-    <Label GridPane.rowIndex="4"   GridPane.columnSpan="3" alignment="CENTER">Already Registered?</Label>
-    <Button GridPane.rowIndex="5" prefHeight="30.0" prefWidth="200.0" alignment="CENTER" fx:id="button_login" GridPane.columnSpan="3" onAction="#initLogin"
+    <Label GridPane.rowIndex="5"   GridPane.columnSpan="3" alignment="CENTER">Already Registered?</Label>
+    <Button GridPane.rowIndex="6" prefHeight="30.0" prefWidth="200.0" alignment="CENTER" fx:id="button_login" GridPane.columnSpan="3" onAction="#initLogin"
             text="Login"/>
 
 

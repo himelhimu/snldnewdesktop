@@ -5,12 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.media.MediaView?>
 
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.text.Font?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #D7BBD9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpower.desktop.controller.IntroViewController">
    <children>
-      <Label layoutX="5.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #D7BBD9;" text="Professor Mohammad Shahidullah &#10;Professor, Dept. of Neonatology &#10;Bangabandhu Sheikh Mujib &#10;Medical University, Dhaka" />
-      <MediaView  fx:id="intro_media_view" fitHeight="400.0" fitWidth="640.0" layoutX="5.0" layoutY="100.0">
+      <Label layoutX="5.0" layoutY="10.0" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #D7BBD9;" text="Professor Mohammad Shahidullah &#10;Professor, Dept. of Neonatology &#10;Bangabandhu Sheikh Mujib Medical University, Dhaka">
+         <font>
+            <Font  size="20.0" />
+         </font>
+      </Label>
+      <MediaView fx:id="intro_media_view" fitHeight="400.0" fitWidth="790.0" layoutX="20.0" layoutY="120.0">
       </MediaView>
-      <Button prefHeight="30.0" prefWidth="150.0" layoutX="487.0" layoutY="550.0" mnemonicParsing="false" onAction="#startChapterView" text="Forward" />
+      <Button layoutX="487.0" layoutY="550.0" mnemonicParsing="false" onAction="#startChapterView" prefHeight="30.0" prefWidth="150.0" text="Forward" />
       <Button layoutX="32.0" layoutY="550.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Back" />
    </children>
 </AnchorPane>

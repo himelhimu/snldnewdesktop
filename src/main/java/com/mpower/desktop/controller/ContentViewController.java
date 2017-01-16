@@ -33,7 +33,7 @@ public class ContentViewController {
     public static boolean isBanglaContent=false;
 
     public void onMouseClicked(Event event) {
-        if (LoginController.USER_TYPE==2 || LoginController.USER_TYPE==3) isBanglaContent=true;
+        isBanglaContent = LoginController.USER_TYPE == 2 || LoginController.USER_TYPE == 3;
         if(event.getSource() instanceof ImageView) {
             String imageViewID = ((ImageView) event.getSource()).getId();
             switch (imageViewID) {
@@ -69,21 +69,18 @@ public class ContentViewController {
                     //System.out.print("sixth Image clicked." + current_user);
                     break;
                 case "session_1_7":
+                    if (isBanglaContent){
+                        current_session="2_0";
+                        FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                        break;
+                    }else
                     current_session = "1_7";
                     FxViewController.getInstance().setCurrentView("1_7", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_1_8":
-                    if (isBanglaContent) {
-                        current_session = "2_0";
-                        FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    }
-                    else {
-                        current_session = "1_8";
-                        FxViewController.getInstance().setCurrentView("1_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    }
-
-
+                    current_session = "1_8";
+                    FxViewController.getInstance().setCurrentView("1_8", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_1_9":
@@ -282,11 +279,12 @@ public class ContentViewController {
 
         }else{
             clearTmpData();
-            FxViewController.getInstance().setCurrentView("", AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
+            isBanglaContent=false;
+            FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
         }
     }
     private void clearTmpData(){
         current_user = "";
-        current_session = "1_0";
+        //current_session = "1_0";
     }
 }

@@ -92,13 +92,13 @@ public abstract class QuestionWidget {
         String imageURI = p.getImageText();
         String audioURI = p.getAudioText();
         String videoURI = p.getSpecialFormQuestionText("video");
-        System.out.println("Bind Attribute  "+p.getBindAttributes());
+        /*System.out.println("Bind Attribute  "+p.getBindAttributes());
         System.out.println("Data Type  "+p.getDataType());
         System.out.println("Select choices  "+p.getSelectChoices());
-        System.out.println("Bind Attribute  "+p.getBindAttributes());
+        System.out.println("Bind Attribute  "+p.getBindAttributes());*/
 
-        System.out.println("@@ URIs from FormEntryPrompt "+imageURI);
-
+        /*System.out.println("@@ URIs from FormEntryPrompt "+imageURI);
+*/
         // shown when image is clicked
         String bigImageURI = p.getSpecialFormQuestionText("big-image");
 
@@ -115,16 +115,15 @@ public abstract class QuestionWidget {
         if (p.getLongText() == null || p.getLongText().length() == 0) {
             mQuestionText.setVisible(false);
         }
-
-        System.out.print("constraint-------------------"+p.getIndex());
         FormViewController fvc = FormViewController.getInstance();
 
         //FxViewController.getInstance().getCurrentLayout().setContent(mQuestionText);
         FxViewController.getInstance().getCurrentLayout().add(mQuestionText,fvc.getColIndex(),fvc.getRowIndex());
+        fvc.incRowIndex();
         //FxViewController.getInstance().getCurrentLayout().getChildren().add(mQuestionText);
         //fvc.incColIndex();
         //FormViewController.getInstance().addComponent(mQuestionText,0,1,GridBagConstraints.HORIZONTAL);
-        fvc.incRowIndex();
+        //fvc.incRowIndex();
 
     }
 

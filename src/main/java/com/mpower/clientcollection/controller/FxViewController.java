@@ -111,7 +111,6 @@ public class FxViewController implements Initializable {
         }
         else if( view_type == AppConfiguration.VIEW_TYPE.REG_VIEW){
             Main.isLoggedIn=false;
-            //player.stop();
             showMainStage();
             //jumpBackIn();
         }
@@ -521,7 +520,7 @@ public class FxViewController implements Initializable {
     //Sabbir
     private void loadSplashScreen() {
         try {
-            splashPane= FXMLLoader.load(getClass().getResource("/resources/fxml/splash_screen.fxml"));
+            splashPane= FXMLLoader.load(getClass().getResource("/splash_screen.fxml"));
             //root.getChildrenUnmodifiable().setAll(splashLayout);
             mGridMainLayout.getChildren().addAll(splashPane);
 
