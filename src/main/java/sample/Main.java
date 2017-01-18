@@ -4,6 +4,7 @@ import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.config.AppLogger;
 import com.mpower.desktop.constants.Constants;
+import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.controller.LoginController;
 import com.mpower.desktop.database.InitializeDatabase;
 import javafx.application.Application;
@@ -188,14 +189,14 @@ public class Main extends Application {
 
     }
 
-    private void sendTimeToServer(String startingDateTime, String currentDateTime) throws UnsupportedEncodingException {
+    public static void sendTimeToServer(String startingDateTime, String currentDateTime) throws UnsupportedEncodingException {
         //String serverUrl="http://192.168.23.251:8001/usermodule/update-log-time/";
         HttpClient httpClient= HttpClients.createDefault();
         HttpPost httpPost=new HttpPost();
 
         HashMap<String,String> dataMap=new HashMap<>();
        // dataMap.put("user_id", ContentViewController.current_user);
-        dataMap.put("user_id", "snluser");
+        dataMap.put("user_id", ContentViewController.current_user);
         dataMap.put("login_time",startingDateTime);
         dataMap.put("logout_time",currentDateTime);
         dataMap.put("user_profile",LoginController.CURRENT_PROFFESION);

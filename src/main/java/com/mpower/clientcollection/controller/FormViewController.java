@@ -382,10 +382,12 @@ public class FormViewController {
         multipartEntity.addPart("xml_submission_file",fileBody);
 
 
+        String submitUrl=Constants.FORM_SUBMIT_URL+ContentViewController.current_user+"/submission";
+        System.out.println("**SubmitUrl "+submitUrl);
         HttpPost httpPost =new HttpPost();
         URL url1 = null;
         try {
-            url1 = new URL(URLDecoder.decode(Constants.FORM_SUBMIT_URL, "utf-8"));
+            url1 = new URL(URLDecoder.decode(submitUrl, "utf-8"));
         } catch (MalformedURLException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }

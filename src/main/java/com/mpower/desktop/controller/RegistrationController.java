@@ -110,11 +110,11 @@ public class RegistrationController {
         } else if(button_fwd.isSelected()){
             prof_image = new Image(Main.class.getResourceAsStream("/fwv.png"));
             current_user_type = 2;
-            SELECTED_PROFILE="Fwv";
+            SELECTED_PROFILE="FWV";
         }else if (button_sacmo.isSelected()){
             prof_image=new Image(Main.class.getResourceAsStream("/sacmo.png"));
             current_user_type=3;
-            SELECTED_PROFILE="Sacmo";
+            SELECTED_PROFILE="SACMO";
         }
 
         Node imageview = root.lookup("#iv_profession");
@@ -125,9 +125,9 @@ public class RegistrationController {
         regStage.show();
     }
 
-    private boolean validateData(String mobile, String email) {
+    private boolean validateData(String mobile, String email,String pass) {
         // return !mobile.isEmpty() && mobile.length() == 11 && validateEmail(email);
-        return !mobile.isEmpty() && mobile.length() == 11 && validateMobile(mobile) && validateEmail(email);
+        return pass.length()>=8 && !mobile.isEmpty() && mobile.length() == 11 && validateMobile(mobile) && validateEmail(email);
     }
 
     private boolean validateMobile(String mobile) {
@@ -147,7 +147,7 @@ public class RegistrationController {
     
     @FXML
     protected void registeruser(ActionEvent actionEvent) {
-        if (validateData(tf_mobile.getText(), tf_email.getText())) {
+        if (validateData(tf_mobile.getText(), tf_email.getText(),tf_pass.getText())) {
             String name = tf_name.getText();
             String address = tf_addr.getText();
             String email = tf_email.getText();
@@ -208,6 +208,7 @@ public class RegistrationController {
                         }
                     });
                     //TODO Start the Thread
+                    thread.start();
                     //registerOnServer(email,name,mobile,password,gender,username,address);
 
                 }
@@ -235,13 +236,15 @@ public class RegistrationController {
         jsonObject.put("address",address);
         jsonObject.put("password",password);
         jsonObject.put("country","Bangladesh");
-        jsonObject.put("po","-");
+        jsonObject.put("district",address);
+        jsonObject.put("union",address);
+        jsonObject.put("village",address);
         jsonObject.put("username",username);
         jsonObject.put("mobile",mobile);
         jsonObject.put("email",email);
         jsonObject.put("gender",gender);
         jsonObject.put("name",name);
-        jsonObject.put("division","-");
+        jsonObject.put("division",address);
         jsonObject.put("profile",SELECTED_PROFILE);
        // jsonObject.putAll(dataMap);
 
@@ -253,12 +256,14 @@ public class RegistrationController {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        multipartEntity.addPart("reg",sb);
+        multipartEntity.addPart("data",sb);
         httpPost.setEntity(multipartEntity);
 
+        String registerUrl=Constants.SERVER_URL+"usermodule/mobile-signup/";
+        System.out.println("**Register Url "+registerUrl);
         URL url1 = null;
         try {
-            url1 = new URL(URLDecoder.decode(Constants.SERVER_URL, "utf-8"));
+            url1 = new URL(URLDecoder.decode(registerUrl, "utf-8"));
         } catch (MalformedURLException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }

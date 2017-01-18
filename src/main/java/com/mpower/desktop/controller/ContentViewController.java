@@ -5,6 +5,11 @@ import com.mpower.desktop.config.AppConfiguration;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import sample.Main;
+
+import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by hemel on 4/24/16.
@@ -280,6 +285,12 @@ public class ContentViewController {
         }else{
             clearTmpData();
             isBanglaContent=false;
+            Main.CURRENT_DATE_TIME=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+            try {
+                Main.sendTimeToServer(Main.STARTING_DATE_TIME,Main.CURRENT_DATE_TIME);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
             FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
         }
     }
