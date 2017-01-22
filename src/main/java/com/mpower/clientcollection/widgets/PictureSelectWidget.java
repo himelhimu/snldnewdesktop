@@ -46,19 +46,18 @@ public class PictureSelectWidget extends QuestionWidget {
     //TODO
     private ArrayList<String> imagesToShow=null;
     private String imageNameFInal="";
-    private boolean q5=false;
-    private String ques5file="";
-    private String ques12File="";
     private File testDIrectory=null;
     private String answerId;
     private File DIRECTORY_1=new File("/home/sabbir/Downloads/Form Builder/src/resources/img/c1_exam");
     private String theImage=null;
+    private ArrayList<String> imageArrayList=null;
    public PictureSelectWidget(FormEntryPrompt prompt)
     {
         super(prompt);
         System.out.println("Im in PictureSelectWidget ###");
         mFlowPane=new FlowPane();
         imagesToShow=new ArrayList<>();
+        imageArrayList=new ArrayList<>();
         mItems= prompt.getSelectChoices();
         mCurrentPath=System.getProperty("user.dir");
         String currentFormPath = FormViewController.getInstance().getCurrentFormName();
@@ -67,9 +66,10 @@ public class PictureSelectWidget extends QuestionWidget {
         for (int i=0;i<mItems.size();i++)
         {
             String imageUri =
-                    mPrompt.getSpecialFormSelectChoiceText(mItems.get(0),
+                    mPrompt.getSpecialFormSelectChoiceText(mItems.get(i),
                             FormEntryCaption.TEXT_FORM_IMAGE);
             String imageName = imageUri.substring(imageUri.lastIndexOf("/") + 1);
+            imageArrayList.add(imageName);
             theImage=imageName;
             System.out.println("****image url = " + imageName);
             imagesToShow.add(imageName);

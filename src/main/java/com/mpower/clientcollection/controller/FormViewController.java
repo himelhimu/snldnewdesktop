@@ -339,10 +339,19 @@ public class FormViewController {
             });
 
             createResultDialog();
+            boolean isEnd=false;
             try {
-                InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user,ContentViewController.current_session);
+                String currProg=InitializeDatabase.get_instance().getCurrUserProgress(ContentViewController.current_user);
+                isEnd = currProg.equals("3_50");
             } catch (SQLException e1) {
                 e1.printStackTrace();
+            }
+            if (!isEnd) {
+                try {
+                    InitializeDatabase.get_instance().SaveProgressToDatabase(ContentViewController.current_user, ContentViewController.current_session);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
             FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
             thread.start();

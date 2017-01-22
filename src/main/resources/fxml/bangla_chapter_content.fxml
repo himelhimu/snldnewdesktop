@@ -407,7 +407,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_2_quiz_2" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_2_21" disable="true" fitHeight="111.0" fitWidth="101.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_2_21_lock.png" />
                             </image>
@@ -467,7 +467,7 @@
                         <Insets left="20.0" right="20.0" />
                     </HBox.margin>
                     <children>
-                        <ImageView fx:id="session_3_quiz" disable="true" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="session_3_4" disable="true" fitHeight="99.0" fitWidth="126.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../ch_3_4_g.png" />
                             </image>

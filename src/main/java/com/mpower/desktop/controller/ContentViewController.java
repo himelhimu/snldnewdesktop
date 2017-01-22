@@ -2,12 +2,14 @@ package com.mpower.desktop.controller;
 
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
+import com.mpower.desktop.database.InitializeDatabase;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import sample.Main;
 
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -36,10 +38,23 @@ public class ContentViewController {
     public static String current_user = "";
     public static String current_session = "1_0";
     public static boolean isBanglaContent=false;
+    String currProg="";
+    public static boolean isEnd=false;
 
     public void onMouseClicked(Event event) {
+        try {
+            currProg = InitializeDatabase.get_instance().getCurrUserProgress(ContentViewController.current_user);
+            System.out.println("#### current progress " + currProg);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        current_session = currProg;
+        {
+            isEnd = current_session == "3_33" || current_session == "3_42";
+        }
         isBanglaContent = LoginController.USER_TYPE == 2 || LoginController.USER_TYPE == 3;
-        if(event.getSource() instanceof ImageView) {
+        System.out.println("### current session " + current_session);
+        if (event.getSource() instanceof ImageView) {
             String imageViewID = ((ImageView) event.getSource()).getId();
             switch (imageViewID) {
                 case "session_1_1":
@@ -74,12 +89,12 @@ public class ContentViewController {
                     //System.out.print("sixth Image clicked." + current_user);
                     break;
                 case "session_1_7":
-                    if (isBanglaContent){
-                        current_session="2_0";
+                    if (isBanglaContent) {
+                        current_session = "2_0";
                         FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                         break;
-                    }else
-                    current_session = "1_7";
+                    } else
+                        current_session = "1_7";
                     FxViewController.getInstance().setCurrentView("1_7", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
@@ -114,7 +129,7 @@ public class ContentViewController {
                     break;
 
                 case "session_1_quiz":
-                    current_session="2_0";
+                    current_session = "2_0";
                     FxViewController.getInstance().setCurrentView("quiz_1_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
                 case "session_2_1":
@@ -179,7 +194,7 @@ public class ContentViewController {
                     break;
 
                 case "session_2_quiz_1":
-                    current_session="2_13";
+                    current_session = "2_13";
                     FxViewController.getInstance().setCurrentView("quiz_2_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
 
@@ -224,10 +239,18 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_21":
-                    current_session = "2_21";
-                    FxViewController.getInstance().setCurrentView("2_21", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    //System.out.print("Seventh Image clicked." + current_user);
-                    break;
+                    if (isBanglaContent) {
+                        current_session = "3_0";
+                        FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                        break;
+
+                    } else {
+                        current_session = "2_21";
+                        FxViewController.getInstance().setCurrentView("2_21", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                        //System.out.print("Seventh Image clicked." + current_user);
+                        break;
+                    }
+
                 case "session_2_22":
                     current_session = "2_22";
                     FxViewController.getInstance().setCurrentView("2_22", AppConfiguration.VIEW_TYPE.FORM_VIEW);
@@ -246,7 +269,7 @@ public class ContentViewController {
                     //System.out.print("Seventh Image clicked." + current_user);
                     break;
                 case "session_2_quiz_2":
-                    current_session="3_0";
+                    current_session = "3_0";
                     FxViewController.getInstance().setCurrentView("quiz_2_2", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
 
@@ -267,35 +290,44 @@ public class ContentViewController {
                     //System.out.print("Third Image clicked." + current_user);
                     break;
                 case "session_3_3":
-                    current_session = "3_3";
-                    FxViewController.getInstance().setCurrentView("3_3", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    //System.out.print("Fourth Image clicked." + current_user);
-                    break;
+                    if (isBanglaContent) {
+                        current_session = "3_50";
+                        FxViewController.getInstance().setCurrentView("3_3", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                        break;
+                    } else {
+                        current_session = "3_50";
+                        isEnd = true;
+                        FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                        break;
+                    }
                 case "session_3_quiz":
-                    current_session="3_4";
-                    FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
-                    break;
-                case "session_3_5":
                     current_session = "3_4";
                     FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
                     break;
+                case "session_3_4":
+                    current_session = "3_50";
+                    isEnd = true;
+                    FxViewController.getInstance().setCurrentView("quiz_3_1", AppConfiguration.VIEW_TYPE.FORM_VIEW);
+                    break;
             }
-
-
         }else{
-            clearTmpData();
-            isBanglaContent=false;
-            Main.CURRENT_DATE_TIME=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
-            try {
-                Main.sendTimeToServer(Main.STARTING_DATE_TIME,Main.CURRENT_DATE_TIME);
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+                clearTmpData();
+                isBanglaContent = false;
+                Main.CURRENT_DATE_TIME = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+                try {
+                    Main.sendTimeToServer(Main.STARTING_DATE_TIME, Main.CURRENT_DATE_TIME);
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
             }
-            FxViewController.getInstance().setCurrentView(AppConfiguration.LOGIN_NAME, AppConfiguration.VIEW_TYPE.LOGIN_VIEW);
         }
-    }
+
+
     private void clearTmpData(){
         current_user = "";
+        isBanglaContent=false;
+        isEnd=false;
         //current_session = "1_0";
     }
 }
