@@ -40,7 +40,10 @@ import org.javarosa.form.api.FormEntryModel;
 import sample.Main;
 
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -477,7 +480,60 @@ public class FxViewController implements Initializable {
         }
         this.curStage.setScene(new Scene(root,800,700));
         showCurStage();
+        if (!netIsAvailable()) showNoNetworkAlert();
         //jumpBackIn();
+    }
+
+    private void showNoNetworkAlert() {
+        Alert alert=new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Internet not Available");
+        alert.setContentText("You need Internet to Register ");
+        alert.showAndWait();
+    }
+
+
+    public  boolean isInternetAvailable(){
+        URL url=null;
+        try {
+            url=new URL("http://www.google.com");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        HttpURLConnection httpURLConnection=null;
+        try {
+            httpURLConnection=(HttpURLConnection) url.openConnection();
+            if (httpURLConnection != null) {
+                httpURLConnection.connect();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        try {
+            if (httpURLConnection != null) {
+                if (httpURLConnection.getResponseCode() == 200) return true;
+                else return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean netIsAvailable() {
+        try {
+            final URL url = new URL("http://www.google.com");
+            final URLConnection conn = url.openConnection();
+            conn.connect();
+            return true;
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            return false;
+        }
     }
 
     private void jumpBackIn(){

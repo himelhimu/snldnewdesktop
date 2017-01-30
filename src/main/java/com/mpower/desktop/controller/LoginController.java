@@ -1,6 +1,7 @@
 package com.mpower.desktop.controller;
 
 
+import com.mpower.clientcollection.controller.FormViewController;
 import com.mpower.clientcollection.controller.FxViewController;
 import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.database.InitializeDatabase;
@@ -185,6 +186,14 @@ public class LoginController extends AnchorPane implements Initializable {
                     } catch (IOException ex) {
                         // I/O error
                     }
+
+                   /* Thread thread=new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            FormViewController.sendAllFilesToServer();
+                        }
+                    });
+                    thread.start();*/
                     return true;
                 }else{
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);

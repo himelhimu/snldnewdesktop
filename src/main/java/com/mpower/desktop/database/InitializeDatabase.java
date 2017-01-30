@@ -19,6 +19,7 @@ public class InitializeDatabase {
     private PreparedStatement mPrepLogin = null;
 
     private String mCurrentPath="";
+    private PreparedStatement mPrepInstanceFilepath=null;
 
     private InitializeDatabase()  {
         try {
@@ -41,6 +42,7 @@ public class InitializeDatabase {
             createTableIfNotExist();
             createRegisterStatement();
             createLoginStatement();
+            createInstanceFilePathStatement();
         } catch (SQLException e){
             System.out.println("*** Error*** ");
             e.printStackTrace();
@@ -57,7 +59,8 @@ public class InitializeDatabase {
             mStatement.executeUpdate(regTableSql);
 
             String loginTableSql = "CREATE TABLE IF NOT EXISTS "+AppConfiguration.LOGIN_INFO+" (username TEXT,user_type NUMERIC,password TEXT);";
-            System.out.println("Login table sql = " + loginTableSql);
+            String instanCeFileSQL="CREATE TABLE IF NOT EXISTS instances ( username TEXT , file_path TEXT )";
+            mStatement.executeUpdate(instanCeFileSQL);
             mStatement.executeUpdate(loginTableSql);
             mStatement.executeUpdate("CREATE TABLE IF NOT EXISTS "+AppConfiguration.PROGRESS_INFO+" (user_name TEXT,completed_no TEXT);");
         } catch (SQLException e) {
@@ -91,6 +94,14 @@ public class InitializeDatabase {
     private void createRegisterStatement() throws SQLException {
         mPrepRegister = this.mConn.prepareStatement(
                 "insert into registration_info values (?,?,?,?,?,?,?,?);");
+    }
+
+    private void createInstanceFilePathStatement() throws SQLException {
+        mPrepInstanceFilepath=this.mConn.prepareStatement("insert into instances values (?,?);");
+    }
+
+    public PreparedStatement getInstanceFilePathStatement(){
+        return this.mPrepInstanceFilepath;
     }
     public PreparedStatement getRegisterStatement()
     {

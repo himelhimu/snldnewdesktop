@@ -10,14 +10,9 @@ import com.mpower.desktop.config.AppConfiguration;
 import com.mpower.desktop.constants.Constants;
 import com.mpower.desktop.controller.ContentViewController;
 import com.mpower.desktop.database.InitializeDatabase;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
+import org.apache.http.*;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.entity.mime.MultipartEntity;
@@ -27,8 +22,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.javarosa.core.model.FormDef;
 import org.javarosa.core.model.FormIndex;
 import org.javarosa.core.model.GroupDef;
-import org.javarosa.core.model.condition.EvaluationContext;
-import org.javarosa.core.model.condition.IFunctionHandler;
 import org.javarosa.core.model.data.IAnswerData;
 import org.javarosa.core.model.instance.InstanceInitializationFactory;
 import org.javarosa.core.model.instance.InvalidReferenceException;
@@ -37,16 +30,15 @@ import org.javarosa.form.api.FormEntryController;
 import org.javarosa.form.api.FormEntryModel;
 import org.javarosa.form.api.FormEntryPrompt;
 
-import javax.swing.*;
-import javax.swing.text.View;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 
-
-import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
@@ -95,6 +87,7 @@ public class FormViewController {
             "org.javarosa.core.model.actions.SetValueAction" //CoreModelModule
     };
     private static FormViewController _VCInstance = null;
+    private static boolean canHaveCertificate=false;
     private WidgetFactory mWFactory = null;
 
 
@@ -115,6 +108,8 @@ public class FormViewController {
     private String currentFormName = "";
 
     private HashMap ansMap;
+    private ArrayList<File> filesList;
+    private boolean isCertificateRequestDone=false;
 
     public static final class FormsDirectory {
         FormsDirectory (){}
@@ -343,6 +338,8 @@ public class FormViewController {
             try {
                 String currProg=InitializeDatabase.get_instance().getCurrUserProgress(ContentViewController.current_user);
                 isEnd = currProg.equals("3_50");
+                if (isEnd) sendAllFilesToServer();
+                if (canHaveCertificate) sendCertificateRequest();
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }
@@ -354,12 +351,162 @@ public class FormViewController {
                 }
             }
             FxViewController.getInstance().setCurrentView("Course Content", AppConfiguration.VIEW_TYPE.COURSE_OVERVIEW);
-            thread.start();
+
+
+           if (FxViewController.netIsAvailable()) thread.start();
+           else {
+               saveFileTOList();
+           }
 
         });
 
         FxViewController.getInstance().getCurrentLayout().add(mSubmitButton,getColIndex(),getRowIndex());
         incRowIndex();
+    }
+
+    private void sendCertificateRequest() {
+        String url=Constants.CERTIFICATE_URL;
+        String name=ContentViewController.current_user;
+        url +="usermodule/"+name+"/certificate/";
+        org.apache.http.client.HttpClient httpClient= HttpClients.createDefault();
+        try {
+            URL url1=new URL(url);
+            HttpPost httpPost =new HttpPost();
+            HttpResponse httpResponse=httpClient.execute(httpPost);
+          StatusLine  statusLine=httpResponse.getStatusLine();
+            if (statusLine != null && statusLine.getStatusCode() != HttpStatus.SC_OK){
+                isCertificateRequestDone=true;
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveFileTOList() {
+        File instanceFile = new File(SaveToDisk.instancePath);
+        String filePath=instanceFile.getAbsolutePath();
+        System.out.println("** InstancePath "+filePath);
+        String userName=ContentViewController.current_user;
+        System.out.println("## Current Username "+userName);
+
+        try {
+            InitializeDatabase database=InitializeDatabase.get_instance();
+            PreparedStatement preparedStatement=database.getInstanceFilePathStatement();
+            preparedStatement.setString(1,userName);
+            preparedStatement.setString(2,filePath);
+            preparedStatement.addBatch();
+            database.getConnection().setAutoCommit(false);
+            preparedStatement.executeBatch();
+            database.getConnection().setAutoCommit(true);
+            preparedStatement.close();
+            database.closeDBConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        filesList=new ArrayList<>();
+        try {
+            filesList.add(instanceFile);
+        }catch (Exception e){
+
+        }
+
+    }
+
+
+    public static void sendAllFilesToServer(){
+        String userName=ContentViewController.current_user;
+        String fileSql="SELECT file_path FROM instances WHERE username like \"" + userName + "\" ;";
+
+        try {
+            InitializeDatabase database=InitializeDatabase.get_instance();
+            Statement statement=database.getConnection().createStatement();
+            ResultSet resultSet=statement.executeQuery(fileSql);
+
+            while(resultSet.next()){
+                String filePath=resultSet.getString(1);
+                System.out.println("## FilePath from DB "+filePath);
+                uploadFileToServer(filePath);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        canHaveCertificate=true;
+    }
+
+    private static void uploadFileToServer(String filePath) {
+        org.apache.http.client.HttpClient httpClient= HttpClients.createDefault();
+        File instanceFile=new File(filePath);
+        MultipartEntity multipartEntity=new MultipartEntity();
+        FileBody fileBody=new FileBody(instanceFile,"text/xml");
+        System.out.println("*** Filebody "+fileBody);
+        multipartEntity.addPart("xml_submission_file",fileBody);
+
+
+        String submitUrl=Constants.FORM_SUBMIT_URL+ContentViewController.current_user+"/submission";
+        System.out.println("**SubmitUrl "+submitUrl);
+        HttpPost httpPost =new HttpPost();
+        URL url1 = null;
+        try {
+            url1 = new URL(URLDecoder.decode(submitUrl, "utf-8"));
+        } catch (MalformedURLException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        URI u = null;
+        try {
+            u = url1.toURI();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        httpPost.setURI(u);
+        //TODO Sabbir
+        httpPost.setEntity(multipartEntity);
+
+        System.out.println("** URL "+url1+"** URI "+u);
+        HttpResponse httpResponse=null;
+        try {
+            httpResponse=httpClient.execute(httpPost);
+            System.out.println("***HttpResponse "+httpResponse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static boolean isInternetAvailable(){
+        URL url=null;
+        try {
+            url=new URL("http://www.google.com");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        HttpURLConnection httpURLConnection=null;
+        try {
+            if (url != null) {
+                httpURLConnection=(HttpURLConnection) url.openConnection();
+            }
+            if (httpURLConnection != null) {
+                httpURLConnection.connect();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        boolean isInternetAvailable=false;
+        try {
+            if (httpURLConnection != null) {
+                if (httpURLConnection.getResponseCode() == 200) return true;
+                else return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    return true;
     }
 
     private void uploadFileToServer() {
@@ -417,6 +564,14 @@ public class FormViewController {
             System.out.println("***HttpResponse "+httpResponse);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        StatusLine statusLine=null;
+        if (httpResponse != null) {
+            statusLine=httpResponse.getStatusLine();
+        }
+        if (statusLine != null && statusLine.getStatusCode() != HttpStatus.SC_CREATED) {
+            saveFileTOList();
         }
         HttpEntity httpEntity=httpResponse.getEntity();
         System.out.println("*** HttpEnttity "+httpEntity);

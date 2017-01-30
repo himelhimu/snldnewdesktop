@@ -10,6 +10,7 @@ public class Constants {
     public static final String USER_LOGIN_URL="login/?";
     public static final String LOG_TIME_URL="http://cncp.scibd.info:8001/usermodule/update-log-time/";
     public static final String FORM_SUBMIT_URL="http://cncp.scibd.info:8001/";
+    public static final String CERTIFICATE_URL="http://cncp.scibd.info:8001/usermodule/";
 
     public static final String DOCTOR = "Doctor";
     public static final String NURSE = "Nurse";
